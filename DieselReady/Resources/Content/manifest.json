@@ -4,7 +4,8 @@
     "01-how-a-diesel-engine-works.json",
     "02-fuel-system-and-bleeding.json",
     "03-cooling-systems.json",
-    "04-lubrication.json"
+    "04-lubrication.json",
+    "05-electrics-and-starting.json"
   ],
   "faults": "faults.json"
 }

@@ -36,7 +36,16 @@
         "With the engine stopped, check the oil level on the dipstick. An overfilled engine can burn the extra oil and smoke blue.",
         "Think about load: a dirty hull, a fouled propeller or something round the shaft all make the engine work harder."
       ],
-      "lessonIds": ["m01-l01", "m01-l02"],
+      "lessonIds": [
+        "m01-l01",
+        "m01-l02",
+        "m02-l03",
+        "m03-l05",
+        "m04-l02",
+        "m06-l04",
+        "m08-l01",
+        "m08-l04"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -75,10 +84,22 @@
         "Listen when you press start. Nothing at all, a single click, slow turning and normal turning each point to different causes.",
         "If it turns slowly or just clicks, check the battery and make sure its terminals are clean and tight.",
         "If it turns normally but will not fire, check there is fuel in the tank, the fuel valve is open and there is no water in the filter bowl.",
-        "Crank in short bursts of no more than about 15 seconds, with a rest between them. On an engine with a wet exhaust, repeated cranking can fill the exhaust with water, so check your handbook for when to close the raw water seacock and remember to open it again as soon as the engine runs."
+        "Crank in short bursts with a rest between them, as your handbook advises. On an engine with a wet exhaust, repeated cranking can fill the exhaust with water, so check your handbook for when to close the raw water seacock and remember to open it again as soon as the engine runs."
       ],
-      "lessonIds": ["m01-l01", "m01-l03", "m01-l04"],
-      "reviewStatus": "draft"
+      "lessonIds": [
+        "m01-l04",
+        "m02-l02",
+        "m02-l04",
+        "m02-l05",
+        "m05-l01",
+        "m05-l03",
+        "m05-l04",
+        "m05-l05",
+        "m08-l01",
+        "m08-l02"
+      ],
+      "reviewStatus": "draft",
+      "reviewNote": "The final check advises closing the raw water seacock during long cranking on wet-exhaust engines. This is engine-dependent; please confirm the wording is safe."
     },
     {
       "id": "overheating",
@@ -122,7 +143,16 @@
         "Once the engine has cooled, check the coolant level in the header tank.",
         "If all of those are fine, inspect the impeller. If any vanes are missing, find the pieces before you run the engine again."
       ],
-      "lessonIds": ["m01-l03", "m01-l04"],
+      "lessonIds": [
+        "m01-l04",
+        "m03-l02",
+        "m03-l03",
+        "m03-l04",
+        "m03-l05",
+        "m06-l01",
+        "m08-l01",
+        "m08-l04"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -163,7 +193,15 @@
         "Look in the primary filter bowl for water or dirt.",
         "Before checking round the propeller, make sure the engine is stopped and cannot be started. Never go near the propeller with the engine running."
       ],
-      "lessonIds": ["m01-l01", "m01-l04"],
+      "lessonIds": [
+        "m01-l04",
+        "m02-l02",
+        "m02-l04",
+        "m02-l05",
+        "m06-l04",
+        "m08-l01",
+        "m08-l03"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -203,8 +241,18 @@
         "If the oil and filter were changed recently, check that the right filter is fitted, it is tight and its seal is in place.",
         "If the level is right and the oil looks normal, the switch or its wiring may be at fault. A qualified engineer can measure the real pressure with a gauge before you rely on the engine."
       ],
-      "lessonIds": ["m01-l03", "m01-l04"],
-      "reviewStatus": "draft"
+      "lessonIds": [
+        "m01-l04",
+        "m04-l01",
+        "m04-l02",
+        "m04-l03",
+        "m04-l04",
+        "m05-l05",
+        "m08-l01",
+        "m08-l04"
+      ],
+      "reviewStatus": "draft",
+      "reviewNote": "Please confirm the order of likely causes, and that advising against running with milky or fuel-smelling oil is appropriate."
     },
     {
       "id": "not-charging",
@@ -240,7 +288,15 @@
         "Check the battery isolator and any charge switches are set as they normally are.",
         "If you have a voltmeter, compare the battery voltage with the engine stopped and then running above idle. With no rise, the battery is not being charged."
       ],
-      "lessonIds": ["m01-l03", "m01-l04"],
+      "lessonIds": [
+        "m01-l04",
+        "m05-l01",
+        "m05-l02",
+        "m05-l05",
+        "m06-l01",
+        "m08-l01",
+        "m08-l04"
+      ],
       "reviewStatus": "draft"
     }
   ]

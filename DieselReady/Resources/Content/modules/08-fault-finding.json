@@ -13,12 +13,30 @@
         "kind": "flow",
         "caption": "A simple order of work for any engine fault.",
         "labels": [
-          { "title": "Make the boat safe", "detail": "Sail, anchor or get a tow before working on the engine." },
-          { "title": "Gather the clues", "detail": "What happened, when, and what changed beforehand." },
-          { "title": "Think in systems", "detail": "Fuel, air, compression, cooling, lubrication, electrics." },
-          { "title": "Check the simple things first", "detail": "Controls, switches, levels and filters." },
-          { "title": "Change one thing at a time", "detail": "And check the result after each change." },
-          { "title": "Know when to stop", "detail": "Get help before a fault becomes damage." }
+          {
+            "title": "Make the boat safe",
+            "detail": "Sail, anchor or get a tow before working on the engine."
+          },
+          {
+            "title": "Gather the clues",
+            "detail": "What happened, when, and what changed beforehand."
+          },
+          {
+            "title": "Think in systems",
+            "detail": "Fuel, air, compression, cooling, lubrication, electrics."
+          },
+          {
+            "title": "Check the simple things first",
+            "detail": "Controls, switches, levels and filters."
+          },
+          {
+            "title": "Change one thing at a time",
+            "detail": "And check the result after each change."
+          },
+          {
+            "title": "Know when to stop",
+            "detail": "Get help before a fault becomes damage."
+          }
         ],
         "description": "A flow diagram of six steps for fault finding: make the boat safe, gather the clues, think in systems, check the simple things first, change one thing at a time, and know when to stop and get help."
       },
@@ -164,11 +182,14 @@
   ],
   "questions": [
     {
-      "id": "m08-q001", "moduleId": "m08", "lessonId": "m08-l01", "difficulty": 1,
+      "id": "m08-q001",
+      "moduleId": "m08",
+      "lessonId": "m08-l01",
+      "difficulty": 1,
       "prompt": "Your engine stops while you are motoring near a rocky shore. What should you do first?",
       "options": [
         "Make the boat safe: sail, anchor or call for help",
-        "Open the engine space and start changing filters",
+        "Open the engine space and start changing the fuel filters",
         "Keep trying to start the engine until it runs",
         "Phone the engine manufacturer"
       ],
@@ -177,25 +198,31 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q002", "moduleId": "m08", "lessonId": "m08-l01", "difficulty": 2,
+      "id": "m08-q002",
+      "moduleId": "m08",
+      "lessonId": "m08-l01",
+      "difficulty": 2,
       "prompt": "Why is it useful to ask 'what changed recently?' when an engine develops a fault?",
       "options": [
-        "Recent events such as refuelling or a filter change often point straight to the cause",
-        "Engines only develop faults after something has changed",
-        "It is the first question an insurer will ask",
-        "It tells you the engine's age"
+        "Recent events, such as refuelling, often point straight to the cause",
+        "Engines only ever develop faults after something about them has changed",
+        "It is the first question an insurer will ask after a claim",
+        "It tells you how old the engine is and when it was built"
       ],
       "correctIndex": 0,
       "explanation": "A fault that appears after refuelling suggests fuel quality; after a filter change, air or a poor seal. Linking the fault to a recent event narrows the search quickly.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q003", "moduleId": "m08", "lessonId": "m08-l01", "difficulty": 2,
+      "id": "m08-q003",
+      "moduleId": "m08",
+      "lessonId": "m08-l01",
+      "difficulty": 2,
       "prompt": "Which three things does a diesel engine need in order to run?",
       "options": [
         "Clean fuel free of air, clean air, and good compression",
         "A spark, petrol and oil",
-        "Coolant, a charged battery and a full fuel tank",
+        "Coolant, a fully charged battery and a full fuel tank",
         "A gearbox, a propeller and a stern gland"
       ],
       "correctIndex": 0,
@@ -203,33 +230,42 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q004", "moduleId": "m08", "lessonId": "m08-l01", "difficulty": 3,
+      "id": "m08-q004",
+      "moduleId": "m08",
+      "lessonId": "m08-l01",
+      "difficulty": 3,
       "prompt": "Why should you change only one thing at a time when fault finding?",
       "options": [
         "So you can tell which change fixed the problem, without adding new faults",
-        "Because the engine can only cope with one repair a day",
-        "Because tools must be used one at a time",
-        "So the job takes longer and is done more carefully"
+        "Because the engine can only cope with one repair in a day",
+        "Because most engine tools are designed to be used one at a time",
+        "So the job takes longer and is therefore done more carefully"
       ],
       "correctIndex": 0,
       "explanation": "If you change several things and the engine runs, you will not know which mattered. Each extra change also adds a chance of a new problem, such as letting air into the fuel.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q005", "moduleId": "m08", "lessonId": "m08-l01", "difficulty": 1,
+      "id": "m08-q005",
+      "moduleId": "m08",
+      "lessonId": "m08-l01",
+      "difficulty": 1,
       "prompt": "In what order should you usually check possible causes?",
       "options": [
         "Simple and common causes first, difficult and rare ones later",
-        "The most expensive parts first",
-        "Whatever is nearest to hand",
-        "Internal engine parts first"
+        "The most expensive parts first, as they matter most",
+        "Whichever parts of the engine are easiest to reach",
+        "Internal engine parts first, then the outside ones"
       ],
       "correctIndex": 0,
       "explanation": "Most faults have simple causes such as a control left in the wrong place, a blocked filter or a closed valve. Checking those first saves time and avoids unnecessary dismantling.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q006", "moduleId": "m08", "lessonId": "m08-l02", "difficulty": 1,
+      "id": "m08-q006",
+      "moduleId": "m08",
+      "lessonId": "m08-l02",
+      "difficulty": 1,
       "prompt": "The engine turns over normally but will not fire. Which system should you look at first?",
       "options": [
         "The fuel system",
@@ -242,59 +278,74 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q007", "moduleId": "m08", "lessonId": "m08-l02", "difficulty": 2,
+      "id": "m08-q007",
+      "moduleId": "m08",
+      "lessonId": "m08-l02",
+      "difficulty": 2,
       "prompt": "Pressing start gives a single click and nothing else. What does this usually point to?",
       "options": [
-        "Not enough current reaching the starter: a weak battery or a poor connection",
-        "Air in the fuel lines",
-        "A blocked raw water strainer",
-        "A closed fuel valve"
+        "A weak battery or a poor connection to the starter",
+        "Air in the fuel lines to the injection pump",
+        "A raw water strainer blocked with weed",
+        "A fuel shut-off valve that was left closed at the tank"
       ],
       "correctIndex": 0,
       "explanation": "The click is the solenoid trying to engage. Without enough current, the starter cannot turn. Fuel and cooling faults do not stop the engine turning over.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q008", "moduleId": "m08", "lessonId": "m08-l02", "difficulty": 2,
+      "id": "m08-q008",
+      "moduleId": "m08",
+      "lessonId": "m08-l02",
+      "difficulty": 2,
       "prompt": "The engine will not start on a cold morning but starts easily later in the day. Which part is a likely suspect?",
       "options": [
         "The glow plugs or their circuit",
-        "The stern gland",
-        "The raw water impeller",
-        "The gearbox oil"
+        "The stern gland and its packing rings",
+        "The raw water pump impeller",
+        "The level of the gearbox oil"
       ],
       "correctIndex": 0,
       "explanation": "Cold starting relies on extra heat from the glow plugs. Once the air is warmer the engine manages without them, which hides the fault.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q009", "moduleId": "m08", "lessonId": "m08-l02", "difficulty": 3,
+      "id": "m08-q009",
+      "moduleId": "m08",
+      "lessonId": "m08-l02",
+      "difficulty": 3,
       "prompt": "Why can long periods of cranking be harmful on an engine with a wet exhaust?",
       "options": [
-        "The raw water pump fills the exhaust with water that is not blown out, and it can flood back into the cylinders",
-        "Cranking burns the oil in the sump",
-        "Cranking reverses the flow of fuel",
-        "The exhaust overheats while cranking"
+        "Water pumped into the exhaust is not blown out and can flood the cylinders",
+        "Cranking without firing burns off the oil in the sump",
+        "Cranking for a long time reverses the flow of fuel",
+        "The exhaust gets dangerously hot while the engine is cranking"
       ],
       "correctIndex": 0,
       "explanation": "While cranking, the pump still pushes water into the exhaust, but without running exhaust gas to expel it. The water-lock fills and water can reach the cylinders, risking serious damage.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q010", "moduleId": "m08", "lessonId": "m08-l02", "difficulty": 3,
+      "id": "m08-q010",
+      "moduleId": "m08",
+      "lessonId": "m08-l02",
+      "difficulty": 3,
       "prompt": "While cranking, the engine turns a little and then stops hard. What should you do?",
       "options": [
         "Stop cranking and get advice, because water may be in the cylinders",
-        "Crank harder with a fully charged battery",
-        "Use a starting spray",
-        "Bleed the fuel system and try again"
+        "Keep cranking, using a freshly charged battery to give more power",
+        "Use a starting spray to help it fire before it stops",
+        "Bleed the fuel system, then try cranking again straight away"
       ],
       "correctIndex": 0,
       "explanation": "Water does not compress. If a cylinder is full of it, forcing the engine round can bend a connecting rod. Stop and find out why.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q011", "moduleId": "m08", "lessonId": "m08-l03", "difficulty": 1,
+      "id": "m08-q011",
+      "moduleId": "m08",
+      "lessonId": "m08-l03",
+      "difficulty": 1,
       "prompt": "The engine slows and fades over several seconds before stopping. What is the most likely type of cause?",
       "options": [
         "A fuel supply problem",
@@ -307,33 +358,42 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q012", "moduleId": "m08", "lessonId": "m08-l03", "difficulty": 2,
+      "id": "m08-q012",
+      "moduleId": "m08",
+      "lessonId": "m08-l03",
+      "difficulty": 2,
       "prompt": "The engine runs fine in neutral but stalls as soon as you put it in gear. What should you suspect?",
       "options": [
         "Something caught round the propeller",
-        "Water in the engine oil",
-        "A faulty oil pressure switch",
-        "A flat domestic battery"
+        "A faulty oil pressure warning switch or wire",
+        "Water mixed into the engine oil",
+        "A flat domestic battery bank"
       ],
       "correctIndex": 0,
       "explanation": "In neutral the propeller is not driven. If the engine stalls only when the propeller is loaded, a rope, net or weed round it is the usual reason.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q013", "moduleId": "m08", "lessonId": "m08-l03", "difficulty": 2,
+      "id": "m08-q013",
+      "moduleId": "m08",
+      "lessonId": "m08-l03",
+      "difficulty": 2,
       "prompt": "Over a season, the boat gets slower at the same engine revs and the exhaust smokes black under load. What is a likely cause?",
       "options": [
         "A fouled hull or propeller adding load",
-        "A brand-new fuel filter",
-        "Too little gearbox oil",
-        "A loose battery isolator"
+        "A newly fitted, clean fuel filter",
+        "Slightly too little oil in the gearbox",
+        "A loose connection on the battery isolator"
       ],
       "correctIndex": 0,
       "explanation": "Growth on the hull and propeller adds drag. The engine works harder, burns more fuel than it can use cleanly, and the boat goes slower.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q014", "moduleId": "m08", "lessonId": "m08-l03", "difficulty": 3,
+      "id": "m08-q014",
+      "moduleId": "m08",
+      "lessonId": "m08-l03",
+      "difficulty": 3,
       "prompt": "The engine stops, restarts after a rest, runs for a while and stops again, with no water or dirt in the filter bowl. What might be blocked?",
       "options": [
         "The fuel tank vent",
@@ -346,25 +406,31 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q015", "moduleId": "m08", "lessonId": "m08-l03", "difficulty": 2,
-      "prompt": "After clearing a blocked fuel filter at sea, what will the engine probably need before it runs properly?",
+      "id": "m08-q015",
+      "moduleId": "m08",
+      "lessonId": "m08-l03",
+      "difficulty": 2,
+      "prompt": "After a rough passage the engine fades over a few seconds and stops. Where should you look first?",
       "options": [
-        "The fuel system bled",
-        "An oil change",
-        "A new impeller",
-        "The gearbox topped up"
+        "In the primary fuel filter bowl, for water and dirt",
+        "In the coolant header tank, to check the coolant level",
+        "At the stern gland, for a faster drip than usual",
+        "At the alternator belt, for its tension and wear"
       ],
       "correctIndex": 0,
-      "explanation": "Opening the filter lets air in. Unless the engine bleeds itself, that air has to be pushed out before the injection pump can deliver fuel.",
+      "explanation": "A fading stop points to fuel starvation, and rough water stirs up water and sediment from the bottom of the tank. The primary filter bowl shows quickly whether any has come through.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q016", "moduleId": "m08", "lessonId": "m08-l04", "difficulty": 1,
+      "id": "m08-q016",
+      "moduleId": "m08",
+      "lessonId": "m08-l04",
+      "difficulty": 1,
       "prompt": "Which two warnings mean you should stop the engine as soon as it is safe to do so?",
       "options": [
         "Low oil pressure and high temperature",
         "Low fuel and low domestic battery",
-        "Charge warning and glow plug light",
+        "Charge warning and the glow plug light",
         "Depth alarm and wind alarm"
       ],
       "correctIndex": 0,
@@ -372,7 +438,10 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q017", "moduleId": "m08", "lessonId": "m08-l04", "difficulty": 2,
+      "id": "m08-q017",
+      "moduleId": "m08",
+      "lessonId": "m08-l04",
+      "difficulty": 2,
       "prompt": "The engine is overheating but water is flowing normally from the exhaust. Which of these should you check?",
       "options": [
         "The drive belt and the coolant level",
@@ -385,7 +454,10 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q018", "moduleId": "m08", "lessonId": "m08-l04", "difficulty": 2,
+      "id": "m08-q018",
+      "moduleId": "m08",
+      "lessonId": "m08-l04",
+      "difficulty": 2,
       "prompt": "What does blue exhaust smoke usually mean?",
       "options": [
         "The engine is burning lubricating oil",
@@ -398,20 +470,26 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q019", "moduleId": "m08", "lessonId": "m08-l04", "difficulty": 3,
+      "id": "m08-q019",
+      "moduleId": "m08",
+      "lessonId": "m08-l04",
+      "difficulty": 3,
       "prompt": "The charge warning light comes on while motoring. Why should you check the drive belt straight away?",
       "options": [
-        "If the belt has broken and also drives the coolant pump, the engine will soon overheat",
-        "Because the belt also drives the fuel injection pump",
-        "Because a broken belt will cause low oil pressure",
-        "Because the belt holds the propeller shaft in place"
+        "If the belt also drives the coolant pump, the engine will soon overheat",
+        "Because on most engines the same belt drives the fuel injection pump",
+        "Because a broken belt will quickly cause low oil pressure",
+        "Because the belt helps keep the propeller shaft in line"
       ],
       "correctIndex": 0,
       "explanation": "On many engines the alternator belt also drives the coolant circulating pump. A charge warning can therefore be the first sign of an overheating problem to come.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m08-q020", "moduleId": "m08", "lessonId": "m08-l04", "difficulty": 3,
+      "id": "m08-q020",
+      "moduleId": "m08",
+      "lessonId": "m08-l04",
+      "difficulty": 3,
       "prompt": "You suspect a temperature alarm is false because the engine does not feel hot. What is the safe approach?",
       "options": [
         "Treat the alarm as real until you have proved otherwise",

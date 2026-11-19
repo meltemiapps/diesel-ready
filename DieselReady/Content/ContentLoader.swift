@@ -223,7 +223,7 @@ struct ContentRules: Sendable, Equatable {
     static let release = ContentRules(
         lessonsPerModule: 3...6,
         minQuestionsPerLesson: 3,
-        minTotalQuestions: 0,
+        minTotalQuestions: 150,
         requireEveryDifficultyPerModule: true
     )
 

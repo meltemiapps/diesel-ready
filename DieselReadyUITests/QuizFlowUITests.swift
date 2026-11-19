@@ -18,9 +18,10 @@ final class QuizFlowUITests: XCTestCase {
         snapshot(app, "1-quiz-home")
         app.buttons["Start mock test"].tap()
 
-        // Only module 1 has questions, so the shortfall is explained.
+        // The full course has well over 30 questions, so there is no shortfall notice.
+        XCTAssertTrue(app.staticTexts["Question 1 of 30"].waitForExistence(timeout: 5))
         let shortfall = app.staticTexts.containing(NSPredicate(format: "label CONTAINS 'questions are available so far'")).firstMatch
-        XCTAssertTrue(shortfall.waitForExistence(timeout: 5))
+        XCTAssertFalse(shortfall.exists)
         snapshot(app, "2-first-question")
 
         var answered = 0
@@ -45,7 +46,7 @@ final class QuizFlowUITests: XCTestCase {
             XCTAssertTrue(next.waitForExistence(timeout: 3))
             next.tap()
         }
-        XCTAssertEqual(answered, 17, "Mock test should use each of the 17 available questions once")
+        XCTAssertEqual(answered, 30, "Mock test should ask 30 questions")
 
         let score = app.staticTexts.containing(NSPredicate(format: "label BEGINSWITH 'Your score'")).firstMatch
         XCTAssertTrue(score.waitForExistence(timeout: 5))

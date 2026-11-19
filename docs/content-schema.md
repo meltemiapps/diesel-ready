@@ -39,6 +39,7 @@ platform-specific fields.
 | `caution` | string or null | Shown as a caution callout. |
 | `handsOn` | boolean | If true, the app ends the lesson with the reminder to follow the engine manufacturer's handbook. |
 | `reviewStatus` | `"draft"` or `"reviewed"` | |
+| `reviewNote` | string (optional) | What the expert reviewer should check. Never shown in the app; exported to `docs/content-review.md`. |
 
 ### Diagram
 
@@ -56,6 +57,7 @@ Known kinds and their label counts:
 | `compression-ignition` | 3 | Panels left to right: air in, compression, ignition |
 | `four-stroke-cycle` | 4 | Induction, compression, power, exhaust |
 | `engine-layout` | 7 | Numbered parts: head, injectors, block and pistons, crankshaft, sump, flywheel, injection pump |
+| `flow` | 2 to 7 | Numbered stages joined by arrows, top to bottom (for circuits and sequences) |
 
 ### Question
 
@@ -70,6 +72,7 @@ Known kinds and their label counts:
 | `correctIndex` | integer | 0-based index into `options`. Apps shuffle options when displaying them. |
 | `explanation` | string | One or two sentences. |
 | `reviewStatus` | `"draft"` or `"reviewed"` | |
+| `reviewNote` | string (optional) | What the expert reviewer should check. Never shown in the app; exported to `docs/content-review.md`. |
 
 ## `faults.json` (Fault finder tab)
 
@@ -90,25 +93,19 @@ Known kinds and their label counts:
 | `checkFirst` | string[] | At least one, in the order to do them. |
 | `lessonIds` | string[] | At least one, no duplicates. **Every id must be an existing lesson**, or loading fails. |
 | `reviewStatus` | `"draft"` or `"reviewed"` | |
+| `reviewNote` | string (optional) | What the expert reviewer should check. Never shown in the app; exported to `docs/content-review.md`. |
 
 Icons for the chips are chosen by the app from the symptom id; they are not content.
 
-### Lesson links to add in Phase 5
-
-Only module 1 exists so far, so each symptom links only to module 1 lessons.
-When the later modules are written, add these links (lesson ids to be
-decided when the lessons exist; the validator will reject any that do not):
-
-| Symptom | Add links to lessons on |
-|---|---|
-| Exhaust smoke | Module 2: injectors; Module 3: raw water circuit (steam, dry exhaust); Module 4: oil checks (overfilling); Module 6: shaft and propeller (fouling and load); Module 8: systematic approach |
-| Won't start | Module 2: bleeding the fuel system, fuel filters and water separation, diesel bug; Module 5: batteries, starter motor, glow plugs, basic electrical checks; Module 8: systematic approach |
-| Overheating | Module 3: seacock and strainer, impeller, heat exchanger, fresh water circuit and thermostat; Module 6: belt tension and inspection; Module 8: systematic approach |
-| Stops suddenly | Module 2: fuel filters, bleeding, diesel bug and tank care; Module 6: shaft and propeller; Module 8: systematic approach |
-| Low oil pressure | Module 4: oil checks, oil and filter change, oil pressure warnings; Module 5: warning lights; Module 8: systematic approach |
-| Not charging | Module 5: batteries, alternator, warning lights; Module 6: belt tension and inspection; Module 8: systematic approach |
-
 ## Validation
+
+Volume rules for the bundled course:
+
+- 3 to 6 lessons per module.
+- At least 3 questions per lesson, so "Check your knowledge" always works.
+- Every module has questions at each difficulty, 1 to 3.
+- At least 150 questions in total.
+- No two questions with the same text (ignoring case, spacing and punctuation).
 
 The iOS loader (`ContentLoader.validate`) enforces every rule above, and the
 unit tests run it against the bundled files.

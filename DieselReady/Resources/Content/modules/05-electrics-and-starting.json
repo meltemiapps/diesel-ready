@@ -79,11 +79,26 @@
         "kind": "flow",
         "caption": "A typical starting circuit. The key switch only carries a small current; the solenoid switches the heavy one.",
         "labels": [
-          { "title": "Battery and isolator", "detail": "Supply the large current the starter needs." },
-          { "title": "Key or start button", "detail": "Sends a small current to the starter solenoid." },
-          { "title": "Starter solenoid", "detail": "A heavy-duty switch that connects the battery to the starter, and pushes the starter gear into mesh." },
-          { "title": "Starter motor", "detail": "Turns the flywheel through its toothed ring." },
-          { "title": "Engine earth return", "detail": "The current returns to the battery through the engine and its earth cable." }
+          {
+            "title": "Battery and isolator",
+            "detail": "Supply the large current the starter needs."
+          },
+          {
+            "title": "Key or start button",
+            "detail": "Sends a small current to the starter solenoid."
+          },
+          {
+            "title": "Starter solenoid",
+            "detail": "A heavy-duty switch that connects the battery to the starter, and pushes the starter gear into mesh."
+          },
+          {
+            "title": "Starter motor",
+            "detail": "Turns the flywheel through its toothed ring."
+          },
+          {
+            "title": "Engine earth return",
+            "detail": "The current returns to the battery through the engine and its earth cable."
+          }
         ],
         "description": "A flow diagram of the starting circuit in five stages: the battery and isolator, the key or start button, the starter solenoid, the starter motor turning the flywheel, and the earth return to the battery."
       },
@@ -185,12 +200,15 @@
   ],
   "questions": [
     {
-      "id": "m05-q001", "moduleId": "m05", "lessonId": "m05-l01", "difficulty": 1,
+      "id": "m05-q001",
+      "moduleId": "m05",
+      "lessonId": "m05-l01",
+      "difficulty": 1,
       "prompt": "Why do many boats keep a separate battery just for starting the engine?",
       "options": [
         "So that using lights and equipment cannot leave you unable to start",
         "Because the engine needs two batteries to turn over",
-        "Because domestic batteries cannot be charged by the engine",
+        "Because domestic batteries cannot be charged by the engine's alternator",
         "So the engine can run without an alternator"
       ],
       "correctIndex": 0,
@@ -198,39 +216,48 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q002", "moduleId": "m05", "lessonId": "m05-l01", "difficulty": 2,
+      "id": "m05-q002",
+      "moduleId": "m05",
+      "lessonId": "m05-l01",
+      "difficulty": 2,
       "prompt": "The battery is fully charged but the starter only clicks. What should you check first?",
       "options": [
         "That the battery terminals are clean and tight",
-        "The engine oil level",
-        "The raw water strainer",
-        "The propeller for fouling"
+        "That the engine oil level is not too high",
+        "That the raw water strainer basket is clear of weed",
+        "That nothing is caught round the propeller"
       ],
       "correctIndex": 0,
       "explanation": "A loose or corroded terminal cannot pass the heavy starting current, even from a good battery, so it behaves like a flat one.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q003", "moduleId": "m05", "lessonId": "m05-l01", "difficulty": 2,
+      "id": "m05-q003",
+      "moduleId": "m05",
+      "lessonId": "m05-l01",
+      "difficulty": 2,
       "prompt": "Why is a voltmeter reading of a battery's state of charge best taken after it has rested?",
       "options": [
-        "Charging or heavy use temporarily raises or lowers the voltage, giving a misleading reading",
-        "Batteries only show a voltage when completely cold",
-        "The meter needs time to charge from the battery",
-        "Resting the battery removes the acid"
+        "Recent charging or heavy use shifts the voltage, giving a misleading reading",
+        "The meter needs time to charge itself up from the battery first",
+        "A battery gives no voltage reading at all while it is in use",
+        "Resting lets any gas escape so the meter can make contact"
       ],
       "correctIndex": 0,
       "explanation": "Just after charging the voltage is higher than the true state of charge, and under load it is lower. After a rest it settles to a value that better reflects the charge.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q004", "moduleId": "m05", "lessonId": "m05-l01", "difficulty": 3,
+      "id": "m05-q004",
+      "moduleId": "m05",
+      "lessonId": "m05-l01",
+      "difficulty": 3,
       "prompt": "Why must you keep sparks and flames away from batteries that are being charged?",
       "options": [
         "Charging can give off hydrogen gas, which is explosive",
-        "Sparks drain the battery's charge",
-        "Heat makes the battery charge too quickly",
-        "Flames turn the electrolyte into diesel"
+        "Sparks near the terminals drain the battery's charge",
+        "Heat from a flame makes the battery charge far too quickly",
+        "Flames make the battery switch to discharging"
       ],
       "correctIndex": 0,
       "explanation": "Many batteries release hydrogen while charging. In a poorly ventilated locker, a spark from a loose connection or a dropped tool can ignite it.",
@@ -238,12 +265,15 @@
       "reviewNote": "Applies mainly to lead-acid types; confirm wording."
     },
     {
-      "id": "m05-q005", "moduleId": "m05", "lessonId": "m05-l02", "difficulty": 1,
+      "id": "m05-q005",
+      "moduleId": "m05",
+      "lessonId": "m05-l02",
+      "difficulty": 1,
       "prompt": "What drives the alternator?",
       "options": [
         "A belt from the engine's crankshaft pulley",
         "The battery",
-        "The propeller shaft through the gearbox",
+        "The propeller shaft, through the gearbox",
         "The raw water flow"
       ],
       "correctIndex": 0,
@@ -251,102 +281,126 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q006", "moduleId": "m05", "lessonId": "m05-l02", "difficulty": 1,
+      "id": "m05-q006",
+      "moduleId": "m05",
+      "lessonId": "m05-l02",
+      "difficulty": 1,
       "prompt": "The charge warning light stays on after the engine has started. What does this mean?",
       "options": [
         "The alternator is not charging the batteries",
-        "The batteries are fully charged",
-        "The engine is overheating",
-        "The oil needs changing"
+        "The batteries are fully charged and now resting",
+        "The engine coolant is starting to overheat",
+        "The engine oil is due to be changed"
       ],
       "correctIndex": 0,
       "explanation": "The charge light should go out once the alternator starts producing power. If it stays on, check the belt and connections; see Not charging in the Fault finder.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q007", "moduleId": "m05", "lessonId": "m05-l02", "difficulty": 2,
+      "id": "m05-q007",
+      "moduleId": "m05",
+      "lessonId": "m05-l02",
+      "difficulty": 2,
       "prompt": "What is the regulator's job?",
       "options": [
-        "Controlling the charging voltage so the batteries are not overcharged",
-        "Controlling the engine speed",
-        "Switching the starter motor on",
-        "Measuring the oil pressure"
+        "Controlling the charging voltage to avoid overcharging",
+        "Keeping the engine speed steady as the load changes",
+        "Switching the starter motor on when you turn the key to start",
+        "Measuring the oil pressure and lighting the warning"
       ],
       "correctIndex": 0,
       "explanation": "Without regulation the alternator's output would rise with engine speed and could damage the batteries. The regulator holds the voltage at a safe charging level.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q008", "moduleId": "m05", "lessonId": "m05-l02", "difficulty": 3,
+      "id": "m05-q008",
+      "moduleId": "m05",
+      "lessonId": "m05-l02",
+      "difficulty": 3,
       "prompt": "Why should you not normally switch off the battery isolator while the engine is running?",
       "options": [
-        "Suddenly disconnecting the battery can damage the alternator's electronics",
-        "The engine will immediately stop",
-        "It will discharge the batteries",
-        "It locks the gearbox in gear"
+        "Cutting off the battery can damage the alternator's electronics",
+        "The engine will stop at once without battery power",
+        "It drains the batteries back through the alternator instead",
+        "It locks the gearbox in whatever gear is selected"
       ],
       "correctIndex": 0,
       "explanation": "With the battery disconnected, the alternator's output has nowhere to go and the voltage can spike, damaging its diodes or regulator. A diesel keeps running without the battery.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q009", "moduleId": "m05", "lessonId": "m05-l03", "difficulty": 1,
+      "id": "m05-q009",
+      "moduleId": "m05",
+      "lessonId": "m05-l03",
+      "difficulty": 1,
       "prompt": "What does the starter motor turn to start the engine?",
       "options": [
         "The flywheel, through its toothed ring",
-        "The camshaft directly",
-        "The propeller shaft",
-        "The raw water pump"
+        "The camshaft, through its drive chain",
+        "The propeller shaft, through the gearbox",
+        "The crankshaft pulley, through the belt"
       ],
       "correctIndex": 0,
       "explanation": "The starter's small gear meshes with the teeth around the flywheel, which is bolted to the crankshaft, and turns the engine over.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q010", "moduleId": "m05", "lessonId": "m05-l03", "difficulty": 2,
+      "id": "m05-q010",
+      "moduleId": "m05",
+      "lessonId": "m05-l03",
+      "difficulty": 2,
       "prompt": "Why is a solenoid used in the starting circuit?",
       "options": [
-        "So a small current from the key can switch the very large current the starter needs",
-        "To store electricity for the next start",
-        "To heat the air in the cylinders",
-        "To charge the battery while starting"
+        "So the key's small current can switch the starter's large one",
+        "To store a charge of electricity, ready for the next start",
+        "To heat the air in the cylinders before starting",
+        "To charge the battery while the engine is cranking"
       ],
       "correctIndex": 0,
       "explanation": "The starter draws far more current than a key switch could handle. The solenoid is a heavy-duty switch that the key operates with a small current.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q011", "moduleId": "m05", "lessonId": "m05-l03", "difficulty": 2,
+      "id": "m05-q011",
+      "moduleId": "m05",
+      "lessonId": "m05-l03",
+      "difficulty": 2,
       "prompt": "When you press the start button, nothing happens at all, not even a click. Which of these is the most likely cause?",
       "options": [
         "The battery isolator is off or the gear lever is not in neutral",
-        "Air in the fuel system",
-        "A blocked raw water strainer",
-        "Low engine oil"
+        "Air has been drawn into the fuel system through a loose joint",
+        "The raw water strainer is blocked with weed and debris",
+        "The engine oil level is below the minimum mark"
       ],
       "correctIndex": 0,
       "explanation": "Complete silence means no current is reaching the solenoid. Fuel, cooling and oil problems do not stop the starter turning.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q012", "moduleId": "m05", "lessonId": "m05-l03", "difficulty": 3,
+      "id": "m05-q012",
+      "moduleId": "m05",
+      "lessonId": "m05-l03",
+      "difficulty": 3,
       "prompt": "The battery is good and its terminals are clean, but the starter turns slowly. Which connection is often overlooked?",
       "options": [
         "The engine earth cable between the engine and the battery",
-        "The fuel tank vent",
-        "The coolant header tank cap",
-        "The stern gland"
+        "The fuel tank vent pipe and its through-hull fitting on the side",
+        "The pressure cap on the coolant header tank",
+        "The coupling between the gearbox and the shaft"
       ],
       "correctIndex": 0,
       "explanation": "Starting current returns to the battery through the engine and its earth cable. Corrosion there adds resistance and slows the starter just like a weak battery.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q013", "moduleId": "m05", "lessonId": "m05-l04", "difficulty": 1,
+      "id": "m05-q013",
+      "moduleId": "m05",
+      "lessonId": "m05-l04",
+      "difficulty": 1,
       "prompt": "What does a glow plug do?",
       "options": [
         "Heats the combustion chamber to help a cold engine start",
-        "Creates a spark to light the fuel while running",
+        "Creates a spark to light the fuel while the engine is running",
         "Lights the engine space",
         "Warms the engine oil in the sump"
       ],
@@ -355,46 +409,58 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q014", "moduleId": "m05", "lessonId": "m05-l04", "difficulty": 2,
+      "id": "m05-q014",
+      "moduleId": "m05",
+      "lessonId": "m05-l04",
+      "difficulty": 2,
       "prompt": "Why does a diesel engine find it harder to start on a cold day?",
       "options": [
-        "The cold metal absorbs the heat of compression, so the air may not get hot enough to light the fuel",
-        "Cold air contains no oxygen",
-        "The starter motor only works in warm weather",
-        "Diesel will not flow below room temperature"
+        "Cold metal soaks up the compression heat, so the air may not get hot enough",
+        "Cold air holds too little oxygen for the fuel to burn",
+        "The starter motor is designed to work only in warm weather",
+        "Diesel stops flowing as soon as it drops below room temperature"
       ],
       "correctIndex": 0,
       "explanation": "Compression ignition depends on the air getting very hot. A cold block and head draw heat out of the air, which is why pre-heating helps.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q015", "moduleId": "m05", "lessonId": "m05-l04", "difficulty": 2,
+      "id": "m05-q015",
+      "moduleId": "m05",
+      "lessonId": "m05-l04",
+      "difficulty": 2,
       "prompt": "An engine is hard to start from cold and smokes white for a minute, then runs well and restarts easily when warm. What is a likely cause?",
       "options": [
         "A failed glow plug or a fault in the glow plug circuit",
-        "A blocked raw water strainer",
-        "A slipping alternator belt",
-        "Too much oil in the sump"
+        "A raw water strainer partly blocked with weed",
+        "An alternator belt that is slipping on its drive pulley",
+        "Too much oil in the sump after an oil change"
       ],
       "correctIndex": 0,
       "explanation": "These are classic signs of poor cold starting. Once warm, the engine does not need the glow plugs, so it runs and restarts normally.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q016", "moduleId": "m05", "lessonId": "m05-l04", "difficulty": 3,
+      "id": "m05-q016",
+      "moduleId": "m05",
+      "lessonId": "m05-l04",
+      "difficulty": 3,
       "prompt": "Why can aerosol starting sprays be dangerous in an engine with glow plugs?",
       "options": [
-        "The vapour can ignite too early on the hot plugs and cause serious damage",
-        "The spray blocks the fuel filter",
-        "The spray flattens the battery",
-        "The spray freezes the glow plugs"
+        "The vapour can ignite early on the hot plugs and damage the engine",
+        "The spray gets into the fuel and blocks the fine filter",
+        "The spray stops the alternator charging the battery",
+        "The spray chills the glow plugs so they stop heating"
       ],
       "correctIndex": 0,
       "explanation": "Starting spray is highly flammable. Lit by a hot glow plug or intake heater before the piston is in position, it can cause violent combustion that damages the engine. Only use it if the handbook allows.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q017", "moduleId": "m05", "lessonId": "m05-l05", "difficulty": 1,
+      "id": "m05-q017",
+      "moduleId": "m05",
+      "lessonId": "m05-l05",
+      "difficulty": 1,
       "prompt": "When you switch on before starting, which lights would you normally expect to come on?",
       "options": [
         "The oil pressure and charge warning lights",
@@ -407,7 +473,10 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q018", "moduleId": "m05", "lessonId": "m05-l05", "difficulty": 2,
+      "id": "m05-q018",
+      "moduleId": "m05",
+      "lessonId": "m05-l05",
+      "difficulty": 2,
       "prompt": "When disconnecting a battery, which lead should you take off first?",
       "options": [
         "The negative lead",
@@ -420,26 +489,32 @@
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q019", "moduleId": "m05", "lessonId": "m05-l05", "difficulty": 2,
+      "id": "m05-q019",
+      "moduleId": "m05",
+      "lessonId": "m05-l05",
+      "difficulty": 2,
       "prompt": "The whole engine panel is dead when you turn the key. What should you check early on?",
       "options": [
         "The battery isolator and the panel's fuse or circuit breaker",
-        "The engine oil level",
-        "The fuel filter",
-        "The impeller"
+        "The engine oil level, in case the panel has shut off",
+        "The fuel filter, in case it is blocked with sludge",
+        "The raw water impeller, in case its vanes have broken off"
       ],
       "correctIndex": 0,
       "explanation": "If nothing at all lights, power is not reaching the panel. The isolator, fuse or breaker are the simplest things that cut it off.",
       "reviewStatus": "draft"
     },
     {
-      "id": "m05-q020", "moduleId": "m05", "lessonId": "m05-l05", "difficulty": 3,
+      "id": "m05-q020",
+      "moduleId": "m05",
+      "lessonId": "m05-l05",
+      "difficulty": 3,
       "prompt": "Why should you remove metal rings and watches before working near the batteries?",
       "options": [
-        "A short circuit through the metal can heat it enough to cause severe burns",
-        "Metal jewellery drains the battery",
-        "They interfere with the voltmeter reading",
-        "They attract corrosion to the terminals"
+        "A short circuit through the metal can heat it and cause severe burns",
+        "Metal jewellery near the terminals slowly drains the battery's charge",
+        "They interfere with the multimeter's voltage readings",
+        "They attract corrosion onto the battery terminals"
       ],
       "correctIndex": 0,
       "explanation": "A battery can deliver a very large current. If a ring bridges a live terminal and earth, it heats almost instantly and can burn deeply.",

@@ -7,7 +7,7 @@ made by [Meltemi Apps](https://meltemiapps.co.uk), an independent app studio.
 - Website: https://meltemiapps.co.uk/diesel-ready/
 - App Store: link to follow at release
 
-> **Status:** in development (Phase 4, fault finder). All lesson and quiz content is
+> **Status:** in development (Phase 5, full content). All lesson and quiz content is
 > marked `"reviewStatus": "draft"` until it has been reviewed by a qualified
 > marine engineer.
 
@@ -72,12 +72,24 @@ DieselReady/
     Content/         Bundled JSON content (CC BY-NC-SA 4.0)
     PrivacyInfo.xcprivacy
 DieselReadyTests/    Unit tests (Swift Testing)
-DieselReadyUITests/  UI test that runs a mock test end to end
-docs/                Content schema and, later, store metadata and web pages
+DieselReadyUITests/  UI tests: a mock test end to end, and every Fault finder symptom
+docs/                Content schema, content review pack and, later, store metadata
+scripts/             Developer tools (standard-library Python, not part of the app)
 ```
 
 Content is plain, platform-neutral JSON so the planned Android version can read
 the same files unchanged. See [docs/content-schema.md](docs/content-schema.md).
+
+### Content review
+
+[docs/content-review.md](docs/content-review.md) is a readable export of every
+lesson, question and Fault finder entry, with all review notes highlighted, for
+sign-off by a qualified marine engineer. Regenerate it after any content change:
+
+```sh
+python3 scripts/export-content-review.py          # rewrite the pack
+python3 scripts/export-content-review.py --check  # fail if it is out of date
+```
 
 ## Contributing
 

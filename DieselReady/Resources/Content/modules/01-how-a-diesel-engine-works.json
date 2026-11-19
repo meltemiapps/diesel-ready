@@ -245,7 +245,7 @@
       "prompt": "What does moving the throttle lever on a diesel engine actually change?",
       "options": [
         "The amount of fuel injected into each cylinder",
-        "How far a valve in the air intake opens",
+        "How far a butterfly valve in the air intake is opened",
         "The timing of the spark",
         "The flow of raw cooling water"
       ],
@@ -261,9 +261,9 @@
       "prompt": "Why does a diesel engine need a high compression ratio?",
       "options": [
         "To heat the air enough to ignite the fuel",
-        "To keep the cylinders cool",
-        "To raise the oil pressure",
-        "To make the exhaust quieter"
+        "To keep the cylinders cool while the engine is running",
+        "To raise the engine's oil pressure",
+        "To make the exhaust note quieter"
       ],
       "correctIndex": 0,
       "explanation": "The air must be squeezed hard to reach a temperature well above the point at which diesel fuel ignites on its own.",
@@ -279,7 +279,7 @@
         "About 15:1 to 23:1",
         "About 4:1 to 6:1",
         "About 8:1 to 10:1",
-        "About 40:1 to 50:1"
+        "About 40:1 to 50:1 or higher"
       ],
       "correctIndex": 0,
       "explanation": "Small diesels typically compress the air to between about a fifteenth and a twenty-third of its volume. Ratios near 8:1 to 10:1 are more typical of petrol engines.",
@@ -294,7 +294,7 @@
       "prompt": "What is the correct order of the four strokes?",
       "options": [
         "Induction, compression, power, exhaust",
-        "Compression, induction, exhaust, power",
+        "Compression, induction, exhaust, then power",
         "Induction, power, compression, exhaust",
         "Power, induction, exhaust, compression"
       ],
@@ -326,7 +326,7 @@
       "prompt": "When is fuel injected into the cylinder?",
       "options": [
         "Near the end of the compression stroke",
-        "At the start of the induction stroke",
+        "At the very start of the induction stroke",
         "During the exhaust stroke",
         "At the bottom of the power stroke"
       ],
@@ -389,10 +389,10 @@
       "difficulty": 2,
       "prompt": "What is the job of the fuel injection pump?",
       "options": [
-        "To deliver a measured amount of fuel at high pressure to each injector at the right time",
-        "To lift fuel from the tank to the primary filter",
-        "To return unused fuel to the tank",
-        "To separate water from the fuel"
+        "To deliver fuel at high pressure to each injector at the right time",
+        "To lift fuel from the tank up to the primary filter",
+        "To send unused fuel from the injectors back to the tank",
+        "To separate any water from the fuel before the filters"
       ],
       "correctIndex": 0,
       "explanation": "The injection pump meters, pressurises and times the fuel for each cylinder. Lifting fuel from the tank is the lift pump's job.",
@@ -423,7 +423,7 @@
       "options": [
         "Smoothing out the pulses from each power stroke",
         "Pumping oil round the engine",
-        "Driving the raw water pump through a belt",
+        "Driving the raw water pump through a toothed belt",
         "Charging the batteries"
       ],
       "correctIndex": 0,
@@ -438,7 +438,7 @@
       "prompt": "What seals the joint between the cylinder head and the cylinder block?",
       "options": [
         "The head gasket",
-        "The stern gland",
+        "The rocker cover seal",
         "The impeller",
         "The thermostat"
       ],
@@ -455,7 +455,7 @@
       "options": [
         "Make sure the engine is stopped and cannot be started",
         "Run the engine so you can hear where each part is",
-        "Close the fuel tank valve and bleed the fuel system",
+        "Close the fuel tank valve and then bleed the fuel system",
         "Remove the drive belts"
       ],
       "correctIndex": 0,
@@ -469,10 +469,10 @@
       "difficulty": 2,
       "prompt": "Why is it worth knowing exactly where the raw water seacock is before you need it?",
       "options": [
-        "So you can close it quickly if a cooling hose fails or before working on the raw water circuit",
-        "So you can open it to add coolant",
-        "Because it is where you check the gearbox oil",
-        "Because it must be closed before starting the engine"
+        "So you can close it fast if a hose fails, or before working on the circuit",
+        "So you can open it to top up the engine's coolant",
+        "Because the gearbox oil level is checked beside it",
+        "Because it must always be closed before you start the engine"
       ],
       "correctIndex": 0,
       "explanation": "The seacock lets sea water into the engine's cooling circuit. Being able to shut it fast can stop a leak becoming a flood.",
@@ -503,7 +503,7 @@
       "options": [
         "The air is not squeezed enough to get hot enough to ignite the fuel",
         "The injectors cannot open without full compression",
-        "The starter motor is designed to stop if compression is low",
+        "The starter motor is designed to cut out whenever compression is low",
         "Low compression lets too much oil reach the fuel"
       ],
       "correctIndex": 0,
@@ -518,9 +518,9 @@
       "prompt": "When you trace the fuel line on your own engine, what are you most likely to find between the tank and the engine-mounted filter?",
       "options": [
         "A primary filter, often with a water trap",
-        "The raw water strainer",
-        "The heat exchanger",
-        "The oil filter"
+        "The raw water strainer and its removable basket",
+        "The heat exchanger and header tank",
+        "The engine oil filter"
       ],
       "correctIndex": 0,
       "explanation": "Fuel usually passes through a primary filter with a water trap before it reaches the finer filter on the engine. The strainer, heat exchanger and oil filter belong to the cooling and lubrication systems.",
@@ -535,7 +535,7 @@
       "prompt": "Why is it useful to keep labelled photos or a sketch of your engine on board?",
       "options": [
         "So you can find parts quickly when something goes wrong",
-        "Because it is a legal requirement for all boats",
+        "Because it is a legal requirement for all boats with engines",
         "So the engine warranty stays valid",
         "Because the engine will not start without them"
       ],

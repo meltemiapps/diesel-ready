@@ -27,6 +27,21 @@ struct ContentLoaderTests {
         }
     }
 
+    @Test("Bundled course meets the release volume rules")
+    func bundledVolume() throws {
+        let library = try ContentLoader.bundled(.main).load()
+        #expect(library.modules.count == 8)
+        #expect(library.allQuestions.count >= 150)
+        #expect(ContentLoader.validate(library, rules: .release).isEmpty)
+        for module in library.modules {
+            #expect(Set(module.questions.map(\.difficulty)) == [1, 2, 3], "\(module.id) difficulty spread")
+        }
+        // Review notes, where present, are real sentences.
+        let notes = library.allLessons.compactMap(\.reviewNote) + library.allQuestions.compactMap(\.reviewNote)
+        #expect(!notes.isEmpty)
+        #expect(notes.allSatisfy { $0.count > 10 })
+    }
+
     // MARK: Volume rules
 
     private static func lesson(_ id: String) -> Lesson {

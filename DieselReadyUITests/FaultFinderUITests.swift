@@ -25,7 +25,8 @@ final class FaultFinderUITests: XCTestCase {
             XCTAssertTrue(chip.waitForExistence(timeout: 3), "chip \(name)")
             scrollToTop(app)
             chip.tap()
-            XCTAssertTrue(chip.isSelected, "\(name) chip should be selected")
+            let selected = expectation(for: NSPredicate(format: "isSelected == true"), evaluatedWith: chip)
+            wait(for: [selected], timeout: 3)
 
             let heading = app.staticTexts.matching(NSPredicate(format: "label == %@", name))
                 .matching(NSPredicate(format: "elementType == %d", XCUIElement.ElementType.staticText.rawValue))
@@ -52,25 +53,30 @@ final class FaultFinderUITests: XCTestCase {
             if index == 0 { snapshot(app, "faults-1b-end") }
         }
 
-        // Follow a lesson link from the last symptom into the reader and back.
-        let link = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Module 1, lesson'")).firstMatch
+        // Follow the last lesson link of the last symptom (on screen beside the reminder) and come back.
+        let links = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Module '"))
+        XCTAssertGreaterThan(links.count, 1, "Not charging should link to several lessons")
+        let link = links.element(boundBy: links.count - 1)
         scrollUntilVisible(link, in: app)
         XCTAssertTrue(link.isHittable)
+        let moduleNumber = link.label.split(separator: ",").first.map(String.init) ?? "Module"
         link.tap()
-        XCTAssertTrue(app.navigationBars["Module 1"].waitForExistence(timeout: 5))
+        let reader = app.navigationBars[moduleNumber]
+        XCTAssertTrue(reader.waitForExistence(timeout: 5), "Lesson reader for \(moduleNumber)")
         snapshot(app, "faults-7-lesson")
-        app.navigationBars["Module 1"].buttons.firstMatch.tap()
+        reader.buttons.firstMatch.tap()
         XCTAssertTrue(app.navigationBars["Fault finder"].waitForExistence(timeout: 3))
     }
 
     @MainActor
     private func scrollToTop(_ app: XCUIApplication) {
-        app.statusBars.firstMatch.exists ? app.statusBars.firstMatch.tap() : ()
         var tries = 0
-        while !app.buttons["Exhaust smoke"].isHittable && tries < 10 {
-            app.swipeDown()
+        while !app.buttons["Exhaust smoke"].isHittable && tries < 15 {
+            app.swipeDown(velocity: .fast)
             tries += 1
         }
+        // Let any scroll deceleration finish, or the next tap only stops the scroll.
+        Thread.sleep(forTimeInterval: 0.8)
     }
 
     @MainActor

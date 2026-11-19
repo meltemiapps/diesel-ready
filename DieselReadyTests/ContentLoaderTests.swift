@@ -91,7 +91,7 @@ struct ContentLoaderTests {
     }
 }
 
-private extension ContentLoader {
+extension ContentLoader {
     static func inMemory(_ files: [String: String]) -> ContentLoader {
         ContentLoader { path in
             guard let text = files[path] else { throw LoadError.missingFile(path) }

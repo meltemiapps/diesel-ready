@@ -52,7 +52,7 @@ struct LearnView: View {
 
 /// Resolves a route id to its content. Shows a message if the id no longer
 /// exists (for example after a content update removed a lesson).
-private struct LearnDestination: View {
+struct LearnDestination: View {
     @Environment(ContentStore.self) private var content
     let route: AppNavigation.LearnRoute
 

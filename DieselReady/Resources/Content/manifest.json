@@ -2,5 +2,6 @@
   "schemaVersion": 1,
   "modules": [
     "01-how-a-diesel-engine-works.json"
-  ]
+  ],
+  "faults": "faults.json"
 }

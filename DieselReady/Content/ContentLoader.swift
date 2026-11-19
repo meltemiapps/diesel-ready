@@ -51,7 +51,8 @@ struct ContentLoader: Sendable {
             throw LoadError.unsupportedSchema(manifest.schemaVersion)
         }
         let modules: [Module] = try manifest.modules.map { try decode("modules/\($0)") }
-        let library = ContentLibrary(schemaVersion: manifest.schemaVersion, modules: modules)
+        let faults: FaultGuide? = try manifest.faults.map { try decode($0) }
+        let library = ContentLibrary(schemaVersion: manifest.schemaVersion, modules: modules, faults: faults)
 
         let problems = Self.validate(library)
         guard problems.isEmpty else { throw LoadError.invalid(problems) }
@@ -126,6 +127,47 @@ struct ContentLoader: Sendable {
                     problems.append("\(question.id): difficulty \(question.difficulty) not in 1...3")
                 }
             }
+        }
+
+        if let faults = library.faults {
+            problems += validate(faults, lessonIDs: Set(library.allLessons.map(\.id)))
+        }
+        return problems
+    }
+
+    /// Fault finder checks, including that every lesson link resolves.
+    static func validate(_ faults: FaultGuide, lessonIDs: Set<Lesson.ID>) -> [String] {
+        var problems: [String] = []
+        var seen = Set<String>()
+
+        if faults.reminder.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            problems.append("faults: reminder is empty")
+        }
+        for symptom in faults.symptoms {
+            let id = symptom.id
+            if !seen.insert(id).inserted { problems.append("faults: duplicate symptom id \(id)") }
+            if symptom.causes.isEmpty { problems.append("\(id): has no causes") }
+            if symptom.checkFirst.isEmpty { problems.append("\(id): has nothing to check first") }
+            if symptom.lessonIds.isEmpty { problems.append("\(id): links to no lessons") }
+            for lessonID in symptom.lessonIds where !lessonIDs.contains(lessonID) {
+                problems.append("\(id): links to unknown lesson \(lessonID)")
+            }
+            if Set(symptom.lessonIds).count != symptom.lessonIds.count {
+                problems.append("\(id): links to the same lesson twice")
+            }
+            if FaultGuide.stopFirstSymptomIDs.contains(id) {
+                if let stop = symptom.stopFirst {
+                    if stop.title != FaultGuide.stopFirstTitle {
+                        problems.append("\(id): stopFirst title must be \"\(FaultGuide.stopFirstTitle)\"")
+                    }
+                    if stop.text.isEmpty { problems.append("\(id): stopFirst text is empty") }
+                } else {
+                    problems.append("\(id): must start with a stopFirst instruction")
+                }
+            }
+        }
+        for missing in FaultGuide.requiredSymptomIDs.subtracting(seen).sorted() {
+            problems.append("faults: missing symptom \(missing)")
         }
         return problems
     }

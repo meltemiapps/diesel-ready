@@ -1,0 +1,247 @@
+{
+  "intro": "Pick the symptom that best matches what you are seeing. Causes are listed with the most likely first, followed by what to check before anything else.",
+  "reminder": "This is general guidance only. Engines differ, so follow your engine manufacturer's handbook, and if you are unsure or the fault comes back, ask a qualified marine engineer to look at it.",
+  "symptoms": [
+    {
+      "id": "exhaust-smoke",
+      "title": "Exhaust smoke",
+      "summary": "The colour of the smoke is your best clue. A puff of smoke on a cold start is normal; heavy smoke, or smoke that does not clear, is telling you something.",
+      "stopFirst": null,
+      "causes": [
+        {
+          "title": "White smoke on a cold start that clears",
+          "detail": "Some fuel does not burn fully until the cylinders warm up, especially in cold weather or if a glow plug is weak. If it clears within a minute or two it is usually nothing to worry about."
+        },
+        {
+          "title": "Black smoke, mainly under load",
+          "detail": "There is more fuel than the air can burn. Common reasons are a dirty air filter, a blocked air intake, or an engine working too hard because of a fouled hull, a fouled propeller or rope round the shaft. A worn injector can do the same."
+        },
+        {
+          "title": "White smoke or steam with little water coming out",
+          "detail": "If the exhaust is dry or spitting rather than flowing, the cooling water is not getting through and the hot exhaust is turning what little there is into steam. Treat this as overheating."
+        },
+        {
+          "title": "Blue smoke",
+          "detail": "The engine is burning its own lubricating oil. It may have been overfilled, or it may have worn piston rings or valve guides. Long periods of idling with little load make it worse."
+        },
+        {
+          "title": "White smoke that stays when the engine is warm",
+          "detail": "Less common but serious: coolant may be getting into a cylinder, for example through a failed head gasket. Look for the coolant level dropping with no visible leak."
+        }
+      ],
+      "checkFirst": [
+        "Note the colour, and whether the smoke appears on a cold start, at idle or only when you open the throttle.",
+        "Check that cooling water is coming out of the exhaust as it normally does. If the flow is weak or missing, go to Overheating.",
+        "Check the air filter and make sure nothing is blocking the engine's air intake.",
+        "With the engine stopped, check the oil level on the dipstick. An overfilled engine can burn the extra oil and smoke blue.",
+        "Think about load: a dirty hull, a fouled propeller or something round the shaft all make the engine work harder."
+      ],
+      "lessonIds": ["m01-l01", "m01-l02"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "wont-start",
+      "title": "Won't start",
+      "summary": "Split the problem in two. Either the engine does not turn over when you press start, or it turns over but does not fire.",
+      "stopFirst": null,
+      "causes": [
+        {
+          "title": "Flat or weak battery, or a poor connection",
+          "detail": "The starter turns slowly, clicks or does nothing. Loose or corroded terminals give exactly the same symptoms as a flat battery."
+        },
+        {
+          "title": "A control left in the wrong position",
+          "detail": "The stop control not pushed fully home, the gear lever out of neutral, or the battery isolator or key switch off. Easy to miss and quick to put right."
+        },
+        {
+          "title": "Air in the fuel",
+          "detail": "Running low on fuel, changing a filter or a loose fuel connection can let air in. The engine turns over normally but will not fire, or fires briefly and dies."
+        },
+        {
+          "title": "No fuel reaching the engine",
+          "detail": "An empty tank, a closed fuel valve or a blocked filter. Water or sludge in the tank can block a filter very quickly."
+        },
+        {
+          "title": "Not enough heat to light the fuel",
+          "detail": "A diesel lights its fuel with the heat of compression. In cold weather it relies on its cold-start aid, usually glow plugs. Failed glow plugs, or not pre-heating for long enough, can stop it firing."
+        },
+        {
+          "title": "Water in the cylinders",
+          "detail": "Less common but serious. If the engine turns a little and then stops hard, water may have flooded back from the exhaust after a lot of cranking. Stop trying and get advice, because forcing it can bend internal parts."
+        }
+      ],
+      "checkFirst": [
+        "Gear lever in neutral, stop control pushed fully in, battery isolator and key switch on.",
+        "Listen when you press start. Nothing at all, a single click, slow turning and normal turning each point to different causes.",
+        "If it turns slowly or just clicks, check the battery and make sure its terminals are clean and tight.",
+        "If it turns normally but will not fire, check there is fuel in the tank, the fuel valve is open and there is no water in the filter bowl.",
+        "Crank in short bursts of no more than about 15 seconds, with a rest between them. On an engine with a wet exhaust, repeated cranking can fill the exhaust with water, so check your handbook for when to close the raw water seacock and remember to open it again as soon as the engine runs."
+      ],
+      "lessonIds": ["m01-l01", "m01-l03", "m01-l04"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "overheating",
+      "title": "Overheating",
+      "summary": "A high temperature reading, an overheat alarm, steam in the exhaust or a dry exhaust all mean the engine is not being cooled properly.",
+      "stopFirst": {
+        "title": "Stop the engine",
+        "text": "Stop the engine as soon as it is safe to do so, taking it out of gear first. Running an overheating engine can quickly cause serious damage, such as a warped cylinder head or a seized engine. Before you lose propulsion, make sure the boat is safe: sail, anchor or arrange a tow if you need to."
+      },
+      "causes": [
+        {
+          "title": "Blocked raw water intake or strainer",
+          "detail": "Weed, a plastic bag or debris over the hull inlet or packed into the strainer stops the cooling water. This is the most common cause."
+        },
+        {
+          "title": "Raw water seacock closed",
+          "detail": "Often left closed after maintenance, after the boat has been laid up, or after a crew member closed it for safety."
+        },
+        {
+          "title": "Worn or broken water pump impeller",
+          "detail": "The rubber vanes of the raw water pump wear, crack and break off, particularly if the pump has run dry. Broken pieces can lodge further along the system."
+        },
+        {
+          "title": "Slipping or broken drive belt",
+          "detail": "On many engines the belt also drives the fresh water (coolant) pump. A squeal, or a battery that stops charging at the same time, are clues."
+        },
+        {
+          "title": "Low coolant in the fresh water circuit",
+          "detail": "On engines with a closed coolant circuit, a leaking hose, pump seal or cap lets the level fall until the engine overheats."
+        },
+        {
+          "title": "Stuck thermostat or blocked heat exchanger",
+          "detail": "Less common. A thermostat that stays closed, or a heat exchanger furred with scale or blocked by impeller pieces, stops heat being carried away."
+        }
+      ],
+      "checkFirst": [
+        "Never remove the pressure cap on the coolant system while the engine is hot. Hot coolant can spray out and scald you. Wait until it has cooled.",
+        "Look at the exhaust. Little or no water coming out points to the raw water side: intake, seacock, strainer or impeller.",
+        "Check the raw water seacock is open, then close it before opening the strainer to clear it.",
+        "Check the drive belt is in place, undamaged and tight.",
+        "Once the engine has cooled, check the coolant level in the header tank.",
+        "If all of those are fine, inspect the impeller. If any vanes are missing, find the pieces before you run the engine again."
+      ],
+      "lessonIds": ["m01-l03", "m01-l04"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "stops-suddenly",
+      "title": "Stops suddenly",
+      "summary": "An engine that stops by itself is most often starved of fuel or air, or stalled by something round the propeller. How it stopped tells you where to look.",
+      "stopFirst": null,
+      "causes": [
+        {
+          "title": "Blocked fuel filter",
+          "detail": "Rough weather stirs up water, sediment and fuel bug from the bottom of the tank, and it collects in the filters. The engine usually slows and fades over a few seconds."
+        },
+        {
+          "title": "Out of fuel, or air drawn into the fuel",
+          "detail": "A low tank can uncover the pick-up pipe when the boat heels or rolls, letting air in. A loose connection on the suction side does the same."
+        },
+        {
+          "title": "Rope, net or weed round the propeller",
+          "detail": "The engine stalls as soon as it is put in gear, or stops abruptly with a thump. Often there is vibration first."
+        },
+        {
+          "title": "Water in the fuel",
+          "detail": "Water does not burn. A slug of it reaching the injectors stops the engine, often after rough weather or refuelling."
+        },
+        {
+          "title": "Blocked fuel tank vent",
+          "detail": "As fuel is used, a vacuum builds in a tank that cannot breathe, until the lift pump can no longer draw fuel. The engine may restart after a rest and then stop again."
+        },
+        {
+          "title": "Serious mechanical fault",
+          "detail": "Less common. If the engine stopped hard with an alarm, a bang or a smell of burning, it may have overheated, lost oil pressure or seized. Do not restart it."
+        }
+      ],
+      "checkFirst": [
+        "Make the boat safe first. You have lost propulsion, so sail, anchor or call for help as the situation needs.",
+        "Think about how it stopped. Fading over a few seconds suggests fuel; stopping as you put it in gear suggests the propeller; a hard stop with an alarm or a bang means do not restart.",
+        "Check the fuel level and that the fuel valve is open.",
+        "Look in the primary filter bowl for water or dirt.",
+        "Before checking round the propeller, make sure the engine is stopped and cannot be started. Never go near the propeller with the engine running."
+      ],
+      "lessonIds": ["m01-l01", "m01-l04"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "low-oil-pressure",
+      "title": "Low oil pressure",
+      "summary": "The oil pressure warning light comes on, the alarm sounds or the gauge reads low while the engine is running.",
+      "stopFirst": {
+        "title": "Stop the engine",
+        "text": "Stop the engine straight away, unless doing so would put the boat or crew in immediate danger. Without oil pressure the bearings can be damaged within minutes. Do not restart it until you have found the cause."
+      },
+      "causes": [
+        {
+          "title": "Low oil level",
+          "detail": "From a leak, from oil being burnt over time, or from the level simply not being checked. The most common cause, and the easiest to check."
+        },
+        {
+          "title": "Faulty sender, switch or wiring",
+          "detail": "The warning can be false, caused by a failed pressure switch or a loose wire. Treat it as real until you have proved otherwise."
+        },
+        {
+          "title": "Thin or contaminated oil",
+          "detail": "Oil diluted by diesel, the wrong grade of oil, or oil that has been overheated cannot hold its pressure."
+        },
+        {
+          "title": "Oil filter problem",
+          "detail": "A blocked filter, the wrong filter, or a filter fitted badly after an oil change."
+        },
+        {
+          "title": "Worn oil pump or bearings",
+          "detail": "Less common, and more likely on an older engine. This needs a qualified engineer."
+        }
+      ],
+      "checkFirst": [
+        "Wait a few minutes for the oil to drain back to the sump, then check the level on the dipstick with the boat as level as possible.",
+        "Look under the engine and around the oil filter for fresh oil.",
+        "Look at the oil on the dipstick. If it smells of diesel, looks milky or feels unusually thin, do not run the engine; get advice.",
+        "If the oil and filter were changed recently, check that the right filter is fitted, it is tight and its seal is in place.",
+        "If the level is right and the oil looks normal, the switch or its wiring may be at fault. A qualified engineer can measure the real pressure with a gauge before you rely on the engine."
+      ],
+      "lessonIds": ["m01-l03", "m01-l04"],
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "not-charging",
+      "title": "Not charging",
+      "summary": "The charge warning light stays on with the engine running, or the battery voltage does not rise when the engine is started.",
+      "stopFirst": null,
+      "causes": [
+        {
+          "title": "Loose, slipping or broken drive belt",
+          "detail": "The alternator is driven by a belt. A slipping belt often squeals, especially when the engine speeds up or the batteries are low."
+        },
+        {
+          "title": "Loose or corroded connections",
+          "detail": "At the alternator, the battery terminals or the isolator switch. Damp engine spaces make corrosion common."
+        },
+        {
+          "title": "Isolator or charge switch set wrongly",
+          "detail": "Battery switches set to a position that disconnects the battery being charged, or a charge-splitting device that has failed."
+        },
+        {
+          "title": "Battery that will not hold its charge",
+          "detail": "An old or deeply discharged battery may accept little charge, so it looks as if nothing is charging it."
+        },
+        {
+          "title": "Faulty alternator or regulator",
+          "detail": "Less common. Once the belt, wiring and battery have been ruled out, the alternator needs testing."
+        }
+      ],
+      "checkFirst": [
+        "Look at the drive belt. If it has broken and also drives the coolant pump, stop the engine, because it will soon overheat.",
+        "With the engine stopped, check the belt's tension and look for cracks, glazing or fraying.",
+        "Check the battery terminals and the alternator wiring for loose or corroded connections.",
+        "Check the battery isolator and any charge switches are set as they normally are.",
+        "If you have a voltmeter, compare the battery voltage with the engine stopped and then running above idle. With no rise, the battery is not being charged."
+      ],
+      "lessonIds": ["m01-l03", "m01-l04"],
+      "reviewStatus": "draft"
+    }
+  ]
+}

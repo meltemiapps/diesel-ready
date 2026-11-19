@@ -7,7 +7,7 @@ made by [Meltemi Apps](https://meltemiapps.co.uk), an independent app studio.
 - Website: https://meltemiapps.co.uk/diesel-ready/
 - App Store: link to follow at release
 
-> **Status:** in development (Phase 3, quizzes). All lesson and quiz content is
+> **Status:** in development (Phase 4, fault finder). All lesson and quiz content is
 > marked `"reviewStatus": "draft"` until it has been reviewed by a qualified
 > marine engineer.
 

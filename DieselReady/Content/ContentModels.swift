@@ -10,6 +10,8 @@ import Foundation
 struct ContentManifest: Codable, Sendable, Equatable {
     let schemaVersion: Int
     let modules: [String]
+    /// File name of the fault finder content, relative to the content folder.
+    let faults: String?
 }
 
 /// One module file, e.g. `Content/modules/01-how-a-diesel-engine-works.json`.
@@ -98,6 +100,14 @@ enum ReviewStatus: String, Codable, Sendable {
 struct ContentLibrary: Sendable, Equatable {
     let schemaVersion: Int
     let modules: [Module]
+    /// Fault finder content, or nil if the manifest lists none.
+    let faults: FaultGuide?
+
+    init(schemaVersion: Int, modules: [Module], faults: FaultGuide? = nil) {
+        self.schemaVersion = schemaVersion
+        self.modules = modules
+        self.faults = faults
+    }
 
     static let empty = ContentLibrary(schemaVersion: 0, modules: [])
 
@@ -111,4 +121,57 @@ struct ContentLibrary: Sendable, Equatable {
     func module(containingLesson lessonID: Lesson.ID) -> Module? {
         modules.first { $0.lessons.contains { $0.id == lessonID } }
     }
+
+    func lesson(withID lessonID: Lesson.ID) -> Lesson? {
+        allLessons.first { $0.id == lessonID }
+    }
+}
+
+// MARK: - Fault finder
+
+/// `Content/faults.json`: the Fault finder tab.
+struct FaultGuide: Codable, Sendable, Hashable {
+    /// Shown above the symptom chips.
+    let intro: String
+    /// Shown at the end of every symptom: follow the handbook, ask an engineer.
+    let reminder: String
+    let symptoms: [Symptom]
+
+    /// The symptoms the app must cover, by id.
+    static let requiredSymptomIDs: Set<String> = [
+        "exhaust-smoke", "wont-start", "overheating", "stops-suddenly", "low-oil-pressure", "not-charging",
+    ]
+    /// Symptoms where running on can damage the engine, so they must open
+    /// with a "Stop the engine" instruction.
+    static let stopFirstSymptomIDs: Set<String> = ["overheating", "low-oil-pressure"]
+    static let stopFirstTitle = "Stop the engine"
+
+    func symptom(withID id: Symptom.ID) -> Symptom? {
+        symptoms.first { $0.id == id }
+    }
+}
+
+struct Symptom: Codable, Sendable, Identifiable, Hashable {
+    let id: String
+    let title: String
+    let summary: String
+    /// Shown before any diagnosis when running on could damage the engine.
+    let stopFirst: StopInstruction?
+    /// Most likely first.
+    let causes: [FaultCause]
+    /// In the order to do them.
+    let checkFirst: [String]
+    /// Lessons to read next. Every id must exist.
+    let lessonIds: [String]
+    let reviewStatus: ReviewStatus
+}
+
+struct StopInstruction: Codable, Sendable, Hashable {
+    let title: String
+    let text: String
+}
+
+struct FaultCause: Codable, Sendable, Hashable {
+    let title: String
+    let detail: String
 }

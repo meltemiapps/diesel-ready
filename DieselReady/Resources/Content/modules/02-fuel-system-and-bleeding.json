@@ -1,0 +1,469 @@
+{
+  "id": "m02",
+  "number": 2,
+  "title": "Fuel system and bleeding",
+  "summary": "How fuel gets from the tank to the injectors, keeping it clean and free of water, and how to bleed out air when the engine is starved.",
+  "lessons": [
+    {
+      "id": "m02-l01",
+      "title": "From tank to injector",
+      "estimatedMinutes": 6,
+      "intro": "A diesel engine is fussy about its fuel. It needs a steady supply, free of air, water and dirt, delivered to the injectors at very high pressure. Following the fuel's path from the tank to the cylinders makes most fuel problems much easier to understand.",
+      "diagram": {
+        "kind": "flow",
+        "caption": "A typical fuel path. Your engine may have the parts in a slightly different order or combine some of them.",
+        "labels": [
+          { "title": "Fuel tank", "detail": "With a filler, a vent and a pick-up pipe that draws from just above the bottom." },
+          { "title": "Shut-off valve", "detail": "Lets you stop the fuel at the tank, for example to change a filter or in a fire." },
+          { "title": "Primary filter and water separator", "detail": "Catches water and larger dirt. Often has a clear bowl and a drain." },
+          { "title": "Lift pump", "detail": "Draws fuel from the tank and pushes it on at low pressure." },
+          { "title": "Engine fine filter", "detail": "Removes the small particles that would damage the injection equipment." },
+          { "title": "Injection pump", "detail": "Raises the fuel to a very high pressure and times its delivery." },
+          { "title": "Injectors", "detail": "Spray a fine mist of fuel into each cylinder. Spare fuel returns to the tank." }
+        ],
+        "description": "A flow diagram of a typical fuel system in seven stages: the fuel tank, the shut-off valve, the primary filter and water separator, the lift pump, the engine fine filter, the injection pump and the injectors, with spare fuel returning to the tank."
+      },
+      "steps": [
+        {
+          "title": "The tank",
+          "text": "Fuel is drawn through a pick-up pipe that stops a little above the bottom of the tank, so that water and sludge which settle there are less likely to be drawn in. The tank also needs a vent so air can replace the fuel that is used."
+        },
+        {
+          "title": "The low-pressure side",
+          "text": "From the tank, fuel passes through a shut-off valve and a primary filter to the lift pump, then through a finer filter mounted on the engine. Everything up to the injection pump works at low pressure, and much of it is under suction. A small leak on the suction side lets air in rather than letting fuel out."
+        },
+        {
+          "title": "The high-pressure side",
+          "text": "The injection pump raises the fuel to a very high pressure and sends a measured amount along a separate steel pipe to each injector at exactly the right moment."
+        },
+        {
+          "title": "The return line",
+          "text": "The injection system is supplied with more fuel than it burns. The spare fuel, along with any air it has picked up, goes back to the tank through a return or leak-off line."
+        },
+        {
+          "title": "Why air is the enemy",
+          "text": "Air in the fuel compresses instead of building pressure, so the injection pump cannot deliver fuel properly. Even a small bubble can stop the engine. That is why the fuel system has to be bled after it has been opened or allowed to run dry."
+        }
+      ],
+      "caution": null,
+      "handsOn": false,
+      "reviewStatus": "draft",
+      "reviewNote": "The order of the lift pump and fine filter, and whether a separate primary filter is fitted, varies between installations. Please check that the general path described is fair for typical small marine diesels."
+    },
+    {
+      "id": "m02-l02",
+      "title": "Filters and water separation",
+      "estimatedMinutes": 7,
+      "intro": "Clean fuel is the single most important thing you can give a diesel engine. Two stages of filtering protect the expensive injection equipment, and the first stage also traps water before it can do harm.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "Why filtering matters",
+          "text": "The injection pump and injectors are made to extremely fine tolerances. Particles too small to see, or a drop of water, can wear them, make them stick or stop the engine altogether."
+        },
+        {
+          "title": "The primary filter",
+          "text": "The first filter, usually mounted between the tank and the engine, catches larger dirt and separates water from the fuel. Water is heavier than diesel, so it sinks to the bottom of the filter bowl, where you can often see it as a separate layer."
+        },
+        {
+          "title": "The engine fine filter",
+          "text": "The second filter, usually on the engine itself, removes much smaller particles. It should only ever see fuel that has already been through the primary filter."
+        },
+        {
+          "title": "Checking and draining water",
+          "text": "With the engine stopped, look at the primary filter bowl. If you see water or dirt at the bottom, open the drain into a container until clean fuel runs out, then close it firmly. Make this part of your regular checks, and check again after rough weather or taking on fuel from an unfamiliar source."
+        },
+        {
+          "title": "Changing filters",
+          "text": "Filter elements are changed at the intervals in your engine handbook, or sooner if they block. Close the fuel valve, have rags and a container ready, and fit new seals with each element. Afterwards, the system will usually need bleeding to remove the air let in."
+        },
+        {
+          "title": "Carry spares",
+          "text": "Keep at least one spare element for each filter, with their seals, on board. A blocked filter is one of the most common reasons for an engine to stop at sea."
+        }
+      ],
+      "caution": "Diesel is slippery and irritates the skin. Wear gloves, mop up spills straight away, and never let fuel go into the bilge where it could be pumped overboard. No naked flames or smoking while the fuel system is open.",
+      "handsOn": true,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-l03",
+      "title": "Lift pump, injection pump and injectors",
+      "estimatedMinutes": 6,
+      "intro": "Three components move the fuel through the engine. Knowing what each one does helps you understand why the low-pressure side is something an owner can work on, while the high-pressure side is usually best left to a specialist.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "The lift pump",
+          "text": "The lift pump draws fuel from the tank and pushes it through the fine filter to the injection pump. Many are driven mechanically by the engine and have a small hand lever, which you use when bleeding the system. Some engines use an electric lift pump instead."
+        },
+        {
+          "title": "The injection pump",
+          "text": "The injection pump is the heart of the fuel system. Driven by the engine, it raises the fuel to a very high pressure, meters the amount for each cylinder according to the throttle, and times each delivery to the position of the pistons."
+        },
+        {
+          "title": "The injectors",
+          "text": "Each injector holds a spring-loaded valve that opens only when the fuel pressure is high enough. The fuel then sprays through tiny holes as a fine mist, which mixes with the hot air and burns quickly and cleanly."
+        },
+        {
+          "title": "Signs of injector trouble",
+          "text": "A worn or sticking injector may give black smoke, a knock from one cylinder, rough running or hard starting. Injectors are tested and serviced with special equipment, so suspected injector faults are a job for a specialist."
+        },
+        {
+          "title": "The stop control",
+          "text": "Most small diesels are stopped by cutting off the fuel at the injection pump, either with a pull cable or an electric solenoid. If the stop control is not fully returned, the engine may crank but refuse to start."
+        }
+      ],
+      "caution": "Fuel in the high-pressure pipes is at a pressure high enough to pierce skin and cause serious injury. Never feel for a leak with your hand, and never loosen a high-pressure pipe while the engine is running.",
+      "handsOn": false,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-l04",
+      "title": "Bleeding the fuel system",
+      "estimatedMinutes": 8,
+      "intro": "If air gets into the fuel system, the engine will not start or will run briefly and stop. Bleeding means pushing fuel through the system until all the air has been driven out. Your engine handbook describes the exact points and order for your engine; this lesson explains the general idea.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "When you need to bleed",
+          "text": "After running out of fuel, after changing a fuel filter, after any part of the fuel system has been disconnected, or when air has been drawn in through a leak. Find and fix the cause first, or the air will come back."
+        },
+        {
+          "title": "Get ready",
+          "text": "Make sure there is fuel in the tank and the fuel valve is open. Have the right spanners, plenty of rags and a small container. Lay rags under each bleed point to catch fuel."
+        },
+        {
+          "title": "Work from the tank towards the engine",
+          "text": "Always start at the bleed point nearest the tank and work along the fuel's path. Bleeding further along first just pulls more air through from behind."
+        },
+        {
+          "title": "Pump until the bubbles stop",
+          "text": "Open the first bleed screw a little and operate the lift pump's hand lever, or switch on an electric lift pump. Keep pumping until fuel comes out with no bubbles, then close the screw while fuel is still flowing. Move on to the next bleed point and repeat."
+        },
+        {
+          "title": "If the hand lever feels dead",
+          "text": "On a mechanical lift pump, the engine's cam can leave the lever with no travel. Turning the engine a little, in the way your handbook describes, usually brings the lever back to life."
+        },
+        {
+          "title": "Finishing off",
+          "text": "Some engines bleed themselves once the low-pressure side is full. Others need further steps at the injection pump or injectors, which the handbook will explain. When the engine starts, let it run and watch for leaks at every point you opened, then clean up all spilt fuel."
+        }
+      ],
+      "caution": "Keep hands and face away from injector pipes while the engine is being cranked or is running. Avoid long periods of cranking, which can flatten the battery, overheat the starter and, on many boats, fill a wet exhaust with water.",
+      "handsOn": true,
+      "reviewStatus": "draft",
+      "reviewNote": "Bleeding procedures vary widely: some engines are self-bleeding, some need the injection pump bled, and some need injector pipes loosened while cranking. The lesson deliberately avoids engine-specific steps. Please check the dead-lever advice and the general order are sound."
+    },
+    {
+      "id": "m02-l05",
+      "title": "Diesel bug and fuel care",
+      "estimatedMinutes": 6,
+      "intro": "Water in a fuel tank allows micro-organisms to grow where the fuel and water meet. The result, usually called diesel bug, is a dark slime that blocks filters, often at the worst possible moment.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "What diesel bug is",
+          "text": "Bacteria and fungi live in the thin layer where water meets fuel at the bottom of a tank. They feed on the fuel and form a dark, slimy sludge, and they can produce acids that attack metal tanks."
+        },
+        {
+          "title": "How water gets in",
+          "text": "Condensation inside a part-empty tank, leaking deck filler seals, rain or spray getting in while refuelling, and contaminated fuel from the supplier. Modern road diesel can contain a proportion of biodiesel, which holds more water than traditional diesel."
+        },
+        {
+          "title": "The signs",
+          "text": "Dark slime or sludge in the primary filter bowl, filters that block much sooner than usual, and an engine that loses power or stops after rough weather has stirred up the bottom of the tank."
+        },
+        {
+          "title": "Prevention",
+          "text": "Check the filler cap seal, drain the water trap regularly, buy fuel from a busy, reputable supplier, and refuel carefully in wet weather. Many owners keep the tank well filled during lay-up to reduce condensation. Fuel additives such as biocides can help, but must be used exactly as their maker directs."
+        },
+        {
+          "title": "When it is bad",
+          "text": "If the tank is badly contaminated, additives alone will not fix it. The fuel may need to be filtered by a specialist fuel polishing service, or the tank emptied and cleaned."
+        }
+      ],
+      "caution": "Some fuel additives are hazardous. Read the label, wear gloves, and never mix products unless the maker says you can.",
+      "handsOn": false,
+      "reviewStatus": "draft",
+      "reviewNote": "Whether to keep tanks full over winter is commonly recommended but debated (for example where fuel ages). Please confirm the wording on lay-up and on biodiesel content is balanced and current."
+    }
+  ],
+  "questions": [
+    {
+      "id": "m02-q001", "moduleId": "m02", "lessonId": "m02-l01", "difficulty": 1,
+      "prompt": "Why does the fuel pick-up pipe usually stop a little above the bottom of the tank?",
+      "options": [
+        "So water and sludge that settle at the bottom are less likely to be drawn in",
+        "So the tank can never be emptied completely by mistake",
+        "So the fuel stays warmer on its way to the engine",
+        "So the tank vent does not get blocked by fuel"
+      ],
+      "correctIndex": 0,
+      "explanation": "Water is heavier than diesel and dirt settles out, so both collect at the bottom of the tank. Drawing from slightly higher up keeps most of it out of the fuel system.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q002", "moduleId": "m02", "lessonId": "m02-l01", "difficulty": 2,
+      "prompt": "Why does a small leak on the suction side of the fuel system often cause the engine to stop rather than drip fuel?",
+      "options": [
+        "Because the suction draws air in through the leak instead of pushing fuel out",
+        "Because diesel evaporates before it can drip",
+        "Because the injection pump shuts down when it senses a leak",
+        "Because the return line refills the leak with fuel"
+      ],
+      "correctIndex": 0,
+      "explanation": "Between the tank and the lift pump the fuel is under suction, so a loose joint pulls air in. That air reaches the injection pump, which cannot build pressure with air in it.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q003", "moduleId": "m02", "lessonId": "m02-l01", "difficulty": 2,
+      "prompt": "What is the purpose of the fuel return or leak-off line?",
+      "options": [
+        "To carry spare fuel, and any air it has picked up, back to the tank",
+        "To drain water from the bottom of the tank",
+        "To let air into the tank as fuel is used",
+        "To supply fuel to a second engine"
+      ],
+      "correctIndex": 0,
+      "explanation": "The injection system is given more fuel than it burns. The surplus, along with any air bubbles, flows back to the tank. Letting air into the tank is the vent's job.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q004", "moduleId": "m02", "lessonId": "m02-l01", "difficulty": 3,
+      "prompt": "Why can even a small bubble of air stop a diesel engine?",
+      "options": [
+        "Air compresses, so the injection pump cannot build enough pressure to open the injectors",
+        "Air reacts with diesel and turns it into wax",
+        "Air makes the fuel ignite too early in the lift pump",
+        "Air blocks the fuel filter element completely"
+      ],
+      "correctIndex": 0,
+      "explanation": "Liquid fuel barely compresses, which is how the pump builds very high pressure. Air squashes like a spring instead, so the pressure needed to open the injector is never reached.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q005", "moduleId": "m02", "lessonId": "m02-l02", "difficulty": 1,
+      "prompt": "Where does water collect in a primary fuel filter with a clear bowl?",
+      "options": [
+        "At the bottom of the bowl, below the fuel",
+        "At the top of the bowl, above the fuel",
+        "Mixed evenly through the fuel",
+        "Inside the paper filter element only"
+      ],
+      "correctIndex": 0,
+      "explanation": "Water is denser than diesel, so it sinks and forms a separate layer at the bottom of the bowl, where it can be seen and drained off.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q006", "moduleId": "m02", "lessonId": "m02-l02", "difficulty": 1,
+      "prompt": "You see a layer of water in the primary filter bowl. What should you do?",
+      "options": [
+        "With the engine stopped, drain it into a container until clean fuel runs out",
+        "Leave it, because the fine filter will catch it",
+        "Run the engine hard to burn the water off",
+        "Pump it into the bilge so it is out of the fuel"
+      ],
+      "correctIndex": 0,
+      "explanation": "Water must be removed before it reaches the injection equipment. Drain it into a container, never into the bilge, because fuel-contaminated water must not be pumped overboard.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q007", "moduleId": "m02", "lessonId": "m02-l02", "difficulty": 2,
+      "prompt": "Why does a diesel engine have two stages of fuel filter?",
+      "options": [
+        "The first catches water and larger dirt, so the finer second filter can remove tiny particles without blocking quickly",
+        "The second filter is a spare that is only used if the first one fails",
+        "One filter cleans fuel going to the engine and the other cleans fuel returning to the tank",
+        "Two filters let the engine run on two different types of fuel"
+      ],
+      "correctIndex": 0,
+      "explanation": "Removing the water and bigger particles first protects the fine filter, which then takes out the very small particles that would damage the injection pump and injectors.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q008", "moduleId": "m02", "lessonId": "m02-l02", "difficulty": 2,
+      "prompt": "After changing a fuel filter element, what will the engine usually need before it runs properly?",
+      "options": [
+        "The fuel system bled to remove the air let in",
+        "A new set of injectors",
+        "The oil changed",
+        "The raw water strainer cleaned"
+      ],
+      "correctIndex": 0,
+      "explanation": "Opening a filter lets air into the fuel system. Unless the engine is self-bleeding, that air must be pushed out before the injection pump can work.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q009", "moduleId": "m02", "lessonId": "m02-l03", "difficulty": 1,
+      "prompt": "What is the main job of the lift pump?",
+      "options": [
+        "To draw fuel from the tank and supply it at low pressure to the injection pump",
+        "To spray fuel into the cylinders",
+        "To pump water out of the fuel tank",
+        "To raise fuel to the very high pressure needed for injection"
+      ],
+      "correctIndex": 0,
+      "explanation": "The lift pump works on the low-pressure side, keeping the injection pump supplied. Creating the very high injection pressure is the injection pump's job.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q010", "moduleId": "m02", "lessonId": "m02-l03", "difficulty": 2,
+      "prompt": "How are most small marine diesels stopped?",
+      "options": [
+        "By cutting off the fuel at the injection pump",
+        "By switching off the ignition spark",
+        "By closing the raw water seacock",
+        "By closing the air intake"
+      ],
+      "correctIndex": 0,
+      "explanation": "A diesel has no spark to switch off. The stop control, a cable or solenoid, shuts off fuel delivery at the injection pump, and the engine stops.",
+      "reviewStatus": "draft",
+      "reviewNote": "Some engines stop differently (for example with an air flap or a key-operated solenoid). Confirm 'most' is fair."
+    },
+    {
+      "id": "m02-q011", "moduleId": "m02", "lessonId": "m02-l03", "difficulty": 3,
+      "prompt": "Why should you never feel for a leak along a high-pressure fuel pipe with your hand?",
+      "options": [
+        "The fuel is at such high pressure it can pierce the skin and cause serious injury",
+        "The pipes are live with electrical current",
+        "Skin oils make the fuel pipes corrode",
+        "The pipe will crack if it is touched while the engine runs"
+      ],
+      "correctIndex": 0,
+      "explanation": "A fine jet of fuel from a high-pressure leak can be injected through the skin. This is a medical emergency, so look for leaks visually or with a piece of card instead.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q012", "moduleId": "m02", "lessonId": "m02-l03", "difficulty": 2,
+      "prompt": "Which of these is a typical sign of a faulty injector?",
+      "options": [
+        "Black smoke and rough running, sometimes with a knock from one cylinder",
+        "The charge warning light staying on",
+        "Water dripping from the stern gland",
+        "Oil appearing in the raw water strainer"
+      ],
+      "correctIndex": 0,
+      "explanation": "An injector that dribbles or sprays poorly delivers fuel that does not burn completely, giving smoke, rough running and sometimes a knock. The other symptoms belong to the charging, stern gear and cooling systems.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q013", "moduleId": "m02", "lessonId": "m02-l04", "difficulty": 1,
+      "prompt": "Which of these is the most likely to mean you need to bleed the fuel system?",
+      "options": [
+        "The engine ran out of fuel",
+        "The engine oil was changed",
+        "The alternator belt was adjusted",
+        "The raw water impeller was replaced"
+      ],
+      "correctIndex": 0,
+      "explanation": "Running the tank dry lets air into the fuel lines. Oil changes, belt work and impeller changes do not open the fuel system.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q014", "moduleId": "m02", "lessonId": "m02-l04", "difficulty": 2,
+      "prompt": "In what order should you work through the bleed points?",
+      "options": [
+        "From the point nearest the tank towards the engine, following the fuel's path",
+        "From the injectors back towards the tank",
+        "Any order, as long as every point is opened",
+        "All points opened at once, then closed together"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fuel pushes air ahead of it along the system. Starting near the tank clears each section in turn; starting at the far end just draws more air through from behind.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q015", "moduleId": "m02", "lessonId": "m02-l04", "difficulty": 2,
+      "prompt": "When should you close a bleed screw?",
+      "options": [
+        "While fuel free of bubbles is still flowing out",
+        "As soon as the first drop of fuel appears",
+        "After the pump has stopped and fuel has stopped flowing",
+        "Only once the engine has started"
+      ],
+      "correctIndex": 0,
+      "explanation": "Closing while clean fuel is still flowing stops air being drawn back in. The first drops often still carry bubbles, so keep pumping until they stop.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q016", "moduleId": "m02", "lessonId": "m02-l04", "difficulty": 3,
+      "prompt": "The hand lever on a mechanical lift pump has almost no movement. What is the most likely reason?",
+      "options": [
+        "The engine's cam is holding the pump's arm at the top of its travel",
+        "The fuel tank is completely full",
+        "The fine filter has been fitted upside down",
+        "The pump only works when the engine is hot"
+      ],
+      "correctIndex": 0,
+      "explanation": "A mechanical lift pump is worked by a cam on the engine. If the engine stopped with the cam lobe holding the arm, the hand lever has little travel; turning the engine a little frees it.",
+      "reviewStatus": "draft",
+      "reviewNote": "Confirm this is a fair explanation for the common mechanical lift pump design."
+    },
+    {
+      "id": "m02-q017", "moduleId": "m02", "lessonId": "m02-l04", "difficulty": 3,
+      "prompt": "You bleed the system, the engine runs for a few minutes, then stops again with the same symptoms. What should you suspect?",
+      "options": [
+        "Air is still getting in somewhere, so the cause has not been found",
+        "The engine needs a higher grade of oil",
+        "The bleeding was done in the wrong weather",
+        "The battery is too fully charged"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bleeding removes air but does not stop it entering. If air returns, look for a loose joint, a damaged seal, a split hose on the suction side or a low tank.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q018", "moduleId": "m02", "lessonId": "m02-l05", "difficulty": 1,
+      "prompt": "What is diesel bug?",
+      "options": [
+        "Micro-organisms that grow where water meets fuel in the tank, forming sludge",
+        "A wax that forms in diesel only in freezing weather",
+        "An insect that gets into tanks through the vent",
+        "A fault in the injection pump's electronics"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bacteria and fungi live at the boundary between water and fuel. They feed on the fuel and form a slime that blocks filters. Cold-weather waxing is a separate problem.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q019", "moduleId": "m02", "lessonId": "m02-l05", "difficulty": 2,
+      "prompt": "Why do engines with fuel contamination often stop in rough weather?",
+      "options": [
+        "The motion stirs up water and sludge from the bottom of the tank, which then blocks the filters",
+        "Waves splash diesel out of the tank vent",
+        "The injection pump cannot work when the boat heels",
+        "Cold spray thickens the fuel in the lines"
+      ],
+      "correctIndex": 0,
+      "explanation": "In calm conditions, dirt and water sit undisturbed below the pick-up. Rough water churns them into the fuel, and the filters block soon afterwards.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q020", "moduleId": "m02", "lessonId": "m02-l05", "difficulty": 2,
+      "prompt": "Which of these helps most to stop water getting into the fuel tank?",
+      "options": [
+        "Keeping the deck filler cap seal in good condition",
+        "Running the engine at full throttle once a month",
+        "Fitting a larger fuel return line",
+        "Changing the engine oil more often"
+      ],
+      "correctIndex": 0,
+      "explanation": "A worn filler seal lets rain and spray straight into the tank. The other actions have nothing to do with keeping water out of the fuel.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m02-q021", "moduleId": "m02", "lessonId": "m02-l05", "difficulty": 3,
+      "prompt": "A tank is badly contaminated with diesel bug. Why are additives alone not enough?",
+      "options": [
+        "They can kill the organisms, but the sludge already formed stays in the tank and keeps blocking filters",
+        "Additives only work in petrol engines",
+        "Additives make the fuel too thick to pump",
+        "Additives only work while the engine is running at full power"
+      ],
+      "correctIndex": 0,
+      "explanation": "A biocide can stop further growth, but the dead sludge remains and will still block filters. A badly affected tank needs the fuel polished or the tank cleaned.",
+      "reviewStatus": "draft"
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
   "modules": [
-    "01-how-a-diesel-engine-works.json"
+    "01-how-a-diesel-engine-works.json",
+    "02-fuel-system-and-bleeding.json"
   ],
   "faults": "faults.json"
 }

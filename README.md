@@ -7,7 +7,7 @@ made by [Meltemi Apps](https://meltemiapps.co.uk), an independent app studio.
 - Website: https://meltemiapps.co.uk/diesel-ready/
 - App Store: link to follow at release
 
-> **Status:** in development (Phase 1, skeleton). All lesson and quiz content is
+> **Status:** in development (Phase 2, learning flow). All lesson and quiz content is
 > marked `"reviewStatus": "draft"` until it has been reviewed by a qualified
 > marine engineer.
 
@@ -49,6 +49,10 @@ xcodebuild -project DieselReady.xcodeproj -scheme DieselReady \
 **Signing for a device.** Copy `Config/Local.xcconfig.example` to
 `Config/Local.xcconfig` and enter your Apple Developer Team ID. That file is
 git-ignored, so your Team ID stays out of the repository.
+
+**Debug launch argument.** In Debug builds, `-openLesson <lessonID>` (for
+example `-openLesson m01-l02`) opens that lesson at launch, which helps with
+screenshots and manual testing. It is compiled out of Release builds.
 
 **Project file.** `DieselReady.xcodeproj` is generated from `project.yml` with
 [XcodeGen](https://github.com/yonaskolb/XcodeGen). If you add, move or remove

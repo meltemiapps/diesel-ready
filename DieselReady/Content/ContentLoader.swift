@@ -98,6 +98,11 @@ struct ContentLoader: Sendable {
                 checkUnique(lesson.id)
                 if lesson.steps.isEmpty { problems.append("\(lesson.id): has no steps") }
                 if lesson.estimatedMinutes <= 0 { problems.append("\(lesson.id): estimatedMinutes must be positive") }
+                if let diagram = lesson.diagram,
+                   let expected = Diagram.expectedLabelCounts[diagram.kind],
+                   diagram.labels.count != expected {
+                    problems.append("\(lesson.id): diagram \(diagram.kind) has \(diagram.labels.count) labels, expected \(expected)")
+                }
             }
 
             for question in module.questions {

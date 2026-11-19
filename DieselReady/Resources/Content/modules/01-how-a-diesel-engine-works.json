@@ -11,7 +11,22 @@
       "intro": "A diesel engine has no spark plugs. It squeezes air so hard that the air becomes hot enough to set fire to the fuel the moment it is sprayed in. Understanding this one idea explains most of what a diesel needs to run: clean air, clean fuel delivered at the right moment, and good compression.",
       "diagram": {
         "kind": "compression-ignition",
-        "caption": "Air is compressed and heats up; fuel sprayed into the hot air ignites by itself."
+        "caption": "Air is compressed and heats up; fuel sprayed into the hot air ignites by itself.",
+        "labels": [
+          {
+            "title": "Air in",
+            "detail": "Air only"
+          },
+          {
+            "title": "Squeeze",
+            "detail": "Air gets hot"
+          },
+          {
+            "title": "Fuel ignites",
+            "detail": "No spark needed"
+          }
+        ],
+        "description": "Three stages. First, the piston moves down and draws in air only. Second, the piston rises and compresses the air, which gets very hot. Third, fuel is sprayed into the hot air and ignites without a spark."
       },
       "steps": [
         {
@@ -46,7 +61,26 @@
       "intro": "Most small marine diesels work on a four-stroke cycle. Each stroke is one movement of the piston, either up or down the cylinder. Four strokes make one complete cycle, and the crankshaft turns twice in that time.",
       "diagram": {
         "kind": "four-stroke-cycle",
-        "caption": "Induction, compression, power and exhaust, shown with the valves open or closed."
+        "caption": "Induction, compression, power and exhaust, shown with the valves open or closed.",
+        "labels": [
+          {
+            "title": "1. Induction",
+            "detail": "Inlet open, piston down"
+          },
+          {
+            "title": "2. Compression",
+            "detail": "Valves closed, piston up"
+          },
+          {
+            "title": "3. Power",
+            "detail": "Valves closed, piston forced down"
+          },
+          {
+            "title": "4. Exhaust",
+            "detail": "Exhaust open, piston up"
+          }
+        ],
+        "description": "Four stages. 1, induction: inlet valve open, piston moving down, drawing in air. 2, compression: both valves closed, piston moving up, fuel injected near the top. 3, power: both valves closed, burning gas forces the piston down. 4, exhaust: exhaust valve open, piston moving up, pushing out burnt gas."
       },
       "steps": [
         {
@@ -81,7 +115,38 @@
       "intro": "Whatever the make, small marine diesels are built from the same basic parts. Knowing what each one does makes the rest of this guide, and any conversation with an engineer, much easier to follow.",
       "diagram": {
         "kind": "engine-layout",
-        "caption": "A simplified side view of a small marine diesel with its main parts labelled."
+        "caption": "A simplified side view of a small marine diesel with its main parts labelled.",
+        "labels": [
+          {
+            "title": "Cylinder head with valves",
+            "detail": null
+          },
+          {
+            "title": "Injectors",
+            "detail": null
+          },
+          {
+            "title": "Cylinder block and pistons",
+            "detail": null
+          },
+          {
+            "title": "Crankshaft",
+            "detail": null
+          },
+          {
+            "title": "Sump (engine oil)",
+            "detail": null
+          },
+          {
+            "title": "Flywheel",
+            "detail": null
+          },
+          {
+            "title": "Fuel injection pump",
+            "detail": null
+          }
+        ],
+        "description": "Side view. From top to bottom: the cylinder head with valves and injectors, the cylinder block containing the pistons, the crankshaft, and the oil sump. The flywheel is on the end of the crankshaft and the fuel injection pump is on the side of the block."
       },
       "steps": [
         {

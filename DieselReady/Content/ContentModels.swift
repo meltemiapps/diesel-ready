@@ -53,6 +53,23 @@ struct Diagram: Codable, Sendable, Hashable {
     /// versions can read newer content.
     let kind: String
     let caption: String?
+    /// Text drawn with the diagram, in the order the kind defines
+    /// (panels left to right, or numbered parts).
+    let labels: [DiagramLabel]
+    /// Full description read by screen readers in place of the drawing.
+    let description: String
+
+    /// Number of labels each known kind draws. Unknown kinds are not checked.
+    static let expectedLabelCounts: [String: Int] = [
+        "compression-ignition": 3,
+        "four-stroke-cycle": 4,
+        "engine-layout": 7,
+    ]
+}
+
+struct DiagramLabel: Codable, Sendable, Hashable {
+    let title: String
+    let detail: String?
 }
 
 struct Question: Codable, Sendable, Identifiable, Hashable {

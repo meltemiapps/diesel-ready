@@ -33,13 +33,28 @@ platform-specific fields.
 | `id` | string | `m01-l01`. Stable. |
 | `title`, `intro` | string | |
 | `estimatedMinutes` | integer | Greater than 0. Module time is the sum. |
-| `diagram` | object or null | `{ "kind": string, "caption": string or null }`. Drawn natively; unknown kinds are skipped. |
+| `diagram` | Diagram or null | Drawn natively from shapes; all text comes from the JSON. |
 | `steps` | Step[] | At least one. Step = `{ "title": string or null, "text": string }`. Shown numbered. |
 | `caution` | string or null | Shown as a caution callout. |
 | `handsOn` | boolean | If true, the app ends the lesson with the reminder to follow the engine manufacturer's handbook. |
 | `reviewStatus` | `"draft"` or `"reviewed"` | |
 
-Diagram kinds used so far: `compression-ignition`, `four-stroke-cycle`, `engine-layout`.
+### Diagram
+
+| Field | Type | Notes |
+|---|---|---|
+| `kind` | string | Which drawing to use. Unknown kinds are skipped, so older apps can read newer content. |
+| `caption` | string or null | Shown under the drawing. |
+| `labels` | DiagramLabel[] | Text drawn with the diagram, in the order the kind defines. DiagramLabel = `{ "title": string, "detail": string or null }`. |
+| `description` | string | Full description read by screen readers in place of the drawing. |
+
+Known kinds and their label counts:
+
+| Kind | Labels | Order |
+|---|---|---|
+| `compression-ignition` | 3 | Panels left to right: air in, compression, ignition |
+| `four-stroke-cycle` | 4 | Induction, compression, power, exhaust |
+| `engine-layout` | 7 | Numbered parts: head, injectors, block and pistons, crankshaft, sump, flywheel, injection pump |
 
 ### Question
 

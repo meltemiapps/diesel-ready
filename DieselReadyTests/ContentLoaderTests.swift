@@ -42,6 +42,18 @@ struct ContentLoaderTests {
         }
     }
 
+    @Test("A diagram with the wrong number of labels is reported")
+    func diagramLabelCount() {
+        let diagram = Diagram(kind: "four-stroke-cycle", caption: nil,
+                              labels: [DiagramLabel(title: "Only one", detail: nil)], description: "d")
+        let lesson = Lesson(id: "m01-l01", title: "L", estimatedMinutes: 5, intro: "", diagram: diagram,
+                            steps: [Step(title: nil, text: "x")], caution: nil, handsOn: false, reviewStatus: .draft)
+        let library = ContentLibrary(schemaVersion: 1, modules: [
+            Module(id: "m01", number: 1, title: "T", summary: "", lessons: [lesson], questions: []),
+        ])
+        #expect(ContentLoader.validate(library).contains { $0.contains("expected 4") })
+    }
+
     @Test("A newer schema version is rejected")
     func rejectsNewerSchema() {
         let loader = ContentLoader.inMemory([

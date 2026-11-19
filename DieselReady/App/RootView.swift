@@ -23,26 +23,23 @@ struct RootView: View {
 }
 
 struct MainTabView: View {
-    enum Tab: Hashable {
-        case learn, quiz, faults, about
-    }
-
-    @State private var selection: Tab = .learn
+    @Environment(AppNavigation.self) private var navigation
 
     var body: some View {
-        TabView(selection: $selection) {
+        @Bindable var navigation = navigation
+        TabView(selection: $navigation.selectedTab) {
             LearnView()
                 .tabItem { Label("Learn", systemImage: "book") }
-                .tag(Tab.learn)
+                .tag(AppNavigation.Tab.learn)
             QuizHomeView()
                 .tabItem { Label("Quiz", systemImage: "checklist") }
-                .tag(Tab.quiz)
+                .tag(AppNavigation.Tab.quiz)
             FaultsView()
                 .tabItem { Label("Faults", systemImage: "wrench.and.screwdriver") }
-                .tag(Tab.faults)
+                .tag(AppNavigation.Tab.faults)
             AboutView()
                 .tabItem { Label("About", systemImage: "info.circle") }
-                .tag(Tab.about)
+                .tag(AppNavigation.Tab.about)
         }
     }
 }
@@ -50,5 +47,6 @@ struct MainTabView: View {
 #Preview {
     RootView()
         .environment(ContentStore())
+        .environment(AppNavigation())
         .modelContainer(for: ProgressSchema.models, inMemory: true)
 }

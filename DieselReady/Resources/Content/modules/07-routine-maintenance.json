@@ -1,0 +1,425 @@
+{
+  "id": "m07",
+  "number": 7,
+  "title": "Routine maintenance",
+  "summary": "Daily checks before you start, keeping to the service schedule, laying the engine up for winter and bringing it back, and the spares and tools to carry.",
+  "lessons": [
+    {
+      "id": "m07-l01",
+      "title": "Daily pre-start checks",
+      "estimatedMinutes": 6,
+      "intro": "A few minutes of checks before starting catches most problems while you are still safely tied up. Doing them in the same order every time makes it hard to miss one.",
+      "diagram": {
+        "kind": "flow",
+        "caption": "One way to order the checks so you work round the engine without missing anything.",
+        "labels": [
+          { "title": "Look in the bilge", "detail": "Oil, fuel, coolant or more water than usual all point to a leak." },
+          { "title": "Engine oil", "detail": "Level between the marks; no milky or thin oil." },
+          { "title": "Coolant", "detail": "Header tank level, with the engine cold." },
+          { "title": "Fuel", "detail": "Enough in the tank, valve open, no water in the filter bowl." },
+          { "title": "Raw water", "detail": "Seacock open, strainer clear, lid tight." },
+          { "title": "Belts, hoses and stern gland", "detail": "No cracks, leaks or loose clips." },
+          { "title": "Start and confirm", "detail": "Water from the exhaust and warning lights out." }
+        ],
+        "description": "A flow diagram of seven pre-start checks: look in the bilge, check engine oil, check coolant, check fuel, check the raw water seacock and strainer, check belts, hoses and stern gland, then start and confirm water from the exhaust and warning lights out."
+      },
+      "steps": [
+        {
+          "title": "Start with the bilge",
+          "text": "Before opening up the engine, look into the bilge beneath it. Fresh oil, fuel, coolant or extra water tells you something is leaking, and where to look first."
+        },
+        {
+          "title": "Fluids",
+          "text": "Check the engine oil on the dipstick and the coolant in the header tank. If your gearbox has a dipstick, check it as often as the handbook advises."
+        },
+        {
+          "title": "Fuel",
+          "text": "Make sure there is enough fuel for the trip with a good reserve, the fuel valve is open, and there is no water or dirt in the primary filter bowl."
+        },
+        {
+          "title": "Cooling water",
+          "text": "Check the raw water seacock is open, the strainer basket is clear and its lid is tight."
+        },
+        {
+          "title": "Look around",
+          "text": "Check belts for wear and tension, hoses and clips for leaks, and the stern gland for its normal condition. Make sure nothing loose is lying near belts or pulleys."
+        },
+        {
+          "title": "Starting",
+          "text": "Batteries on, gear lever in neutral, stop control pushed home. After starting, check the oil and charge lights have gone out and that water is coming from the exhaust. Let the engine warm gently before asking for full power."
+        }
+      ],
+      "caution": "Do the hands-on checks with the engine stopped and unable to start. Close the engine space before starting, and keep clear of belts and pulleys while it runs.",
+      "handsOn": true,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-l02",
+      "title": "Service intervals and records",
+      "estimatedMinutes": 5,
+      "intro": "Engines last longest when they are serviced on time. Your handbook contains a schedule of jobs to do at set intervals, and a simple log makes it easy to keep to it.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "Running hours and time",
+          "text": "Most service jobs are due after a number of running hours shown on the engine's hour meter, or after a period of time, whichever comes first. Boats used little still need servicing by time."
+        },
+        {
+          "title": "Typical owner jobs",
+          "text": "Changing the engine oil and filter, fuel filters, the raw water impeller and the air filter; checking and renewing belts; checking anodes; and renewing coolant. Your handbook says which apply to your engine and how often."
+        },
+        {
+          "title": "Specialist jobs",
+          "text": "Some jobs, such as checking valve clearances, servicing injectors or checking engine alignment, need special tools or skills. The handbook may say these should be done by a qualified engineer."
+        },
+        {
+          "title": "Keep a log",
+          "text": "Write down each job with the date and engine hours, and the parts used. A log shows what is due next, helps an engineer find faults, and is valuable when you sell the boat."
+        },
+        {
+          "title": "Use the right parts",
+          "text": "Fit filters, impellers and belts that match your engine's specification, and use the oil and coolant the handbook specifies. Note part numbers in your log so ordering spares is easy."
+        }
+      ],
+      "caution": null,
+      "handsOn": false,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-l03",
+      "title": "Winterising and recommissioning",
+      "estimatedMinutes": 8,
+      "intro": "An engine left unused for months can suffer from frost, corrosion and stale fuel. Laying it up properly in autumn, and bringing it back carefully in spring, prevents most early-season problems.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "Change the oil before lay-up",
+          "text": "Old oil contains acids that attack the engine while it stands. Changing the oil and filter before lay-up leaves the engine protected by clean oil all winter."
+        },
+        {
+          "title": "Protect against frost",
+          "text": "Water left in the raw water circuit can freeze and crack the pump, heat exchanger or exhaust parts. Depending on your engine and climate, the handbook may advise draining the circuit or running antifreeze through it. Check the coolant gives enough frost protection."
+        },
+        {
+          "title": "Fuel",
+          "text": "Drain any water from the filter bowl. Many owners keep the tank well filled to reduce condensation over winter; follow your engine and fuel supplier's advice on additives."
+        },
+        {
+          "title": "Impeller and openings",
+          "text": "Some owners remove the impeller for the winter so its vanes do not take a set. If you block the air intake or exhaust outlet against damp, put a clear note on the engine controls so the blanks are removed before starting."
+        },
+        {
+          "title": "Batteries",
+          "text": "Keep batteries charged over winter, either with a suitable charger or by charging them regularly. A flat battery left in the cold can be permanently damaged."
+        },
+        {
+          "title": "Recommissioning",
+          "text": "Remove any blanks and notes, refit the impeller, and check hoses, clips, belts and all fluid levels. Open the seacocks once afloat and check every through-hull and the stern seal for leaks. Start the engine, check for water from the exhaust and watch for leaks as it warms up."
+        }
+      ],
+      "caution": "Antifreeze is poisonous to people and animals. Store it securely and do not let it go into the water; follow local rules on disposal.",
+      "handsOn": true,
+      "reviewStatus": "draft",
+      "reviewNote": "Winterising methods differ a great deal between engines and climates (draining versus antifreeze, removing impellers, fuel tank full or not). Please confirm the advice is balanced and adequately defers to the handbook."
+    },
+    {
+      "id": "m07-l04",
+      "title": "Spares and tool kit",
+      "estimatedMinutes": 5,
+      "intro": "Most engine problems at sea can be fixed with a modest kit of spares and tools, as long as they are on board, fit your engine, and you know where they are.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "Essential spares",
+          "text": "Fuel filter elements with their seals, a raw water impeller with its cover gasket, a drive belt, engine oil and an oil filter, coolant, a selection of hose clips, and fuses for the engine panel."
+        },
+        {
+          "title": "Useful extras",
+          "text": "A length of hose matching your cooling hoses, self-amalgamating tape for temporary repairs, spare bulbs for the panel, and stern gland packing or grease if your gland uses it."
+        },
+        {
+          "title": "Tools",
+          "text": "Spanners and sockets in the sizes your engine uses, screwdrivers, a filter wrench, a tool for removing the impeller, an oil extraction pump, a multimeter and a good torch. Check each fits before you need it."
+        },
+        {
+          "title": "Consumables",
+          "text": "Rags, gloves, a container for fuel and oil, absorbent pads for spills and a bag for oily waste."
+        },
+        {
+          "title": "Information",
+          "text": "Keep the engine handbook on board, with your log, part numbers and labelled photos of the engine. A small notebook of what worked last time is surprisingly useful."
+        },
+        {
+          "title": "Stow it well",
+          "text": "Keep spares dry and labelled, and know where each one is. A spare you cannot find in a seaway is no help."
+        }
+      ],
+      "caution": null,
+      "handsOn": false,
+      "reviewStatus": "draft"
+    }
+  ],
+  "questions": [
+    {
+      "id": "m07-q001", "moduleId": "m07", "lessonId": "m07-l01", "difficulty": 1,
+      "prompt": "Why is it useful to look in the bilge under the engine before starting?",
+      "options": [
+        "Fresh oil, fuel or coolant there points to a leak and where to look",
+        "To check the propeller is clear",
+        "To measure the fuel level",
+        "To check the battery charge"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fluids that leak from the engine collect in the bilge beneath it. Spotting them before starting lets you trace a leak while it is still minor.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q002", "moduleId": "m07", "lessonId": "m07-l01", "difficulty": 1,
+      "prompt": "What should you check immediately after the engine starts?",
+      "options": [
+        "That the warning lights have gone out and water is coming from the exhaust",
+        "That the fuel tank is completely full",
+        "That the stern gland is dripping fast",
+        "That the batteries are switched off"
+      ],
+      "correctIndex": 0,
+      "explanation": "These two checks confirm that the oil pressure, charging and raw water cooling are all working before you rely on the engine.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q003", "moduleId": "m07", "lessonId": "m07-l01", "difficulty": 2,
+      "prompt": "Why is it worth doing your pre-start checks in the same order every time?",
+      "options": [
+        "A fixed routine makes it much harder to miss a check",
+        "The engine will not start if the order changes",
+        "The checks must be done in the order printed on the panel",
+        "It makes the engine warm up faster"
+      ],
+      "correctIndex": 0,
+      "explanation": "Routine turns the checks into a habit, so a missing step feels wrong. Changing the order each time makes it easy to skip something.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q004", "moduleId": "m07", "lessonId": "m07-l01", "difficulty": 2,
+      "prompt": "Why should you let the engine warm gently before using full power?",
+      "options": [
+        "Oil flows and protects best once warm, and parts expand evenly",
+        "Diesel will not burn at all in a cold engine",
+        "The alternator only charges once the engine is hot",
+        "The propeller needs to warm up before it can grip"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cold oil is thick and reaches bearings more slowly, and a cold engine has tighter clearances in some places. A gentle warm-up reduces wear.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q005", "moduleId": "m07", "lessonId": "m07-l01", "difficulty": 3,
+      "prompt": "Before starting, you see a thin film of oil and a little coolant in the bilge that was not there yesterday. What should you do?",
+      "options": [
+        "Find the source before relying on the engine, starting with oil and coolant levels and the hoses",
+        "Pump the bilge out and carry on",
+        "Start the engine to see if the leak gets worse",
+        "Add more oil and coolant and ignore it"
+      ],
+      "correctIndex": 0,
+      "explanation": "New fluid in the bilge means something has changed. Checking levels and tracing the leak first can prevent an engine failure later, and oily water must not be pumped overboard.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q006", "moduleId": "m07", "lessonId": "m07-l02", "difficulty": 1,
+      "prompt": "Where should you find the service schedule for your engine?",
+      "options": [
+        "In the engine manufacturer's handbook",
+        "On the fuel filler cap",
+        "On the battery label",
+        "In the boat's insurance policy"
+      ],
+      "correctIndex": 0,
+      "explanation": "The handbook lists each service job and when it is due. Intervals vary between engines, so the handbook is the reference.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q007", "moduleId": "m07", "lessonId": "m07-l02", "difficulty": 2,
+      "prompt": "A service is due 'by running hours or by time, whichever comes first'. Your engine has done few hours this year. What does this mean?",
+      "options": [
+        "The service is still due once the time limit is reached",
+        "The service can wait until the hours are reached",
+        "The service is no longer needed",
+        "Only the oil needs changing"
+      ],
+      "correctIndex": 0,
+      "explanation": "Oil ages, rubber parts perish and corrosion continues even when the engine is not used. That is why there is a time limit as well as an hours limit.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q008", "moduleId": "m07", "lessonId": "m07-l02", "difficulty": 2,
+      "prompt": "Why is it useful to keep a written log of engine maintenance?",
+      "options": [
+        "It shows what is due next and helps an engineer track down faults",
+        "It is needed for the engine to start",
+        "It replaces the need for a handbook",
+        "It makes the engine use less fuel"
+      ],
+      "correctIndex": 0,
+      "explanation": "A log of dates, hours and parts tells you when jobs are due and gives an engineer a history to work from. It also adds value when you sell the boat.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q009", "moduleId": "m07", "lessonId": "m07-l02", "difficulty": 3,
+      "prompt": "Which of these jobs is most likely to be one for a qualified engineer rather than the owner?",
+      "options": [
+        "Servicing the injectors",
+        "Changing the engine oil",
+        "Cleaning the raw water strainer",
+        "Draining water from the fuel filter bowl"
+      ],
+      "correctIndex": 0,
+      "explanation": "Injectors need specialist equipment to test and set them. The other jobs are routine owner maintenance.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q010", "moduleId": "m07", "lessonId": "m07-l02", "difficulty": 1,
+      "prompt": "What shows how many running hours the engine has done?",
+      "options": [
+        "The engine hour meter",
+        "The fuel gauge",
+        "The battery voltmeter",
+        "The temperature gauge"
+      ],
+      "correctIndex": 0,
+      "explanation": "The hour meter records how long the engine has run. Most service intervals are based on it.",
+      "reviewStatus": "draft",
+      "reviewNote": "Some older panels have no hour meter; owners then estimate from a log. Consider whether this needs a mention."
+    },
+    {
+      "id": "m07-q011", "moduleId": "m07", "lessonId": "m07-l03", "difficulty": 1,
+      "prompt": "Why is the engine oil usually changed before the winter lay-up rather than in spring?",
+      "options": [
+        "So the engine is not left standing all winter in acidic used oil",
+        "Because new oil freezes less in the bottle",
+        "Because oil can only be bought in autumn",
+        "So the engine starts faster in spring"
+      ],
+      "correctIndex": 0,
+      "explanation": "Used oil contains acids from combustion. Leaving it in the engine for months encourages corrosion, so fresh oil goes in before lay-up.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q012", "moduleId": "m07", "lessonId": "m07-l03", "difficulty": 2,
+      "prompt": "What is the main risk of leaving sea water in the raw water circuit in a hard frost?",
+      "options": [
+        "It can freeze and crack the pump, heat exchanger or other parts",
+        "It turns into diesel bug",
+        "It drains the batteries",
+        "It makes the engine oil too thick"
+      ],
+      "correctIndex": 0,
+      "explanation": "Water expands when it freezes, and the force can split castings and pipes. Handbooks explain whether to drain the circuit or fill it with antifreeze.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q013", "moduleId": "m07", "lessonId": "m07-l03", "difficulty": 2,
+      "prompt": "You block the exhaust outlet and air intake for the winter. What else should you do?",
+      "options": [
+        "Put a clear note on the engine controls to remove them before starting",
+        "Nothing, because the engine will push the blanks out when started",
+        "Tell the marina office only",
+        "Paint over them so they stay watertight"
+      ],
+      "correctIndex": 0,
+      "explanation": "Starting with the intake or exhaust blocked can cause serious damage. A note on the controls makes sure whoever starts the engine next removes them.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q014", "moduleId": "m07", "lessonId": "m07-l03", "difficulty": 3,
+      "prompt": "When recommissioning, why should you check the stern seal and through-hull fittings once the boat is afloat?",
+      "options": [
+        "Leaks only show once water is pressing on them from outside",
+        "They only need checking every few years",
+        "The engine must be running before they can leak",
+        "They are only fitted after launch"
+      ],
+      "correctIndex": 0,
+      "explanation": "Out of the water there is nothing to leak. Checking straight after launch catches a perished hose, a loose clip or a seal that needs attention before you leave.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q015", "moduleId": "m07", "lessonId": "m07-l03", "difficulty": 2,
+      "prompt": "Why should batteries be kept charged over the winter?",
+      "options": [
+        "A battery left flat, especially in the cold, can be permanently damaged",
+        "Charged batteries keep the engine warm",
+        "Batteries must be charged to keep the fuel from freezing",
+        "Charging keeps the stern gland lubricated"
+      ],
+      "correctIndex": 0,
+      "explanation": "Many batteries are damaged if left discharged, and a flat battery is more likely to be harmed by frost. A suitable charger or regular charging prevents this.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q016", "moduleId": "m07", "lessonId": "m07-l04", "difficulty": 1,
+      "prompt": "Which of these is an essential engine spare to carry on board?",
+      "options": [
+        "A raw water impeller with its cover gasket",
+        "A spare cylinder head",
+        "A spare crankshaft",
+        "A second gearbox"
+      ],
+      "correctIndex": 0,
+      "explanation": "Impellers wear out and fail without warning, and changing one is a common at-sea repair. Major engine parts are not practical spares.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q017", "moduleId": "m07", "lessonId": "m07-l04", "difficulty": 1,
+      "prompt": "Why should you carry spare fuel filter elements?",
+      "options": [
+        "Blocked fuel filters are one of the most common causes of an engine stopping",
+        "Filters must be changed every time you go out",
+        "The engine will not start with an old filter",
+        "Spare filters help the fuel burn more cleanly"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rough weather can stir up dirt that blocks a filter quickly. A spare element and the tools to fit it can get the engine running again at sea.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q018", "moduleId": "m07", "lessonId": "m07-l04", "difficulty": 2,
+      "prompt": "What is the point of checking that your spare belt and tools fit while you are in harbour?",
+      "options": [
+        "So you know the repair is possible before you need to do it at sea",
+        "So the spares stay warm",
+        "Because spares wear out if they are not used",
+        "To keep the boat's warranty valid"
+      ],
+      "correctIndex": 0,
+      "explanation": "A belt of the wrong size or a spanner that does not fit is only discovered when you try to use it. Trying in calm conditions avoids nasty surprises.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q019", "moduleId": "m07", "lessonId": "m07-l04", "difficulty": 2,
+      "prompt": "Which of these is most useful for a temporary repair to a leaking cooling hose?",
+      "options": [
+        "Self-amalgamating tape",
+        "Ordinary paper tape",
+        "Engine oil",
+        "Spare fuses"
+      ],
+      "correctIndex": 0,
+      "explanation": "Self-amalgamating tape fuses to itself when stretched and wrapped, making a tight seal that can hold until the hose is replaced.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q020", "moduleId": "m07", "lessonId": "m07-l04", "difficulty": 3,
+      "prompt": "Why is it worth recording part numbers for your filters, impeller and belt in your log?",
+      "options": [
+        "It makes ordering the correct replacements quick and avoids buying parts that do not fit",
+        "Part numbers are needed to start the engine",
+        "It is a legal requirement for all leisure boats",
+        "It allows any filter to be used"
+      ],
+      "correctIndex": 0,
+      "explanation": "Similar-looking parts often differ in size, thread or rating. Having the exact numbers to hand means you get the right part first time, even from a chandler far from home.",
+      "reviewStatus": "draft"
+    }
+  ]
+}

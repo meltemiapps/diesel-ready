@@ -6,7 +6,8 @@
     "03-cooling-systems.json",
     "04-lubrication.json",
     "05-electrics-and-starting.json",
-    "06-drive-belts-and-stern-gear.json"
+    "06-drive-belts-and-stern-gear.json",
+    "07-routine-maintenance.json"
   ],
   "faults": "faults.json"
 }

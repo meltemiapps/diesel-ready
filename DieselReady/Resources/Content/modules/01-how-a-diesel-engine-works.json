@@ -52,7 +52,8 @@
       ],
       "caution": null,
       "handsOn": false,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "reviewNote": "Step 2 gives a typical compression ratio range of roughly 15 to 23 to 1 as general background. Please confirm the range is fair for small marine diesels, or suggest removing the figure."
     },
     {
       "id": "m01-l02",
@@ -282,7 +283,8 @@
       ],
       "correctIndex": 0,
       "explanation": "Small diesels typically compress the air to between about a fifteenth and a twenty-third of its volume. Ratios near 8:1 to 10:1 are more typical of petrol engines.",
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "reviewNote": "Confirm the 15:1 to 23:1 range is a fair general figure for small marine diesels; the distractors are deliberately far outside it."
     },
     {
       "id": "m01-q005",
@@ -490,6 +492,55 @@
       ],
       "correctIndex": 0,
       "explanation": "The dipstick shows the oil level in the sump. Check it with the engine stopped and the boat as level as possible.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q018",
+      "moduleId": "m01",
+      "lessonId": "m01-l01",
+      "difficulty": 3,
+      "prompt": "Why can a worn engine with poor compression be hard to start from cold?",
+      "options": [
+        "The air is not squeezed enough to get hot enough to ignite the fuel",
+        "The injectors cannot open without full compression",
+        "The starter motor is designed to stop if compression is low",
+        "Low compression lets too much oil reach the fuel"
+      ],
+      "correctIndex": 0,
+      "explanation": "A diesel relies on the heat of compression to light its fuel. If air leaks past worn rings or valves, it does not get hot enough, and a cold engine makes this worse because the metal soaks up heat.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q019",
+      "moduleId": "m01",
+      "lessonId": "m01-l04",
+      "difficulty": 2,
+      "prompt": "When you trace the fuel line on your own engine, what are you most likely to find between the tank and the engine-mounted filter?",
+      "options": [
+        "A primary filter, often with a water trap",
+        "The raw water strainer",
+        "The heat exchanger",
+        "The oil filter"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fuel usually passes through a primary filter with a water trap before it reaches the finer filter on the engine. The strainer, heat exchanger and oil filter belong to the cooling and lubrication systems.",
+      "reviewStatus": "draft",
+      "reviewNote": "Fuel system layouts vary; confirm this is a fair description of a typical installation."
+    },
+    {
+      "id": "m01-q020",
+      "moduleId": "m01",
+      "lessonId": "m01-l04",
+      "difficulty": 1,
+      "prompt": "Why is it useful to keep labelled photos or a sketch of your engine on board?",
+      "options": [
+        "So you can find parts quickly when something goes wrong",
+        "Because it is a legal requirement for all boats",
+        "So the engine warranty stays valid",
+        "Because the engine will not start without them"
+      ],
+      "correctIndex": 0,
+      "explanation": "Faults tend to happen at awkward moments. A labelled picture saves time finding the dipstick, filters or seacock when you are under pressure. It is a good habit, not a legal or warranty requirement.",
       "reviewStatus": "draft"
     }
   ]

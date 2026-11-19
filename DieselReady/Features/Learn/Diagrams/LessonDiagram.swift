@@ -7,6 +7,7 @@ struct LessonDiagram: View {
         case compressionIgnition = "compression-ignition"
         case fourStrokeCycle = "four-stroke-cycle"
         case engineLayout = "engine-layout"
+        case flow
     }
 
     private let kind: Kind
@@ -16,7 +17,7 @@ struct LessonDiagram: View {
     /// kind draws (the content validator also reports that case).
     init?(diagram: Diagram) {
         guard let kind = Kind(rawValue: diagram.kind),
-              diagram.labels.count == Diagram.expectedLabelCounts[diagram.kind]
+              Diagram.labelCounts[diagram.kind]?.contains(diagram.labels.count) == true
         else { return nil }
         self.kind = kind
         self.diagram = diagram
@@ -29,6 +30,7 @@ struct LessonDiagram: View {
                 case .compressionIgnition: CompressionIgnitionDiagram(labels: diagram.labels)
                 case .fourStrokeCycle: FourStrokeDiagram(labels: diagram.labels)
                 case .engineLayout: EngineLayoutDiagram(labels: diagram.labels)
+                case .flow: FlowDiagram(labels: diagram.labels)
                 }
             }
             .accessibilityHidden(true)

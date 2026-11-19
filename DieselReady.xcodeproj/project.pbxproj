@@ -20,6 +20,7 @@
 		4A551C613A5694F030DF1205 /* DieselReadyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDEC3F12E432BC55CE09E3 /* DieselReadyApp.swift */; };
 		4DE252F52C178D750E6AB213 /* QuizHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0854804584B7F6AC4D1F8 /* QuizHomeView.swift */; };
 		5B26764BAD736AEC2FD99CBE /* FaultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B8A9BD8C3E0AC3D201D41 /* FaultsView.swift */; };
+		5D3262FA361F96806D37DCE3 /* FlowDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BC6562ED525F267FDAD2AC /* FlowDiagram.swift */; };
 		655CA4412F7A183F5DC4F025 /* Disclaimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CC65DB8D23C8D3391D00DA /* Disclaimer.swift */; };
 		7292E88310DE55F0A2EBB300 /* QuizSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5D94B6DB5ABD07704E1791 /* QuizSession.swift */; };
 		843512494B80108E5D75C5C1 /* ModuleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FC1AD4F17A60C7B7741D34 /* ModuleDetailView.swift */; };
@@ -92,6 +93,7 @@
 		8C9B4CF83352E8CE9FF31A1D /* EngineLayoutDiagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineLayoutDiagram.swift; sourceTree = "<group>"; };
 		8EA92F808964009F490556AA /* CycleDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleDiagrams.swift; sourceTree = "<group>"; };
 		9CE5F94A6B56A73A0B59BCAB /* ProgressRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRecorder.swift; sourceTree = "<group>"; };
+		A6BC6562ED525F267FDAD2AC /* FlowDiagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowDiagram.swift; sourceTree = "<group>"; };
 		A8F7796AE0469CBF751F3AB5 /* QuizRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRecorder.swift; sourceTree = "<group>"; };
 		AC846D4DD81A9A61954A507F /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 		ACDDBDB507881F92D7F81B05 /* QuizFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFlowView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				8EA92F808964009F490556AA /* CycleDiagrams.swift */,
 				8C9B4CF83352E8CE9FF31A1D /* EngineLayoutDiagram.swift */,
+				A6BC6562ED525F267FDAD2AC /* FlowDiagram.swift */,
 				B8BE8316B6D42FA6152987DA /* LessonDiagram.swift */,
 			);
 			path = Diagrams;
@@ -430,6 +433,7 @@
 				10528300F639ADD42432C4B2 /* DisclaimerView.swift in Sources */,
 				BB183607B74275487CB68B10 /* EngineLayoutDiagram.swift in Sources */,
 				5B26764BAD736AEC2FD99CBE /* FaultsView.swift in Sources */,
+				5D3262FA361F96806D37DCE3 /* FlowDiagram.swift in Sources */,
 				84A14E920558741345F3E868 /* LearnView.swift in Sources */,
 				245037BC79B79FE5C360B7F4 /* LessonDiagram.swift in Sources */,
 				B8D5EA4CEB68E03E15692647 /* LessonReaderModel.swift in Sources */,

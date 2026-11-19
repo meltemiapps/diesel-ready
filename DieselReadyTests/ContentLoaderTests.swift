@@ -15,15 +15,97 @@ struct ContentLoaderTests {
         #expect(library.allLessons.allSatisfy { $0.reviewStatus == .draft })
     }
 
-    @Test("Every lesson in the sample module has 3 to 5 questions")
+    @Test("Every bundled lesson has at least 3 questions and every module 3 to 6 lessons")
     func lessonQuestionCounts() throws {
         let library = try ContentLoader.bundled(.main).load()
         for module in library.modules {
+            #expect((3...6).contains(module.lessons.count), "\(module.id) has \(module.lessons.count) lessons")
             for lesson in module.lessons {
                 let count = module.questions(forLesson: lesson.id).count
-                #expect((3...5).contains(count), "\(lesson.id) has \(count) questions")
+                #expect(count >= 3, "\(lesson.id) has \(count) questions")
             }
         }
+    }
+
+    // MARK: Volume rules
+
+    private static func lesson(_ id: String) -> Lesson {
+        Lesson(id: id, title: "L", estimatedMinutes: 5, intro: "", diagram: nil,
+               steps: [Step(title: nil, text: "x")], caution: nil, handsOn: false, reviewStatus: .draft)
+    }
+
+    private static func question(_ id: String, lesson: String, difficulty: Int = 1, prompt: String? = nil) -> Question {
+        Question(id: id, moduleId: "m01", lessonId: lesson, difficulty: difficulty, prompt: prompt ?? "Prompt \(id)?",
+                 options: ["a", "b", "c", "d"], correctIndex: 0, explanation: "E", reviewStatus: .draft)
+    }
+
+    @Test("Release rules flag too few lessons, too few questions per lesson and missing difficulties")
+    func volumeRules() {
+        let lessons = [Self.lesson("m01-l01"), Self.lesson("m01-l02")]
+        let questions = [Self.question("m01-q1", lesson: "m01-l01"), Self.question("m01-q2", lesson: "m01-l01", difficulty: 3)]
+        let library = ContentLibrary(schemaVersion: 1, modules: [
+            Module(id: "m01", number: 1, title: "T", summary: "", lessons: lessons, questions: questions),
+        ])
+        var rules = ContentRules.release
+        rules.minTotalQuestions = 150
+        let problems = ContentLoader.validate(library, rules: rules)
+        #expect(problems.contains("m01: has 2 lessons, expected 3 to 6"))
+        #expect(problems.contains("m01-l01: has 2 questions, needs at least 3"))
+        #expect(problems.contains("m01-l02: has 0 questions, needs at least 3"))
+        #expect(problems.contains("m01: has no difficulty 2 questions"))
+        #expect(!problems.contains("m01: has no difficulty 3 questions"))
+        #expect(problems.contains("Only 2 questions in total, needs at least 150"))
+
+        #expect(ContentLoader.validate(library, rules: .structural).isEmpty)
+    }
+
+    @Test("Seven lessons in a module is too many")
+    func tooManyLessons() {
+        let lessons = (1...7).map { Self.lesson("m01-l0\($0)") }
+        let library = ContentLibrary(schemaVersion: 1, modules: [
+            Module(id: "m01", number: 1, title: "T", summary: "", lessons: lessons, questions: []),
+        ])
+        #expect(ContentLoader.validate(library).contains("m01: has 7 lessons, expected 3 to 6"))
+    }
+
+    @Test("Duplicate question text is flagged, ignoring case, spacing and punctuation")
+    func duplicatePrompts() {
+        let questions = [
+            Self.question("m01-q1", lesson: "m01-l01", prompt: "What does the impeller do?"),
+            Self.question("m01-q2", lesson: "m01-l01", prompt: "  what does the IMPELLER do "),
+            Self.question("m01-q3", lesson: "m01-l01", prompt: "What does the thermostat do?"),
+        ]
+        let library = ContentLibrary(schemaVersion: 1, modules: [
+            Module(id: "m01", number: 1, title: "T", summary: "", lessons: [Self.lesson("m01-l01")], questions: questions),
+        ])
+        let problems = ContentLoader.validate(library, rules: .structural)
+        #expect(problems == ["m01-q2: same question text as m01-q1"])
+    }
+
+    @Test("Flow diagrams accept 2 to 7 stages")
+    func flowDiagramLabels() {
+        func problems(labels count: Int) -> [String] {
+            let diagram = Diagram(kind: "flow", caption: nil,
+                                  labels: (0..<count).map { DiagramLabel(title: "S\($0)", detail: nil) }, description: "d")
+            let lesson = Lesson(id: "m01-l01", title: "L", estimatedMinutes: 5, intro: "", diagram: diagram,
+                                steps: [Step(title: nil, text: "x")], caution: nil, handsOn: false, reviewStatus: .draft)
+            let library = ContentLibrary(schemaVersion: 1, modules: [
+                Module(id: "m01", number: 1, title: "T", summary: "", lessons: [lesson], questions: []),
+            ])
+            return ContentLoader.validate(library, rules: .structural)
+        }
+        #expect(problems(labels: 1).contains("m01-l01: diagram flow has 1 labels, expected 2 to 7"))
+        #expect(problems(labels: 4).isEmpty)
+        #expect(problems(labels: 8).contains { $0.contains("expected 2 to 7") })
+    }
+
+    @Test("reviewNote is optional and decodes when present")
+    func reviewNoteDecodes() throws {
+        let json = #"{"id":"q","moduleId":"m01","lessonId":"l","difficulty":1,"prompt":"P","options":["a","b","c","d"],"correctIndex":0,"explanation":"E","reviewStatus":"draft","reviewNote":"Check this"}"#
+        let question = try JSONDecoder().decode(Question.self, from: Data(json.utf8))
+        #expect(question.reviewNote == "Check this")
+        let without = json.replacingOccurrences(of: #","reviewNote":"Check this""#, with: "")
+        #expect(try JSONDecoder().decode(Question.self, from: Data(without.utf8)).reviewNote == nil)
     }
 
     @Test("Validation reports structural problems")
@@ -93,7 +175,7 @@ struct ContentLoaderTests {
 
 extension ContentLoader {
     static func inMemory(_ files: [String: String]) -> ContentLoader {
-        ContentLoader { path in
+        ContentLoader(rules: .structural) { path in
             guard let text = files[path] else { throw LoadError.missingFile(path) }
             return Data(text.utf8)
         }

@@ -28,6 +28,9 @@ struct ContentLoader: Sendable {
         }
     }
 
+    /// Volume rules applied on top of the structural checks.
+    var rules: ContentRules = .release
+
     /// Supplies the raw bytes for a path relative to the content directory.
     let dataForPath: @Sendable (String) throws -> Data
 
@@ -54,7 +57,7 @@ struct ContentLoader: Sendable {
         let faults: FaultGuide? = try manifest.faults.map { try decode($0) }
         let library = ContentLibrary(schemaVersion: manifest.schemaVersion, modules: modules, faults: faults)
 
-        let problems = Self.validate(library)
+        let problems = Self.validate(library, rules: rules)
         guard problems.isEmpty else { throw LoadError.invalid(problems) }
         return library
     }
@@ -77,9 +80,10 @@ struct ContentLoader: Sendable {
 
     /// Structural checks that the JSON schema alone cannot express.
     /// Returns a human-readable list of problems; empty means valid.
-    static func validate(_ library: ContentLibrary) -> [String] {
+    static func validate(_ library: ContentLibrary, rules: ContentRules = .release) -> [String] {
         var problems: [String] = []
         var seenIDs = Set<String>()
+        var seenPrompts: [String: String] = [:]
 
         func checkUnique(_ id: String) {
             if !seenIDs.insert(id).inserted { problems.append("Duplicate id: \(id)") }
@@ -92,6 +96,20 @@ struct ContentLoader: Sendable {
             }
             if module.lessons.isEmpty {
                 problems.append("\(module.id): has no lessons")
+            } else if !rules.lessonsPerModule.contains(module.lessons.count) {
+                problems.append("\(module.id): has \(module.lessons.count) lessons, expected \(rules.lessonsPerModule.lowerBound) to \(rules.lessonsPerModule.upperBound)")
+            }
+            for lesson in module.lessons {
+                let count = module.questions(forLesson: lesson.id).count
+                if count < rules.minQuestionsPerLesson {
+                    problems.append("\(lesson.id): has \(count) questions, needs at least \(rules.minQuestionsPerLesson)")
+                }
+            }
+            if rules.requireEveryDifficultyPerModule {
+                let present = Set(module.questions.map(\.difficulty))
+                for level in 1...3 where !present.contains(level) {
+                    problems.append("\(module.id): has no difficulty \(level) questions")
+                }
             }
 
             let lessonIDs = Set(module.lessons.map(\.id))
@@ -100,14 +118,21 @@ struct ContentLoader: Sendable {
                 if lesson.steps.isEmpty { problems.append("\(lesson.id): has no steps") }
                 if lesson.estimatedMinutes <= 0 { problems.append("\(lesson.id): estimatedMinutes must be positive") }
                 if let diagram = lesson.diagram,
-                   let expected = Diagram.expectedLabelCounts[diagram.kind],
-                   diagram.labels.count != expected {
-                    problems.append("\(lesson.id): diagram \(diagram.kind) has \(diagram.labels.count) labels, expected \(expected)")
+                   let expected = Diagram.labelCounts[diagram.kind],
+                   !expected.contains(diagram.labels.count) {
+                    let range = expected.count == 1 ? "\(expected.lowerBound)" : "\(expected.lowerBound) to \(expected.upperBound)"
+                    problems.append("\(lesson.id): diagram \(diagram.kind) has \(diagram.labels.count) labels, expected \(range)")
                 }
             }
 
             for question in module.questions {
                 checkUnique(question.id)
+                let key = normalisedPrompt(question.prompt)
+                if let earlier = seenPrompts[key] {
+                    problems.append("\(question.id): same question text as \(earlier)")
+                } else {
+                    seenPrompts[key] = question.id
+                }
                 if question.moduleId != module.id {
                     problems.append("\(question.id): moduleId \(question.moduleId) but stored in \(module.id)")
                 }
@@ -129,10 +154,24 @@ struct ContentLoader: Sendable {
             }
         }
 
+        let total = library.allQuestions.count
+        if total < rules.minTotalQuestions {
+            problems.append("Only \(total) questions in total, needs at least \(rules.minTotalQuestions)")
+        }
+
         if let faults = library.faults {
             problems += validate(faults, lessonIDs: Set(library.allLessons.map(\.id)))
         }
         return problems
+    }
+
+    /// Lowercased, with punctuation removed and spaces collapsed, so trivially
+    /// different copies of the same question are caught.
+    static func normalisedPrompt(_ prompt: String) -> String {
+        prompt.lowercased()
+            .components(separatedBy: CharacterSet.alphanumerics.inverted)
+            .filter { !$0.isEmpty }
+            .joined(separator: " ")
     }
 
     /// Fault finder checks, including that every lesson link resolves.
@@ -171,4 +210,27 @@ struct ContentLoader: Sendable {
         }
         return problems
     }
+}
+
+/// Volume rules for the bundled course. Tests that build tiny libraries use
+/// `.structural`, which keeps every other check.
+struct ContentRules: Sendable, Equatable {
+    var lessonsPerModule: ClosedRange<Int>
+    var minQuestionsPerLesson: Int
+    var minTotalQuestions: Int
+    var requireEveryDifficultyPerModule: Bool
+
+    static let release = ContentRules(
+        lessonsPerModule: 3...6,
+        minQuestionsPerLesson: 3,
+        minTotalQuestions: 0,
+        requireEveryDifficultyPerModule: true
+    )
+
+    static let structural = ContentRules(
+        lessonsPerModule: 1...Int.max,
+        minQuestionsPerLesson: 0,
+        minTotalQuestions: 0,
+        requireEveryDifficultyPerModule: false
+    )
 }

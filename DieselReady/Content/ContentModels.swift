@@ -43,6 +43,8 @@ struct Lesson: Codable, Sendable, Identifiable, Hashable {
     /// lesson with the reminder to follow the engine manufacturer's handbook.
     let handsOn: Bool
     let reviewStatus: ReviewStatus
+    /// What the expert reviewer should check. Never shown in the app.
+    var reviewNote: String? = nil
 }
 
 struct Step: Codable, Sendable, Hashable {
@@ -62,10 +64,11 @@ struct Diagram: Codable, Sendable, Hashable {
     let description: String
 
     /// Number of labels each known kind draws. Unknown kinds are not checked.
-    static let expectedLabelCounts: [String: Int] = [
-        "compression-ignition": 3,
-        "four-stroke-cycle": 4,
-        "engine-layout": 7,
+    static let labelCounts: [String: ClosedRange<Int>] = [
+        "compression-ignition": 3...3,
+        "four-stroke-cycle": 4...4,
+        "engine-layout": 7...7,
+        "flow": 2...7,
     ]
 }
 
@@ -87,6 +90,8 @@ struct Question: Codable, Sendable, Identifiable, Hashable {
     let correctIndex: Int
     let explanation: String
     let reviewStatus: ReviewStatus
+    /// What the expert reviewer should check. Never shown in the app.
+    var reviewNote: String? = nil
 
     var correctAnswer: String { options[correctIndex] }
 }
@@ -164,6 +169,8 @@ struct Symptom: Codable, Sendable, Identifiable, Hashable {
     /// Lessons to read next. Every id must exist.
     let lessonIds: [String]
     let reviewStatus: ReviewStatus
+    /// What the expert reviewer should check. Never shown in the app.
+    var reviewNote: String? = nil
 }
 
 struct StopInstruction: Codable, Sendable, Hashable {

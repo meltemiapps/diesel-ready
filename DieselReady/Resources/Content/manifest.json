@@ -5,7 +5,8 @@
     "02-fuel-system-and-bleeding.json",
     "03-cooling-systems.json",
     "04-lubrication.json",
-    "05-electrics-and-starting.json"
+    "05-electrics-and-starting.json",
+    "06-drive-belts-and-stern-gear.json"
   ],
   "faults": "faults.json"
 }

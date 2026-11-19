@@ -1,0 +1,412 @@
+{
+  "id": "m06",
+  "number": 6,
+  "title": "Drive belts and stern gear",
+  "summary": "The belts that drive the alternator and pumps, the gearbox, and everything between the gearbox and the water: shaft, coupling, stern gland and propeller.",
+  "lessons": [
+    {
+      "id": "m06-l01",
+      "title": "Drive belts",
+      "estimatedMinutes": 6,
+      "intro": "A rubber belt on the front of the engine drives the alternator and, on many engines, the coolant circulating pump. A belt that fails can stop the charging and overheat the engine at the same time, so it deserves regular attention.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "What the belts drive",
+          "text": "Find out what each belt on your engine turns. Usually it is the alternator and the coolant pump; on some engines the raw water pump too. That tells you what will stop working if the belt breaks."
+        },
+        {
+          "title": "Types of belt",
+          "text": "Older and smaller engines often use a V-belt, which grips by its sloping sides. Many newer engines use a flat ribbed belt, sometimes called poly-V or multi-rib. They are not interchangeable."
+        },
+        {
+          "title": "Inspecting a belt",
+          "text": "With the engine stopped and unable to start, look along the whole belt. Cracks across the ribs, fraying edges, a shiny glazed surface or black rubber dust around the pulleys all suggest it needs replacing."
+        },
+        {
+          "title": "Tension",
+          "text": "A slack belt slips and squeals and wears quickly. A belt that is too tight overloads the bearings in the alternator and pump. Your handbook explains how to check tension on your engine, usually by how far the belt moves when pressed at a given point."
+        },
+        {
+          "title": "Adjusting and replacing",
+          "text": "On many engines the tension is set by moving the alternator on its mounting and locking it in place; others have an automatic tensioner. When fitting a new belt, check its tension again after a short period of running, because new belts bed in."
+        },
+        {
+          "title": "Carry a spare",
+          "text": "Keep a spare belt of the right type and size on board, along with the tools to fit it. Check it fits before you need it."
+        }
+      ],
+      "caution": "Never touch or check a belt while the engine is running. Belts and pulleys can trap fingers, hair and clothing in an instant. Make sure the engine cannot be started before you inspect them.",
+      "handsOn": true,
+      "reviewStatus": "draft",
+      "reviewNote": "No deflection figures are given, by design. Please confirm the guidance on new belts bedding in and the description of belt types is accurate."
+    },
+    {
+      "id": "m06-l02",
+      "title": "The gearbox",
+      "estimatedMinutes": 5,
+      "intro": "The gearbox lets the engine run while the propeller is stopped, and lets you choose ahead or astern. It also reduces the speed of the shaft so the propeller turns at an efficient speed.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "What it does",
+          "text": "The gearbox has three positions: ahead, neutral and astern. In neutral the engine can run without turning the propeller. Most marine gearboxes also reduce the shaft speed compared with the engine speed."
+        },
+        {
+          "title": "Gearbox oil",
+          "text": "Most gearboxes have their own oil, separate from the engine oil, with their own dipstick or level plug. Some use engine oil and some use other types such as transmission fluid. Use only what the handbook specifies, and check the level as often as it advises."
+        },
+        {
+          "title": "Changing gear",
+          "text": "Change gear only with the engine at idle. Pause briefly in neutral when going from ahead to astern, or the reverse, to let the shaft slow down. Slamming between ahead and astern at high revs strains the gearbox and couplings."
+        },
+        {
+          "title": "The gear cable",
+          "text": "A cable usually connects the gear lever to the gearbox. If it stretches or its fixings work loose, the gearbox may not fully engage or fully return to neutral. Check the lever positions match the gearbox lever at each end of its travel."
+        },
+        {
+          "title": "Warning signs",
+          "text": "Slipping or delayed engagement, new noises, a burning smell or oil leaking around the gearbox are all reasons to stop and investigate, and probably to get specialist advice."
+        }
+      ],
+      "caution": null,
+      "handsOn": false,
+      "reviewStatus": "draft",
+      "reviewNote": "Please confirm the gear-changing advice (idle, brief pause in neutral) is fair general guidance for common small-boat gearboxes."
+    },
+    {
+      "id": "m06-l03",
+      "title": "The stern gland",
+      "estimatedMinutes": 6,
+      "intro": "Where the propeller shaft passes out through the hull, a seal called the stern gland keeps the water out. There are two main kinds, and each needs a different sort of care.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "The traditional packed gland",
+          "text": "A traditional gland, often called a stuffing box, squeezes rings of packing around the shaft. The packing is lubricated and cooled by water, so many are designed to drip slightly while the shaft turns. Some have a greaser that you turn to push grease into the packing."
+        },
+        {
+          "title": "Dripless seals",
+          "text": "Many modern boats use a seal with a face or lips running on the shaft, designed not to drip. They are held by a short length of flexible hose. Some need air letting out of them after the boat is launched, a process described by the seal's maker."
+        },
+        {
+          "title": "Daily check",
+          "text": "Look at the stern gland as part of your checks, and again after a long passage. Know how it should look: a slow drip from a packed gland may be normal, while any steady leak from a dripless seal is not."
+        },
+        {
+          "title": "Adjusting a packed gland",
+          "text": "If a packed gland leaks too much, it can be adjusted by tightening its nuts a little and evenly. Too tight and it will overheat and wear the shaft. Follow the maker's advice for how much drip to aim for, and when to repack it."
+        },
+        {
+          "title": "Hoses and clips",
+          "text": "Check the flexible hose that holds the gland or seal for cracks and perishing, and check its clips. This hose is below the waterline."
+        }
+      ],
+      "caution": "Never adjust or touch the stern gland while the shaft is turning. Make sure the engine is stopped and cannot be started.",
+      "handsOn": true,
+      "reviewStatus": "draft",
+      "reviewNote": "Expected drip rates and the need to 'burp' dripless seals vary by product. The lesson defers to the maker. Please check the general descriptions are accurate."
+    },
+    {
+      "id": "m06-l04",
+      "title": "Shaft, coupling and propeller",
+      "estimatedMinutes": 6,
+      "intro": "The propeller shaft carries the engine's power out through the hull to the propeller. Most problems here show up as vibration, noise or a change in how the boat handles.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "The coupling",
+          "text": "The shaft is bolted to the gearbox through a coupling. Some installations use a flexible coupling to absorb small movements and reduce noise. The bolts must stay tight."
+        },
+        {
+          "title": "Alignment and engine mounts",
+          "text": "The engine sits on flexible mounts, and it has to be lined up accurately with the shaft. Worn or collapsed mounts, or poor alignment, cause vibration and wear the cutless bearing and stern gland."
+        },
+        {
+          "title": "The cutless bearing",
+          "text": "Where the shaft leaves the hull, it runs in a rubber-lined bearing lubricated by the water outside. When the boat is out of the water, a shaft that can be moved sideways in this bearing shows it is worn."
+        },
+        {
+          "title": "The propeller",
+          "text": "Barnacles, weed or a damaged blade reduce performance and can cause vibration and black smoke as the engine labours. Inspect and clean the propeller whenever the boat is lifted out. Many boats also have a sacrificial anode on the shaft that needs replacing when worn."
+        },
+        {
+          "title": "Rope round the propeller",
+          "text": "A rope or net caught round the propeller can stall the engine or cause heavy vibration. Some boats carry a rope cutter on the shaft. Never try to clear the propeller unless the engine is stopped and cannot be started."
+        },
+        {
+          "title": "Noticing change",
+          "text": "Get to know how your boat normally feels and sounds under power. New vibration, knocking or a drop in speed for the same engine revs are all worth investigating."
+        }
+      ],
+      "caution": "Before anyone goes near the propeller, in the water or out of it, stop the engine and make sure it cannot be started.",
+      "handsOn": false,
+      "reviewStatus": "draft",
+      "reviewNote": "Please check the description of cutless bearing wear and shaft anodes is accurate in general."
+    }
+  ],
+  "questions": [
+    {
+      "id": "m06-q001", "moduleId": "m06", "lessonId": "m06-l01", "difficulty": 1,
+      "prompt": "On many engines, what two things stop working if the alternator belt breaks?",
+      "options": [
+        "Battery charging and the coolant circulating pump",
+        "The fuel lift pump and the injectors",
+        "The oil pump and the starter motor",
+        "The gearbox and the stern gland"
+      ],
+      "correctIndex": 0,
+      "explanation": "A single belt often drives both the alternator and the coolant pump, so a broken belt can mean no charging and rapid overheating together.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q002", "moduleId": "m06", "lessonId": "m06-l01", "difficulty": 1,
+      "prompt": "What is the safe way to inspect a drive belt?",
+      "options": [
+        "With the engine stopped and unable to be started",
+        "With the engine at idle so you can see it moving",
+        "With the engine at high revs to check for slipping",
+        "While someone else holds the start button"
+      ],
+      "correctIndex": 0,
+      "explanation": "Belts and pulleys can trap fingers and clothing instantly. Inspect only with the engine stopped and the key removed or isolator off.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q003", "moduleId": "m06", "lessonId": "m06-l01", "difficulty": 2,
+      "prompt": "You find fine black rubber dust around the pulleys. What does it usually mean?",
+      "options": [
+        "The belt is wearing, possibly from slipping or misalignment",
+        "The engine oil needs changing",
+        "Soot is coming from the exhaust",
+        "The belt has just been replaced"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rubber dust comes from the belt itself wearing away. Check the tension, the pulley alignment and the belt's condition.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q004", "moduleId": "m06", "lessonId": "m06-l01", "difficulty": 2,
+      "prompt": "Why is a belt that is too tight a problem?",
+      "options": [
+        "It overloads the bearings in the alternator and pump",
+        "It makes the belt slip and squeal",
+        "It stops the engine from starting",
+        "It makes the engine run on less fuel"
+      ],
+      "correctIndex": 0,
+      "explanation": "Over-tightening puts a constant sideways load on the bearings of whatever the belt drives, wearing them early. Slipping and squealing come from a belt that is too slack.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q005", "moduleId": "m06", "lessonId": "m06-l01", "difficulty": 3,
+      "prompt": "Why should the tension of a newly fitted belt be checked again after a short period of running?",
+      "options": [
+        "New belts bed in and stretch slightly, so they can become slack",
+        "New belts shrink as they warm up",
+        "The alternator moves further away as it wears",
+        "Running reverses the direction of the belt"
+      ],
+      "correctIndex": 0,
+      "explanation": "A new belt settles into its pulleys and stretches a little at first. Rechecking catches the extra slack before it starts to slip.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q006", "moduleId": "m06", "lessonId": "m06-l02", "difficulty": 1,
+      "prompt": "What lets the engine run while the propeller is not turning?",
+      "options": [
+        "Putting the gearbox in neutral",
+        "Closing the raw water seacock",
+        "Loosening the stern gland",
+        "Switching off the alternator"
+      ],
+      "correctIndex": 0,
+      "explanation": "In neutral the gearbox disconnects the engine from the shaft, so the engine can warm up or charge the batteries without driving the boat.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q007", "moduleId": "m06", "lessonId": "m06-l02", "difficulty": 2,
+      "prompt": "What is the right way to change from ahead to astern?",
+      "options": [
+        "Bring the engine to idle, pause briefly in neutral, then select astern",
+        "Go straight from ahead to astern at full throttle",
+        "Stop the engine, then restart it in astern",
+        "Increase revs in neutral before selecting astern"
+      ],
+      "correctIndex": 0,
+      "explanation": "Changing at idle with a short pause lets the shaft slow before the gearbox engages the other direction, avoiding shock loads on the gearbox and coupling.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q008", "moduleId": "m06", "lessonId": "m06-l02", "difficulty": 2,
+      "prompt": "Where should you check the gearbox oil level on most installations?",
+      "options": [
+        "On the gearbox's own dipstick or level plug",
+        "On the engine oil dipstick, because they share oil",
+        "In the coolant header tank",
+        "In the fuel filter bowl"
+      ],
+      "correctIndex": 0,
+      "explanation": "Most gearboxes have their own separate oil supply with its own dipstick or level plug, and may need a different type of oil from the engine.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q009", "moduleId": "m06", "lessonId": "m06-l02", "difficulty": 3,
+      "prompt": "The boat creeps forward slightly even with the gear lever in neutral. What is a likely cause?",
+      "options": [
+        "The gear cable is out of adjustment, so the gearbox is not fully returning to neutral",
+        "The fuel tank is too full",
+        "The coolant level is low",
+        "The battery is overcharged"
+      ],
+      "correctIndex": 0,
+      "explanation": "If the cable has stretched or slipped, the lever and gearbox positions no longer match, and the gearbox may stay partly engaged. Check the lever travel at both ends.",
+      "reviewStatus": "draft",
+      "reviewNote": "Some gearboxes drag slightly in neutral when cold; confirm the answer is unambiguous."
+    },
+    {
+      "id": "m06-q010", "moduleId": "m06", "lessonId": "m06-l02", "difficulty": 2,
+      "prompt": "Apart from ahead, neutral and astern, what else does a marine gearbox usually do?",
+      "options": [
+        "Reduces the shaft speed compared with the engine speed",
+        "Charges the batteries",
+        "Cools the engine oil",
+        "Pumps raw water to the engine"
+      ],
+      "correctIndex": 0,
+      "explanation": "Propellers work best turning slower than a diesel engine, so most gearboxes include a reduction ratio.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q011", "moduleId": "m06", "lessonId": "m06-l03", "difficulty": 1,
+      "prompt": "What is the job of the stern gland?",
+      "options": [
+        "To stop water coming in where the propeller shaft passes through the hull",
+        "To connect the shaft to the gearbox",
+        "To cool the engine oil",
+        "To hold the propeller on the shaft"
+      ],
+      "correctIndex": 0,
+      "explanation": "The shaft has to pass through the hull to reach the propeller. The stern gland seals around it while still letting it turn.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q012", "moduleId": "m06", "lessonId": "m06-l03", "difficulty": 2,
+      "prompt": "A traditional packed stern gland drips slowly while the shaft turns. What does this usually mean?",
+      "options": [
+        "It may be normal, because many packed glands use water to lubricate and cool the packing",
+        "The boat is sinking and must be lifted out at once",
+        "The gland must be tightened until it stops completely",
+        "The engine is overheating"
+      ],
+      "correctIndex": 0,
+      "explanation": "Many packed glands are meant to drip slightly in use. Tightening until all dripping stops can overheat the packing and wear the shaft. Follow the maker's guidance.",
+      "reviewStatus": "draft",
+      "reviewNote": "Some packed glands are designed to be drip-free when stationary and drip only slowly when running. Confirm wording."
+    },
+    {
+      "id": "m06-q013", "moduleId": "m06", "lessonId": "m06-l03", "difficulty": 2,
+      "prompt": "What can happen if a packed stern gland is tightened too much?",
+      "options": [
+        "The packing overheats and wears a groove in the shaft",
+        "The propeller falls off",
+        "The engine cannot be put in gear",
+        "The battery goes flat"
+      ],
+      "correctIndex": 0,
+      "explanation": "Too much pressure stops the water reaching the packing. Friction then heats it and wears the shaft, which can be costly to repair.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q014", "moduleId": "m06", "lessonId": "m06-l03", "difficulty": 3,
+      "prompt": "A dripless shaft seal shows a steady trickle of water. How should you treat it?",
+      "options": [
+        "As a fault to investigate, because these seals are designed not to leak",
+        "As normal, because all shaft seals drip",
+        "As a sign the seal needs more grease",
+        "As a sign the engine needs an oil change"
+      ],
+      "correctIndex": 0,
+      "explanation": "Unlike a packed gland, a dripless seal should stay dry. A leak can mean wear, damage or a problem with its hose, and it is below the waterline.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q015", "moduleId": "m06", "lessonId": "m06-l03", "difficulty": 1,
+      "prompt": "When is it safe to adjust the stern gland?",
+      "options": [
+        "Only with the engine stopped and unable to be started",
+        "Only while the shaft is turning slowly",
+        "Only with the engine in astern",
+        "At any time, because the shaft is covered"
+      ],
+      "correctIndex": 0,
+      "explanation": "A turning shaft can catch clothing, fingers or tools. Make sure it cannot turn before working near it.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q016", "moduleId": "m06", "lessonId": "m06-l04", "difficulty": 1,
+      "prompt": "A rope has wrapped round the propeller. What must you do before trying to clear it?",
+      "options": [
+        "Stop the engine and make sure it cannot be started",
+        "Put the engine in astern to unwind it",
+        "Run the engine at full power to cut through it",
+        "Leave the engine in neutral while you clear it"
+      ],
+      "correctIndex": 0,
+      "explanation": "Even in neutral, a gearbox can drag or be knocked into gear. Stopping and isolating the engine is the only safe state for working near the propeller.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q017", "moduleId": "m06", "lessonId": "m06-l04", "difficulty": 2,
+      "prompt": "What lubricates a typical cutless bearing?",
+      "options": [
+        "The water the boat is floating in",
+        "Engine oil pumped from the sump",
+        "Grease from the stern gland greaser",
+        "Gearbox oil"
+      ],
+      "correctIndex": 0,
+      "explanation": "The cutless bearing has a grooved rubber lining that lets water flow through, lubricating and cooling it.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q018", "moduleId": "m06", "lessonId": "m06-l04", "difficulty": 2,
+      "prompt": "With the boat out of the water, the shaft can be moved sideways in the bearing where it leaves the hull. What does this suggest?",
+      "options": [
+        "The cutless bearing is worn",
+        "The gearbox oil is low",
+        "The propeller is too small",
+        "The engine mounts are new"
+      ],
+      "correctIndex": 0,
+      "explanation": "A good bearing supports the shaft closely. Noticeable sideways movement shows the rubber lining has worn, which can cause vibration and noise.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q019", "moduleId": "m06", "lessonId": "m06-l04", "difficulty": 3,
+      "prompt": "Why can a fouled propeller make the engine produce black smoke?",
+      "options": [
+        "The engine has to work harder for the same revs, so it is given more fuel than it can burn cleanly",
+        "Barnacles release oil into the exhaust",
+        "The fouling blocks the fuel tank vent",
+        "Weed is drawn into the air filter"
+      ],
+      "correctIndex": 0,
+      "explanation": "Extra drag means more load. The engine is supplied with more fuel to keep its speed, but there is not enough air to burn it all, which shows as black smoke.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m06-q020", "moduleId": "m06", "lessonId": "m06-l04", "difficulty": 3,
+      "prompt": "Over a season, vibration under power slowly gets worse and the stern gland starts to leak more. What should you suspect?",
+      "options": [
+        "Worn engine mounts or poor alignment between engine and shaft",
+        "Too much oil in the engine",
+        "A blocked fuel filter",
+        "A weak battery"
+      ],
+      "correctIndex": 0,
+      "explanation": "If the engine sags on worn mounts or is out of line with the shaft, the shaft runs off-centre, causing vibration and wearing the gland and cutless bearing.",
+      "reviewStatus": "draft"
+    }
+  ]
+}

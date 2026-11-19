@@ -10,7 +10,7 @@ struct LessonReaderView: View {
     @Query private var progressRecords: [LessonProgress]
 
     @State private var model: LessonReaderModel
-    @State private var showingQuiz = false
+    @State private var quizLaunch: QuizLaunch?
 
     init(module: Module, lessonID: Lesson.ID) {
         _model = State(initialValue: LessonReaderModel(module: module, lessonID: lessonID))
@@ -66,9 +66,7 @@ struct LessonReaderView: View {
         .navigationBarTitleDisplayMode(.inline)
         .onAppear { model.didOpen(in: modelContext) }
         .onChange(of: model.lesson.id) { model.didOpen(in: modelContext) }
-        .sheet(isPresented: $showingQuiz) {
-            LessonQuizPlaceholder(lesson: model.lesson, questionCount: model.questions.count)
-        }
+        .quizCover($quizLaunch)
     }
 
     private enum ScrollAnchor: Hashable { case top }
@@ -120,7 +118,7 @@ struct LessonReaderView: View {
 
             if !model.questions.isEmpty {
                 Button {
-                    showingQuiz = true
+                    quizLaunch = QuizLaunch(mode: .lesson(model.lesson.id))
                 } label: {
                     Label("Check your knowledge", systemImage: "checkmark.bubble")
                 }
@@ -201,28 +199,5 @@ struct HandbookReminder: View {
         }
         .card()
         .accessibilityElement(children: .combine)
-    }
-}
-
-/// Stand-in for the lesson quiz until Phase 3 builds the quiz flow.
-private struct LessonQuizPlaceholder: View {
-    @Environment(\.dismiss) private var dismiss
-    let lesson: Lesson
-    let questionCount: Int
-
-    var body: some View {
-        NavigationStack {
-            ContentUnavailableView {
-                Label("Check your knowledge", systemImage: "checkmark.bubble")
-            } description: {
-                Text("\(questionCount) questions on \u{201C}\(lesson.title)\u{201D} are ready. The quiz screens arrive in the next build.")
-            }
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") { dismiss() }
-                }
-            }
-        }
-        .presentationDetents([.medium])
     }
 }

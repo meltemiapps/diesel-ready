@@ -95,10 +95,9 @@ struct DisclaimerView: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .accessibilityElement(children: .ignore)
         .accessibilityLabel(Disclaimer.checkboxLabel)
         .accessibilityValue(understood ? "Ticked" : "Not ticked")
-        .accessibilityAddTraits(understood ? [.isButton, .isSelected] : .isButton)
+        .accessibilityAddTraits(understood ? .isSelected : [])
     }
 }
 

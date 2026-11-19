@@ -50,15 +50,15 @@ struct ModuleDetailView: View {
                     .accessibilityAddTraits(.isHeader)
 
                 ForEach(Array(module.lessons.enumerated()), id: \.element.id) { index, lesson in
-                    NavigationLink(value: AppNavigation.LearnRoute.lesson(lesson.id)) {
-                        LessonRow(
-                            number: index + 1,
-                            lesson: lesson,
-                            isCompleted: summary.isCompleted(lesson: lesson.id),
-                            isStarted: summary.isStarted(lesson: lesson.id)
-                        )
-                    }
-                    .buttonStyle(.plain)
+                    let row = LessonRow(
+                        number: index + 1,
+                        lesson: lesson,
+                        isCompleted: summary.isCompleted(lesson: lesson.id),
+                        isStarted: summary.isStarted(lesson: lesson.id)
+                    )
+                    NavigationLink(value: AppNavigation.LearnRoute.lesson(lesson.id)) { row }
+                        .buttonStyle(.plain)
+                        .accessibilityLabel(row.accessibilityText)
                 }
             }
             .padding(Theme.Spacing.l)
@@ -119,12 +119,10 @@ private struct LessonRow: View {
         }
         .card()
         .contentShape(Rectangle())
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel(accessibilityText)
-        .accessibilityAddTraits(.isButton)
     }
 
-    private var accessibilityText: String {
+    /// Applied by the containing link, so VoiceOver reads one button.
+    var accessibilityText: String {
         var text = "Lesson \(number), \(lesson.title), \(lesson.estimatedMinutes) minutes."
         if lesson.handsOn { text += " Hands-on." }
         if isCompleted {

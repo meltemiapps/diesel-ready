@@ -55,11 +55,23 @@ targets:
       base:
         GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: uk.co.meltemiapps.dieselready.tests
+  DieselReadyUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [DieselReadyUITests]
+    dependencies:
+      - target: DieselReady
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: uk.co.meltemiapps.dieselready.uitests
+        TEST_TARGET_NAME: DieselReady
 schemes:
   DieselReady:
     build:
       targets:
         DieselReady: all
         DieselReadyTests: [test]
+        DieselReadyUITests: [test]
     test:
-      targets: [DieselReadyTests]
+      targets: [DieselReadyTests, DieselReadyUITests]

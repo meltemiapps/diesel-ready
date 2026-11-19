@@ -7,7 +7,7 @@ made by [Meltemi Apps](https://meltemiapps.co.uk), an independent app studio.
 - Website: https://meltemiapps.co.uk/diesel-ready/
 - App Store: link to follow at release
 
-> **Status:** in development (Phase 2, learning flow). All lesson and quiz content is
+> **Status:** in development (Phase 3, quizzes). All lesson and quiz content is
 > marked `"reviewStatus": "draft"` until it has been reviewed by a qualified
 > marine engineer.
 
@@ -72,6 +72,7 @@ DieselReady/
     Content/         Bundled JSON content (CC BY-NC-SA 4.0)
     PrivacyInfo.xcprivacy
 DieselReadyTests/    Unit tests (Swift Testing)
+DieselReadyUITests/  UI test that runs a mock test end to end
 docs/                Content schema and, later, store metadata and web pages
 ```
 

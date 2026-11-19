@@ -28,13 +28,11 @@ struct LearnView: View {
                             .accessibilityAddTraits(.isHeader)
                             .padding(.top, Theme.Spacing.s)
                         ForEach(content.modules) { module in
-                            NavigationLink(value: AppNavigation.LearnRoute.module(module.id)) {
-                                ModuleRow(
-                                    module: module,
-                                    completedLessons: summary.completedLessonCount(in: module)
-                                )
-                            }
-                            .buttonStyle(.plain)
+                            let row = ModuleRow(module: module,
+                                                completedLessons: summary.completedLessonCount(in: module))
+                            NavigationLink(value: AppNavigation.LearnRoute.module(module.id)) { row }
+                                .buttonStyle(.plain)
+                                .accessibilityLabel(row.accessibilityText)
                         }
                     }
                 }
@@ -106,6 +104,8 @@ private struct ProgressCard: View {
     @Environment(AppNavigation.self) private var navigation
     let summary: ProgressSummary
 
+    @State private var quizLaunch: QuizLaunch?
+
     var body: some View {
         VStack(alignment: .leading, spacing: Theme.Spacing.m) {
             Text("Your progress")
@@ -126,14 +126,16 @@ private struct ProgressCard: View {
             continueButton
 
             Button {
-                navigation.selectedTab = .quiz
+                quizLaunch = QuizLaunch(mode: .quick)
             } label: {
                 Label("Quick quiz", systemImage: "bolt")
             }
             .buttonStyle(.secondary)
-            .accessibilityHint("Ten random questions")
+            .disabled(summary.library.allQuestions.isEmpty)
+            .accessibilityHint("\(QuizMode.quickCount) random questions")
         }
         .card()
+        .quizCover($quizLaunch)
     }
 
     @ViewBuilder
@@ -216,12 +218,10 @@ struct ModuleRow: View {
         }
         .card()
         .contentShape(Rectangle())
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel(accessibilityText)
-        .accessibilityAddTraits(.isButton)
     }
 
-    private var accessibilityText: String {
+    /// Applied by the containing link, so VoiceOver reads one button.
+    var accessibilityText: String {
         var text = "Module \(module.number), \(module.title). \(module.lessons.count) lessons, about \(module.estimatedMinutes) minutes."
         if isComplete {
             text += " Completed."

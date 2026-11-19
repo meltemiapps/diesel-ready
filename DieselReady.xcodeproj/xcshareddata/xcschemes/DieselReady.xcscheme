@@ -36,6 +36,20 @@
                ReferencedContainer = "container:DieselReady.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5A106735A5A71A5089375B1A"
+               BuildableName = "DieselReadyUITests.xctest"
+               BlueprintName = "DieselReadyUITests"
+               ReferencedContainer = "container:DieselReady.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -62,6 +76,17 @@
                BlueprintIdentifier = "5585510502EE23326B86164E"
                BuildableName = "DieselReadyTests.xctest"
                BlueprintName = "DieselReadyTests"
+               ReferencedContainer = "container:DieselReady.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5A106735A5A71A5089375B1A"
+               BuildableName = "DieselReadyUITests.xctest"
+               BlueprintName = "DieselReadyUITests"
                ReferencedContainer = "container:DieselReady.xcodeproj">
             </BuildableReference>
          </TestableReference>

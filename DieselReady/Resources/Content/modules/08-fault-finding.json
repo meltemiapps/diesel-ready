@@ -1,0 +1,427 @@
+{
+  "id": "m08",
+  "number": 8,
+  "title": "Fault finding",
+  "summary": "A calm, step-by-step way to work out what is wrong, applied to the faults you are most likely to meet. Use it alongside the Fault finder tab.",
+  "lessons": [
+    {
+      "id": "m08-l01",
+      "title": "A systematic approach",
+      "estimatedMinutes": 6,
+      "intro": "When an engine misbehaves, it is tempting to start taking things apart. A few minutes spent thinking first usually finds the fault faster, and avoids creating new problems.",
+      "diagram": {
+        "kind": "flow",
+        "caption": "A simple order of work for any engine fault.",
+        "labels": [
+          { "title": "Make the boat safe", "detail": "Sail, anchor or get a tow before working on the engine." },
+          { "title": "Gather the clues", "detail": "What happened, when, and what changed beforehand." },
+          { "title": "Think in systems", "detail": "Fuel, air, compression, cooling, lubrication, electrics." },
+          { "title": "Check the simple things first", "detail": "Controls, switches, levels and filters." },
+          { "title": "Change one thing at a time", "detail": "And check the result after each change." },
+          { "title": "Know when to stop", "detail": "Get help before a fault becomes damage." }
+        ],
+        "description": "A flow diagram of six steps for fault finding: make the boat safe, gather the clues, think in systems, check the simple things first, change one thing at a time, and know when to stop and get help."
+      },
+      "steps": [
+        {
+          "title": "The boat comes first",
+          "text": "A failed engine is rarely an emergency in itself, but losing propulsion near rocks, in a busy channel or in strong tide can be. Deal with the boat's safety first: sail, anchor, or call for help. Then turn to the engine."
+        },
+        {
+          "title": "Gather the clues",
+          "text": "Note what the engine did and how: a slow fade or a sudden stop, any noise, smoke, smell, warning light or alarm. Ask what changed recently: refuelling, rough weather, a filter change, a new crew member operating the controls."
+        },
+        {
+          "title": "Think in systems",
+          "text": "To run, a diesel needs clean fuel free of air, clean air, and good compression. To keep running it also needs cooling and lubrication, and to start it needs the electrics and enough heat. Decide which system the clues point to."
+        },
+        {
+          "title": "Simple and likely first",
+          "text": "Check the easy, common causes before the difficult, rare ones: control positions, switches, levels, filters and the strainer, before injectors or internal parts. The Fault finder tab lists causes in this order for each symptom."
+        },
+        {
+          "title": "One change at a time",
+          "text": "Make one change, then test. If you change several things at once, you will not know which one mattered, and you may introduce a new fault."
+        },
+        {
+          "title": "Know when to stop",
+          "text": "Some symptoms, such as low oil pressure, overheating, milky oil or a hard mechanical stop, mean the engine should not be run until the cause is found. If you are unsure, get advice from a qualified marine engineer."
+        }
+      ],
+      "caution": null,
+      "handsOn": false,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-l02",
+      "title": "When the engine will not start",
+      "estimatedMinutes": 7,
+      "intro": "Starting failures divide neatly in two. Either the engine does not turn over properly, which is nearly always electrical, or it turns over but will not fire, which is nearly always fuel or heat.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "First, the controls",
+          "text": "Before anything else, check the gear lever is in neutral, the stop control is pushed fully home, and the battery isolator and key switch are on. These catch out experienced skippers too."
+        },
+        {
+          "title": "If it does not turn over",
+          "text": "Work along the electrical path: battery charge, battery terminals, isolator, fuse or breaker for the panel, the starter solenoid and the engine earth. A click with no turning usually means not enough current is getting through."
+        },
+        {
+          "title": "If it turns but will not fire",
+          "text": "Check there is fuel in the tank, the fuel valve is open and there is no water in the filter bowl. If the fuel system has been opened or run dry, it probably needs bleeding."
+        },
+        {
+          "title": "Cold weather",
+          "text": "On a cold day, make sure you have pre-heated for long enough, as the handbook describes. If the engine starts once warm but struggles from cold, suspect the glow plugs or their circuit."
+        },
+        {
+          "title": "Protect the engine while cranking",
+          "text": "Crank in short bursts with rests between. On an engine with a wet exhaust, repeated cranking pumps water into the exhaust without the exhaust gas to blow it out, and it can flood back into the cylinders. Your handbook will say whether to close the raw water seacock during long attempts; if you do, open it again as soon as the engine runs."
+        },
+        {
+          "title": "When to stop trying",
+          "text": "If the engine turns a little and then stops hard, or you hear water, stop cranking. Water may have entered the cylinders, and forcing the engine round can bend internal parts."
+        }
+      ],
+      "caution": null,
+      "handsOn": true,
+      "reviewStatus": "draft",
+      "reviewNote": "The advice on closing the seacock during prolonged cranking is widely given but engine-dependent. Please confirm the wording is safe and defers appropriately to the handbook."
+    },
+    {
+      "id": "m08-l03",
+      "title": "When the engine stops or loses power",
+      "estimatedMinutes": 6,
+      "intro": "An engine that stops by itself, or slowly loses power, is usually being starved of fuel or air, or is being overloaded. How it stopped is your best clue.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "A slow fade",
+          "text": "If the revs drop away over several seconds, or the engine hunts up and down before stopping, think fuel: a blocked filter, water in the fuel, air getting in, a blocked tank vent or an empty tank."
+        },
+        {
+          "title": "A sudden stop when put in gear",
+          "text": "If the engine stops the moment it is put in gear, or with a thump, something is probably round the propeller. Stop the engine fully before investigating."
+        },
+        {
+          "title": "A hard stop with a warning",
+          "text": "If the engine stopped with an alarm, a bang, a burning smell or a jolt, do not restart it. It may have overheated, lost oil pressure or seized."
+        },
+        {
+          "title": "Gradual loss of power",
+          "text": "If the engine runs but will not reach its usual revs, or the boat is slower at the same revs, look at the air filter, the fuel filters, the exhaust for blockages, and the hull and propeller for fouling."
+        },
+        {
+          "title": "After rough weather",
+          "text": "Many fuel-related stops happen after a rough passage, when dirt and water are stirred up from the bottom of the tank. Check the primary filter bowl first and change the elements if needed."
+        },
+        {
+          "title": "Getting going again",
+          "text": "After clearing a fuel problem, bleed the system if air has got in. Then run the engine at moderate power for a while and watch it, in case the cause returns."
+        }
+      ],
+      "caution": "Never go near the propeller, in the water or from a dinghy, unless the engine is stopped and cannot be started.",
+      "handsOn": true,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-l04",
+      "title": "Overheating, smoke and alarms",
+      "estimatedMinutes": 7,
+      "intro": "Warning lights, alarms and smoke are the engine's way of telling you something is wrong before it fails. Knowing which ones mean stop now, and which mean investigate soon, protects both the engine and the boat.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "Stop now",
+          "text": "Low oil pressure and high temperature warnings mean stop the engine as soon as it is safe to do so. Running on can cause serious damage within minutes."
+        },
+        {
+          "title": "Overheating: raw water first",
+          "text": "Most overheating starts on the raw water side. Look at the exhaust: little or no water means check the seacock, strainer and impeller. Normal water flow but still overheating points to the belt, coolant level, thermostat or heat exchanger."
+        },
+        {
+          "title": "Reading the smoke",
+          "text": "White smoke that clears as the engine warms is usually unburnt fuel on a cold start. Black smoke under load means too much fuel for the air: check the air filter and look for overloading. Blue smoke means oil is being burnt. Steam with little exhaust water means a cooling problem."
+        },
+        {
+          "title": "Charge warning",
+          "text": "A charge warning is not usually an emergency in itself, but check the belt straight away: if it has broken and also drives the coolant pump, the engine will soon overheat."
+        },
+        {
+          "title": "After the alarm",
+          "text": "Once you have found and fixed the cause, restart carefully and watch the gauges and warning lights closely. If the warning comes back, stop again and get advice."
+        },
+        {
+          "title": "False alarms",
+          "text": "Sensors and wiring can fail, but treat every warning as real until you have proved otherwise. An engine that is damaged because a real warning was ignored costs far more than an unnecessary stop."
+        }
+      ],
+      "caution": "Never open the coolant pressure cap on a hot engine. Hot coolant can spray out and scald.",
+      "handsOn": true,
+      "reviewStatus": "draft"
+    }
+  ],
+  "questions": [
+    {
+      "id": "m08-q001", "moduleId": "m08", "lessonId": "m08-l01", "difficulty": 1,
+      "prompt": "Your engine stops while you are motoring near a rocky shore. What should you do first?",
+      "options": [
+        "Make the boat safe: sail, anchor or call for help",
+        "Open the engine space and start changing filters",
+        "Keep trying to start the engine until it runs",
+        "Phone the engine manufacturer"
+      ],
+      "correctIndex": 0,
+      "explanation": "The boat's safety comes before the engine. Once you are no longer at risk, you can work on the engine calmly.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q002", "moduleId": "m08", "lessonId": "m08-l01", "difficulty": 2,
+      "prompt": "Why is it useful to ask 'what changed recently?' when an engine develops a fault?",
+      "options": [
+        "Recent events such as refuelling or a filter change often point straight to the cause",
+        "Engines only develop faults after something has changed",
+        "It is the first question an insurer will ask",
+        "It tells you the engine's age"
+      ],
+      "correctIndex": 0,
+      "explanation": "A fault that appears after refuelling suggests fuel quality; after a filter change, air or a poor seal. Linking the fault to a recent event narrows the search quickly.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q003", "moduleId": "m08", "lessonId": "m08-l01", "difficulty": 2,
+      "prompt": "Which three things does a diesel engine need in order to run?",
+      "options": [
+        "Clean fuel free of air, clean air, and good compression",
+        "A spark, petrol and oil",
+        "Coolant, a charged battery and a full fuel tank",
+        "A gearbox, a propeller and a stern gland"
+      ],
+      "correctIndex": 0,
+      "explanation": "Compression heats the air, the fuel is injected and burns. If any of the three is missing, the engine will not run. Cooling, lubrication and electrics matter too, but for keeping going and starting.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q004", "moduleId": "m08", "lessonId": "m08-l01", "difficulty": 3,
+      "prompt": "Why should you change only one thing at a time when fault finding?",
+      "options": [
+        "So you can tell which change fixed the problem, without adding new faults",
+        "Because the engine can only cope with one repair a day",
+        "Because tools must be used one at a time",
+        "So the job takes longer and is done more carefully"
+      ],
+      "correctIndex": 0,
+      "explanation": "If you change several things and the engine runs, you will not know which mattered. Each extra change also adds a chance of a new problem, such as letting air into the fuel.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q005", "moduleId": "m08", "lessonId": "m08-l01", "difficulty": 1,
+      "prompt": "In what order should you usually check possible causes?",
+      "options": [
+        "Simple and common causes first, difficult and rare ones later",
+        "The most expensive parts first",
+        "Whatever is nearest to hand",
+        "Internal engine parts first"
+      ],
+      "correctIndex": 0,
+      "explanation": "Most faults have simple causes such as a control left in the wrong place, a blocked filter or a closed valve. Checking those first saves time and avoids unnecessary dismantling.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q006", "moduleId": "m08", "lessonId": "m08-l02", "difficulty": 1,
+      "prompt": "The engine turns over normally but will not fire. Which system should you look at first?",
+      "options": [
+        "The fuel system",
+        "The starter motor",
+        "The battery terminals",
+        "The alternator"
+      ],
+      "correctIndex": 0,
+      "explanation": "If the engine turns normally, the battery and starter are doing their job. A failure to fire points to fuel, or on a cold day to pre-heating.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q007", "moduleId": "m08", "lessonId": "m08-l02", "difficulty": 2,
+      "prompt": "Pressing start gives a single click and nothing else. What does this usually point to?",
+      "options": [
+        "Not enough current reaching the starter: a weak battery or a poor connection",
+        "Air in the fuel lines",
+        "A blocked raw water strainer",
+        "A closed fuel valve"
+      ],
+      "correctIndex": 0,
+      "explanation": "The click is the solenoid trying to engage. Without enough current, the starter cannot turn. Fuel and cooling faults do not stop the engine turning over.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q008", "moduleId": "m08", "lessonId": "m08-l02", "difficulty": 2,
+      "prompt": "The engine will not start on a cold morning but starts easily later in the day. Which part is a likely suspect?",
+      "options": [
+        "The glow plugs or their circuit",
+        "The stern gland",
+        "The raw water impeller",
+        "The gearbox oil"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cold starting relies on extra heat from the glow plugs. Once the air is warmer the engine manages without them, which hides the fault.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q009", "moduleId": "m08", "lessonId": "m08-l02", "difficulty": 3,
+      "prompt": "Why can long periods of cranking be harmful on an engine with a wet exhaust?",
+      "options": [
+        "The raw water pump fills the exhaust with water that is not blown out, and it can flood back into the cylinders",
+        "Cranking burns the oil in the sump",
+        "Cranking reverses the flow of fuel",
+        "The exhaust overheats while cranking"
+      ],
+      "correctIndex": 0,
+      "explanation": "While cranking, the pump still pushes water into the exhaust, but without running exhaust gas to expel it. The water-lock fills and water can reach the cylinders, risking serious damage.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q010", "moduleId": "m08", "lessonId": "m08-l02", "difficulty": 3,
+      "prompt": "While cranking, the engine turns a little and then stops hard. What should you do?",
+      "options": [
+        "Stop cranking and get advice, because water may be in the cylinders",
+        "Crank harder with a fully charged battery",
+        "Use a starting spray",
+        "Bleed the fuel system and try again"
+      ],
+      "correctIndex": 0,
+      "explanation": "Water does not compress. If a cylinder is full of it, forcing the engine round can bend a connecting rod. Stop and find out why.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q011", "moduleId": "m08", "lessonId": "m08-l03", "difficulty": 1,
+      "prompt": "The engine slows and fades over several seconds before stopping. What is the most likely type of cause?",
+      "options": [
+        "A fuel supply problem",
+        "A broken propeller blade",
+        "A failed alternator",
+        "A worn stern gland"
+      ],
+      "correctIndex": 0,
+      "explanation": "A gradual fade is typical of fuel starvation, such as a blocked filter or air in the fuel, as the supply dwindles rather than stopping instantly.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q012", "moduleId": "m08", "lessonId": "m08-l03", "difficulty": 2,
+      "prompt": "The engine runs fine in neutral but stalls as soon as you put it in gear. What should you suspect?",
+      "options": [
+        "Something caught round the propeller",
+        "Water in the engine oil",
+        "A faulty oil pressure switch",
+        "A flat domestic battery"
+      ],
+      "correctIndex": 0,
+      "explanation": "In neutral the propeller is not driven. If the engine stalls only when the propeller is loaded, a rope, net or weed round it is the usual reason.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q013", "moduleId": "m08", "lessonId": "m08-l03", "difficulty": 2,
+      "prompt": "Over a season, the boat gets slower at the same engine revs and the exhaust smokes black under load. What is a likely cause?",
+      "options": [
+        "A fouled hull or propeller adding load",
+        "A brand-new fuel filter",
+        "Too little gearbox oil",
+        "A loose battery isolator"
+      ],
+      "correctIndex": 0,
+      "explanation": "Growth on the hull and propeller adds drag. The engine works harder, burns more fuel than it can use cleanly, and the boat goes slower.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q014", "moduleId": "m08", "lessonId": "m08-l03", "difficulty": 3,
+      "prompt": "The engine stops, restarts after a rest, runs for a while and stops again, with no water or dirt in the filter bowl. What might be blocked?",
+      "options": [
+        "The fuel tank vent",
+        "The raw water strainer",
+        "The oil filter",
+        "The exhaust water injection"
+      ],
+      "correctIndex": 0,
+      "explanation": "With a blocked vent, a vacuum builds in the tank as fuel is used until the lift pump cannot draw any more. Resting lets air leak back in slowly, so the cycle repeats.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q015", "moduleId": "m08", "lessonId": "m08-l03", "difficulty": 2,
+      "prompt": "After clearing a blocked fuel filter at sea, what will the engine probably need before it runs properly?",
+      "options": [
+        "The fuel system bled",
+        "An oil change",
+        "A new impeller",
+        "The gearbox topped up"
+      ],
+      "correctIndex": 0,
+      "explanation": "Opening the filter lets air in. Unless the engine bleeds itself, that air has to be pushed out before the injection pump can deliver fuel.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q016", "moduleId": "m08", "lessonId": "m08-l04", "difficulty": 1,
+      "prompt": "Which two warnings mean you should stop the engine as soon as it is safe to do so?",
+      "options": [
+        "Low oil pressure and high temperature",
+        "Low fuel and low domestic battery",
+        "Charge warning and glow plug light",
+        "Depth alarm and wind alarm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Without oil pressure or cooling, the engine can be seriously damaged within minutes. Other warnings need attention but are not usually as urgent.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q017", "moduleId": "m08", "lessonId": "m08-l04", "difficulty": 2,
+      "prompt": "The engine is overheating but water is flowing normally from the exhaust. Which of these should you check?",
+      "options": [
+        "The drive belt and the coolant level",
+        "The raw water seacock",
+        "The raw water strainer",
+        "Whether the raw water pump has an impeller fitted"
+      ],
+      "correctIndex": 0,
+      "explanation": "Normal exhaust water shows the raw water side is working. The problem is more likely on the coolant side: a slipping belt, low coolant, the thermostat or a blocked heat exchanger.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q018", "moduleId": "m08", "lessonId": "m08-l04", "difficulty": 2,
+      "prompt": "What does blue exhaust smoke usually mean?",
+      "options": [
+        "The engine is burning lubricating oil",
+        "The engine has too much fuel for its air",
+        "There is unburnt fuel from a cold start",
+        "The exhaust is short of cooling water"
+      ],
+      "correctIndex": 0,
+      "explanation": "Oil burning in the cylinders gives a bluish smoke. Black smoke means excess fuel, white on cold start means unburnt fuel, and steam points to cooling.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q019", "moduleId": "m08", "lessonId": "m08-l04", "difficulty": 3,
+      "prompt": "The charge warning light comes on while motoring. Why should you check the drive belt straight away?",
+      "options": [
+        "If the belt has broken and also drives the coolant pump, the engine will soon overheat",
+        "Because the belt also drives the fuel injection pump",
+        "Because a broken belt will cause low oil pressure",
+        "Because the belt holds the propeller shaft in place"
+      ],
+      "correctIndex": 0,
+      "explanation": "On many engines the alternator belt also drives the coolant circulating pump. A charge warning can therefore be the first sign of an overheating problem to come.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m08-q020", "moduleId": "m08", "lessonId": "m08-l04", "difficulty": 3,
+      "prompt": "You suspect a temperature alarm is false because the engine does not feel hot. What is the safe approach?",
+      "options": [
+        "Treat the alarm as real until you have proved otherwise",
+        "Disconnect the alarm and carry on",
+        "Increase revs to see if it clears",
+        "Remove the pressure cap to check the coolant"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sensors can fail, but so can engines. Ignoring a real warning risks expensive damage, and opening a hot pressure cap risks scalding. Stop, check safely, and get advice if unsure.",
+      "reviewStatus": "draft"
+    }
+  ]
+}

@@ -1,0 +1,417 @@
+{
+  "id": "m04",
+  "number": 4,
+  "title": "Lubrication",
+  "summary": "What engine oil does, how to check it and read what it tells you, how to change the oil and filter, and what to do when the oil pressure warning comes on.",
+  "lessons": [
+    {
+      "id": "m04-l01",
+      "title": "How lubrication works",
+      "estimatedMinutes": 5,
+      "intro": "Every moving part inside the engine runs on a thin film of oil. Without it, metal rubs on metal, heats up and wears or seizes within minutes. The lubrication system keeps that film in place whenever the engine turns.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "The sump",
+          "text": "Oil is stored in the sump at the bottom of the engine. The dipstick reaches down into it so you can check the level."
+        },
+        {
+          "title": "The oil pump",
+          "text": "An oil pump driven by the engine draws oil from the sump through a coarse strainer and pushes it, under pressure, round the engine."
+        },
+        {
+          "title": "The oil filter",
+          "text": "The oil passes through a replaceable filter that catches fine particles of soot and metal before they can reach the bearings."
+        },
+        {
+          "title": "Oil galleries and bearings",
+          "text": "Drilled passages called galleries carry the oil to the crankshaft and camshaft bearings, the valve gear and other moving parts. Oil then drains back down into the sump to be used again."
+        },
+        {
+          "title": "More than lubrication",
+          "text": "Engine oil also carries heat away from hot parts such as the pistons, holds soot and dirt in suspension so it can be removed with the oil, helps the piston rings seal, and protects against corrosion."
+        },
+        {
+          "title": "Why oil wears out",
+          "text": "Diesel engines produce soot and acidic combustion products that find their way into the oil. Over time the oil's additives are used up and it protects less well, which is why it is changed at regular intervals."
+        }
+      ],
+      "caution": null,
+      "handsOn": false,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-l02",
+      "title": "Checking the oil",
+      "estimatedMinutes": 5,
+      "intro": "Checking the oil takes a minute and is part of every pre-start check. The dipstick tells you not only how much oil there is, but often what condition it is in.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "When to check",
+          "text": "Check before starting, with the engine cold and the boat as level as possible. If the engine has just been running, wait several minutes for the oil to drain back into the sump, or the reading will be low."
+        },
+        {
+          "title": "Reading the dipstick",
+          "text": "Pull the dipstick out, wipe it clean, push it fully back in and pull it out again. The oil level should be between the minimum and maximum marks."
+        },
+        {
+          "title": "Topping up",
+          "text": "If the level is low, add a little of the oil your handbook specifies through the filler, wait a moment, and check again. Add small amounts at a time; it is easy to overfill."
+        },
+        {
+          "title": "Why overfilling matters",
+          "text": "Too much oil can be churned by the crankshaft, frothing it so it lubricates less well, and it can be pushed out through seals or burnt, giving blue smoke."
+        },
+        {
+          "title": "What the oil looks like",
+          "text": "Diesel engine oil turns black quickly because it holds soot, so dark oil on its own is normal. Look instead for oil that is milky or creamy, which suggests water is getting in, or oil that is thin and smells strongly of diesel, which suggests fuel is getting in."
+        },
+        {
+          "title": "A level that rises",
+          "text": "Oil does not make itself. If the level is higher than when you last checked and you have not added any, something else is getting into the sump. Do not run the engine until the cause has been found."
+        }
+      ],
+      "caution": "Hot oil and engine parts can burn. Make sure the engine is stopped and cannot be started before reaching into the engine space.",
+      "handsOn": true,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-l03",
+      "title": "Changing the oil and filter",
+      "estimatedMinutes": 8,
+      "intro": "Changing the engine oil and filter is the most important routine service job. On many boats the sump cannot be drained from underneath, so the old oil is pumped out from above.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "How often",
+          "text": "Your engine handbook gives an interval in running hours and usually a time limit as well, whichever comes first. Engines that are used little still need regular changes, because acids in old oil attack the engine while it stands."
+        },
+        {
+          "title": "Warm the engine first",
+          "text": "Run the engine for a short while so the oil is warm. Warm oil flows more easily and carries more of the dirt out with it. Stop the engine and make sure it cannot be restarted."
+        },
+        {
+          "title": "Remove the old oil",
+          "text": "Many marine engines are drained by pumping the oil out through the dipstick tube or a dedicated drain hose, using a hand or electric extraction pump. Pump into a container large enough for the whole sump."
+        },
+        {
+          "title": "Change the filter",
+          "text": "Put a tray and rags under the filter, then unscrew it. Make sure the old sealing ring has come away with it and is not stuck to the engine. Smear a little clean oil on the new filter's seal and screw it on by hand, as tight as the filter's maker directs."
+        },
+        {
+          "title": "Refill and check",
+          "text": "Fill with the grade and quantity of oil given in the handbook, then check the dipstick. Start the engine and check the oil pressure warning goes out promptly. Look for leaks around the filter, then stop the engine, wait, and check the level again."
+        },
+        {
+          "title": "Dispose of old oil properly",
+          "text": "Take used oil and filters to a waste oil facility, such as those at many marinas and recycling centres. Never put oil in the bilge, the drains or the water. Note the date and engine hours in your log."
+        }
+      ],
+      "caution": "Used engine oil is harmful to skin. Wear gloves and wash any oil off your skin promptly. Warm oil and engine parts can burn.",
+      "handsOn": true,
+      "reviewStatus": "draft",
+      "reviewNote": "The filter-tightening advice is deliberately general ('as the filter's maker directs'). Please confirm the refill sequence (start, check pressure, check leaks, recheck level) is sound in general."
+    },
+    {
+      "id": "m04-l04",
+      "title": "Oil pressure warnings",
+      "estimatedMinutes": 5,
+      "intro": "The oil pressure warning is the one alarm you should never ignore. Low oil pressure means the bearings may not be getting the oil film they need, and serious damage can follow quickly.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "Gauge or warning light",
+          "text": "Most small engines have a pressure switch that lights a warning lamp and sounds an alarm when pressure falls below a safe level. Some also have a gauge that shows the actual pressure."
+        },
+        {
+          "title": "What is normal",
+          "text": "The warning normally comes on when the key is switched on before starting, which shows the lamp and alarm work. It should go out within a few seconds of the engine starting. Pressure is usually highest when the oil is cold and lowest at idle when the engine is hot."
+        },
+        {
+          "title": "If it comes on while running",
+          "text": "Stop the engine as soon as you can without putting the boat or crew in danger. Do not restart it until you have checked the oil level and looked for the cause."
+        },
+        {
+          "title": "Common causes",
+          "text": "Low oil level is the most common. Others include a faulty pressure switch or loose wire, oil thinned by fuel, a blocked or wrongly fitted filter, and, on older engines, a worn pump or bearings."
+        },
+        {
+          "title": "Treat it as real",
+          "text": "Even if you suspect a faulty switch, assume the warning is genuine until you have proved otherwise. A qualified engineer can fit a test gauge to measure the real pressure."
+        },
+        {
+          "title": "If it does not come on at all",
+          "text": "If the warning lamp does not light when you switch on before starting, the bulb, switch or wiring may have failed. Get it fixed, because a warning that cannot come on gives no protection."
+        }
+      ],
+      "caution": "Running an engine with low oil pressure, even for a short time, can destroy its bearings.",
+      "handsOn": false,
+      "reviewStatus": "draft",
+      "reviewNote": "Please confirm the 'normal' behaviour described (lamp lit with ignition on before start, highest pressure cold, lowest hot at idle) applies to typical small marine diesels."
+    }
+  ],
+  "questions": [
+    {
+      "id": "m04-q001", "moduleId": "m04", "lessonId": "m04-l01", "difficulty": 1,
+      "prompt": "Where is the engine oil stored when it is not circulating?",
+      "options": [
+        "In the sump at the bottom of the engine",
+        "In the header tank",
+        "In the fuel tank",
+        "In the heat exchanger"
+      ],
+      "correctIndex": 0,
+      "explanation": "Oil drains back to the sump after lubricating the engine, and the oil pump draws it from there. The header tank holds coolant, not oil.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q002", "moduleId": "m04", "lessonId": "m04-l01", "difficulty": 1,
+      "prompt": "What does the oil filter remove?",
+      "options": [
+        "Fine particles of soot and metal from the oil",
+        "Water from the fuel",
+        "Salt from the cooling water",
+        "Air from the coolant"
+      ],
+      "correctIndex": 0,
+      "explanation": "The oil filter traps particles that would otherwise wear the bearings. Water in fuel is caught by the fuel filter, and the cooling system has its own strainer.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q003", "moduleId": "m04", "lessonId": "m04-l01", "difficulty": 2,
+      "prompt": "Apart from reducing friction, which of these is a job of engine oil?",
+      "options": [
+        "Carrying heat away from hot parts such as the pistons",
+        "Cooling the exhaust gases before they leave the boat",
+        "Keeping the fuel system free of air",
+        "Charging the battery"
+      ],
+      "correctIndex": 0,
+      "explanation": "Oil also carries heat, holds dirt in suspension, helps the rings seal and protects against corrosion. Cooling the exhaust is done by the raw water.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q004", "moduleId": "m04", "lessonId": "m04-l01", "difficulty": 3,
+      "prompt": "Why does diesel engine oil need changing even if the level stays correct?",
+      "options": [
+        "Soot and acidic combustion products build up in it and its additives get used up",
+        "Oil slowly turns into diesel over time",
+        "The oil gets heavier and sinks below the pump",
+        "The level marks on the dipstick wear off"
+      ],
+      "correctIndex": 0,
+      "explanation": "A correct level says nothing about condition. Contamination and spent additives mean old oil protects the engine less well, so it is replaced at set intervals.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q005", "moduleId": "m04", "lessonId": "m04-l01", "difficulty": 2,
+      "prompt": "What carries oil from the pump to the crankshaft and camshaft bearings?",
+      "options": [
+        "Drilled passages in the engine called oil galleries",
+        "The fuel return line",
+        "The raw water hoses",
+        "The exhaust manifold"
+      ],
+      "correctIndex": 0,
+      "explanation": "Oil galleries are passages drilled through the block and head that deliver pressurised oil to the bearings and valve gear.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q006", "moduleId": "m04", "lessonId": "m04-l02", "difficulty": 1,
+      "prompt": "When is the best time to check the engine oil level?",
+      "options": [
+        "Before starting, with the engine cold and the boat level",
+        "While the engine is running",
+        "Immediately after stopping a hot engine",
+        "While motoring hard to windward"
+      ],
+      "correctIndex": 0,
+      "explanation": "With the engine cold, all the oil has drained into the sump, and with the boat level the dipstick gives a true reading.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q007", "moduleId": "m04", "lessonId": "m04-l02", "difficulty": 1,
+      "prompt": "Why do you wipe the dipstick and put it back before reading it?",
+      "options": [
+        "Oil splashed on the stick gives a false reading the first time",
+        "To warm the oil up",
+        "To clean the inside of the dipstick tube",
+        "To let air into the sump"
+      ],
+      "correctIndex": 0,
+      "explanation": "The dipstick is often coated with oil above the real level. Wiping it and dipping again shows where the oil actually sits.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q008", "moduleId": "m04", "lessonId": "m04-l02", "difficulty": 2,
+      "prompt": "The oil on the dipstick is black. What does this usually mean on a diesel?",
+      "options": [
+        "Nothing unusual, because diesel oil darkens quickly with soot",
+        "Water has got into the oil",
+        "The engine has run out of oil",
+        "The oil filter is missing"
+      ],
+      "correctIndex": 0,
+      "explanation": "Diesel combustion produces soot, which the oil holds in suspension, so it turns dark soon after a change. Milky oil, not black oil, points to water.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q009", "moduleId": "m04", "lessonId": "m04-l02", "difficulty": 2,
+      "prompt": "The oil on the dipstick looks milky and creamy. What does this suggest?",
+      "options": [
+        "Water or coolant is getting into the oil",
+        "The oil is brand new",
+        "The engine has been run at low revs",
+        "The oil is the correct grade"
+      ],
+      "correctIndex": 0,
+      "explanation": "Water mixed with oil forms a creamy emulsion. It can come from coolant leaking internally or sea water getting in, and it needs investigating before the engine is run.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q010", "moduleId": "m04", "lessonId": "m04-l02", "difficulty": 3,
+      "prompt": "You have not added any oil, but the level on the dipstick is higher than last week. What should you do?",
+      "options": [
+        "Not run the engine until you find what is getting into the sump",
+        "Run the engine to burn the extra oil off",
+        "Ignore it, because oil expands in warm weather",
+        "Remove some oil and carry on as normal"
+      ],
+      "correctIndex": 0,
+      "explanation": "A rising level means something else, usually fuel or water, is getting into the oil and diluting it. Running the engine with diluted oil risks serious damage.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q011", "moduleId": "m04", "lessonId": "m04-l03", "difficulty": 1,
+      "prompt": "Where should you find the right oil grade and quantity for your engine?",
+      "options": [
+        "In the engine manufacturer's handbook",
+        "On any car oil bottle",
+        "From the colour of the old oil",
+        "From the size of the fuel tank"
+      ],
+      "correctIndex": 0,
+      "explanation": "Different engines need different oil specifications and quantities. The handbook is the reliable source; general-purpose oils may not meet the engine's needs.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q012", "moduleId": "m04", "lessonId": "m04-l03", "difficulty": 2,
+      "prompt": "Why is the engine usually warmed up before the old oil is removed?",
+      "options": [
+        "Warm oil flows more easily and carries more dirt out with it",
+        "Cold oil cannot be pumped at all",
+        "Warming the engine changes the oil filter automatically",
+        "It makes the new oil set faster"
+      ],
+      "correctIndex": 0,
+      "explanation": "Warm oil is thinner, so more of it comes out and the soot and particles stay mixed in it rather than settling in the sump.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q013", "moduleId": "m04", "lessonId": "m04-l03", "difficulty": 2,
+      "prompt": "When removing the old oil filter, what should you make sure of?",
+      "options": [
+        "That its old sealing ring has not stayed stuck to the engine",
+        "That the filter is still full of oil",
+        "That the engine is running",
+        "That the fuel valve is open"
+      ],
+      "correctIndex": 0,
+      "explanation": "If the old seal stays on the engine and the new filter is fitted over it, the joint will not seal and oil can be pumped out quickly once the engine starts.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q014", "moduleId": "m04", "lessonId": "m04-l03", "difficulty": 3,
+      "prompt": "Why does an engine that is used very little still need its oil changed regularly?",
+      "options": [
+        "Acids and moisture in old oil attack the engine while it stands",
+        "Oil evaporates completely within a few months",
+        "The oil filter grows larger when not used",
+        "Standing oil turns into diesel bug"
+      ],
+      "correctIndex": 0,
+      "explanation": "Combustion products in used oil form acids, and condensation adds water. Both cause corrosion inside an idle engine, which is why handbooks give a time limit as well as running hours.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q015", "moduleId": "m04", "lessonId": "m04-l03", "difficulty": 1,
+      "prompt": "What should you do with the used oil and filter?",
+      "options": [
+        "Take them to a waste oil facility",
+        "Pour the oil into the bilge to be pumped out",
+        "Put them in the general rubbish bin",
+        "Pour the oil over the side well away from land"
+      ],
+      "correctIndex": 0,
+      "explanation": "Used oil is a pollutant. Marinas and recycling centres often have waste oil facilities; it must never go into the bilge, drains or water.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q016", "moduleId": "m04", "lessonId": "m04-l04", "difficulty": 1,
+      "prompt": "The oil pressure warning comes on while you are motoring. What should you do?",
+      "options": [
+        "Stop the engine as soon as it is safe to do so",
+        "Increase the revs to raise the pressure",
+        "Carry on and check it at the end of the trip",
+        "Switch the alarm off and continue"
+      ],
+      "correctIndex": 0,
+      "explanation": "Low oil pressure can wreck the bearings within minutes. Stop as soon as you safely can, then check the oil level before thinking about restarting.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q017", "moduleId": "m04", "lessonId": "m04-l04", "difficulty": 1,
+      "prompt": "The oil pressure lamp lights when you turn the key, before starting. What does this show?",
+      "options": [
+        "The lamp and its circuit are working",
+        "The engine has no oil",
+        "The oil filter is blocked",
+        "The battery is flat"
+      ],
+      "correctIndex": 0,
+      "explanation": "With the engine stopped there is no oil pressure, so the lamp should light. It should go out within a few seconds once the engine starts.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q018", "moduleId": "m04", "lessonId": "m04-l04", "difficulty": 2,
+      "prompt": "What is the most common cause of low oil pressure?",
+      "options": [
+        "A low oil level",
+        "A blocked fuel filter",
+        "A worn propeller",
+        "A slack stern gland"
+      ],
+      "correctIndex": 0,
+      "explanation": "If there is not enough oil in the sump, the pump draws air and the pressure falls. That is why the first check is the dipstick.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q019", "moduleId": "m04", "lessonId": "m04-l04", "difficulty": 2,
+      "prompt": "You suspect the oil pressure warning is caused by a faulty switch. What is the right approach?",
+      "options": [
+        "Treat the warning as real until the pressure has been checked properly",
+        "Disconnect the switch and keep using the engine",
+        "Assume the switch is faulty because the oil level is fine",
+        "Fit a brighter warning bulb"
+      ],
+      "correctIndex": 0,
+      "explanation": "A correct oil level does not prove the pressure is good. Only a test gauge shows the real pressure, so the warning should be trusted until then.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m04-q020", "moduleId": "m04", "lessonId": "m04-l04", "difficulty": 3,
+      "prompt": "When is the oil pressure in a healthy engine usually at its lowest?",
+      "options": [
+        "At idle when the engine is fully warm",
+        "At high revs when the engine is cold",
+        "Just after starting from cold",
+        "It is always exactly the same"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hot oil is thinner and the pump turns slowly at idle, so pressure is lowest then. This is why a borderline engine may show a warning only at hot idle.",
+      "reviewStatus": "draft",
+      "reviewNote": "Confirm this applies generally."
+    }
+  ]
+}

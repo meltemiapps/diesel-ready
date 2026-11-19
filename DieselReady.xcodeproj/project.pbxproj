@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10528300F639ADD42432C4B2 /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC3467D736960752A77FCD1 /* DisclaimerView.swift */; };
+		1A0D65D83AE1FB72EACF684F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE9991C0E98660B29C977FC /* Assets.xcassets */; };
+		1AF69CCF04AB0FC8B15472C0 /* ContentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B184399AFA27103B27BE05C /* ContentLoader.swift */; };
+		1C9B562B0AAFC1DE649BCD32 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE5163B1D277788B1BB7F9 /* PrivacyPolicyView.swift */; };
+		1D790DC78982C9DFDE862487 /* ContentModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B40DD6556C47A6B712D13C9 /* ContentModels.swift */; };
+		2FA22E9ADB1EF942851D8700 /* Content in Resources */ = {isa = PBXBuildFile; fileRef = ACEDA225C9F5EE181C9A86B9 /* Content */; };
+		4616D26955C5E7FAFBD6DFDA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C08734F72E29C0B92F304 /* Theme.swift */; };
+		4A551C613A5694F030DF1205 /* DieselReadyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDEC3F12E432BC55CE09E3 /* DieselReadyApp.swift */; };
+		4DE252F52C178D750E6AB213 /* QuizHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0854804584B7F6AC4D1F8 /* QuizHomeView.swift */; };
+		5B26764BAD736AEC2FD99CBE /* FaultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B8A9BD8C3E0AC3D201D41 /* FaultsView.swift */; };
+		655CA4412F7A183F5DC4F025 /* Disclaimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CC65DB8D23C8D3391D00DA /* Disclaimer.swift */; };
+		84A14E920558741345F3E868 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517F016D59C5A6340B4B0E26 /* LearnView.swift */; };
+		8850BCF5A97403E7B256273A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 518CB3D7BA54017990597A65 /* PrivacyInfo.xcprivacy */; };
+		8E2CC1C9524DFD285C26B120 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46D0F6E72CDA4668764527 /* AppInfo.swift */; };
+		9D60F0371212697B1B51A1E4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDD8677F6509D90C32A7D38 /* RootView.swift */; };
+		A2B7A184B9324BB1A5A22ADF /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68F52AA29F74582BF10EC6 /* AboutView.swift */; };
+		AE15C0154E034B34ABAF1449 /* ProgressModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D3AA3641FFE3FF7C65DAE /* ProgressModels.swift */; };
+		C09CF5A2FC5F0F8CE98B7932 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271268BADBFF1CCF476F90C5 /* Components.swift */; };
+		DE2C25F5E767C8F5DA37112C /* ContentLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E98FD1BD9B57450CD5602 /* ContentLoaderTests.swift */; };
+		E356308BB17038101D674998 /* ContentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3EBC725CFC9D575330DE66 /* ContentStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45A3E7B95E07FED09F80BF6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBDB469CC5C0B4D1D3037779 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4F6B04C922499575795B507;
+			remoteInfo = DieselReady;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B3EBC725CFC9D575330DE66 /* ContentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentStore.swift; sourceTree = "<group>"; };
+		0F4B8A9BD8C3E0AC3D201D41 /* FaultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaultsView.swift; sourceTree = "<group>"; };
+		0F68F52AA29F74582BF10EC6 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		271268BADBFF1CCF476F90C5 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		2BE9991C0E98660B29C977FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F46D0F6E72CDA4668764527 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		4B184399AFA27103B27BE05C /* ContentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoader.swift; sourceTree = "<group>"; };
+		517F016D59C5A6340B4B0E26 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
+		518CB3D7BA54017990597A65 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		5D9559B225F9B6D793E910FE /* DieselReadyTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = DieselReadyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		721D3AA3641FFE3FF7C65DAE /* ProgressModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressModels.swift; sourceTree = "<group>"; };
+		7B40DD6556C47A6B712D13C9 /* ContentModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModels.swift; sourceTree = "<group>"; };
+		7CC3467D736960752A77FCD1 /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
+		ACEDA225C9F5EE181C9A86B9 /* Content */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Content; path = DieselReady/Resources/Content; sourceTree = SOURCE_ROOT; };
+		AECE5163B1D277788B1BB7F9 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		BCDD8677F6509D90C32A7D38 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		D0CFCE1DC2230FCFF65E8FE3 /* DieselReady.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = DieselReady.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49C08734F72E29C0B92F304 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E5CC65DB8D23C8D3391D00DA /* Disclaimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disclaimer.swift; sourceTree = "<group>"; };
+		E7DDEC3F12E432BC55CE09E3 /* DieselReadyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DieselReadyApp.swift; sourceTree = "<group>"; };
+		F1C0854804584B7F6AC4D1F8 /* QuizHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizHomeView.swift; sourceTree = "<group>"; };
+		F88F599C72F0A06633D9D8B7 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		FF2E98FD1BD9B57450CD5602 /* ContentLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoaderTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0D21826A2AD8B7FAB79C9714 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F88F599C72F0A06633D9D8B7 /* Shared.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		2D6DBFFC648C0A06805CA0CC /* Disclaimer */ = {
+			isa = PBXGroup;
+			children = (
+				E5CC65DB8D23C8D3391D00DA /* Disclaimer.swift */,
+				7CC3467D736960752A77FCD1 /* DisclaimerView.swift */,
+			);
+			path = Disclaimer;
+			sourceTree = "<group>";
+		};
+		30CCCFF5E4780782472AA2D6 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				271268BADBFF1CCF476F90C5 /* Components.swift */,
+				E49C08734F72E29C0B92F304 /* Theme.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		34AAB634CC38C2FFDC92AAFC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2BE9991C0E98660B29C977FC /* Assets.xcassets */,
+				ACEDA225C9F5EE181C9A86B9 /* Content */,
+				518CB3D7BA54017990597A65 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3BDCC46CF31911592789D141 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				0F68F52AA29F74582BF10EC6 /* AboutView.swift */,
+				AECE5163B1D277788B1BB7F9 /* PrivacyPolicyView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		5360A4A8BE204745D7BB8BA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0CFCE1DC2230FCFF65E8FE3 /* DieselReady.app */,
+				5D9559B225F9B6D793E910FE /* DieselReadyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		583575CF790EF7B429D66FA7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3F46D0F6E72CDA4668764527 /* AppInfo.swift */,
+				E7DDEC3F12E432BC55CE09E3 /* DieselReadyApp.swift */,
+				BCDD8677F6509D90C32A7D38 /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		59C12AEF7864E349519CDCF0 /* Faults */ = {
+			isa = PBXGroup;
+			children = (
+				0F4B8A9BD8C3E0AC3D201D41 /* FaultsView.swift */,
+			);
+			path = Faults;
+			sourceTree = "<group>";
+		};
+		73F3454210952B15851A9338 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3BDCC46CF31911592789D141 /* About */,
+				2D6DBFFC648C0A06805CA0CC /* Disclaimer */,
+				59C12AEF7864E349519CDCF0 /* Faults */,
+				DB1560F51CB99255470C87C3 /* Learn */,
+				A4C7BF2B8C7D06CB6CEF3D1F /* Quiz */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A4C7BF2B8C7D06CB6CEF3D1F /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				F1C0854804584B7F6AC4D1F8 /* QuizHomeView.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		A99BA78BBF28ED565558D5CB /* DieselReadyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E98FD1BD9B57450CD5602 /* ContentLoaderTests.swift */,
+			);
+			path = DieselReadyTests;
+			sourceTree = "<group>";
+		};
+		C5000CAB11599073FF8E8EF2 = {
+			isa = PBXGroup;
+			children = (
+				0D21826A2AD8B7FAB79C9714 /* Config */,
+				F402406DA5E31D56F1FC6413 /* DieselReady */,
+				A99BA78BBF28ED565558D5CB /* DieselReadyTests */,
+				5360A4A8BE204745D7BB8BA5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D80AA0518007441460C5BD2E /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				4B184399AFA27103B27BE05C /* ContentLoader.swift */,
+				7B40DD6556C47A6B712D13C9 /* ContentModels.swift */,
+				0B3EBC725CFC9D575330DE66 /* ContentStore.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		DB1560F51CB99255470C87C3 /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				517F016D59C5A6340B4B0E26 /* LearnView.swift */,
+			);
+			path = Learn;
+			sourceTree = "<group>";
+		};
+		E2FB2DA74303FC3C31BCD131 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				721D3AA3641FFE3FF7C65DAE /* ProgressModels.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		F402406DA5E31D56F1FC6413 /* DieselReady */ = {
+			isa = PBXGroup;
+			children = (
+				583575CF790EF7B429D66FA7 /* App */,
+				D80AA0518007441460C5BD2E /* Content */,
+				30CCCFF5E4780782472AA2D6 /* DesignSystem */,
+				73F3454210952B15851A9338 /* Features */,
+				E2FB2DA74303FC3C31BCD131 /* Persistence */,
+				34AAB634CC38C2FFDC92AAFC /* Resources */,
+			);
+			path = DieselReady;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5585510502EE23326B86164E /* DieselReadyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D0B704ACB2EA4B69D16BA2A /* Build configuration list for PBXNativeTarget "DieselReadyTests" */;
+			buildPhases = (
+				B38C4331954EA45F6A5426E1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A3FA05AC2CE0FDD51C2FC91 /* PBXTargetDependency */,
+			);
+			name = DieselReadyTests;
+			packageProductDependencies = (
+			);
+			productName = DieselReadyTests;
+			productReference = 5D9559B225F9B6D793E910FE /* DieselReadyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4F6B04C922499575795B507 /* DieselReady */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FF0E87A1F3922B6DB620340 /* Build configuration list for PBXNativeTarget "DieselReady" */;
+			buildPhases = (
+				9C6F15A7618E24F9EEFEE37E /* Sources */,
+				A3736110210B262A6EB06B34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DieselReady;
+			packageProductDependencies = (
+			);
+			productName = DieselReady;
+			productReference = D0CFCE1DC2230FCFF65E8FE3 /* DieselReady.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBDB469CC5C0B4D1D3037779 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					5585510502EE23326B86164E = {
+						ProvisioningStyle = Automatic;
+					};
+					D4F6B04C922499575795B507 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 007C9AC8FD5E55CB1B5AF4AB /* Build configuration list for PBXProject "DieselReady" */;
+			developmentRegion = "en-GB";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				"en-GB",
+			);
+			mainGroup = C5000CAB11599073FF8E8EF2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5360A4A8BE204745D7BB8BA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4F6B04C922499575795B507 /* DieselReady */,
+				5585510502EE23326B86164E /* DieselReadyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3736110210B262A6EB06B34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A0D65D83AE1FB72EACF684F /* Assets.xcassets in Resources */,
+				2FA22E9ADB1EF942851D8700 /* Content in Resources */,
+				8850BCF5A97403E7B256273A /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C6F15A7618E24F9EEFEE37E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B7A184B9324BB1A5A22ADF /* AboutView.swift in Sources */,
+				8E2CC1C9524DFD285C26B120 /* AppInfo.swift in Sources */,
+				C09CF5A2FC5F0F8CE98B7932 /* Components.swift in Sources */,
+				1AF69CCF04AB0FC8B15472C0 /* ContentLoader.swift in Sources */,
+				1D790DC78982C9DFDE862487 /* ContentModels.swift in Sources */,
+				E356308BB17038101D674998 /* ContentStore.swift in Sources */,
+				4A551C613A5694F030DF1205 /* DieselReadyApp.swift in Sources */,
+				655CA4412F7A183F5DC4F025 /* Disclaimer.swift in Sources */,
+				10528300F639ADD42432C4B2 /* DisclaimerView.swift in Sources */,
+				5B26764BAD736AEC2FD99CBE /* FaultsView.swift in Sources */,
+				84A14E920558741345F3E868 /* LearnView.swift in Sources */,
+				1C9B562B0AAFC1DE649BCD32 /* PrivacyPolicyView.swift in Sources */,
+				AE15C0154E034B34ABAF1449 /* ProgressModels.swift in Sources */,
+				4DE252F52C178D750E6AB213 /* QuizHomeView.swift in Sources */,
+				9D60F0371212697B1B51A1E4 /* RootView.swift in Sources */,
+				4616D26955C5E7FAFBD6DFDA /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38C4331954EA45F6A5426E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE2C25F5E767C8F5DA37112C /* ContentLoaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A3FA05AC2CE0FDD51C2FC91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4F6B04C922499575795B507 /* DieselReady */;
+			targetProxy = 45A3E7B95E07FED09F80BF6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		161BD334AC5F2468F45233FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Diesel Ready";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.meltemiapps.dieselready;
+				PRODUCT_NAME = DieselReady;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		490AFEE471105D74D538A519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.meltemiapps.dieselready.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DieselReady.app/DieselReady";
+			};
+			name = Debug;
+		};
+		58BD0B00472BBF850D192189 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F88F599C72F0A06633D9D8B7 /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		6E6E15BF21ACE9F946ECC88D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F88F599C72F0A06633D9D8B7 /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		A11F6E8C23826F39444A3412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.meltemiapps.dieselready.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DieselReady.app/DieselReady";
+			};
+			name = Release;
+		};
+		CF3A1381C43F187E3D880F8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Diesel Ready";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.meltemiapps.dieselready;
+				PRODUCT_NAME = DieselReady;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		007C9AC8FD5E55CB1B5AF4AB /* Build configuration list for PBXProject "DieselReady" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58BD0B00472BBF850D192189 /* Debug */,
+				6E6E15BF21ACE9F946ECC88D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6D0B704ACB2EA4B69D16BA2A /* Build configuration list for PBXNativeTarget "DieselReadyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				490AFEE471105D74D538A519 /* Debug */,
+				A11F6E8C23826F39444A3412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6FF0E87A1F3922B6DB620340 /* Build configuration list for PBXNativeTarget "DieselReady" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF3A1381C43F187E3D880F8B /* Debug */,
+				161BD334AC5F2468F45233FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBDB469CC5C0B4D1D3037779 /* Project object */;
+}

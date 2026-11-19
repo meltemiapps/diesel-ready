@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Xcode user state and build output
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.xcresult
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Local signing settings (holds your Team ID)
+Config/Local.xcconfig
+
+# Swift Package Manager (not used, but keep stray caches out)
+.swiftpm/
+.build/
+
+# Android (Phase 7)
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+*.iml

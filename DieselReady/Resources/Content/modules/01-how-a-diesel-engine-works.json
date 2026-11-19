@@ -1,0 +1,431 @@
+{
+  "id": "m01",
+  "number": 1,
+  "title": "How a diesel engine works",
+  "summary": "Compression ignition, the four-stroke cycle and the main parts you will find on a small marine diesel.",
+  "lessons": [
+    {
+      "id": "m01-l01",
+      "title": "Compression ignition",
+      "estimatedMinutes": 6,
+      "intro": "A diesel engine has no spark plugs. It squeezes air so hard that the air becomes hot enough to set fire to the fuel the moment it is sprayed in. Understanding this one idea explains most of what a diesel needs to run: clean air, clean fuel delivered at the right moment, and good compression.",
+      "diagram": {
+        "kind": "compression-ignition",
+        "caption": "Air is compressed and heats up; fuel sprayed into the hot air ignites by itself."
+      },
+      "steps": [
+        {
+          "title": "Air comes in",
+          "text": "The piston moves down and draws a cylinder full of air in through the air filter and inlet valve. Only air enters, not a mixture of air and fuel."
+        },
+        {
+          "title": "The air is squeezed",
+          "text": "The piston rises and compresses the air into a small fraction of its original volume. On a typical small marine diesel the air ends up roughly 15 to 23 times smaller, which is known as the compression ratio."
+        },
+        {
+          "title": "The air gets very hot",
+          "text": "Squeezing air heats it, much as a bicycle pump gets warm in use. By the top of the stroke the air is hundreds of degrees hotter than the temperature at which diesel fuel will ignite on its own."
+        },
+        {
+          "title": "Fuel is sprayed in and burns",
+          "text": "Just before the piston reaches the top, an injector sprays a fine mist of fuel into the hot air. It ignites without a spark, and the expanding gas pushes the piston down."
+        },
+        {
+          "title": "More fuel means more power",
+          "text": "The throttle lever on a diesel controls how much fuel is injected. It does not restrict the air supply the way the throttle on a petrol engine does."
+        }
+      ],
+      "caution": null,
+      "handsOn": false,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-l02",
+      "title": "The four-stroke cycle",
+      "estimatedMinutes": 8,
+      "intro": "Most small marine diesels work on a four-stroke cycle. Each stroke is one movement of the piston, either up or down the cylinder. Four strokes make one complete cycle, and the crankshaft turns twice in that time.",
+      "diagram": {
+        "kind": "four-stroke-cycle",
+        "caption": "Induction, compression, power and exhaust, shown with the valves open or closed."
+      },
+      "steps": [
+        {
+          "title": "1. Induction",
+          "text": "The inlet valve opens and the piston moves down, drawing fresh air into the cylinder. The exhaust valve stays closed."
+        },
+        {
+          "title": "2. Compression",
+          "text": "Both valves close and the piston moves up, compressing and heating the trapped air. Near the top of this stroke the injector sprays in fuel."
+        },
+        {
+          "title": "3. Power",
+          "text": "The fuel burns and the hot, expanding gas forces the piston down. This is the only stroke that produces power; the flywheel keeps the engine turning through the other three."
+        },
+        {
+          "title": "4. Exhaust",
+          "text": "The exhaust valve opens and the rising piston pushes the burnt gas out of the cylinder and into the exhaust system. The cycle then starts again with induction."
+        },
+        {
+          "title": "Timing it all",
+          "text": "The camshaft opens each valve once per cycle, so it turns at half the speed of the crankshaft. The injection pump is timed to the crankshaft so that fuel arrives at the right moment for each cylinder."
+        }
+      ],
+      "caution": null,
+      "handsOn": false,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-l03",
+      "title": "The main components",
+      "estimatedMinutes": 8,
+      "intro": "Whatever the make, small marine diesels are built from the same basic parts. Knowing what each one does makes the rest of this guide, and any conversation with an engineer, much easier to follow.",
+      "diagram": {
+        "kind": "engine-layout",
+        "caption": "A simplified side view of a small marine diesel with its main parts labelled."
+      },
+      "steps": [
+        {
+          "title": "Cylinder block and head",
+          "text": "The block is the main casting that contains the cylinders. The cylinder head bolts on top and carries the valves and injectors. A gasket between them seals in compression, oil and coolant."
+        },
+        {
+          "title": "Pistons, connecting rods and crankshaft",
+          "text": "Each piston slides up and down in its cylinder. A connecting rod links it to the crankshaft, which turns that up-and-down motion into rotation."
+        },
+        {
+          "title": "Camshaft and valves",
+          "text": "The camshaft is driven from the crankshaft and opens the inlet and exhaust valves at the right moments in the cycle."
+        },
+        {
+          "title": "Flywheel",
+          "text": "A heavy wheel on the end of the crankshaft. It smooths out the pulses from each power stroke, and its toothed outer ring is what the starter motor turns to start the engine."
+        },
+        {
+          "title": "Fuel injection pump and injectors",
+          "text": "The injection pump raises the fuel to a very high pressure and delivers a measured amount to each injector at the right time. The injectors spray it into the cylinders as a fine mist."
+        },
+        {
+          "title": "Supporting systems",
+          "text": "Around the core engine you will find the cooling system, the lubrication system with its sump and oil filter, the air intake and exhaust, and the electrical parts such as the starter motor and alternator. Each has its own module in this guide."
+        }
+      ],
+      "caution": null,
+      "handsOn": false,
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-l04",
+      "title": "Getting to know your own engine",
+      "estimatedMinutes": 10,
+      "intro": "The best time to find the dipstick, filters and seacock is on a calm day in harbour, not when something has gone wrong at sea. This lesson walks you round your own engine so you know where everything is before you need it.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "Make the engine safe",
+          "text": "Check the engine is stopped and cool. Remove the key or switch off the engine isolator so nobody can start it while your hands are near moving parts."
+        },
+        {
+          "title": "Open up and look",
+          "text": "Remove the engine covers and use a good torch. Note how easy or hard it is to reach each side of the engine."
+        },
+        {
+          "title": "Find the oil checks",
+          "text": "Locate the engine oil dipstick and filler cap, the oil filter and, if fitted separately, the gearbox dipstick."
+        },
+        {
+          "title": "Follow the fuel",
+          "text": "Trace the fuel line from the tank shut-off valve to the primary filter (often with a water trap), then to the engine-mounted fine filter and the injection pump."
+        },
+        {
+          "title": "Follow the cooling water",
+          "text": "Find the raw water seacock and strainer, the raw water pump, and on most engines the heat exchanger and the coolant header tank with its filler cap."
+        },
+        {
+          "title": "Find the controls and electrics",
+          "text": "Identify the engine stop control, the drive belt or belts, the alternator, the starter motor and the battery isolator switch."
+        },
+        {
+          "title": "Write it down",
+          "text": "Make a simple sketch or take photos and label them. Keep a copy on board with your engine handbook."
+        }
+      ],
+      "caution": "Engine parts can stay hot for a long time after the engine stops, and belts and pulleys can trap fingers or clothing. Never reach into the engine space while the engine is running.",
+      "handsOn": true,
+      "reviewStatus": "draft"
+    }
+  ],
+  "questions": [
+    {
+      "id": "m01-q001",
+      "moduleId": "m01",
+      "lessonId": "m01-l01",
+      "difficulty": 1,
+      "prompt": "How is the fuel ignited in a running diesel engine?",
+      "options": [
+        "By the heat of the compressed air in the cylinder",
+        "By a spark plug in each cylinder",
+        "By glow plugs that stay switched on while the engine runs",
+        "By a spark from the alternator"
+      ],
+      "correctIndex": 0,
+      "explanation": "Diesels rely on compression ignition. Squeezing the air makes it hot enough to ignite the fuel as soon as it is injected.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q002",
+      "moduleId": "m01",
+      "lessonId": "m01-l01",
+      "difficulty": 2,
+      "prompt": "What does moving the throttle lever on a diesel engine actually change?",
+      "options": [
+        "The amount of fuel injected into each cylinder",
+        "How far a valve in the air intake opens",
+        "The timing of the spark",
+        "The flow of raw cooling water"
+      ],
+      "correctIndex": 0,
+      "explanation": "A diesel's speed and power are set by the quantity of fuel injected. Unlike a petrol engine, it does not throttle the incoming air.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q003",
+      "moduleId": "m01",
+      "lessonId": "m01-l01",
+      "difficulty": 1,
+      "prompt": "Why does a diesel engine need a high compression ratio?",
+      "options": [
+        "To heat the air enough to ignite the fuel",
+        "To keep the cylinders cool",
+        "To raise the oil pressure",
+        "To make the exhaust quieter"
+      ],
+      "correctIndex": 0,
+      "explanation": "The air must be squeezed hard to reach a temperature well above the point at which diesel fuel ignites on its own.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q004",
+      "moduleId": "m01",
+      "lessonId": "m01-l01",
+      "difficulty": 2,
+      "prompt": "Roughly what compression ratio would you expect on a small marine diesel?",
+      "options": [
+        "About 15:1 to 23:1",
+        "About 4:1 to 6:1",
+        "About 8:1 to 10:1",
+        "About 40:1 to 50:1"
+      ],
+      "correctIndex": 0,
+      "explanation": "Small diesels typically compress the air to between about a fifteenth and a twenty-third of its volume. Ratios near 8:1 to 10:1 are more typical of petrol engines.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q005",
+      "moduleId": "m01",
+      "lessonId": "m01-l02",
+      "difficulty": 1,
+      "prompt": "What is the correct order of the four strokes?",
+      "options": [
+        "Induction, compression, power, exhaust",
+        "Compression, induction, exhaust, power",
+        "Induction, power, compression, exhaust",
+        "Power, induction, exhaust, compression"
+      ],
+      "correctIndex": 0,
+      "explanation": "Air is drawn in, compressed, burnt with the fuel to drive the piston down, and then pushed out as exhaust.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q006",
+      "moduleId": "m01",
+      "lessonId": "m01-l02",
+      "difficulty": 2,
+      "prompt": "How many times does the crankshaft turn during one complete four-stroke cycle?",
+      "options": [
+        "Twice",
+        "Once",
+        "Four times",
+        "Half a turn"
+      ],
+      "correctIndex": 0,
+      "explanation": "Each stroke is half a turn of the crankshaft, so four strokes take two full revolutions.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q007",
+      "moduleId": "m01",
+      "lessonId": "m01-l02",
+      "difficulty": 2,
+      "prompt": "When is fuel injected into the cylinder?",
+      "options": [
+        "Near the end of the compression stroke",
+        "At the start of the induction stroke",
+        "During the exhaust stroke",
+        "At the bottom of the power stroke"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fuel is sprayed in just before the piston reaches the top of the compression stroke, when the air is at its hottest.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q008",
+      "moduleId": "m01",
+      "lessonId": "m01-l02",
+      "difficulty": 2,
+      "prompt": "What does a diesel engine draw into the cylinder on the induction stroke?",
+      "options": [
+        "Air only",
+        "A mixture of air and fuel",
+        "Fuel only",
+        "Air mixed with exhaust gas from the previous cycle"
+      ],
+      "correctIndex": 0,
+      "explanation": "Only air is drawn in. The fuel is added later by the injector, directly into the hot compressed air.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q009",
+      "moduleId": "m01",
+      "lessonId": "m01-l02",
+      "difficulty": 3,
+      "prompt": "How fast does the camshaft turn compared with the crankshaft?",
+      "options": [
+        "At half the crankshaft speed",
+        "At the same speed",
+        "At twice the crankshaft speed",
+        "At a quarter of the crankshaft speed"
+      ],
+      "correctIndex": 0,
+      "explanation": "Each valve opens once per cycle, and a cycle takes two crankshaft turns, so the camshaft turns once for every two turns of the crank.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q010",
+      "moduleId": "m01",
+      "lessonId": "m01-l03",
+      "difficulty": 1,
+      "prompt": "Which part turns the up-and-down movement of the pistons into rotation?",
+      "options": [
+        "The crankshaft",
+        "The camshaft",
+        "The flywheel",
+        "The injection pump"
+      ],
+      "correctIndex": 0,
+      "explanation": "Connecting rods link each piston to the crankshaft, which converts their reciprocating motion into rotation.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q011",
+      "moduleId": "m01",
+      "lessonId": "m01-l03",
+      "difficulty": 2,
+      "prompt": "What is the job of the fuel injection pump?",
+      "options": [
+        "To deliver a measured amount of fuel at high pressure to each injector at the right time",
+        "To lift fuel from the tank to the primary filter",
+        "To return unused fuel to the tank",
+        "To separate water from the fuel"
+      ],
+      "correctIndex": 0,
+      "explanation": "The injection pump meters, pressurises and times the fuel for each cylinder. Lifting fuel from the tank is the lift pump's job.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q012",
+      "moduleId": "m01",
+      "lessonId": "m01-l03",
+      "difficulty": 1,
+      "prompt": "Where are the inlet and exhaust valves usually found?",
+      "options": [
+        "In the cylinder head",
+        "In the sump",
+        "In the gearbox",
+        "In the heat exchanger"
+      ],
+      "correctIndex": 0,
+      "explanation": "The cylinder head sits on top of the block and carries the valves and the injectors.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q013",
+      "moduleId": "m01",
+      "lessonId": "m01-l03",
+      "difficulty": 2,
+      "prompt": "Which of these is a job of the flywheel?",
+      "options": [
+        "Smoothing out the pulses from each power stroke",
+        "Pumping oil round the engine",
+        "Driving the raw water pump through a belt",
+        "Charging the batteries"
+      ],
+      "correctIndex": 0,
+      "explanation": "The flywheel's weight carries the engine through the non-power strokes. Its toothed ring also gives the starter motor something to turn.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q014",
+      "moduleId": "m01",
+      "lessonId": "m01-l03",
+      "difficulty": 2,
+      "prompt": "What seals the joint between the cylinder head and the cylinder block?",
+      "options": [
+        "The head gasket",
+        "The stern gland",
+        "The impeller",
+        "The thermostat"
+      ],
+      "correctIndex": 0,
+      "explanation": "The head gasket keeps compression, oil and coolant in their proper places where the head meets the block.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q015",
+      "moduleId": "m01",
+      "lessonId": "m01-l04",
+      "difficulty": 1,
+      "prompt": "What should you do before reaching into the engine space to find its parts?",
+      "options": [
+        "Make sure the engine is stopped and cannot be started",
+        "Run the engine so you can hear where each part is",
+        "Close the fuel tank valve and bleed the fuel system",
+        "Remove the drive belts"
+      ],
+      "correctIndex": 0,
+      "explanation": "Stop the engine and remove the key or isolate it, so nobody can start it while your hands are near belts and pulleys.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q016",
+      "moduleId": "m01",
+      "lessonId": "m01-l04",
+      "difficulty": 2,
+      "prompt": "Why is it worth knowing exactly where the raw water seacock is before you need it?",
+      "options": [
+        "So you can close it quickly if a cooling hose fails or before working on the raw water circuit",
+        "So you can open it to add coolant",
+        "Because it is where you check the gearbox oil",
+        "Because it must be closed before starting the engine"
+      ],
+      "correctIndex": 0,
+      "explanation": "The seacock lets sea water into the engine's cooling circuit. Being able to shut it fast can stop a leak becoming a flood.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m01-q017",
+      "moduleId": "m01",
+      "lessonId": "m01-l04",
+      "difficulty": 1,
+      "prompt": "Where would you normally check the engine oil level?",
+      "options": [
+        "On the engine oil dipstick",
+        "In the coolant header tank",
+        "On the primary fuel filter bowl",
+        "At the raw water strainer"
+      ],
+      "correctIndex": 0,
+      "explanation": "The dipstick shows the oil level in the sump. Check it with the engine stopped and the boat as level as possible.",
+      "reviewStatus": "draft"
+    }
+  ]
+}

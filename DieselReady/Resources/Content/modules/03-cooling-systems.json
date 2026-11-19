@@ -1,0 +1,471 @@
+{
+  "id": "m03",
+  "number": 3,
+  "title": "Cooling systems",
+  "summary": "How sea water and coolant carry heat away from the engine, and how to look after the seacock, strainer, impeller, heat exchanger and thermostat.",
+  "lessons": [
+    {
+      "id": "m03-l01",
+      "title": "Direct and indirect cooling",
+      "estimatedMinutes": 5,
+      "intro": "Only part of the energy in diesel fuel turns the propeller. Much of the rest becomes heat, which has to be carried away or the engine will be damaged. Marine engines use the water the boat floats in to do this, either directly or through a separate coolant circuit.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "Direct (raw water) cooling",
+          "text": "Sea or river water is pumped straight through passages in the engine and then out with the exhaust. It is simple, but salt water is corrosive and the engine must run cooler to stop salt deposits forming, so it is found mainly on older or very small engines."
+        },
+        {
+          "title": "Indirect (fresh water) cooling",
+          "text": "A closed circuit of coolant, a mixture of fresh water and antifreeze with corrosion inhibitors, circulates through the engine. The coolant passes its heat to sea water in a heat exchanger. The sea water never enters the engine block itself."
+        },
+        {
+          "title": "Why indirect cooling is more common",
+          "text": "Keeping salt water out of the engine greatly reduces internal corrosion and scale. The engine can also run at a steadier, warmer temperature, which suits it better."
+        },
+        {
+          "title": "What both systems share",
+          "text": "Both need sea water: a hull inlet with a seacock, a strainer, and a pump to drive the water round. In both, the used sea water is usually injected into the exhaust to cool it before it leaves the boat."
+        },
+        {
+          "title": "Keel cooling",
+          "text": "Some boats use a keel cooler instead of a heat exchanger: the coolant runs through pipes or a tank in contact with the water outside the hull. There is then no raw water pump for the engine itself, although the exhaust may be dry or need its own supply."
+        }
+      ],
+      "caution": null,
+      "handsOn": false,
+      "reviewStatus": "draft",
+      "reviewNote": "Please check the keel cooling paragraph is accurate in general terms and that the claims about direct cooling (running cooler to limit salt deposits) are fair."
+    },
+    {
+      "id": "m03-l02",
+      "title": "The raw water circuit: seacock and strainer",
+      "estimatedMinutes": 7,
+      "intro": "The raw water circuit brings outside water into the boat to cool the engine and its exhaust. It starts with a hole in the hull, so it matters for safety as well as for the engine.",
+      "diagram": {
+        "kind": "flow",
+        "caption": "The raw water path on a typical indirectly cooled engine.",
+        "labels": [
+          { "title": "Hull inlet and seacock", "detail": "The seacock lets you shut off the water at the hull." },
+          { "title": "Strainer", "detail": "Catches weed and debris before they reach the pump." },
+          { "title": "Raw water pump", "detail": "Driven by the engine, with a flexible rubber impeller." },
+          { "title": "Heat exchanger", "detail": "Raw water takes heat from the engine's coolant." },
+          { "title": "Exhaust injection", "detail": "The warm water is sprayed into the exhaust to cool it." },
+          { "title": "Overboard with the exhaust", "detail": "You should see a steady flow of water from the exhaust outlet." }
+        ],
+        "description": "A flow diagram of the raw water circuit in six stages: hull inlet and seacock, strainer, raw water pump, heat exchanger, exhaust injection, and out of the boat with the exhaust."
+      },
+      "steps": [
+        {
+          "title": "The seacock",
+          "text": "The seacock is a valve fitted directly to the hull inlet. It must be open whenever the engine runs, and it lets you stop water entering the boat if a hose fails or when you work on the circuit. Operate it regularly so it does not seize."
+        },
+        {
+          "title": "The strainer",
+          "text": "The strainer sits between the seacock and the pump. It has a removable basket that catches weed, shells and plastic. A blocked strainer is one of the most common causes of overheating."
+        },
+        {
+          "title": "Checking the strainer",
+          "text": "Through the clear lid, if it has one, look for debris in the basket as part of your daily checks. Make sure the water level in the strainer looks normal; if the lid seal leaks air, the pump can lose its suction."
+        },
+        {
+          "title": "Clearing the strainer",
+          "text": "With the engine stopped, close the seacock. Open the lid, lift out and clean the basket, check the lid seal, and refit everything firmly. Open the seacock again, then start the engine and check that water comes out of the exhaust and the strainer lid does not leak."
+        },
+        {
+          "title": "Anti-siphon protection",
+          "text": "If the engine sits close to or below the waterline, sea water can siphon back through the circuit and flood the engine through its exhaust. Such installations usually have a loop in the hose with an anti-siphon valve at its top, which needs to be kept clean so it works."
+        },
+        {
+          "title": "Hoses and clips",
+          "text": "Every hose below the waterline should be in good condition, ideally secured with two stainless clips at each end. A split hose here can sink the boat."
+        }
+      ],
+      "caution": "Always close the seacock before opening the strainer or any part of the raw water circuit, and remember to open it again before starting the engine. Running with the seacock closed will quickly ruin the impeller and overheat the engine.",
+      "handsOn": true,
+      "reviewStatus": "draft",
+      "reviewNote": "Anti-siphon arrangements and whether two clips are expected on every below-waterline hose vary with installation and guidance. Please confirm the wording is appropriately general."
+    },
+    {
+      "id": "m03-l03",
+      "title": "The raw water pump impeller",
+      "estimatedMinutes": 7,
+      "intro": "Most raw water pumps use a flexible rubber impeller. It is cheap and effective, but it wears out, and it is quickly destroyed if it runs dry. Changing it is a job every owner should be able to do.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "How it works",
+          "text": "The impeller is a rubber wheel with flexible vanes, fitted off-centre in a round pump body. As it turns, the vanes bend and straighten, squeezing water from the inlet side to the outlet side."
+        },
+        {
+          "title": "Why impellers fail",
+          "text": "The rubber hardens and cracks with age, and the vanes take a permanent bend if the pump sits unused for long periods. Running without water, even briefly, overheats the vanes and tears them. Grit in the water wears them down."
+        },
+        {
+          "title": "Signs of a failing impeller",
+          "text": "Less water than usual coming out of the exhaust, a rising engine temperature, or an overheat alarm. A pump that has been run dry may squeal."
+        },
+        {
+          "title": "Changing the impeller",
+          "text": "Stop the engine and close the seacock. Remove the pump cover, ease out the old impeller with the tool or method your handbook suggests, and look at it closely. Fit the new one with the lubricant its maker recommends, turning it in the direction of rotation so the vanes bend the right way. Fit a new cover gasket or seal, open the seacock, then start the engine and check the water flow."
+        },
+        {
+          "title": "Missing vanes",
+          "text": "If any vanes are missing from the old impeller, find them before you run the engine. Pieces usually travel downstream and lodge in the heat exchanger inlet or a pipe, where they block the flow."
+        },
+        {
+          "title": "Spares and records",
+          "text": "Carry at least one spare impeller and cover seal. Note in your log when it was changed; the handbook will say how often it should be replaced as a precaution."
+        }
+      ],
+      "caution": "Make sure the engine cannot be started while the pump cover is off. Pump covers and housings can be hot after running.",
+      "handsOn": true,
+      "reviewStatus": "draft",
+      "reviewNote": "Some impellers can be fitted either way round and the direction is set by rotation; others are handed. Please confirm the fitting advice and the lubricant wording (some makers specify a particular product or none)."
+    },
+    {
+      "id": "m03-l04",
+      "title": "Heat exchanger, coolant circuit and thermostat",
+      "estimatedMinutes": 7,
+      "intro": "On an indirectly cooled engine, the coolant circuit keeps the engine at a steady working temperature. The thermostat controls the temperature and the heat exchanger hands the heat over to the sea water.",
+      "diagram": {
+        "kind": "flow",
+        "caption": "The coolant circuit on a typical indirectly cooled engine. The thermostat decides how much coolant goes through the heat exchanger.",
+        "labels": [
+          { "title": "Header tank and pressure cap", "detail": "Holds a reserve of coolant and keeps the circuit under pressure." },
+          { "title": "Circulating pump", "detail": "Usually belt-driven; pushes coolant round the engine." },
+          { "title": "Engine block and head", "detail": "Coolant picks up heat from around the cylinders." },
+          { "title": "Thermostat", "detail": "Stays closed when cold, opens as the engine warms up." },
+          { "title": "Heat exchanger", "detail": "Coolant passes its heat to the raw water, then returns to the pump." }
+        ],
+        "description": "A flow diagram of the coolant circuit in five stages: header tank and pressure cap, circulating pump, engine block and head, thermostat, and heat exchanger, after which the coolant returns to the pump."
+      },
+      "steps": [
+        {
+          "title": "The circulating pump",
+          "text": "A pump, usually driven by the same belt as the alternator, keeps coolant moving through the block and head. If that belt breaks, the coolant stops circulating and the engine soon overheats."
+        },
+        {
+          "title": "The thermostat",
+          "text": "When the engine is cold, the thermostat stays closed so the coolant circulates only round the engine and warms it up quickly. As it reaches working temperature the thermostat opens and sends coolant through the heat exchanger."
+        },
+        {
+          "title": "The heat exchanger",
+          "text": "Inside the heat exchanger, coolant flows around a bundle of small tubes carrying raw water. Heat passes through the tube walls into the sea water, which then goes out with the exhaust. The two liquids never mix."
+        },
+        {
+          "title": "The header tank and pressure cap",
+          "text": "The header tank, often built into the heat exchanger, holds spare coolant. Its cap keeps the circuit under pressure, which raises the boiling point of the coolant. Check the level only when the engine is cold."
+        },
+        {
+          "title": "Coolant",
+          "text": "Use the type of coolant your handbook specifies, mixed as directed. It protects against freezing and corrosion, and its inhibitors wear out with time, so it needs renewing at the intervals the handbook gives."
+        },
+        {
+          "title": "Things that block",
+          "text": "Over time the raw water side of the heat exchanger can fur up with scale or be blocked by impeller pieces and debris. Some heat exchangers have a sacrificial anode that needs checking. A thermostat can also stick closed. Both lead to overheating once the engine is working hard."
+        }
+      ],
+      "caution": "Never remove the pressure cap while the engine is hot. The coolant is under pressure and above its normal boiling point, and it can spray out and scald you.",
+      "handsOn": false,
+      "reviewStatus": "draft",
+      "reviewNote": "Whether the thermostat is on the coolant side, the raw water side (on direct cooling) or both varies, as do sacrificial anodes in heat exchangers. Please confirm the general description and the 'two liquids never mix' statement (true unless the exchanger has failed)."
+    },
+    {
+      "id": "m03-l05",
+      "title": "Checking the cooling system",
+      "estimatedMinutes": 5,
+      "intro": "Most cooling problems give warning if you know what to look for. A few quick checks before and during every trip catch them early.",
+      "diagram": null,
+      "steps": [
+        {
+          "title": "Before starting",
+          "text": "With the engine cold, check the coolant level in the header tank. Check the seacock is open and the strainer basket is clear. Look at hoses and clips for leaks, cracks or rust stains."
+        },
+        {
+          "title": "Straight after starting",
+          "text": "Look over the stern or at the exhaust outlet within the first few seconds. You should see a steady, pulsing flow of water with the exhaust. If there is none, stop the engine and find out why."
+        },
+        {
+          "title": "While running",
+          "text": "Glance at the temperature gauge, if fitted, and get to know where the needle normally sits. A slow rise, especially under load, can be the first sign of a blockage or a worn impeller."
+        },
+        {
+          "title": "Listen and look",
+          "text": "Steam from the exhaust, a change in the exhaust note, or a hot rubber smell all deserve a look. So does a squealing belt, which may mean the coolant pump is not being driven properly."
+        },
+        {
+          "title": "Know your alarms",
+          "text": "Find out whether your engine has an overheat alarm or warning light, and what it sounds or looks like. Test it as your handbook describes."
+        }
+      ],
+      "caution": "If the exhaust has no water or the temperature is climbing, stop the engine as soon as it is safe to do so. See Overheating in the Fault finder.",
+      "handsOn": true,
+      "reviewStatus": "draft"
+    }
+  ],
+  "questions": [
+    {
+      "id": "m03-q001", "moduleId": "m03", "lessonId": "m03-l01", "difficulty": 1,
+      "prompt": "In an indirectly cooled engine, what circulates through the engine block?",
+      "options": [
+        "Coolant in a closed circuit",
+        "Sea water drawn through the hull inlet",
+        "Engine oil only",
+        "Air blown by a fan"
+      ],
+      "correctIndex": 0,
+      "explanation": "Indirect cooling keeps a closed circuit of coolant in the engine. The sea water only passes through the heat exchanger and the exhaust, so salt never reaches the block.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q002", "moduleId": "m03", "lessonId": "m03-l01", "difficulty": 2,
+      "prompt": "What is the main advantage of indirect cooling over direct cooling?",
+      "options": [
+        "Salt water is kept out of the engine, reducing corrosion and scale",
+        "It needs no raw water pump at all",
+        "It lets the engine run without any coolant",
+        "It removes the need for a seacock"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sea water is corrosive and leaves deposits. With indirect cooling only the heat exchanger sees sea water, which protects the engine's internal passages. A raw water pump and seacock are still needed.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q003", "moduleId": "m03", "lessonId": "m03-l01", "difficulty": 2,
+      "prompt": "On most small marine diesels, what happens to the raw water after it has cooled the engine?",
+      "options": [
+        "It is injected into the exhaust and leaves the boat with the exhaust gases",
+        "It is stored in a tank and reused",
+        "It drains into the bilge to be pumped out later",
+        "It is mixed with the coolant in the header tank"
+      ],
+      "correctIndex": 0,
+      "explanation": "Spraying the water into the exhaust cools the hot gas so the exhaust can run through rubber hose and a water-lock silencer, and it is why you see water coming out with the exhaust.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q004", "moduleId": "m03", "lessonId": "m03-l01", "difficulty": 3,
+      "prompt": "Why do directly cooled engines usually run cooler than indirectly cooled ones?",
+      "options": [
+        "To limit salt coming out of the sea water and building up inside the engine",
+        "Because sea water boils at a lower temperature than fresh water",
+        "Because they have no thermostat of any kind",
+        "To make the engine use less fuel"
+      ],
+      "correctIndex": 0,
+      "explanation": "Salt and minerals come out of sea water faster as it gets hotter, forming scale that blocks passages. Running cooler slows this, though a cooler engine is less efficient.",
+      "reviewStatus": "draft",
+      "reviewNote": "Please confirm this is a fair general explanation."
+    },
+    {
+      "id": "m03-q005", "moduleId": "m03", "lessonId": "m03-l02", "difficulty": 1,
+      "prompt": "What must you do before opening the raw water strainer?",
+      "options": [
+        "Stop the engine and close the seacock",
+        "Run the engine to warm up the water",
+        "Open the coolant pressure cap",
+        "Disconnect the battery"
+      ],
+      "correctIndex": 0,
+      "explanation": "With the seacock open, water can pour in through the strainer, because it is below the waterline on many boats. Stopping the engine also stops the pump running dry.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q006", "moduleId": "m03", "lessonId": "m03-l02", "difficulty": 2,
+      "prompt": "The strainer lid seal is leaking air. What can this cause?",
+      "options": [
+        "The raw water pump loses suction and the engine overheats",
+        "Fuel leaks into the cooling water",
+        "The engine oil becomes diluted",
+        "The alternator stops charging"
+      ],
+      "correctIndex": 0,
+      "explanation": "The pump draws water through the strainer. If the lid lets air in, the pump draws air instead of water, so the flow drops or stops and the engine overheats.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q007", "moduleId": "m03", "lessonId": "m03-l02", "difficulty": 1,
+      "prompt": "Why should you work the seacock handle from time to time?",
+      "options": [
+        "So it does not seize and can be closed quickly in an emergency",
+        "To flush salt out of the engine",
+        "To recharge the battery",
+        "To top up the coolant"
+      ],
+      "correctIndex": 0,
+      "explanation": "Seacocks left in one position can seize with growth and corrosion. If a hose fails, you need to be able to close it at once.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q008", "moduleId": "m03", "lessonId": "m03-l02", "difficulty": 3,
+      "prompt": "What is the purpose of an anti-siphon valve in the raw water circuit?",
+      "options": [
+        "To stop sea water siphoning back into the engine through the exhaust when it is stopped",
+        "To increase the flow of water to the heat exchanger",
+        "To let air out of the coolant circuit",
+        "To stop fuel siphoning out of the tank"
+      ],
+      "correctIndex": 0,
+      "explanation": "Where the engine is near or below the waterline, water can siphon through the circuit and fill the exhaust and cylinders. The valve lets air into the top of the loop to break the siphon.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q009", "moduleId": "m03", "lessonId": "m03-l03", "difficulty": 1,
+      "prompt": "What is a raw water pump impeller usually made of?",
+      "options": [
+        "Flexible rubber",
+        "Cast iron",
+        "Glass",
+        "Paper"
+      ],
+      "correctIndex": 0,
+      "explanation": "The vanes need to bend and straighten as the impeller turns off-centre in the pump body, which is why it is made of flexible rubber, and why it wears out.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q010", "moduleId": "m03", "lessonId": "m03-l03", "difficulty": 2,
+      "prompt": "What damages an impeller most quickly?",
+      "options": [
+        "Running the pump without water",
+        "Running the engine at low revs",
+        "Using the engine in fresh water",
+        "Changing the engine oil"
+      ],
+      "correctIndex": 0,
+      "explanation": "The water lubricates and cools the rubber vanes. Without it they overheat and tear within moments, for example if the seacock is left closed.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q011", "moduleId": "m03", "lessonId": "m03-l03", "difficulty": 2,
+      "prompt": "Your old impeller has two vanes missing. What should you do before running the engine?",
+      "options": [
+        "Find the missing pieces, which have probably lodged further along the circuit",
+        "Nothing, because the pieces will dissolve",
+        "Run the engine hard to flush them out",
+        "Fit two impellers to make up for it"
+      ],
+      "correctIndex": 0,
+      "explanation": "Broken vanes travel downstream and often block the heat exchanger inlet, causing overheating even with a new impeller. They do not break down on their own.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q012", "moduleId": "m03", "lessonId": "m03-l03", "difficulty": 3,
+      "prompt": "Why do impellers often fail early in the season after a long lay-up?",
+      "options": [
+        "The vanes take a permanent bend while standing still and can crack when they start working again",
+        "Cold weather turns the rubber into metal",
+        "The impeller shrinks and falls off its shaft",
+        "Antifreeze always dissolves the impeller"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vanes held bent in one position for months set in that shape and lose their flexibility, so they crack or tear soon after recommissioning. Many owners fit a new impeller or remove it for the winter.",
+      "reviewStatus": "draft",
+      "reviewNote": "Removing the impeller over winter is common practice but not universal advice; please confirm."
+    },
+    {
+      "id": "m03-q013", "moduleId": "m03", "lessonId": "m03-l04", "difficulty": 1,
+      "prompt": "When should you check the coolant level in the header tank?",
+      "options": [
+        "When the engine is cold",
+        "While the engine is running at full power",
+        "Immediately after stopping a hot engine",
+        "Only when the overheat alarm sounds"
+      ],
+      "correctIndex": 0,
+      "explanation": "A hot coolant circuit is under pressure, and removing the cap can release scalding coolant. Checking cold is safe and gives a consistent reading.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q014", "moduleId": "m03", "lessonId": "m03-l04", "difficulty": 2,
+      "prompt": "What does the thermostat do when the engine is cold?",
+      "options": [
+        "Stays closed so the coolant circulates only round the engine, warming it quickly",
+        "Opens fully so the engine cools down faster",
+        "Switches on the starter motor",
+        "Lets raw water into the engine block"
+      ],
+      "correctIndex": 0,
+      "explanation": "By keeping coolant away from the heat exchanger at first, the thermostat helps the engine reach its working temperature sooner. It opens as the engine warms.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q015", "moduleId": "m03", "lessonId": "m03-l04", "difficulty": 2,
+      "prompt": "Why is the coolant circuit kept under pressure by the cap?",
+      "options": [
+        "To raise the boiling point of the coolant",
+        "To push coolant into the exhaust",
+        "To stop the thermostat opening",
+        "To help the starter motor turn the engine"
+      ],
+      "correctIndex": 0,
+      "explanation": "The higher the pressure, the higher the temperature a liquid can reach before it boils. This lets the engine run at its proper temperature without the coolant boiling.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q016", "moduleId": "m03", "lessonId": "m03-l04", "difficulty": 3,
+      "prompt": "The engine runs at a normal temperature at low revs but overheats under load, and the raw water flow looks normal. Which is the most likely cause?",
+      "options": [
+        "A partly blocked or scaled heat exchanger, or a sticking thermostat",
+        "A closed seacock",
+        "A completely missing impeller",
+        "A flat battery"
+      ],
+      "correctIndex": 0,
+      "explanation": "A closed seacock or missing impeller would stop the water flow altogether. When flow is normal but the engine overheats only when working hard, heat is not being transferred well enough.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q017", "moduleId": "m03", "lessonId": "m03-l05", "difficulty": 1,
+      "prompt": "What is the first thing to check straight after starting the engine?",
+      "options": [
+        "That cooling water is coming out with the exhaust",
+        "That the fuel tank is completely full",
+        "That the oil filter is warm",
+        "That the propeller is turning in neutral"
+      ],
+      "correctIndex": 0,
+      "explanation": "Water from the exhaust shows the raw water circuit is working. If there is none, stop the engine before the impeller and exhaust are damaged.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q018", "moduleId": "m03", "lessonId": "m03-l05", "difficulty": 2,
+      "prompt": "Why is it worth learning where your temperature gauge normally sits?",
+      "options": [
+        "So you notice a gradual rise early, before it becomes a serious problem",
+        "Because the gauge must always read exactly halfway",
+        "So you can set the throttle by it",
+        "Because it shows how much fuel is left"
+      ],
+      "correctIndex": 0,
+      "explanation": "Every engine settles at its own normal reading. A slow drift above it is often the first sign of a blocked strainer, worn impeller or scaled heat exchanger.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q019", "moduleId": "m03", "lessonId": "m03-l05", "difficulty": 2,
+      "prompt": "You hear a belt squealing and the temperature starts to rise. What is the link?",
+      "options": [
+        "The belt may also drive the coolant pump, so a slipping belt can reduce coolant flow",
+        "A squealing belt always means the oil is low",
+        "The noise is caused by steam in the exhaust",
+        "There is no link, so the temperature rise is a coincidence"
+      ],
+      "correctIndex": 0,
+      "explanation": "On many engines one belt drives both the alternator and the coolant circulating pump. If it slips, the pump slows and the engine gets hotter.",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "m03-q020", "moduleId": "m03", "lessonId": "m03-l05", "difficulty": 3,
+      "prompt": "There is steam and very little water from the exhaust. Why is stopping the engine also important for the exhaust system itself?",
+      "options": [
+        "Without cooling water the exhaust gas gets hot enough to damage rubber hoses and the silencer",
+        "Steam blocks the fuel filter",
+        "Steam makes the propeller turn backwards",
+        "The exhaust needs steam to work properly"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wet exhaust systems use rubber hose and plastic or composite silencers that rely on the injected water to stay cool. Hot, dry exhaust gas can melt or burn them, risking fire and fumes inside the boat.",
+      "reviewStatus": "draft"
+    }
+  ]
+}

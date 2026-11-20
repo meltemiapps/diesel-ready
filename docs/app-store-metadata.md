@@ -109,7 +109,7 @@ First release.
 | Primary category | Education |
 | Secondary category | Reference |
 | Copyright | © 2026 Meltemi Apps |
-| Version | 1.0 (build 1) |
+| Version | 1.0 (build 2) |
 | Content rights | Does not contain, show or access third-party content |
 
 ## Pricing and Availability

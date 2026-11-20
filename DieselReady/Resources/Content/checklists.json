@@ -1,0 +1,301 @@
+{
+  "mnemonic": {
+    "name": "WOBBLE",
+    "summary": "WOBBLE is a widely used memory aid for checking a marine diesel: Water, Oil, Belts, Bilges, Leaks and levels, and Exhaust. The first five letters are checked with the engine off; the E is checked once it is running.",
+    "letters": [
+      {
+        "letter": "W",
+        "word": "Water"
+      },
+      {
+        "letter": "O",
+        "word": "Oil"
+      },
+      {
+        "letter": "B",
+        "word": "Belts"
+      },
+      {
+        "letter": "B",
+        "word": "Bilges"
+      },
+      {
+        "letter": "L",
+        "word": "Leaks and levels"
+      },
+      {
+        "letter": "E",
+        "word": "Exhaust"
+      }
+    ]
+  },
+  "reminder": "Engines and installations differ. Follow your engine handbook, and ask a qualified marine engineer if anything you find is not normal for your engine.",
+  "checklists": [
+    {
+      "id": "pre-start",
+      "title": "Pre-start",
+      "subtitle": "Engine off",
+      "intro": "Work through these with the engine stopped and unable to start.",
+      "engineRunning": false,
+      "lessonId": "m07-l01",
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.2 (owner request): pre/post-start checklists. Please approve the wording and action levels.",
+      "sections": [
+        {
+          "id": "water",
+          "letter": "W",
+          "title": "Water",
+          "items": [
+            {
+              "id": "pre-coolant",
+              "title": "Coolant level",
+              "detail": "Freshwater coolant at the correct level in the header tank or expansion bottle. Check it with the engine cold, and never open a hot pressure cap.",
+              "action": "owner",
+              "lessonId": "m03-l04",
+              "reviewStatus": "draft"
+            },
+            {
+              "id": "pre-seacock",
+              "title": "Raw-water seacock OPEN",
+              "detail": "The cooling-water seacock is open. A keel-cooled engine may have a seacock only for its exhaust, or none at all.",
+              "action": "owner",
+              "lessonId": "m03-l02",
+              "reviewStatus": "draft"
+            },
+            {
+              "id": "pre-strainer",
+              "title": "Strainer clean and sealed",
+              "detail": "The raw-water strainer is clear of weed and debris, and its lid is seated and sealed so it cannot draw in air.",
+              "action": "observe",
+              "lessonId": "m03-l02",
+              "reviewStatus": "draft"
+            }
+          ]
+        },
+        {
+          "id": "oil",
+          "letter": "O",
+          "title": "Oil",
+          "items": [
+            {
+              "id": "pre-engine-oil",
+              "title": "Engine oil level",
+              "detail": "Between the marks on the dipstick.",
+              "action": "observe",
+              "lessonId": "m04-l02",
+              "reviewStatus": "draft"
+            },
+            {
+              "id": "pre-gearbox-oil",
+              "title": "Gearbox oil level",
+              "detail": "On the gearbox dipstick, or checked as your handbook describes.",
+              "action": "observe",
+              "lessonId": "m06-l02",
+              "reviewStatus": "draft"
+            },
+            {
+              "id": "pre-oil-condition",
+              "title": "Oil not milky or contaminated",
+              "detail": "Milky, frothy or fuel-smelling oil means something is getting into it. Do not start the engine; get advice from a qualified engineer.",
+              "action": "observe",
+              "lessonId": "m04-l02",
+              "reviewStatus": "draft"
+            }
+          ]
+        },
+        {
+          "id": "belts",
+          "letter": "B",
+          "title": "Belts",
+          "items": [
+            {
+              "id": "pre-belt-condition",
+              "title": "Belt condition",
+              "detail": "Alternator and pump drive belts show no wear, cracking or fraying.",
+              "action": "observe",
+              "lessonId": "m06-l01",
+              "reviewStatus": "draft"
+            },
+            {
+              "id": "pre-belt-tension",
+              "title": "Belt tension",
+              "detail": "Tensioned as your engine handbook specifies, checked with the engine stopped and unable to start.",
+              "action": "owner",
+              "lessonId": "m06-l01",
+              "reviewStatus": "draft"
+            }
+          ]
+        },
+        {
+          "id": "bilges",
+          "letter": "B",
+          "title": "Bilges",
+          "items": [
+            {
+              "id": "pre-bilges",
+              "title": "Bilge dry and clean",
+              "detail": "Under the engine and in the bilge: no standing water, oil or fuel. Any of these is a leak to trace before you start.",
+              "action": "observe",
+              "lessonId": "m07-l01",
+              "reviewStatus": "draft"
+            }
+          ]
+        },
+        {
+          "id": "leaks-levels",
+          "letter": "L",
+          "title": "Leaks and levels",
+          "items": [
+            {
+              "id": "pre-fuel",
+              "title": "Fuel level",
+              "detail": "Enough fuel for the trip with a good reserve, and the fuel valve open.",
+              "action": "owner",
+              "lessonId": "m02-l01",
+              "reviewStatus": "draft"
+            },
+            {
+              "id": "pre-leaks",
+              "title": "Seacocks, hoses and fittings",
+              "detail": "No drips or weeping at seacocks, hoses, clips or fittings, and the exhaust hose undamaged.",
+              "action": "observe",
+              "lessonId": "m03-l05",
+              "reviewStatus": "draft"
+            },
+            {
+              "id": "pre-batteries",
+              "title": "Batteries and isolator",
+              "detail": "Batteries in good condition, connections clean and tight, and the battery isolator set for starting.",
+              "action": "owner",
+              "lessonId": "m05-l01",
+              "reviewStatus": "draft"
+            }
+          ]
+        },
+        {
+          "id": "before-you-start",
+          "title": "Before you start",
+          "items": [
+            {
+              "id": "pre-ventilation",
+              "title": "Engine space ventilated",
+              "detail": "The engine space and air intake are open and clear.",
+              "action": "owner",
+              "lessonId": "m07-l01",
+              "reviewStatus": "draft"
+            },
+            {
+              "id": "pre-propeller",
+              "title": "Propeller and lines clear",
+              "detail": "No ropes, fenders or people in the water near the propeller, where it is safe and practicable to check.",
+              "action": "observe",
+              "lessonId": "m06-l04",
+              "reviewStatus": "draft"
+            },
+            {
+              "id": "pre-neutral",
+              "title": "Gear lever in neutral",
+              "detail": "So the boat cannot move off as the engine starts.",
+              "action": "owner",
+              "lessonId": "m06-l02",
+              "reviewStatus": "draft"
+            },
+            {
+              "id": "pre-stop-control",
+              "title": "Stop control works",
+              "detail": "The stop control moves freely and is returned to the run position, or the stop switch works as your handbook describes.",
+              "action": "owner",
+              "lessonId": "m05-l03",
+              "reviewStatus": "draft"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "post-start",
+      "title": "Post-start",
+      "subtitle": "Engine running",
+      "intro": "Check these straight after starting and again once the engine is warm.",
+      "banner": "Engine running: observe only. Keep clear of belts, pulleys, the shaft and other moving parts.",
+      "engineRunning": true,
+      "lessonId": "m07-l01",
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.2 (owner request): pre/post-start checklists. Please approve the wording and action levels.",
+      "sections": [
+        {
+          "id": "exhaust",
+          "letter": "E",
+          "title": "Exhaust",
+          "items": [
+            {
+              "id": "post-exhaust-water",
+              "title": "Water from the exhaust",
+              "detail": "On a wet exhaust, cooling water comes out within a few seconds of starting. If it does not, stop the engine.",
+              "action": "observe",
+              "lessonId": "m03-l05",
+              "safetyNoticeIds": [
+                "overheating-stop"
+              ],
+              "reviewStatus": "draft"
+            }
+          ]
+        },
+        {
+          "id": "lights-gauges",
+          "title": "Lights and gauges",
+          "items": [
+            {
+              "id": "post-warning-lights",
+              "title": "Warning lights out",
+              "detail": "The oil pressure and charging warning lights go out once the engine is running.",
+              "action": "observe",
+              "lessonId": "m05-l05",
+              "safetyNoticeIds": [
+                "oil-pressure-stop"
+              ],
+              "reviewStatus": "draft"
+            },
+            {
+              "id": "post-temperature",
+              "title": "Temperature normal",
+              "detail": "Once warm, the temperature gauge or light shows normal running temperature.",
+              "action": "observe",
+              "lessonId": "m03-l04",
+              "reviewStatus": "draft"
+            }
+          ]
+        },
+        {
+          "id": "listen-look",
+          "title": "Listen and look",
+          "items": [
+            {
+              "id": "post-noise-smoke",
+              "title": "No unusual noise or smoke",
+              "detail": "No unusual noise, vibration or belt squeal, and no abnormal smoke colour from the exhaust.",
+              "action": "observe",
+              "lessonId": "m08-l04",
+              "symptomId": "exhaust-smoke",
+              "reviewStatus": "draft"
+            }
+          ]
+        },
+        {
+          "id": "after-warm-up",
+          "title": "After warm-up",
+          "items": [
+            {
+              "id": "post-recheck-leaks",
+              "title": "Recheck for leaks",
+              "detail": "Look again for leaks of water, oil or fuel, by eye only. Do not reach near belts, pulleys or the shaft while the engine runs.",
+              "action": "observe",
+              "lessonId": "m03-l05",
+              "reviewStatus": "draft"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

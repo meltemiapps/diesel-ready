@@ -14,6 +14,8 @@ struct ContentManifest: Codable, Sendable, Equatable {
     let faults: String?
     /// File name of the shared safety notices, action levels and tags.
     var safety: String? = nil
+    /// File name of the pre-start and post-start engine checklists.
+    var checklists: String? = nil
     /// Version, review date and change log, shown on the About tab.
     var contentInfo: ContentInfo? = nil
 }
@@ -90,9 +92,12 @@ struct Lesson: Codable, Sendable, Identifiable, Hashable {
     var safetyNoticeIds: [String]? = nil
     /// Installation types the lesson is written for (`safety.json` tags).
     var appliesTo: [String]? = nil
+    /// Checklists (`checklists.json`) the lesson links to. Each one links back.
+    var checklistIds: [String]? = nil
 
     var noticeIDs: [String] { safetyNoticeIds ?? [] }
     var tagIDs: [String] { appliesTo ?? [] }
+    var checklistIDs: [String] { checklistIds ?? [] }
 
     /// A procedure with any step beyond observing. It must carry a warning,
     /// which the app shows before the first step.
@@ -204,14 +209,17 @@ struct ContentLibrary: Sendable, Equatable {
     let safety: SafetyGuide?
     /// Version and review status, or nil if the manifest has none.
     let info: ContentInfo?
+    /// Pre-start and post-start checklists, or nil if the manifest lists none.
+    let checks: ChecklistGuide?
 
     init(schemaVersion: Int, modules: [Module], faults: FaultGuide? = nil,
-         safety: SafetyGuide? = nil, info: ContentInfo? = nil) {
+         safety: SafetyGuide? = nil, info: ContentInfo? = nil, checks: ChecklistGuide? = nil) {
         self.schemaVersion = schemaVersion
         self.modules = modules
         self.faults = faults
         self.safety = safety
         self.info = info
+        self.checks = checks
     }
 
     static let empty = ContentLibrary(schemaVersion: 0, modules: [])
@@ -359,4 +367,82 @@ struct Symptom: Codable, Sendable, Identifiable, Hashable {
 struct FaultCause: Codable, Sendable, Hashable {
     let title: String
     let detail: String
+}
+
+// MARK: - Checklists
+
+/// `Content/checklists.json`: the Checks tab. Pre-start checks with the engine
+/// off and post-start checks with it running, built on a memory aid.
+struct ChecklistGuide: Codable, Sendable, Hashable {
+    let mnemonic: Mnemonic
+    /// Shown at the end of every checklist: follow the handbook.
+    let reminder: String
+    let checklists: [Checklist]
+
+    /// Checklists the app must have, in display order.
+    static let requiredChecklistIDs = ["pre-start", "post-start"]
+
+    func checklist(withID id: Checklist.ID) -> Checklist? {
+        checklists.first { $0.id == id }
+    }
+
+    var allItems: [ChecklistItem] { checklists.flatMap(\.items) }
+}
+
+/// A mnemonic whose letters match the checklist sections that carry a letter.
+struct Mnemonic: Codable, Sendable, Hashable {
+    let name: String
+    let summary: String
+    let letters: [MnemonicLetter]
+}
+
+struct MnemonicLetter: Codable, Sendable, Hashable {
+    let letter: String
+    let word: String
+}
+
+struct Checklist: Codable, Sendable, Hashable, Identifiable {
+    let id: String
+    let title: String
+    /// For example "Engine off".
+    let subtitle: String
+    let intro: String
+    /// Shown first when the engine is running, e.g. "observe only".
+    var banner: String? = nil
+    /// True for checks made with the engine running. Every item must then be
+    /// observe only, and the banner is required.
+    let engineRunning: Bool
+    /// The lesson that teaches these checks. It must link back.
+    let lessonId: String
+    let sections: [ChecklistSection]
+    let reviewStatus: ReviewStatus
+    /// What the expert reviewer should check. Never shown in the app.
+    var reviewNote: String? = nil
+
+    var items: [ChecklistItem] { sections.flatMap(\.items) }
+}
+
+struct ChecklistSection: Codable, Sendable, Hashable, Identifiable {
+    let id: String
+    /// The memory-aid letter this section stands for, if any.
+    var letter: String? = nil
+    let title: String
+    let items: [ChecklistItem]
+}
+
+struct ChecklistItem: Codable, Sendable, Hashable, Identifiable {
+    let id: String
+    let title: String
+    let detail: String
+    /// Observe or owner. Checklists never include engineer-only work.
+    let action: ActionLevel
+    /// The lesson to read for this check. Must exist.
+    let lessonId: String
+    /// Shared safety notices that apply, referenced rather than copied.
+    var safetyNoticeIds: [String]? = nil
+    /// A Fault finder symptom to open if the check finds a problem.
+    var symptomId: String? = nil
+    let reviewStatus: ReviewStatus
+
+    var noticeIDs: [String] { safetyNoticeIds ?? [] }
 }

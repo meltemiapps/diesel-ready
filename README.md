@@ -67,12 +67,12 @@ DieselReady/
   DesignSystem/      Colour, type and spacing tokens; shared components
   Content/           Codable content models, loader/validator, ContentStore
   Persistence/       SwiftData models for progress, quiz attempts, bookmarks
-  Features/          Disclaimer, Learn, Quiz, Faults, About
+  Features/          Disclaimer, Learn, Quiz, Checks, Faults, About
   Resources/
     Content/         Bundled JSON content (CC BY-NC-SA 4.0)
     PrivacyInfo.xcprivacy
 DieselReadyTests/    Unit tests (Swift Testing)
-DieselReadyUITests/  UI tests: a mock test end to end, and every Fault finder symptom
+DieselReadyUITests/  UI tests: a mock test end to end, the checklists, and every Fault finder symptom
 docs/                Content schema, content review pack and, later, store metadata
 scripts/             Developer tools (not part of the app): see below
 ```
@@ -83,7 +83,7 @@ the same files unchanged. See [docs/content-schema.md](docs/content-schema.md).
 ### Content review
 
 [docs/content-review.md](docs/content-review.md) is a readable export of every
-lesson, question and Fault finder entry, with all review notes highlighted, for
+lesson, question, checklist and Fault finder entry, with all review notes highlighted, for
 sign-off by a qualified marine engineer.
 [docs/quiz-review.csv](docs/quiz-review.csv) lists every question with its key,
 severity and an empty sign-off column, and

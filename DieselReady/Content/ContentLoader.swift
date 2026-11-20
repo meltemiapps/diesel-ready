@@ -56,8 +56,9 @@ struct ContentLoader: Sendable {
         let modules: [Module] = try manifest.modules.map { try decode("modules/\($0)") }
         let faults: FaultGuide? = try manifest.faults.map { try decode($0) }
         let safety: SafetyGuide? = try manifest.safety.map { try decode($0) }
+        let checks: ChecklistGuide? = try manifest.checklists.map { try decode($0) }
         let library = ContentLibrary(schemaVersion: manifest.schemaVersion, modules: modules, faults: faults,
-                                     safety: safety, info: manifest.contentInfo)
+                                     safety: safety, info: manifest.contentInfo, checks: checks)
 
         let problems = Self.validate(library, rules: rules)
         guard problems.isEmpty else { throw LoadError.invalid(problems) }
@@ -190,6 +191,99 @@ struct ContentLoader: Sendable {
             problems += validate(info)
         } else if rules.requireSafetyContent {
             problems.append("manifest: no contentInfo")
+        }
+        if let checks = library.checks {
+            problems += validate(checks, library: library)
+        } else if rules.requireChecklists {
+            problems.append("manifest: no checklists file")
+        }
+        for lesson in library.allLessons {
+            if Set(lesson.checklistIDs).count != lesson.checklistIDs.count {
+                problems.append("\(lesson.id): links to the same checklist twice")
+            }
+            for id in lesson.checklistIDs where library.checks?.checklist(withID: id) == nil {
+                problems.append("\(lesson.id): links to unknown checklist \(id)")
+            }
+        }
+        return problems
+    }
+
+    // MARK: Checklists
+
+    /// Checklist checks: required lists present, ids unique, links and notices
+    /// resolve, sections match the memory aid, running-engine lists are
+    /// observe only with a banner, and every checklist's lesson links back.
+    static func validate(_ guide: ChecklistGuide, library: ContentLibrary) -> [String] {
+        var problems: [String] = []
+        let lessonIDs = Set(library.allLessons.map(\.id))
+        let symptomIDs = Set(library.faults?.symptoms.map(\.id) ?? [])
+        func blank(_ text: String?) -> Bool { (text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+
+        if blank(guide.reminder) { problems.append("checklists: reminder is empty") }
+        if blank(guide.mnemonic.name) || blank(guide.mnemonic.summary) {
+            problems.append("checklists: memory aid needs a name and summary")
+        }
+        let listIDs = guide.checklists.map(\.id)
+        if listIDs != ChecklistGuide.requiredChecklistIDs {
+            problems.append("checklists: expected \(ChecklistGuide.requiredChecklistIDs.joined(separator: ", ")) in that order")
+        }
+
+        // The lettered sections, read across every list in order, spell the memory aid.
+        let sectionLetters = guide.checklists.flatMap(\.sections).compactMap(\.letter)
+        if sectionLetters != guide.mnemonic.letters.map(\.letter) {
+            problems.append("checklists: lettered sections \(sectionLetters.joined()) do not match \(guide.mnemonic.name)")
+        }
+        let aidName = guide.mnemonic.name.uppercased()
+        if aidName != guide.mnemonic.letters.map(\.letter).joined().uppercased() {
+            problems.append("checklists: \(guide.mnemonic.name) letters do not spell its name")
+        }
+        let words = guide.checklists.flatMap(\.sections).filter { $0.letter != nil }.map(\.title)
+        if words != guide.mnemonic.letters.map(\.word) {
+            problems.append("checklists: lettered section titles do not match the memory aid words")
+        }
+
+        var seen = Set<String>()
+        func checkUnique(_ id: String) {
+            if !seen.insert(id).inserted { problems.append("checklists: duplicate id \(id)") }
+        }
+        for list in guide.checklists {
+            checkUnique(list.id)
+            if blank(list.title) || blank(list.subtitle) || blank(list.intro) {
+                problems.append("\(list.id): needs a title, subtitle and intro")
+            }
+            if list.sections.isEmpty { problems.append("\(list.id): has no sections") }
+            if !lessonIDs.contains(list.lessonId) {
+                problems.append("\(list.id): links to unknown lesson \(list.lessonId)")
+            } else if library.lesson(withID: list.lessonId)?.checklistIDs.contains(list.id) != true {
+                problems.append("\(list.id): lesson \(list.lessonId) does not link back to it")
+            }
+            if list.engineRunning && blank(list.banner) {
+                problems.append("\(list.id): engine-running checklist needs a banner")
+            }
+            for section in list.sections {
+                checkUnique("\(list.id)/\(section.id)")
+                if section.items.isEmpty { problems.append("\(list.id)/\(section.id): has no items") }
+                if blank(section.title) { problems.append("\(list.id)/\(section.id): has no title") }
+                for item in section.items {
+                    let id = item.id
+                    checkUnique(id)
+                    if blank(item.title) || blank(item.detail) { problems.append("\(id): needs a title and detail") }
+                    if item.action == .engineer {
+                        problems.append("\(id): checklists hold observe and owner checks only")
+                    }
+                    if list.engineRunning && item.action != .observe {
+                        problems.append("\(id): engine is running, so the check must be observe only")
+                    }
+                    if !lessonIDs.contains(item.lessonId) {
+                        problems.append("\(id): links to unknown lesson \(item.lessonId)")
+                    }
+                    if let symptom = item.symptomId, !symptomIDs.contains(symptom) {
+                        problems.append("\(id): links to unknown symptom \(symptom)")
+                    }
+                    problems += unknownNotices(item.noticeIDs, in: library.safety, owner: id)
+                    problems += rankingProblems(in: [item.title, item.detail], owner: id)
+                }
+            }
         }
         return problems
     }
@@ -385,6 +479,8 @@ struct ContentRules: Sendable, Equatable {
     var requireSafetyContent: Bool
     /// There are enough safety-critical and scenario questions for a mock test.
     var requireMockBlueprint: Bool
+    /// The manifest must list the pre-start and post-start checklists.
+    var requireChecklists: Bool
 
     static let release = ContentRules(
         lessonsPerModule: 3...6,
@@ -392,7 +488,8 @@ struct ContentRules: Sendable, Equatable {
         minTotalQuestions: 150,
         requireEveryDifficultyPerModule: true,
         requireSafetyContent: true,
-        requireMockBlueprint: true
+        requireMockBlueprint: true,
+        requireChecklists: true
     )
 
     static let structural = ContentRules(
@@ -401,6 +498,7 @@ struct ContentRules: Sendable, Equatable {
         minTotalQuestions: 0,
         requireEveryDifficultyPerModule: false,
         requireSafetyContent: false,
-        requireMockBlueprint: false
+        requireMockBlueprint: false,
+        requireChecklists: false
     )
 }

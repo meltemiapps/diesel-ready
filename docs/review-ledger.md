@@ -1,4 +1,4 @@
-# Review ledger: content 1.1
+# Review ledger: content 1.2
 
 This ledger records how each finding of the independent technical content audit
 of 20 November 2026 was handled. Findings are referred to by the audit's own
@@ -17,6 +17,9 @@ as notices `wet-exhaust-waterlock` (A), `high-pressure-fuel` (B),
 `oil-pressure-stop` (C) and `overheating-stop` (D), and every surface refers to
 it by ID, so the wording cannot drift. Wording E is in `m03-l02` step 6. A unit
 test (`SafetyContentTests`) fails if any of the five changes.
+
+Content 1.2 adds one owner request on top of the audit corrections: the
+pre-start and post-start checklists, listed in their own section below.
 
 ## Priority findings S01–S20
 
@@ -80,9 +83,22 @@ test (`SafetyContentTests`) fails if any of the five changes.
 | 31 | Fault finder "Won't start" | Safety revise (P0) | `faults.json`: `wont-start` (wording A first; stop card `suspected-waterlock`; consistent with `m08-l02`). See S01. | revised, awaiting engineer approval |
 | 32 | Fault finder "Low oil pressure" | Safety revise (P0) | `faults.json`: `low-oil-pressure` (wording C first; stop card; no "most common cause"; causes unranked). See S03. | revised, awaiting engineer approval |
 
+## New (owner request): pre/post-start checklists
+
+Not an audit finding: added at the owner's request in content 1.2. Every item is
+new, `reviewStatus: "draft"`, and awaits engineer approval.
+
+| Item | Change made (file: items) | Status |
+|---|---|---|
+| Checklists | `checklists.json` (new): the WOBBLE memory aid, introduced as "a widely used memory aid" and attributed to no one; `pre-start` (engine off: W Water, O Oil, B Belts, B Bilges, L Leaks and levels, and Before you start from S15: ventilation, propeller and lines clear, neutral, stop control); `post-start` (engine running, observe only, with a banner first: E Exhaust, lights and gauges, listen and look, recheck after warm-up). 21 items, each with an action level (Observe or Owner) and a lesson link. No engine-specific figures; belt tension refers to the handbook. | new, awaiting engineer approval |
+| Safety wording | `post-exhaust-water` references wording D (`overheating-stop`) and `post-warning-lights` references wording C (`oil-pressure-stop`) by ID; the wording is not copied. | new, awaiting engineer approval |
+| Lesson 7.1 | `modules/07-routine-maintenance.json`: `m07-l01` intro, caution, diagram and steps rewritten in WOBBLE order with the same checks as the checklists; wording D added before the steps; `checklistIds` links to both checklists, which link back. The S15 additions are kept. | revised, awaiting engineer approval |
+| Questions | `modules/07-routine-maintenance.json`: new `m07-q022` to `m07-q030` (WOBBLE meaning and order, no exhaust water, milky oil, seacock left closed, hot pressure cap, rechecking leaks while running, belts, gear in neutral). Six are safety-critical and in the mock test pool; `m07-q024` and `m07-q026` show wording D in the feedback. | new, awaiting engineer approval |
+| App | New Checks tab (Learn, Quiz, Checks, Faults, About). Ticks are held in memory for the session only. The Quiz tab icon changed so the Checks tab can use the checklist symbol. | new |
+
 ## Not done in this revision
 
 - The audit's suggestion to display a statement naming the training body is not applied: the project brief does not allow any organisation to be named. The app keeps the generic statement that it is not affiliated with any training organisation.
 - Technical approver name and credentials: shown as "Engineer approval: pending" on the About tab until an engineer approves the content.
-- Section 8 (air and exhaust, spares and tools, failure underway) and the module 7 winterisation decision tree are deferred to Phase 5c.
+- Section 8 (air and exhaust, spares and tools, failure underway) and the module 7 winterisation decision tree are deferred to a later round.
 - Checks that need people or engines rather than editing: a second reviewer answering the bank blind (the CSV shuffles options per question so the key column can be hidden), a novice UX test, empirical validation of difficulty labels, and checking diagrams against several engine families.

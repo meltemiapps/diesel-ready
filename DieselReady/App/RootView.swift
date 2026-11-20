@@ -32,8 +32,11 @@ struct MainTabView: View {
                 .tabItem { Label("Learn", systemImage: "book") }
                 .tag(AppNavigation.Tab.learn)
             QuizHomeView()
-                .tabItem { Label("Quiz", systemImage: "checklist") }
+                .tabItem { Label("Quiz", systemImage: "questionmark.circle") }
                 .tag(AppNavigation.Tab.quiz)
+            ChecksView()
+                .tabItem { Label("Checks", systemImage: "checklist") }
+                .tag(AppNavigation.Tab.checks)
             FaultsView()
                 .tabItem { Label("Faults", systemImage: "wrench.and.screwdriver") }
                 .tag(AppNavigation.Tab.faults)

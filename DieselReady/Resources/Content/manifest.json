@@ -12,12 +12,18 @@
   ],
   "faults": "faults.json",
   "safety": "safety.json",
+  "checklists": "checklists.json",
   "contentInfo": {
-    "version": "1.1",
+    "version": "1.2",
     "status": "draft",
     "reviewDate": "2026-11-20",
     "engineerApproval": "pending",
     "changeLog": [
+      {
+        "version": "1.2",
+        "date": "2026-11-20",
+        "summary": "New pre-start and post-start engine checklists built on the WOBBLE memory aid, lesson 7.1 aligned with them, and nine new questions on the checks. Awaiting engineer approval."
+      },
       {
         "version": "1.1",
         "date": "2026-11-20",

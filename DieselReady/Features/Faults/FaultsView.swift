@@ -6,8 +6,11 @@ import SwiftUI
 /// from `Content/faults.json` and `Content/safety.json`.
 struct FaultsView: View {
     @Environment(ContentStore.self) private var content
+    @Environment(AppNavigation.self) private var navigation
     @SceneStorage("faults.selectedSymptom") private var selectedID = ""
     @State private var path: [AppNavigation.LearnRoute] = []
+    /// Set when a link from another tab opens a symptom, to scroll it into view.
+    @State private var linkedSymptom: Symptom.ID?
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -26,46 +29,64 @@ struct FaultsView: View {
                 LearnDestination(route: route)
             }
         }
+        // A link from another tab (such as a checklist item) opens its symptom.
+        .onChange(of: navigation.requestedSymptom, initial: true) { _, id in
+            guard let id else { return }
+            path = []
+            selectedID = id
+            linkedSymptom = id
+            navigation.requestedSymptom = nil
+        }
     }
 
     private func guideView(_ guide: FaultGuide) -> some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: Theme.Spacing.l) {
-                Text(guide.intro)
-                    .foregroundStyle(Theme.Palette.secondaryText)
-                    .fixedSize(horizontal: false, vertical: true)
+        ScrollViewReader { proxy in
+            ScrollView {
+                VStack(alignment: .leading, spacing: Theme.Spacing.l) {
+                    Text(guide.intro)
+                        .foregroundStyle(Theme.Palette.secondaryText)
+                        .fixedSize(horizontal: false, vertical: true)
 
-                VStack(alignment: .leading, spacing: Theme.Spacing.m) {
-                    Text("Stop first")
+                    VStack(alignment: .leading, spacing: Theme.Spacing.m) {
+                        Text("Stop first")
+                            .font(.sectionTitle)
+                            .foregroundStyle(Theme.Palette.ink)
+                            .accessibilityAddTraits(.isHeader)
+                        ForEach(guide.stopCards) { card in
+                            StopCardView(card: card)
+                        }
+                    }
+
+                    Text("What are you seeing?")
                         .font(.sectionTitle)
                         .foregroundStyle(Theme.Palette.ink)
                         .accessibilityAddTraits(.isHeader)
-                    ForEach(guide.stopCards) { card in
-                        StopCardView(card: card)
-                    }
-                }
 
-                Text("What are you seeing?")
-                    .font(.sectionTitle)
-                    .foregroundStyle(Theme.Palette.ink)
-                    .accessibilityAddTraits(.isHeader)
-
-                FlowLayout(spacing: Theme.Spacing.s) {
-                    ForEach(guide.symptoms) { symptom in
-                        SymptomChip(symptom: symptom, isSelected: symptom.id == selectedID) {
-                            withAnimation(.easeInOut(duration: 0.2)) { selectedID = symptom.id }
+                    FlowLayout(spacing: Theme.Spacing.s) {
+                        ForEach(guide.symptoms) { symptom in
+                            SymptomChip(symptom: symptom, isSelected: symptom.id == selectedID) {
+                                withAnimation(.easeInOut(duration: 0.2)) { selectedID = symptom.id }
+                            }
                         }
                     }
-                }
 
-                if let symptom = guide.symptom(withID: selectedID) {
-                    SymptomDetailView(symptom: symptom, guide: guide, library: content.library)
-                        .id(symptom.id)
+                    if let symptom = guide.symptom(withID: selectedID) {
+                        SymptomDetailView(symptom: symptom, guide: guide, library: content.library)
+                            .id(symptom.id)
+                    }
+                }
+                .padding(Theme.Spacing.l)
+                .frame(maxWidth: 700)
+                .frame(maxWidth: .infinity)
+            }
+            .onChange(of: linkedSymptom, initial: true) { _, id in
+                guard let id else { return }
+                // After the detail has been laid out.
+                DispatchQueue.main.async {
+                    withAnimation { proxy.scrollTo(id, anchor: .top) }
+                    linkedSymptom = nil
                 }
             }
-            .padding(Theme.Spacing.l)
-            .frame(maxWidth: 700)
-            .frame(maxWidth: .infinity)
         }
     }
 }

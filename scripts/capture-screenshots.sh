@@ -5,6 +5,7 @@
 #   scripts/capture-screenshots.sh            # both sets
 #   scripts/capture-screenshots.sh audit      # docs/screenshots/audit/{dark,largest-text}/
 #   scripts/capture-screenshots.sh store      # docs/screenshots/app-store/ (6.9-inch iPhone)
+#   scripts/capture-screenshots.sh store63    # docs/screenshots/app-store-6.3/ (6.3-inch iPhone)
 #   scripts/capture-screenshots.sh ipad       # docs/screenshots/app-store-ipad/ (13-inch iPad)
 #
 # Changes the simulators' appearance, text size and status bar while it runs,
@@ -15,6 +16,7 @@ ROOT=${0:A:h:h}
 WORK=$(mktemp -d)
 AUDIT_DEVICE=${AUDIT_DEVICE:-"iPhone 18 Pro"}
 STORE_DEVICE=${STORE_DEVICE:-"iPhone 18 Pro Max"}   # 6.9-inch: 1320 x 2868
+STORE63_DEVICE=${STORE63_DEVICE:-"iPhone 18 Pro"}    # 6.3-inch: 1206 x 2622
 IPAD_DEVICE=${IPAD_DEVICE:-"iPad Pro 13-inch (M5)"}  # 13-inch: 2064 x 2752
 WHAT=${1:-all}
 
@@ -82,6 +84,10 @@ store_shots() {
 
 if [[ $WHAT == all || $WHAT == store ]]; then
   store_shots "$STORE_DEVICE" "$ROOT/docs/screenshots/app-store"
+fi
+
+if [[ $WHAT == all || $WHAT == store63 ]]; then
+  store_shots "$STORE63_DEVICE" "$ROOT/docs/screenshots/app-store-6.3"
 fi
 
 if [[ $WHAT == all || $WHAT == ipad ]]; then

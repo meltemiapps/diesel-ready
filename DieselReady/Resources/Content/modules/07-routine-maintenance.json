@@ -7,44 +7,44 @@
     {
       "id": "m07-l01",
       "title": "Daily pre-start checks",
-      "estimatedMinutes": 6,
-      "intro": "A few minutes of checks before starting catches most problems while you are still safely tied up. Doing them in the same order every time makes it hard to miss one.",
+      "estimatedMinutes": 7,
+      "intro": "WOBBLE is a widely used memory aid for the checks before and just after starting: Water, Oil, Belts, Bilges, Leaks and levels, and Exhaust. Doing them in the same order every time makes it hard to miss one, and finds problems while you are still safely tied up. The Checks tab has the same list to tick off.",
       "diagram": {
         "kind": "flow",
-        "caption": "One way to order the checks so you work round the engine without missing anything.",
+        "caption": "The WOBBLE order: five checks with the engine off, the final safety checks, then the exhaust once it is running.",
         "labels": [
           {
-            "title": "Bilge and water ingress",
+            "title": "W: Water",
             "detail": null
           },
           {
-            "title": "Oil and coolant",
+            "title": "O: Oil",
             "detail": null
           },
           {
-            "title": "Fuel",
+            "title": "B: Belts",
             "detail": null
           },
           {
-            "title": "Raw water",
+            "title": "B: Bilges",
             "detail": null
           },
           {
-            "title": "Belts, hoses and stern gland",
+            "title": "L: Leaks and levels",
             "detail": null
           },
           {
-            "title": "Air, exhaust and propeller",
+            "title": "Before you start",
             "detail": null
           },
           {
-            "title": "Start and confirm",
+            "title": "E: Exhaust (running)",
             "detail": null
           }
         ],
-        "description": "A flow diagram of the pre-start checks in seven stages: the bilge and any water coming in, engine oil and coolant, fuel, the raw water seacock and strainer, belts, hoses and the stern gland, the air intake, exhaust and propeller, and finally starting and confirming the warning lights and exhaust water."
+        "description": "A flow diagram of the WOBBLE checks in seven stages: water (coolant, seacock and strainer), oil, belts, bilges, leaks and levels, the final checks before starting, and, with the engine running, the exhaust."
       },
-      "caution": "Do the hands-on checks with the engine stopped and unable to start. Close the engine space before starting, and keep clear of belts and pulleys while it runs.",
+      "caution": "Do the hands-on checks with the engine stopped and unable to start. Once it is running, observe only and keep clear of belts, pulleys and the shaft.",
       "appliesTo": [
         "direct-cooling",
         "heat-exchanger",
@@ -52,44 +52,51 @@
       ],
       "steps": [
         {
-          "title": "Start with the bilge",
-          "text": "Before opening up the engine, look into the bilge beneath it. Fresh oil, fuel, coolant or extra water tells you something is leaking, and where to look first. Check that no water is coming in anywhere else either.",
-          "action": "observe"
+          "title": "W: Water",
+          "action": "owner",
+          "text": "With the engine cold, check the freshwater coolant level in the header tank or expansion bottle; never open a hot pressure cap. Check the raw-water seacock is open and the strainer is clear, with its lid seated and sealed. A keel-cooled engine has no raw-water seacock for cooling, but may have one for its exhaust."
         },
         {
-          "title": "Fluids",
-          "text": "Check the engine oil on the dipstick and the coolant in the header tank. If your gearbox has a dipstick, check it as often as the handbook advises.",
-          "action": "observe"
+          "title": "O: Oil",
+          "action": "observe",
+          "text": "Check the engine oil on the dipstick and, if your gearbox has one, the gearbox oil. Look at the oil as well as the level: milky, frothy or fuel-smelling oil means something is getting into it. Do not start the engine; get advice."
         },
         {
-          "title": "Fuel",
-          "text": "Make sure there is enough fuel for the trip with a good reserve, the fuel valve is open, and there is no water or dirt in the primary filter bowl.",
-          "action": "observe"
+          "title": "B: Belts",
+          "action": "observe",
+          "text": "Look over the alternator and pump drive belts for wear, cracking or fraying. Belt tension should be as your engine handbook specifies. Make sure nothing loose is lying near belts or pulleys."
         },
         {
-          "title": "Cooling water",
-          "text": "Check the raw water seacock is open, the strainer basket is clear and its lid is tight. A keel-cooled engine has no raw water seacock for cooling, but may have one for its exhaust.",
-          "action": "observe"
+          "title": "B: Bilges",
+          "action": "observe",
+          "text": "Look under the engine and in the bilge. Standing water, oil or fuel tells you something is leaking, and where to look first. Check that no water is coming in anywhere else either."
         },
         {
-          "title": "Look around",
-          "text": "Check belts for wear and tension, hoses and clips for leaks, and the stern gland for its normal condition. Make sure nothing loose is lying near belts or pulleys.",
-          "action": "observe"
+          "title": "L: Leaks and levels",
+          "action": "owner",
+          "text": "Make sure there is enough fuel for the trip with a good reserve and the fuel valve is open. Look for drips or weeping at seacocks, hoses and fittings, and over the exhaust hose for damage. Check the batteries, their connections and that the isolator is set for starting."
         },
         {
-          "title": "Air, exhaust and propeller",
-          "text": "Make sure the engine's air intake and the engine space ventilation are clear, and look over the exhaust hose and outlet for damage or leaks. Where it is safe and practicable, check that no lines, fenders or people in the water are near the propeller before you engage gear.",
-          "action": "observe"
+          "title": "Before you start",
+          "action": "owner",
+          "text": "Ventilate the engine space and make sure the air intake is clear. Where it is safe and practicable, check that no lines, fenders or people in the water are near the propeller. Put the gear lever in neutral and check the stop control works and is returned to the run position."
         },
         {
-          "title": "Starting",
-          "text": "Batteries on, gear lever in neutral, stop control pushed home. After starting, check the oil and charge lights have gone out and that water is coming from the exhaust. Let the engine warm gently before asking for full power.",
-          "action": "owner"
+          "title": "E: Exhaust, once running",
+          "action": "observe",
+          "text": "Within a few seconds of starting, cooling water should come from a wet exhaust; if it does not, stop the engine. Check that the oil pressure and charging lights have gone out, and listen and look for unusual noise, vibration, belt squeal or smoke. Once warm, check the temperature is normal and look again for leaks without reaching near moving parts. Let the engine warm gently before asking for full power."
         }
       ],
       "handsOn": true,
       "reviewStatus": "draft",
-      "reviewNote": "S15: the pre-start checks now include water ingress, the air intake and engine space ventilation, the exhaust condition, and a propeller-clear check where safe and practicable. Please approve."
+      "reviewNote": "S15: the pre-start checks include water ingress, the air intake and engine space ventilation, the exhaust condition, and a propeller-clear check where safe and practicable. Revised in content 1.2 (owner request): now follows the WOBBLE memory aid, with the same checks as the pre-start and post-start checklists. Please approve.",
+      "safetyNoticeIds": [
+        "overheating-stop"
+      ],
+      "checklistIds": [
+        "pre-start",
+        "post-start"
+      ]
     },
     {
       "id": "m07-l02",
@@ -559,6 +566,192 @@
       "correctIndex": 0,
       "explanation": "Similar-looking parts often differ in size, thread or rating. Having the exact numbers to hand means you get the right part first time, even from a chandler far from home.",
       "reviewStatus": "draft"
+    },
+    {
+      "id": "m07-q022",
+      "moduleId": "m07",
+      "lessonId": "m07-l01",
+      "difficulty": 1,
+      "prompt": "In the WOBBLE memory aid for engine checks, what do the letters stand for?",
+      "options": [
+        "Water, Oil, Belts, Bilges, Leaks and levels, Exhaust",
+        "Water, Oil, Batteries, Bearings, Lights, Engine",
+        "Wiring, Oil, Belts, Batteries, Lubrication, Exhaust",
+        "Water, Oil, Bolts, Bilges, Lights, Electrics"
+      ],
+      "correctIndex": 0,
+      "explanation": "WOBBLE covers the coolant and raw water, oil, drive belts, bilges, leaks and fuel and battery levels, and finally the exhaust once the engine is running.",
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
+    },
+    {
+      "id": "m07-q023",
+      "moduleId": "m07",
+      "lessonId": "m07-l01",
+      "difficulty": 2,
+      "prompt": "Which WOBBLE check is made with the engine running rather than before it starts?",
+      "options": [
+        "Exhaust: cooling water coming out of the exhaust",
+        "Belts: wear, cracking and tension",
+        "Bilges: no water, oil or fuel under the engine",
+        "Oil: the level on the dipstick"
+      ],
+      "correctIndex": 0,
+      "explanation": "The E is the only check that needs the engine running: water from a wet exhaust shows the raw water pump is delivering. Belts, bilges and oil are checked with the engine off.",
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
+    },
+    {
+      "id": "m07-q024",
+      "moduleId": "m07",
+      "lessonId": "m07-l01",
+      "difficulty": 2,
+      "prompt": "You start the engine and after several seconds no cooling water is coming out of the wet exhaust. What should you do?",
+      "options": [
+        "Stop the engine and find the cause before running it again",
+        "Raise the revs to help the pump draw water through",
+        "Leave it at tickover and check again in ten minutes",
+        "Carry on, as the water will appear once the engine is warm"
+      ],
+      "correctIndex": 0,
+      "explanation": "With no water flow the engine and the wet exhaust are not being cooled, and the impeller is running dry. Raising the revs or leaving it running can damage the impeller, exhaust hose and silencer within a short time and overheat the engine.",
+      "safetyNoticeIds": [
+        "overheating-stop"
+      ],
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
+    },
+    {
+      "id": "m07-q025",
+      "moduleId": "m07",
+      "lessonId": "m07-l01",
+      "difficulty": 2,
+      "prompt": "During your pre-start checks the engine oil on the dipstick looks milky. What should you do?",
+      "options": [
+        "Leave the engine off and get advice from a qualified engineer",
+        "Top it up with fresh oil and start as normal",
+        "Start the engine and run it hard to drive off the moisture",
+        "Change the oil filter and carry on with the trip"
+      ],
+      "correctIndex": 0,
+      "explanation": "Milky oil suggests water or coolant is mixing with it. Running the engine on contaminated oil can damage the bearings, and topping up or changing the filter hides the problem without finding where the water is coming from.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
+    },
+    {
+      "id": "m07-q026",
+      "moduleId": "m07",
+      "lessonId": "m07-l01",
+      "difficulty": 3,
+      "prompt": "Shortly after starting, you realise the raw-water seacock was left closed. What should you do?",
+      "options": [
+        "Stop the engine, open the seacock, and check the impeller and water flow before relying on the engine",
+        "Open the seacock with the engine running and carry on without further checks",
+        "Leave it closed until the engine has warmed up, then open it",
+        "Increase the revs so the pump can draw water past the closed seacock"
+      ],
+      "correctIndex": 0,
+      "explanation": "Running with the seacock closed lets the impeller run dry, which can damage its vanes within a short time, and leaves the wet exhaust uncooled. Carrying on without checking risks an overheated engine or a burnt exhaust hose later in the trip.",
+      "safetyNoticeIds": [
+        "overheating-stop"
+      ],
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve. Please confirm the recommended response, including whether the impeller should always be inspected."
+    },
+    {
+      "id": "m07-q027",
+      "moduleId": "m07",
+      "lessonId": "m07-l01",
+      "difficulty": 2,
+      "prompt": "Why should the freshwater coolant level be checked only with the engine cold?",
+      "options": [
+        "A hot pressure cap can release scalding coolant when opened",
+        "Antifreeze loses its strength if it meets air while hot",
+        "The thermostat sticks open if the cap is removed when warm",
+        "The header tank empties itself while the engine is warm"
+      ],
+      "correctIndex": 0,
+      "explanation": "A warm cooling system is under pressure. Opening the cap lets the coolant boil and spray out, which can scald you. Wait until the engine is cold.",
+      "categories": [
+        "safety-critical"
+      ],
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
+    },
+    {
+      "id": "m07-q028",
+      "moduleId": "m07",
+      "lessonId": "m07-l01",
+      "difficulty": 2,
+      "prompt": "With the engine running and warm, you want to look again for leaks. How should you do it?",
+      "options": [
+        "Look carefully, keeping hands, clothing and hair well clear of belts, pulleys and the shaft",
+        "Feel along the hoses near the belts by hand to find damp patches",
+        "Take off the belt guard so you can see behind the pulleys",
+        "Hold a rag against the drive belt to see whether it picks up oil"
+      ],
+      "correctIndex": 0,
+      "explanation": "With the engine running, a hand, sleeve or rag near a belt, pulley or shaft can be caught and pulled in, causing serious injury. Check by eye only; touch nothing near moving parts until the engine is stopped.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
+    },
+    {
+      "id": "m07-q029",
+      "moduleId": "m07",
+      "lessonId": "m07-l01",
+      "difficulty": 1,
+      "prompt": "What should you check about the drive belts before starting?",
+      "options": [
+        "That they show no wear, cracking or fraying, and are tensioned as the handbook specifies",
+        "That they are as tight as you can possibly make them",
+        "That they are slack enough to lift off the pulleys by hand",
+        "That they have been dressed with oil so they do not squeal"
+      ],
+      "correctIndex": 0,
+      "explanation": "A worn or wrongly tensioned belt can slip or break, stopping the raw water pump or alternator. Too tight a belt loads the bearings, and oil on a belt makes it slip; follow the handbook's tension.",
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
+    },
+    {
+      "id": "m07-q030",
+      "moduleId": "m07",
+      "lessonId": "m07-l01",
+      "difficulty": 1,
+      "prompt": "Before starting the engine, where should the gear lever be?",
+      "options": [
+        "In neutral",
+        "In ahead, so the boat moves off as soon as it starts",
+        "In astern, to hold the boat back against its lines",
+        "Anywhere, because the gearbox always disengages for starting"
+      ],
+      "correctIndex": 0,
+      "explanation": "Starting in gear can make the boat lurch into a pontoon, another boat or a person in the water, and can strain the lines. Some installations will not crank unless the lever is in neutral, but do not rely on that; check it every time.",
+      "categories": [
+        "safety-critical",
+        "unsafe-distractor"
+      ],
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
     }
   ]
 }

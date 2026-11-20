@@ -116,12 +116,12 @@ struct SafetyContentTests {
     @Test("Content info shows the version, review date and pending engineer approval")
     func contentInfo() throws {
         let info = try #require(try Self.library().info)
-        #expect(info.version == "1.1")
+        #expect(info.version == "1.2")
         #expect(info.status == "draft")
         #expect(info.engineerApproval == "pending")
         #expect(info.reviewDateValue != nil)
         #expect(ContentInfoFormat.date(info.reviewDate) == "20 November 2026")
-        #expect(info.changeLog.first?.version == "1.1")
+        #expect(info.changeLog.first?.version == "1.2")
     }
 
     @Test("At least 150 questions remain, every item is still a draft")

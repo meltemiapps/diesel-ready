@@ -9,8 +9,9 @@ platform-specific fields.
 
 ```json
 { "schemaVersion": 2, "modules": ["01-how-a-diesel-engine-works.json"], "faults": "faults.json",
-  "safety": "safety.json", "contentInfo": { "version": "1.1", "status": "draft", "reviewDate": "2026-11-20",
-  "engineerApproval": "pending", "changeLog": [{ "version": "1.1", "date": "2026-11-20", "summary": "..." }] } }
+  "safety": "safety.json", "checklists": "checklists.json",
+  "contentInfo": { "version": "1.2", "status": "draft", "reviewDate": "2026-11-20",
+  "engineerApproval": "pending", "changeLog": [{ "version": "1.2", "date": "2026-11-20", "summary": "..." }] } }
 ```
 
 | Field | Type | Notes |
@@ -19,6 +20,7 @@ platform-specific fields.
 | `modules` | string[] | File names under `modules/`, in display order. |
 | `faults` | string (optional) | Fault finder file, relative to the content folder. |
 | `safety` | string (optional) | Safety notices, action levels and applicability tags, relative to the content folder. Required for the bundled course. |
+| `checklists` | string (optional) | Pre-start and post-start checklists (Checks tab), relative to the content folder. Required for the bundled course. Added in content 1.2 as an optional field, so schema version 2 is unchanged. |
 | `contentInfo` | object (optional) | Shown on the About tab. Required for the bundled course. See below. |
 
 ### `contentInfo`
@@ -66,6 +68,7 @@ Wording shared by lessons, quiz feedback and the Fault finder, so every surface 
 | `handsOn` | boolean | True for a procedure. Every step then needs an `action`, and the app ends the lesson with the reminder to follow the engine manufacturer's handbook. |
 | `reviewStatus` | `"draft"` or `"reviewed"` | |
 | `reviewNote` | string (optional) | What the expert reviewer should check. Never shown in the app; exported to `docs/content-review.md`. |
+| `checklistIds` | string[] (optional) | Checklists from `checklists.json` this lesson teaches. Shown as buttons that open the Checks tab. Each checklist's `lessonId` must point back. |
 
 ### Diagram
 
@@ -127,6 +130,23 @@ Known kinds and their label counts:
 
 Icons for the chips are chosen by the app from the symptom id; they are not content.
 
+## `checklists.json` (Checks tab)
+
+| Field | Type | Notes |
+|---|---|---|
+| `mnemonic` | `{ "name", "summary", "letters": [{ "letter", "word" }] }` | The mnemonic the checklists follow (WOBBLE), introduced as a widely used memory aid and attributed to no one. The letters spell `name`. |
+| `reminder` | string | Shown at the end of each checklist: follow the handbook. |
+| `checklists` | Checklist[] | Exactly `pre-start` then `post-start`. |
+
+Checklist = `{ "id", "title", "subtitle", "intro", "banner" (optional), "engineRunning", "lessonId", "sections", "reviewStatus", "reviewNote" (optional) }`.
+`engineRunning: true` means every item must be `observe` and the `banner` (shown first) is required.
+`lessonId` must exist and list this checklist in its `checklistIds`.
+
+Section = `{ "id", "letter" (optional), "title", "items" }`. Read in order across both checklists, the sections with a `letter` must spell the memory aid, and their titles must equal its words.
+
+Item = `{ "id", "title", "detail", "action": "observe" or "owner", "lessonId", "safetyNoticeIds" (optional), "symptomId" (optional), "reviewStatus" }`.
+Safety wording is referenced by notice id, never copied. `symptomId` links to a Fault finder symptom. Ticks are held in memory by the app for the session only; nothing is stored.
+
 ## Validation
 
 Volume rules for the bundled course:
@@ -152,6 +172,7 @@ Safety rules:
 - Every referenced notice, tag and stop card exists, and each is listed once.
 - Every STOP condition has a complete card, and the three dangerous symptoms open with their notice and card.
 - No content ranks causes by frequency ("most common", "most likely", "commonest", "most often", "in order of likelihood"; in the Fault finder also "less common", "more common", "less likely", "more likely", "likely first").
+- Checklists: both lists present in order, ids unique, sections spell the memory aid, every lesson, notice and symptom link resolves, no engineer-only items, running-engine lists are observe only with a banner, and each list's lesson links back to it (and every lesson's `checklistIds` resolve).
 - `contentInfo` has a valid review date, a non-empty approval entry and a change log that starts with the current version.
 
 The iOS loader (`ContentLoader.validate`) enforces every rule above, and the

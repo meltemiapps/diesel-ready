@@ -48,7 +48,7 @@ Limit 4,000 characters.
 ```text
 Diesel Ready is a free, independent study guide for leisure boaters who want to understand and look after a small marine diesel engine.
 
-Work through short, plain-English lessons, test yourself with quizzes, and use the Fault finder when something is not right. Everything works offline, so it is there when you need it, in harbour or at sea.
+Work through short, plain-English lessons, test yourself with quizzes, tick off your engine checks before and after starting, and use the Fault finder when something is not right. Everything works offline, so it is there when you need it, in harbour or at sea.
 
 LEARN
 • 8 modules and 35 short lessons, from how a diesel works to finding faults
@@ -66,6 +66,12 @@ TEST YOURSELF
 • Instant feedback with an explanation for every answer
 • Review the questions you missed and retry them
 • Over 150 original questions
+
+CHECKLISTS
+• Pre-start checks with the engine off, built on the widely used WOBBLE memory aid: water, oil, belts, bilges, leaks and levels
+• Post-start checks with the engine running: water from the exhaust, warning lights, temperature, noise and smoke, observing only
+• Tick items off as you go and reset for next time; ticks are never saved or sent anywhere
+• Every check links to the lesson that explains it
 
 FAULT FINDER
 Stop cards come first, with what to do at once for low oil pressure, overheating, water coming in, suspected water in the engine, fuel spray, smoke or fire, and a leaking shaft seal. Then pick a symptom (exhaust smoke, won't start, overheating, stops suddenly, low oil pressure or not charging) to see the possible causes, what to check first, and links to the lessons that explain more.
@@ -193,10 +199,14 @@ recreate them. Upload them in this order:
 3. `3-quiz-feedback.png`: a quiz question with feedback
 4. `4-fault-finder.png`: the Fault finder
 5. `5-about.png`: About and privacy
+6. `6-checks.png`: the pre-start checklist
 
-App Store Connect scales these down for smaller iPhones.
+App Store Connect scales these down for smaller iPhones. A 6.3-inch set
+(1206 × 2622) of the same six screens is in `docs/screenshots/app-store-6.3/`
+(`scripts/capture-screenshots.sh store63`) for anyone who prefers to upload
+that size as well.
 
 The app also runs on iPad (`TARGETED_DEVICE_FAMILY` 1,2), so App Store Connect
 requires iPad screenshots too. 13-inch iPad screenshots (2064 × 2752) of the
-same five screens are in `docs/screenshots/app-store-ipad/`
+same six screens are in `docs/screenshots/app-store-ipad/`
 (`scripts/capture-screenshots.sh ipad`).

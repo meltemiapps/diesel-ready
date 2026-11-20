@@ -151,8 +151,11 @@ struct ActionBadge: View {
             .foregroundStyle(colours.foreground)
             .padding(.horizontal, Theme.Spacing.s)
             .padding(.vertical, 3)
-            .background(Capsule().fill(colours.background))
-            .overlay(Capsule().strokeBorder(colours.foreground.opacity(0.5), lineWidth: 1))
+            // A rounded rectangle rather than a capsule, so a label that wraps at
+            // accessibility text sizes keeps a tidy shape.
+            .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(colours.background))
+            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .strokeBorder(colours.foreground.opacity(0.5), lineWidth: 1))
     }
 }
 

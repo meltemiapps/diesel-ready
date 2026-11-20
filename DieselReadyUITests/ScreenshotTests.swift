@@ -77,6 +77,16 @@ final class ScreenshotTests: XCTestCase {
         tab(app, "Quiz").tap()
         pages(app, "10-quiz-home", count: 3)
 
+        // Checks: pre-start with two items ticked, then post-start.
+        tab(app, "Checks").tap()
+        app.buttons["check-pre-coolant"].tap()
+        app.buttons["check-pre-seacock"].tap()
+        pages(app, "16-checks-pre-start", count: 5)
+        scrollUp(app)
+        app.buttons["Post-start"].tap()
+        Thread.sleep(forTimeInterval: 0.5)
+        pages(app, "17-checks-post-start", count: 3)
+
         // Fault finder.
         tab(app, "Faults").tap()
         snap(app, "11-faults-home")
@@ -160,6 +170,17 @@ final class ScreenshotTests: XCTestCase {
         tab(app, "About").tap()
         Thread.sleep(forTimeInterval: 0.8)
         snap(app, "5-about")
+
+        // Pre-start checks, part way through.
+        tab(app, "Checks").tap()
+        Thread.sleep(forTimeInterval: 0.5)
+        for id in ["pre-coolant", "pre-seacock", "pre-strainer"] {
+            app.buttons["check-\(id)"].tap()
+        }
+        // Ticking can scroll the list; show it from the top (picker, memory aid, Water).
+        for _ in 0..<3 { app.swipeDown(velocity: .fast) }
+        Thread.sleep(forTimeInterval: 0.8)
+        snap(app, "6-checks")
     }
 
     // MARK: - Helpers

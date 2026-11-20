@@ -11,6 +11,7 @@ struct LessonReaderView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @Environment(ContentStore.self) private var content
+    @Environment(AppNavigation.self) private var navigation
     @Query private var progressRecords: [LessonProgress]
 
     @State private var model: LessonReaderModel
@@ -50,6 +51,10 @@ struct LessonReaderView: View {
                     }
 
                     steps
+
+                    ChecklistLinks(checklists: model.lesson.checklistIDs.compactMap { content.library.checks?.checklist(withID: $0) }) {
+                        navigation.showChecklist($0)
+                    }
 
                     if model.lesson.handsOn {
                         HandbookReminder()
@@ -199,6 +204,37 @@ private struct StepRow: View {
         let title = step.title.map { "\($0). " } ?? ""
         let action = actionLabel.map { "\($0). " } ?? ""
         return "Step \(number). \(title)\(action)\(step.text)"
+    }
+}
+
+/// Buttons that open the lesson's checklists on the Checks tab.
+private struct ChecklistLinks: View {
+    let checklists: [Checklist]
+    let open: (Checklist.ID) -> Void
+
+    var body: some View {
+        if !checklists.isEmpty {
+            VStack(alignment: .leading, spacing: Theme.Spacing.m) {
+                Text("Tick them off")
+                    .font(.headline)
+                    .foregroundStyle(Theme.Palette.ink)
+                    .accessibilityAddTraits(.isHeader)
+                Text("The same checks are on the Checks tab, to tick off on board.")
+                    .font(.callout)
+                    .foregroundStyle(Theme.Palette.ink)
+                    .fixedSize(horizontal: false, vertical: true)
+                ForEach(checklists) { list in
+                    Button {
+                        open(list.id)
+                    } label: {
+                        Label("\(list.title) checklist (\(list.subtitle.lowercased()))", systemImage: "checklist")
+                    }
+                    .buttonStyle(.secondary)
+                    .accessibilityIdentifier("lesson-checklist-\(list.id)")
+                }
+            }
+            .card()
+        }
     }
 }
 

@@ -72,8 +72,13 @@ final class AccessibilityUITests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments += ["-disclaimerAcceptedVersion", "1"]
         app.launch()
-        for tab in ["Learn", "Quiz", "Faults", "About"] {
-            app.tabBars.buttons[tab].tap()
+        for tab in ["Learn", "Quiz", "Checks", "Checks (post-start)", "Faults", "About"] {
+            if tab == "Checks (post-start)" {
+                app.buttons["Post-start"].tap()
+            } else {
+                app.tabBars.buttons[tab].tap()
+            }
+            if tab == "Checks" { app.buttons["check-pre-coolant"].tap() }
             if tab == "Faults" { app.buttons["Overheating"].tap() }
             let tabBarFrame = app.tabBars.firstMatch.frame
             let navigationBar = app.navigationBars.firstMatch

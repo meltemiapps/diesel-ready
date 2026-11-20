@@ -10,6 +10,11 @@
       "estimatedMinutes": 6,
       "intro": "A diesel engine needs no electricity to keep running, but it almost always needs a healthy battery to start. Most boats have at least two batteries, so that using the lights and instruments cannot leave you unable to start the engine.",
       "diagram": null,
+      "caution": "Lead-acid batteries can give off explosive hydrogen gas when charging, and they contain corrosive acid. Lithium batteries have different hazards and are managed by their own battery management system: follow their maker's instructions. With any battery, a spanner across the terminals can cause sparks, severe burns or an explosion, so keep flames and sparks away, remove metal watches and rings, and protect your eyes.",
+      "appliesTo": [
+        "lead-acid",
+        "lithium"
+      ],
       "steps": [
         {
           "title": "Engine and domestic batteries",
@@ -32,10 +37,9 @@
           "text": "Batteries are heavy. They must be strapped down so they cannot move in rough weather, and their terminals covered so nothing can fall across them."
         }
       ],
-      "caution": "Batteries can give off explosive hydrogen gas when charging, and a spanner across the terminals can cause sparks, severe burns or an explosion. Keep flames and sparks away, remove metal watches and rings, and protect your eyes. Some batteries contain corrosive acid.",
       "handsOn": false,
       "reviewStatus": "draft",
-      "reviewNote": "Battery chemistries vary (flooded, sealed, gel, AGM, lithium). The lesson avoids voltage figures deliberately. Please check the hydrogen and acid caution is fair given the range of battery types."
+      "reviewNote": "Audit note 18, revise: the hydrogen and acid warning now applies to lead-acid batteries, with a separate statement that lithium batteries have different hazards and their own management system. Please approve."
     },
     {
       "id": "m05-l02",
@@ -43,6 +47,7 @@
       "estimatedMinutes": 6,
       "intro": "While the engine runs, the alternator recharges the batteries and powers the boat's equipment. It is driven by a belt from the engine and controlled by a regulator that stops the batteries being overcharged.",
       "diagram": null,
+      "caution": null,
       "steps": [
         {
           "title": "How it is driven",
@@ -58,17 +63,16 @@
         },
         {
           "title": "The charge warning light",
-          "text": "The charge light comes on with the key before starting and should go out once the engine is running. If it stays on, or comes on while running, the alternator is not charging."
+          "text": "The charge light comes on with the key before starting and should go out once the engine is running. If it stays on, or comes on while running, it indicates a charging-system fault or a failure to excite the alternator. Check the belt first, then verify using the handbook and suitable voltage checks."
         },
         {
           "title": "Do not break the circuit while running",
-          "text": "Never switch the battery isolator off while the engine is running unless your installation is designed for it. Suddenly disconnecting the battery can damage the alternator's electronics."
+          "text": "Never switch the battery isolator off while the engine is running unless the installation is specifically designed and approved for it. Suddenly disconnecting the battery can damage the alternator's electronics."
         }
       ],
-      "caution": null,
       "handsOn": false,
       "reviewStatus": "draft",
-      "reviewNote": "Some installations have alternator protection devices that make isolator switching safe. Please confirm the 'unless your installation is designed for it' wording is appropriate."
+      "reviewNote": "S09 and audit note 20, accept with qualification: a lit charge lamp now 'indicates a charging-system fault or failure to excite' rather than proving the alternator is not charging; the isolator step says 'specifically designed and approved'. Please approve."
     },
     {
       "id": "m05-l03",
@@ -102,6 +106,10 @@
         ],
         "description": "A flow diagram of the starting circuit in five stages: the battery and isolator, the key or start button, the starter solenoid, the starter motor turning the flywheel, and the earth return to the battery."
       },
+      "safetyNoticeIds": [
+        "wet-exhaust-waterlock"
+      ],
+      "caution": null,
       "steps": [
         {
           "title": "The solenoid",
@@ -109,11 +117,11 @@
         },
         {
           "title": "The earth return",
-          "text": "The current has to get back to the battery. On most engines it returns through the engine block and an earth cable. A corroded or loose earth connection is a common and easily missed cause of starting trouble."
+          "text": "The current has to get back to the battery. On many engines it returns through the engine block and an earth cable. A corroded or loose earth connection is an easily missed cause of starting trouble."
         },
         {
           "title": "Reading the symptoms",
-          "text": "Nothing at all usually points to the isolator, the key switch or a safety switch. A single click often means a weak battery or a poor connection. Slow turning suggests a weak battery, poor connections or a very cold engine. Normal turning without firing points away from the electrics and towards fuel or cold-starting."
+          "text": "Nothing at all usually points to the isolator, the key switch or a safety switch. A single click often means a weak battery or a poor connection. Slow turning suggests a weak battery, poor connections or a very cold engine. Normal turning without firing usually points away from the starting circuit: check the stop control, the fuel and pre-heating next (lesson 8.2)."
         },
         {
           "title": "Safety switches",
@@ -121,12 +129,12 @@
         },
         {
           "title": "Look after the starter",
-          "text": "Crank in short bursts with pauses between, as your handbook advises. Long cranking overheats the starter, flattens the battery and, on boats with a wet exhaust, can fill the exhaust with water."
+          "text": "Crank in short bursts with pauses between, as your handbook advises. Long cranking overheats the starter and flattens the battery, and on a wet exhaust it can let water build up: see the wet-exhaust warning at the top of this lesson."
         }
       ],
-      "caution": null,
       "handsOn": false,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "reviewNote": "S01: the wet-exhaust waterlock warning A is now shown before the steps, verbatim, because the lesson discusses cranking. Please approve."
     },
     {
       "id": "m05-l04",
@@ -134,6 +142,7 @@
       "estimatedMinutes": 5,
       "intro": "A cold engine soaks up the heat of compression, so on a cold day the air may not get hot enough to light the fuel. Many small diesels have a cold-starting aid, usually glow plugs, to help.",
       "diagram": null,
+      "caution": null,
       "steps": [
         {
           "title": "What glow plugs do",
@@ -149,17 +158,16 @@
         },
         {
           "title": "When glow plugs fail",
-          "text": "A failed glow plug usually shows as hard starting from cold, rough running and white smoke for the first minute or so, which then clears as the engine warms. The engine often starts normally once it is warm."
+          "text": "A failed glow plug can show as hard starting from cold, rough running and white smoke for the first minute or so, which then clears as the engine warms. The engine often starts normally once it is warm. Other faults can cause similar symptoms, so treat these as clues rather than proof."
         },
         {
           "title": "Starting sprays",
           "text": "Do not use aerosol starting sprays unless your engine's handbook allows them. On engines with glow plugs or intake heaters, the vapour can ignite early and cause serious engine damage."
         }
       ],
-      "caution": null,
       "handsOn": false,
       "reviewStatus": "draft",
-      "reviewNote": "Please confirm the glow plug failure symptoms and the starting spray warning are accurate in general."
+      "reviewNote": "Audit note 21, accept with qualification: the glow plug symptoms are now described as clues, not exclusive to glow plugs; the starting spray warning is unchanged. Please approve."
     },
     {
       "id": "m05-l05",
@@ -167,35 +175,46 @@
       "estimatedMinutes": 6,
       "intro": "The engine panel is how the engine tells you something is wrong. Knowing what each light and alarm means, and a few simple electrical checks, will solve many problems without a specialist.",
       "diagram": null,
+      "caution": "Remove metal watches and rings before working near batteries or the starter circuit. A short circuit can heat metal enough to cause severe burns.",
+      "appliesTo": [
+        "lead-acid",
+        "lithium"
+      ],
       "steps": [
         {
           "title": "The usual lights",
-          "text": "Most panels have an oil pressure light, a charge light and a high temperature light, often with a buzzer. Some also have a glow plug light and gauges for temperature, oil pressure or battery voltage. Learn which is which on your own panel."
+          "text": "Most panels have an oil pressure light, a charge light and a high temperature light, often with a buzzer. Some also have a glow plug light and gauges for temperature, oil pressure or battery voltage. Learn which is which on your own panel.",
+          "action": "observe"
         },
         {
           "title": "The key-on test",
-          "text": "When you switch on before starting, the oil and charge lights normally come on and the alarm sounds. This shows they are working. Both lights should go out within a few seconds of the engine starting."
+          "text": "When you switch on before starting, the oil and charge lights normally come on and the alarm sounds. This shows they are working. Both lights should go out within a few seconds of the engine starting.",
+          "action": "observe"
         },
         {
           "title": "Make it safe first",
-          "text": "Before working on any wiring, switch off the battery isolator. If you need to disconnect a battery, take off the negative lead first and put it back last, so a spanner touching the engine cannot cause a short circuit."
+          "text": "Before working on any wiring, switch off the battery isolator, following your boat's own isolation procedure. On a conventional negative-earth system with lead-acid batteries, if you need to disconnect a battery, take off the negative lead first and put it back last, so a spanner touching the engine cannot cause a short circuit. Starter and house banks may be wired differently, and lithium systems often have a battery management system with their own isolation steps, so follow the installer's or maker's instructions.",
+          "action": "owner"
         },
         {
           "title": "Check the connections",
-          "text": "Look for loose, corroded or damaged connections at the battery terminals, the isolator, the starter, the alternator and the engine earth. Green or white powder on a terminal is a sign of corrosion."
+          "text": "Look for loose, corroded or damaged connections at the battery terminals, the isolator, the starter, the alternator and the engine earth. Green or white powder on a terminal is a sign of corrosion.",
+          "action": "observe"
         },
         {
           "title": "Fuses and breakers",
-          "text": "The engine panel and its instruments are usually protected by a fuse or circuit breaker. If the whole panel is dead, check this before anything else."
+          "text": "The engine panel and its instruments are usually protected by a fuse or circuit breaker. If the whole panel is dead, check this before anything else.",
+          "action": "owner"
         },
         {
           "title": "Use a meter",
-          "text": "A simple multimeter lets you compare battery voltage with the engine stopped and running, and check that power reaches each part of the circuit. It is worth carrying one and learning the basics."
+          "text": "A simple multimeter lets you compare battery voltage with the engine stopped and running, and check that power reaches each part of the circuit. Use the voltage setting across the battery terminals; never connect a meter set to measure current (amps) across a battery, which makes a short circuit and can cause burns. It is worth carrying a meter and learning the basics.",
+          "action": "owner"
         }
       ],
-      "caution": "Remove metal watches and rings before working near batteries or the starter circuit. A short circuit can heat metal enough to cause severe burns.",
       "handsOn": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "reviewNote": "S10: the negative-lead-first advice is now limited to conventional negative-earth lead-acid systems, with the vessel's isolation procedure, separate starter and house banks and lithium systems covered. The meter step adds safe voltage use and a prohibition on measuring current across a battery (module 5 judgement). Please approve."
     }
   ],
   "questions": [
@@ -252,17 +271,17 @@
       "moduleId": "m05",
       "lessonId": "m05-l01",
       "difficulty": 3,
-      "prompt": "Why must you keep sparks and flames away from batteries that are being charged?",
+      "prompt": "Why should sparks and flames be kept away from lead-acid batteries that are being charged?",
       "options": [
         "Charging can give off hydrogen gas, which is explosive",
-        "Sparks near the terminals drain the battery's charge",
-        "Heat from a flame makes the battery charge far too quickly",
-        "Flames make the battery switch to discharging"
+        "Sparks can damage the charger's electronics",
+        "Heat from a flame makes the battery overcharge",
+        "A spark can reverse the battery's polarity"
       ],
       "correctIndex": 0,
-      "explanation": "Many batteries release hydrogen while charging. In a poorly ventilated locker, a spark from a loose connection or a dropped tool can ignite it.",
+      "explanation": "Vented lead-acid batteries can release hydrogen while charging. In a poorly ventilated locker, a spark from a loose connection or a dropped tool can ignite it. Lithium batteries do not give off hydrogen in normal use but have hazards of their own.",
       "reviewStatus": "draft",
-      "reviewNote": "Applies mainly to lead-acid types; confirm wording."
+      "reviewNote": "Audit note 19, revise: the question is now limited to lead-acid batteries, and the explanation says lithium hazards differ. Please approve."
     },
     {
       "id": "m05-q005",
@@ -274,7 +293,7 @@
         "A belt from the engine's crankshaft pulley",
         "The battery",
         "The propeller shaft, through the gearbox",
-        "The raw water flow"
+        "An electric motor powered from the domestic bank"
       ],
       "correctIndex": 0,
       "explanation": "The alternator is turned by a belt from the engine, so it only charges while the engine runs and the belt is in good order.",
@@ -284,17 +303,18 @@
       "id": "m05-q006",
       "moduleId": "m05",
       "lessonId": "m05-l02",
-      "difficulty": 1,
-      "prompt": "The charge warning light stays on after the engine has started. What does this mean?",
+      "difficulty": 2,
+      "prompt": "The charge warning light stays on after the engine has started. What does this indicate?",
       "options": [
-        "The alternator is not charging the batteries",
+        "A charging-system fault, or the alternator failing to excite",
         "The batteries are fully charged and now resting",
-        "The engine coolant is starting to overheat",
-        "The engine oil is due to be changed"
+        "The alternator has definitely failed and needs replacing",
+        "The engine coolant is starting to overheat"
       ],
       "correctIndex": 0,
-      "explanation": "The charge light should go out once the alternator starts producing power. If it stays on, check the belt and connections; see Not charging in the Fault finder.",
-      "reviewStatus": "draft"
+      "explanation": "The light points to a fault somewhere in the charging system, not necessarily the alternator itself. Check the belt and connections, then verify with the handbook and a voltage check; see Not charging in the Fault finder.",
+      "reviewStatus": "draft",
+      "reviewNote": "S09: the key no longer says the lamp proves the alternator is not charging. Please approve."
     },
     {
       "id": "m05-q007",
@@ -322,7 +342,7 @@
         "Cutting off the battery can damage the alternator's electronics",
         "The engine will stop at once without battery power",
         "It drains the batteries back through the alternator instead",
-        "It locks the gearbox in whatever gear is selected"
+        "The starter motor can engage while the engine is running"
       ],
       "correctIndex": 0,
       "explanation": "With the battery disconnected, the alternator's output has nowhere to go and the voltage can spike, damaging its diodes or regulator. A diesel keeps running without the battery.",
@@ -365,7 +385,7 @@
       "moduleId": "m05",
       "lessonId": "m05-l03",
       "difficulty": 2,
-      "prompt": "When you press the start button, nothing happens at all, not even a click. Which of these is the most likely cause?",
+      "prompt": "When you press the start button, nothing happens at all, not even a click. Which of these is a likely cause?",
       "options": [
         "The battery isolator is off or the gear lever is not in neutral",
         "Air has been drawn into the fuel system through a loose joint",
@@ -373,7 +393,7 @@
         "The engine oil level is below the minimum mark"
       ],
       "correctIndex": 0,
-      "explanation": "Complete silence means no current is reaching the solenoid. Fuel, cooling and oil problems do not stop the starter turning.",
+      "explanation": "Complete silence usually means no current is reaching the solenoid. Fuel, cooling and oil problems do not stop the starter turning.",
       "reviewStatus": "draft"
     },
     {
@@ -383,13 +403,13 @@
       "difficulty": 3,
       "prompt": "The battery is good and its terminals are clean, but the starter turns slowly. Which connection is often overlooked?",
       "options": [
-        "The engine earth cable between the engine and the battery",
-        "The fuel tank vent pipe and its through-hull fitting on the side",
-        "The pressure cap on the coolant header tank",
-        "The coupling between the gearbox and the shaft"
+        "The engine earth cable",
+        "The glow plug feed wire",
+        "The alternator output terminal",
+        "The fuse for the engine panel"
       ],
       "correctIndex": 0,
-      "explanation": "Starting current returns to the battery through the engine and its earth cable. Corrosion there adds resistance and slows the starter just like a weak battery.",
+      "explanation": "Starting current returns to the battery through the engine and its earth cable. Corrosion there adds resistance and slows the starter just like a weak battery. The glow plug and alternator wiring do not carry starting current, and a blown panel fuse would stop the starter altogether.",
       "reviewStatus": "draft"
     },
     {
@@ -401,7 +421,7 @@
       "options": [
         "Heats the combustion chamber to help a cold engine start",
         "Creates a spark to light the fuel while the engine is running",
-        "Lights the engine space",
+        "Warms the fuel in the filter so it flows in cold weather",
         "Warms the engine oil in the sump"
       ],
       "correctIndex": 0,
@@ -465,7 +485,7 @@
       "options": [
         "The oil pressure and charge warning lights",
         "None at all",
-        "Only the navigation lights",
+        "The oil pressure light alone; the charge light comes on once the engine runs",
         "The high temperature light, which stays on while running"
       ],
       "correctIndex": 0,
@@ -477,15 +497,15 @@
       "moduleId": "m05",
       "lessonId": "m05-l05",
       "difficulty": 2,
-      "prompt": "When disconnecting a battery, which lead should you take off first?",
+      "prompt": "On a conventional negative-earth system with lead-acid batteries, which lead should you take off first when disconnecting a battery?",
       "options": [
         "The negative lead",
         "The positive lead",
         "Either, it makes no difference",
-        "Both at the same time"
+        "Whichever is easier to reach"
       ],
       "correctIndex": 0,
-      "explanation": "The engine is connected to the negative side. With the negative removed first, a spanner touching the positive terminal and the engine cannot complete a circuit and cause a short.",
+      "explanation": "On these systems the engine is connected to the negative side. With the negative removed first, a spanner touching the positive terminal and the engine cannot complete a circuit and cause a short. Other systems, such as lithium banks with a battery management system, may have their own isolation procedure.",
       "reviewStatus": "draft"
     },
     {
@@ -519,6 +539,23 @@
       "correctIndex": 0,
       "explanation": "A battery can deliver a very large current. If a ring bridges a live terminal and earth, it heats almost instantly and can burn deeply.",
       "reviewStatus": "draft"
+    },
+    {
+      "id": "m05-q021",
+      "moduleId": "m05",
+      "lessonId": "m05-l05",
+      "difficulty": 2,
+      "prompt": "You want to check a battery with a multimeter. Which setting and connection is safe?",
+      "options": [
+        "The voltage setting, with the probes across the battery terminals",
+        "The current (amps) setting, with the probes across the battery terminals",
+        "The resistance setting, with the engine running",
+        "The current setting, with one probe on the engine and one on the positive terminal"
+      ],
+      "correctIndex": 0,
+      "explanation": "A meter on its voltage setting has a high resistance, so it can be connected across the battery safely. On a current setting it is close to a short circuit: connected across a battery or to earth it can blow the meter, burn the leads and burn you.",
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.1 (module 5 judgement, S20): safe multimeter use. Please approve."
     }
   ]
 }

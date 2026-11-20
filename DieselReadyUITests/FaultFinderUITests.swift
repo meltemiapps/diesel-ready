@@ -1,10 +1,16 @@
 import XCTest
 
-/// Opens every symptom in the Fault finder and follows a lesson link.
+/// Opens every symptom in the Fault finder and follows a lesson link, and
+/// checks that safety warnings come before the steps or causes they protect.
 final class FaultFinderUITests: XCTestCase {
 
     private let symptoms = ["Exhaust smoke", "Won't start", "Overheating", "Stops suddenly", "Low oil pressure", "Not charging"]
-    private let stopFirst: Set<String> = ["Overheating", "Low oil pressure"]
+    /// Symptoms that must open with a verbatim notice, by notice id.
+    private let openingNotice = [
+        "Overheating": "overheating-stop", "Low oil pressure": "oil-pressure-stop", "Won't start": "wet-exhaust-waterlock",
+    ]
+    private let stopCards = ["low-oil-pressure", "overheating", "water-ingress", "suspected-waterlock",
+                             "fuel-spray", "smoke-or-fire", "shaft-seal-leak"]
 
     override func setUp() {
         continueAfterFailure = false
@@ -20,10 +26,21 @@ final class FaultFinderUITests: XCTestCase {
         XCTAssertTrue(app.navigationBars["Fault finder"].waitForExistence(timeout: 5))
         snapshot(app, "faults-0-home")
 
+        // The stop cards come first, before the symptom chips.
+        let firstChip = app.buttons["Exhaust smoke"]
+        XCTAssertTrue(firstChip.waitForExistence(timeout: 3))
+        for id in stopCards {
+            let card = app.descendants(matching: .any)["stop-card-\(id)"].firstMatch
+            XCTAssertTrue(card.exists, "stop card \(id)")
+            XCTAssertLessThan(card.frame.minY, firstChip.frame.minY, "stop card \(id) must come before the symptoms")
+        }
+        let lowOilCard = app.descendants(matching: .any)["stop-card-low-oil-pressure"].firstMatch
+        XCTAssertTrue(lowOilCard.label.contains("Do not restart"))
+
         for (index, name) in symptoms.enumerated() {
             let chip = app.buttons[name]
             XCTAssertTrue(chip.waitForExistence(timeout: 3), "chip \(name)")
-            scrollToTop(app)
+            bringChipsIntoView(app)
             chip.tap()
             let selected = expectation(for: NSPredicate(format: "isSelected == true"), evaluatedWith: chip)
             wait(for: [selected], timeout: 3)
@@ -32,15 +49,14 @@ final class FaultFinderUITests: XCTestCase {
                 .matching(NSPredicate(format: "elementType == %d", XCUIElement.ElementType.staticText.rawValue))
             XCTAssertTrue(heading.firstMatch.waitForExistence(timeout: 3), "heading \(name)")
 
-            let causes = app.staticTexts["Likely causes"]
+            let causes = app.staticTexts["Possible causes"]
             XCTAssertTrue(causes.waitForExistence(timeout: 3))
-            let stop = app.otherElements["stop-first"].exists ? app.otherElements["stop-first"] : app.staticTexts["stop-first"]
-            if stopFirst.contains(name) {
-                XCTAssertTrue(stop.exists, "\(name) should open with Stop the engine")
-                XCTAssertTrue(stop.label.hasPrefix("Stop the engine"))
-                XCTAssertLessThan(stop.frame.minY, causes.frame.minY, "Stop instruction must come before the causes")
-            } else {
-                XCTAssertFalse(stop.exists, "\(name) should not show a stop instruction")
+            XCTAssertFalse(app.staticTexts["Likely causes"].exists)
+            if let noticeID = openingNotice[name] {
+                let notice = app.descendants(matching: .any)["safety-notice-\(noticeID)"].firstMatch
+                XCTAssertTrue(notice.exists, "\(name) should open with its safety notice")
+                XCTAssertLessThan(notice.frame.minY, causes.frame.minY, "The notice must come before the causes")
+                XCTAssertGreaterThan(notice.frame.minY, chip.frame.minY, "The notice belongs to the chosen symptom")
             }
             snapshot(app, "faults-\(index + 1)-\(name)")
 
@@ -68,11 +84,37 @@ final class FaultFinderUITests: XCTestCase {
         XCTAssertTrue(app.navigationBars["Fault finder"].waitForExistence(timeout: 3))
     }
 
+    /// The lesson reader shows warnings before the first step.
     @MainActor
-    private func scrollToTop(_ app: XCUIApplication) {
+    func testLessonWarningsComeBeforeSteps() throws {
+        for (lesson, notice) in [("m08-l02", "wet-exhaust-waterlock"), ("m02-l04", "high-pressure-fuel"),
+                                 ("m04-l04", "oil-pressure-stop")] {
+            let app = XCUIApplication()
+            app.launchArguments += ["-disclaimerAcceptedVersion", "1", "-openLesson", lesson]
+            app.launch()
+            let warning = app.descendants(matching: .any)["safety-notice-\(notice)"].firstMatch
+            XCTAssertTrue(warning.waitForExistence(timeout: 5), "\(lesson) shows \(notice)")
+            let firstStep = app.descendants(matching: .any)["lesson-step-1"].firstMatch
+            scrollUntilVisible(firstStep, in: app)
+            XCTAssertTrue(firstStep.exists)
+            XCTAssertTrue(firstStep.label.contains("Observe") || firstStep.label.contains("Owner") || firstStep.label.contains("Engineer"),
+                          "\(lesson) step 1 should carry its action level")
+            if warning.exists && warning.frame.height > 0 {
+                XCTAssertLessThan(warning.frame.minY, firstStep.frame.minY, "\(lesson): the warning must come before step 1")
+            }
+            snapshot(app, "lesson-\(lesson)")
+            app.terminate()
+        }
+    }
+
+    /// Scrolls so the symptom chips are on screen: up to the top, then down past the stop cards.
+    @MainActor
+    private func bringChipsIntoView(_ app: XCUIApplication) {
+        let chip = app.buttons["Exhaust smoke"]
         var tries = 0
-        while !app.buttons["Exhaust smoke"].isHittable && tries < 15 {
-            app.swipeDown(velocity: .fast)
+        while !chip.isHittable && tries < 15 {
+            // Above the chips are the stop cards; below them is the symptom detail.
+            if chip.frame.minY > app.frame.midY { app.swipeUp() } else { app.swipeDown() }
             tries += 1
         }
         // Let any scroll deceleration finish, or the next tap only stops the scroll.

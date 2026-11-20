@@ -1,20 +1,73 @@
 {
-  "intro": "Pick the symptom that best matches what you are seeing. Causes are listed with the most likely first, followed by what to check before anything else.",
+  "intro": "Check the stop cards first: each one is a condition where you stop the engine before doing anything else. Then pick the symptom that best matches what you are seeing. Possible causes are not listed in any order, so use what you have seen to decide where to start, and do the checks in the order given.",
   "reminder": "This is general guidance only. Engines differ, so follow your engine manufacturer's handbook, and if you are unsure or the fault comes back, ask a qualified marine engineer to look at it.",
+  "stopCards": [
+    {
+      "id": "low-oil-pressure",
+      "title": "Low oil pressure",
+      "stop": "Reduce power and stop the engine as soon as the boat is safe.",
+      "doNotRestart": "Do not restart to see whether the warning clears, even if the oil level looks right.",
+      "getAssistance": "If the cause is not clear and corrected, get a qualified engineer to check the engine."
+    },
+    {
+      "id": "overheating",
+      "title": "Overheating or loss of cooling water",
+      "stop": "Reduce power and stop the engine as soon as the boat is safe.",
+      "doNotRestart": "Do not restart until the cause is corrected and the cooling circuit is ready. Never open a hot pressure cap.",
+      "getAssistance": "If you cannot find and fix the cause once the engine has cooled, get qualified help."
+    },
+    {
+      "id": "water-ingress",
+      "title": "Water coming into the boat",
+      "stop": "Make the boat safe and start pumping. Find where the water is coming in and close its seacock if you can. If the leak is at the engine, its hoses or the shaft, stop the engine as soon as the boat is safe.",
+      "doNotRestart": "Do not restart until the leak is stopped or under control.",
+      "getAssistance": "If the water is gaining or you cannot find the source, call for assistance early."
+    },
+    {
+      "id": "suspected-waterlock",
+      "title": "Suspected water in the engine (waterlock)",
+      "stop": "Stop cranking at once if the engine turns a little and stops hard, or you hear water.",
+      "doNotRestart": "Do not crank again: forcing an engine with water in a cylinder can bend internal parts.",
+      "getAssistance": "Get qualified assistance before anyone tries to turn the engine again."
+    },
+    {
+      "id": "fuel-spray",
+      "title": "Fuel spraying or leaking",
+      "stop": "Stop the engine at once and keep hands and face away from any spray. Contain spills and keep flames and sparks away.",
+      "doNotRestart": "Do not restart until the leak has been repaired. High-pressure fuel parts are engineer-only work.",
+      "getAssistance": "If fuel may have been injected into the skin, get emergency medical treatment immediately."
+    },
+    {
+      "id": "smoke-or-fire",
+      "title": "Smoke or fire in the engine space",
+      "stop": "Stop the engine, shut off the fuel supply if you can reach it safely, and get everyone clear. Follow your boat's fire plan and do not open the engine space wide, because fresh air feeds a fire.",
+      "doNotRestart": "Do not restart until the cause has been found and repaired.",
+      "getAssistance": "If there is a fire, or the boat or crew are in danger, call for help immediately."
+    },
+    {
+      "id": "shaft-seal-leak",
+      "title": "Uncontrolled leak at the shaft seal",
+      "stop": "Stop the engine and shaft as soon as the boat is safe. Never adjust a seal on a turning shaft.",
+      "doNotRestart": "Do not run the engine in gear until the leak is under control.",
+      "getAssistance": "Check the bilge pumps can keep up. If the water is gaining or the seal cannot be secured, call for assistance early."
+    }
+  ],
   "symptoms": [
     {
       "id": "exhaust-smoke",
       "title": "Exhaust smoke",
-      "summary": "The colour of the smoke is your best clue. A puff of smoke on a cold start is normal; heavy smoke, or smoke that does not clear, is telling you something.",
-      "stopFirst": null,
-      "causes": [
+      "summary": "The colour of the smoke is a useful clue. A puff of smoke on a cold start can be normal; heavy smoke, or smoke that does not clear, is telling you something. Smoke inside the engine space is different: use the stop card.",
+      "stopCardIds": [
+        "smoke-or-fire"
+      ],
+      "possibleCauses": [
         {
           "title": "White smoke on a cold start that clears",
           "detail": "Some fuel does not burn fully until the cylinders warm up, especially in cold weather or if a glow plug is weak. If it clears within a minute or two it is usually nothing to worry about."
         },
         {
           "title": "Black smoke, mainly under load",
-          "detail": "There is more fuel than the air can burn. Common reasons are a dirty air filter, a blocked air intake, or an engine working too hard because of a fouled hull, a fouled propeller or rope round the shaft. A worn injector can do the same."
+          "detail": "There is more fuel than the air can burn. Possible reasons are a dirty air filter, a blocked air intake, or an engine working too hard because of a fouled hull, a fouled propeller or rope round the shaft. A worn injector can do the same."
         },
         {
           "title": "White smoke or steam with little water coming out",
@@ -26,7 +79,7 @@
         },
         {
           "title": "White smoke that stays when the engine is warm",
-          "detail": "Less common but serious: coolant may be getting into a cylinder, for example through a failed head gasket. Look for the coolant level dropping with no visible leak."
+          "detail": "Can be serious: coolant may be getting into a cylinder, for example through a failed head gasket. Look for the coolant level dropping with no visible leak."
         }
       ],
       "checkFirst": [
@@ -52,15 +105,20 @@
       "id": "wont-start",
       "title": "Won't start",
       "summary": "Split the problem in two. Either the engine does not turn over when you press start, or it turns over but does not fire.",
-      "stopFirst": null,
-      "causes": [
+      "safetyNoticeIds": [
+        "wet-exhaust-waterlock"
+      ],
+      "stopCardIds": [
+        "suspected-waterlock"
+      ],
+      "possibleCauses": [
         {
           "title": "Flat or weak battery, or a poor connection",
           "detail": "The starter turns slowly, clicks or does nothing. Loose or corroded terminals give exactly the same symptoms as a flat battery."
         },
         {
-          "title": "A control left in the wrong position",
-          "detail": "The stop control not pushed fully home, the gear lever out of neutral, or the battery isolator or key switch off. Easy to miss and quick to put right."
+          "title": "A control left in the wrong position, or an engine inhibit",
+          "detail": "The stop control not pushed fully home, the gear lever out of neutral, or the battery isolator or key switch off. On an electronically controlled engine, a fault or immobiliser can also prevent starting, usually with a warning on the panel."
         },
         {
           "title": "Air in the fuel",
@@ -75,16 +133,20 @@
           "detail": "A diesel lights its fuel with the heat of compression. In cold weather it relies on its cold-start aid, usually glow plugs. Failed glow plugs, or not pre-heating for long enough, can stop it firing."
         },
         {
+          "title": "Blocked air intake or low compression",
+          "detail": "A blocked intake starves the engine of air. A worn engine with low compression may not get hot enough to fire, which shows most from cold."
+        },
+        {
           "title": "Water in the cylinders",
-          "detail": "Less common but serious. If the engine turns a little and then stops hard, water may have flooded back from the exhaust after a lot of cranking. Stop trying and get advice, because forcing it can bend internal parts."
+          "detail": "Serious. If the engine turns a little and then stops hard, water may have flooded back from the exhaust after a lot of cranking. Do not crank again; get qualified assistance, because forcing it can bend internal parts."
         }
       ],
       "checkFirst": [
         "Gear lever in neutral, stop control pushed fully in, battery isolator and key switch on.",
         "Listen when you press start. Nothing at all, a single click, slow turning and normal turning each point to different causes.",
         "If it turns slowly or just clicks, check the battery and make sure its terminals are clean and tight.",
-        "If it turns normally but will not fire, check there is fuel in the tank, the fuel valve is open and there is no water in the filter bowl.",
-        "Crank in short bursts with a rest between them, as your handbook advises. On an engine with a wet exhaust, repeated cranking can fill the exhaust with water, so check your handbook for when to close the raw water seacock and remember to open it again as soon as the engine runs."
+        "If it turns normally but will not fire, check the stop control is fully home, then that there is fuel in the tank, the fuel valve is open and there is no water in the filter bowl. On a cold day, pre-heat as the handbook describes.",
+        "Crank in short bursts with a rest between them, as your handbook advises. If the engine repeatedly cranks but does not start, stop and follow the wet-exhaust warning above; never run the engine with the raw-water seacock closed."
       ],
       "lessonIds": [
         "m01-l04",
@@ -99,20 +161,22 @@
         "m08-l02"
       ],
       "reviewStatus": "draft",
-      "reviewNote": "The final check advises closing the raw water seacock during long cranking on wet-exhaust engines. This is engine-dependent; please confirm the wording is safe."
+      "reviewNote": "Audit note 31, safety revise (P0, S01): the advice to close the raw water seacock during long cranking is removed. Warning A is shown first, verbatim, with the waterlock stop card, consistent with lesson 8.2. Causes now include an engine inhibit, air intake and compression (S13). Please approve."
     },
     {
       "id": "overheating",
       "title": "Overheating",
       "summary": "A high temperature reading, an overheat alarm, steam in the exhaust or a dry exhaust all mean the engine is not being cooled properly.",
-      "stopFirst": {
-        "title": "Stop the engine",
-        "text": "Stop the engine as soon as it is safe to do so, taking it out of gear first. Running an overheating engine can quickly cause serious damage, such as a warped cylinder head or a seized engine. Before you lose propulsion, make sure the boat is safe: sail, anchor or arrange a tow if you need to."
-      },
-      "causes": [
+      "safetyNoticeIds": [
+        "overheating-stop"
+      ],
+      "stopCardIds": [
+        "overheating"
+      ],
+      "possibleCauses": [
         {
           "title": "Blocked raw water intake or strainer",
-          "detail": "Weed, a plastic bag or debris over the hull inlet or packed into the strainer stops the cooling water. This is the most common cause."
+          "detail": "Weed, a plastic bag or debris over the hull inlet or packed into the strainer stops the cooling water."
         },
         {
           "title": "Raw water seacock closed",
@@ -132,15 +196,15 @@
         },
         {
           "title": "Stuck thermostat or blocked heat exchanger",
-          "detail": "Less common. A thermostat that stays closed, or a heat exchanger furred with scale or blocked by impeller pieces, stops heat being carried away."
+          "detail": "A thermostat that stays closed, or a heat exchanger furred with scale or blocked by impeller pieces, stops heat being carried away."
         }
       ],
       "checkFirst": [
-        "Never remove the pressure cap on the coolant system while the engine is hot. Hot coolant can spray out and scald you. Wait until it has cooled.",
-        "Look at the exhaust. Little or no water coming out points to the raw water side: intake, seacock, strainer or impeller.",
-        "Check the raw water seacock is open, then close it before opening the strainer to clear it.",
+        "Before anything else, follow the stop-engine condition above and let the engine cool. Do not open a hot coolant pressure cap or touch hot hoses or exhaust parts.",
+        "Think back to the exhaust before you stopped. Little or no water coming out points to the raw water side: intake, seacock, strainer, pump drive or impeller.",
+        "Once cool, check the raw water seacock is open. Close it before opening the strainer to clear it, and open it again before the engine runs.",
         "Check the drive belt is in place, undamaged and tight.",
-        "Once the engine has cooled, check the coolant level in the header tank.",
+        "On an engine with a coolant circuit, check the level in the header tank.",
         "If all of those are fine, inspect the impeller. If any vanes are missing, find the pieces before you run the engine again."
       ],
       "lessonIds": [
@@ -153,14 +217,18 @@
         "m08-l01",
         "m08-l04"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "reviewNote": "S04: stop-engine condition D is shown first, verbatim, with the overheating stop card; the blocked strainer is no longer called the most common cause, causes are unranked, and every check happens after the engine has cooled. Please approve."
     },
     {
       "id": "stops-suddenly",
       "title": "Stops suddenly",
-      "summary": "An engine that stops by itself is most often starved of fuel or air, or stalled by something round the propeller. How it stopped tells you where to look.",
-      "stopFirst": null,
-      "causes": [
+      "summary": "An engine that stops by itself is often starved of fuel or air, or stalled by something round the propeller. How it stopped tells you where to look.",
+      "stopCardIds": [
+        "fuel-spray",
+        "smoke-or-fire"
+      ],
+      "possibleCauses": [
         {
           "title": "Blocked fuel filter",
           "detail": "Rough weather stirs up water, sediment and fuel bug from the bottom of the tank, and it collects in the filters. The engine usually slows and fades over a few seconds."
@@ -171,7 +239,7 @@
         },
         {
           "title": "Rope, net or weed round the propeller",
-          "detail": "The engine stalls as soon as it is put in gear, or stops abruptly with a thump. Often there is vibration first."
+          "detail": "The engine stalls as soon as it is put in gear, or stops abruptly with a thump. Often there is vibration first. A low idle speed, a gearbox fault or a binding shaft can also stall an engine in gear."
         },
         {
           "title": "Water in the fuel",
@@ -183,12 +251,12 @@
         },
         {
           "title": "Serious mechanical fault",
-          "detail": "Less common. If the engine stopped hard with an alarm, a bang or a smell of burning, it may have overheated, lost oil pressure or seized. Do not restart it."
+          "detail": "If the engine stopped hard with an alarm, a bang or a smell of burning, it may have overheated, lost oil pressure or seized. Do not restart it."
         }
       ],
       "checkFirst": [
         "Make the boat safe first. You have lost propulsion, so sail, anchor or call for help as the situation needs.",
-        "Think about how it stopped. Fading over a few seconds suggests fuel; stopping as you put it in gear suggests the propeller; a hard stop with an alarm or a bang means do not restart.",
+        "Think about how it stopped. Fading over a few seconds suggests fuel; stopping as you put it in gear suggests the propeller, though idle speed, the gearbox or the shaft are also possible; a hard stop with an alarm or a bang means do not restart.",
         "Check the fuel level and that the fuel valve is open.",
         "Look in the primary filter bowl for water or dirt.",
         "Before checking round the propeller, make sure the engine is stopped and cannot be started. Never go near the propeller with the engine running."
@@ -208,14 +276,16 @@
       "id": "low-oil-pressure",
       "title": "Low oil pressure",
       "summary": "The oil pressure warning light comes on, the alarm sounds or the gauge reads low while the engine is running.",
-      "stopFirst": {
-        "title": "Stop the engine",
-        "text": "Stop the engine straight away, unless doing so would put the boat or crew in immediate danger. Without oil pressure the bearings can be damaged within minutes. Do not restart it until you have found the cause."
-      },
-      "causes": [
+      "safetyNoticeIds": [
+        "oil-pressure-stop"
+      ],
+      "stopCardIds": [
+        "low-oil-pressure"
+      ],
+      "possibleCauses": [
         {
           "title": "Low oil level",
-          "detail": "From a leak, from oil being burnt over time, or from the level simply not being checked. The most common cause, and the easiest to check."
+          "detail": "From a leak, from oil being burnt over time, or from the level simply not being checked. Easy to check once the engine has stopped, but a normal level does not rule out a real loss of pressure."
         },
         {
           "title": "Faulty sender, switch or wiring",
@@ -231,15 +301,16 @@
         },
         {
           "title": "Worn oil pump or bearings",
-          "detail": "Less common, and more likely on an older engine. This needs a qualified engineer."
+          "detail": "Can happen on older engines. This needs a qualified engineer."
         }
       ],
       "checkFirst": [
+        "Do not restart to see whether the warning clears.",
         "Wait a few minutes for the oil to drain back to the sump, then check the level on the dipstick with the boat as level as possible.",
         "Look under the engine and around the oil filter for fresh oil.",
         "Look at the oil on the dipstick. If it smells of diesel, looks milky or feels unusually thin, do not run the engine; get advice.",
         "If the oil and filter were changed recently, check that the right filter is fitted, it is tight and its seal is in place.",
-        "If the level is right and the oil looks normal, the switch or its wiring may be at fault. A qualified engineer can measure the real pressure with a gauge before you rely on the engine."
+        "If the level is right and the oil looks normal, still treat the warning as real: the switch or wiring may be at fault, but only a test gauge proves it. Get a qualified engineer to measure the real pressure before you run the engine again."
       ],
       "lessonIds": [
         "m01-l04",
@@ -252,14 +323,13 @@
         "m08-l04"
       ],
       "reviewStatus": "draft",
-      "reviewNote": "Please confirm the order of likely causes, and that advising against running with milky or fuel-smelling oil is appropriate."
+      "reviewNote": "Audit note 32, safety revise (P0, S03): stop-engine condition C is shown first, verbatim, with the stop card; 'the most common cause' is removed and causes are unranked; the checks begin with 'do not restart'. Please approve, including the advice against running with milky or fuel-smelling oil."
     },
     {
       "id": "not-charging",
       "title": "Not charging",
-      "summary": "The charge warning light stays on with the engine running, or the battery voltage does not rise when the engine is started.",
-      "stopFirst": null,
-      "causes": [
+      "summary": "The charge warning light stays on with the engine running, or the battery voltage does not rise when the engine is started. Either indicates a charging-system fault, not necessarily a failed alternator.",
+      "possibleCauses": [
         {
           "title": "Loose, slipping or broken drive belt",
           "detail": "The alternator is driven by a belt. A slipping belt often squeals, especially when the engine speeds up or the batteries are low."
@@ -278,7 +348,7 @@
         },
         {
           "title": "Faulty alternator or regulator",
-          "detail": "Less common. Once the belt, wiring and battery have been ruled out, the alternator needs testing."
+          "detail": "Once the belt, wiring and battery have been ruled out, the alternator needs testing."
         }
       ],
       "checkFirst": [

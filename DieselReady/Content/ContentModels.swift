@@ -12,6 +12,45 @@ struct ContentManifest: Codable, Sendable, Equatable {
     let modules: [String]
     /// File name of the fault finder content, relative to the content folder.
     let faults: String?
+    /// File name of the shared safety notices, action levels and tags.
+    var safety: String? = nil
+    /// Version, review date and change log, shown on the About tab.
+    var contentInfo: ContentInfo? = nil
+}
+
+/// Which version of the content is bundled, and where it is in review.
+struct ContentInfo: Codable, Sendable, Hashable {
+    /// For example "1.1".
+    let version: String
+    /// "draft" until a qualified marine engineer has approved the content.
+    let status: String
+    /// Date of the latest technical review, as yyyy-MM-dd.
+    let reviewDate: String
+    /// "pending", or who approved the content once it has been approved.
+    let engineerApproval: String
+    /// Newest first.
+    let changeLog: [ChangeLogEntry]
+
+    /// `reviewDate` as a date, or nil if it is not a valid yyyy-MM-dd date.
+    var reviewDateValue: Date? { Self.date(from: reviewDate) }
+
+    static func date(from text: String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "en_GB_POSIX")
+        formatter.timeZone = TimeZone(identifier: "UTC")
+        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.isLenient = false
+        guard let date = formatter.date(from: text), formatter.string(from: date) == text else { return nil }
+        return date
+    }
+}
+
+struct ChangeLogEntry: Codable, Sendable, Hashable {
+    let version: String
+    /// yyyy-MM-dd.
+    let date: String
+    let summary: String
 }
 
 /// One module file, e.g. `Content/modules/01-how-a-diesel-engine-works.json`.
@@ -38,18 +77,50 @@ struct Lesson: Codable, Sendable, Identifiable, Hashable {
     /// Optional SwiftUI-drawn diagram, identified by a platform-neutral key.
     let diagram: Diagram?
     let steps: [Step]
+    /// Hazard warning for the lesson. Shown before the steps.
     let caution: String?
-    /// True when the lesson describes hands-on work. The reader then ends the
-    /// lesson with the reminder to follow the engine manufacturer's handbook.
+    /// True when the lesson describes a procedure (hands-on work). Every step
+    /// then needs an action level, and the reader ends the lesson with the
+    /// reminder to follow the engine manufacturer's handbook.
     let handsOn: Bool
     let reviewStatus: ReviewStatus
     /// What the expert reviewer should check. Never shown in the app.
     var reviewNote: String? = nil
+    /// Shared safety notices (`safety.json`), shown before the steps.
+    var safetyNoticeIds: [String]? = nil
+    /// Installation types the lesson is written for (`safety.json` tags).
+    var appliesTo: [String]? = nil
+
+    var noticeIDs: [String] { safetyNoticeIds ?? [] }
+    var tagIDs: [String] { appliesTo ?? [] }
+
+    /// A procedure with any step beyond observing. It must carry a warning,
+    /// which the app shows before the first step.
+    var isHazardousProcedure: Bool {
+        handsOn && steps.contains { $0.action == .owner || $0.action == .engineer }
+    }
+
+    /// True when a warning (caution or notice) is shown before the steps.
+    var hasWarningBeforeSteps: Bool {
+        !(caution ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || !noticeIDs.isEmpty
+    }
 }
 
 struct Step: Codable, Sendable, Hashable {
     let title: String?
     let text: String
+    /// Who should do this step. Required on every step of a hands-on lesson.
+    var action: ActionLevel? = nil
+}
+
+/// Who a procedural step is for.
+enum ActionLevel: String, Codable, Sendable, CaseIterable {
+    /// Look and check only: nothing is opened, adjusted or dismantled.
+    case observe
+    /// Owner maintenance, following the engine handbook.
+    case owner
+    /// Only for a qualified engineer.
+    case engineer
 }
 
 struct Diagram: Codable, Sendable, Hashable {
@@ -92,8 +163,11 @@ struct Question: Codable, Sendable, Identifiable, Hashable {
     let reviewStatus: ReviewStatus
     /// What the expert reviewer should check. Never shown in the app.
     var reviewNote: String? = nil
+    /// Shared safety notices shown with the answer feedback.
+    var safetyNoticeIds: [String]? = nil
 
     var correctAnswer: String { options[correctIndex] }
+    var noticeIDs: [String] { safetyNoticeIds ?? [] }
 }
 
 enum ReviewStatus: String, Codable, Sendable {
@@ -107,11 +181,18 @@ struct ContentLibrary: Sendable, Equatable {
     let modules: [Module]
     /// Fault finder content, or nil if the manifest lists none.
     let faults: FaultGuide?
+    /// Safety notices, action levels and tags, or nil if the manifest lists none.
+    let safety: SafetyGuide?
+    /// Version and review status, or nil if the manifest has none.
+    let info: ContentInfo?
 
-    init(schemaVersion: Int, modules: [Module], faults: FaultGuide? = nil) {
+    init(schemaVersion: Int, modules: [Module], faults: FaultGuide? = nil,
+         safety: SafetyGuide? = nil, info: ContentInfo? = nil) {
         self.schemaVersion = schemaVersion
         self.modules = modules
         self.faults = faults
+        self.safety = safety
+        self.info = info
     }
 
     static let empty = ContentLibrary(schemaVersion: 0, modules: [])
@@ -132,38 +213,118 @@ struct ContentLibrary: Sendable, Equatable {
     }
 }
 
+// MARK: - Safety
+
+/// `Content/safety.json`: wording shared by lessons, quiz feedback and the
+/// Fault finder, so every surface says the same thing.
+struct SafetyGuide: Codable, Sendable, Hashable {
+    let notices: [SafetyNotice]
+    let actionLevels: [ActionLevelInfo]
+    let tags: [ApplicabilityTag]
+
+    /// Notices the content must define (wet exhaust, high-pressure fuel, oil
+    /// pressure, overheating).
+    static let requiredNoticeIDs: [String] = [
+        "wet-exhaust-waterlock", "high-pressure-fuel", "oil-pressure-stop", "overheating-stop",
+    ]
+
+    func notice(withID id: String) -> SafetyNotice? { notices.first { $0.id == id } }
+    func tag(withID id: String) -> ApplicabilityTag? { tags.first { $0.id == id } }
+    func info(for level: ActionLevel) -> ActionLevelInfo? { actionLevels.first { $0.id == level } }
+}
+
+/// A warning shown before steps, in quiz feedback or at the top of a symptom.
+/// `text` may use `**bold**` for emphasis; nothing else is markup.
+struct SafetyNotice: Codable, Sendable, Hashable, Identifiable {
+    enum Level: String, Codable, Sendable {
+        /// A stop-engine condition.
+        case stop
+        /// A hazard warning.
+        case warning
+    }
+
+    let id: String
+    let level: Level
+    let title: String
+    let text: String
+}
+
+struct ActionLevelInfo: Codable, Sendable, Hashable {
+    let id: ActionLevel
+    /// Shown on each step, e.g. "Owner (handbook required)".
+    let label: String
+    let description: String
+}
+
+/// An installation type a lesson applies to, e.g. common rail or keel cooling.
+struct ApplicabilityTag: Codable, Sendable, Hashable, Identifiable {
+    let id: String
+    /// The choice this tag belongs to, e.g. "Fuel injection".
+    let group: String
+    let label: String
+}
+
 // MARK: - Fault finder
 
 /// `Content/faults.json`: the Fault finder tab.
 struct FaultGuide: Codable, Sendable, Hashable {
-    /// Shown above the symptom chips.
+    /// Shown above everything else.
     let intro: String
     /// Shown at the end of every symptom: follow the handbook, ask an engineer.
     let reminder: String
+    /// STOP / DO NOT RESTART / GET ASSISTANCE cards, shown before any symptom.
+    let stopCards: [StopCard]
     let symptoms: [Symptom]
 
     /// The symptoms the app must cover, by id.
     static let requiredSymptomIDs: Set<String> = [
         "exhaust-smoke", "wont-start", "overheating", "stops-suddenly", "low-oil-pressure", "not-charging",
     ]
-    /// Symptoms where running on can damage the engine, so they must open
-    /// with a "Stop the engine" instruction.
-    static let stopFirstSymptomIDs: Set<String> = ["overheating", "low-oil-pressure"]
-    static let stopFirstTitle = "Stop the engine"
+    /// Conditions that must each have a stop card, in display order.
+    static let requiredStopCardIDs: [String] = [
+        "low-oil-pressure", "overheating", "water-ingress", "suspected-waterlock",
+        "fuel-spray", "smoke-or-fire", "shaft-seal-leak",
+    ]
+    /// Symptoms that must open with a given safety notice and stop card.
+    static let requiredSymptomSafety: [String: RequiredSafety] = [
+        "low-oil-pressure": RequiredSafety(noticeID: "oil-pressure-stop", stopCardID: "low-oil-pressure"),
+        "overheating": RequiredSafety(noticeID: "overheating-stop", stopCardID: "overheating"),
+        "wont-start": RequiredSafety(noticeID: "wet-exhaust-waterlock", stopCardID: "suspected-waterlock"),
+    ]
+
+    struct RequiredSafety: Sendable, Hashable {
+        let noticeID: String
+        let stopCardID: String
+    }
 
     func symptom(withID id: Symptom.ID) -> Symptom? {
         symptoms.first { $0.id == id }
     }
+
+    func stopCard(withID id: StopCard.ID) -> StopCard? {
+        stopCards.first { $0.id == id }
+    }
+}
+
+/// What to do at once when a dangerous condition appears.
+struct StopCard: Codable, Sendable, Hashable, Identifiable {
+    let id: String
+    let title: String
+    let stop: String
+    let doNotRestart: String
+    let getAssistance: String
 }
 
 struct Symptom: Codable, Sendable, Identifiable, Hashable {
     let id: String
     let title: String
     let summary: String
-    /// Shown before any diagnosis when running on could damage the engine.
-    let stopFirst: StopInstruction?
-    /// Most likely first.
-    let causes: [FaultCause]
+    /// Shared safety notices shown first, before anything else.
+    var safetyNoticeIds: [String]? = nil
+    /// Stop cards shown next, before the causes.
+    var stopCardIds: [String]? = nil
+    /// Not ranked: the app shows them as an unordered list.
+    let possibleCauses: [FaultCause]
     /// In the order to do them.
     let checkFirst: [String]
     /// Lessons to read next. Every id must exist.
@@ -171,11 +332,9 @@ struct Symptom: Codable, Sendable, Identifiable, Hashable {
     let reviewStatus: ReviewStatus
     /// What the expert reviewer should check. Never shown in the app.
     var reviewNote: String? = nil
-}
 
-struct StopInstruction: Codable, Sendable, Hashable {
-    let title: String
-    let text: String
+    var noticeIDs: [String] { safetyNoticeIds ?? [] }
+    var cardIDs: [String] { stopCardIds ?? [] }
 }
 
 struct FaultCause: Codable, Sendable, Hashable {

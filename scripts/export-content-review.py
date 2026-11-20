@@ -1,16 +1,25 @@
 #!/usr/bin/env python3
-"""Export every lesson, question and fault entry to docs/content-review.md.
+"""Export every lesson, question and fault entry for review.
 
-The output is the pack given to a qualified marine engineer for sign-off.
-It is generated from the bundled JSON, so re-run this after any content change:
+Writes two files from the bundled JSON:
 
-    python3 scripts/export-content-review.py           # write the file
-    python3 scripts/export-content-review.py --check   # fail if it is out of date
+- docs/content-review.md: the pack given to a qualified marine engineer for sign-off.
+- docs/quiz-review.csv: one row per question, with a severity and an empty
+  sign-off column, for the question-level QA ledger.
+
+Re-run this after any content change:
+
+    python3 scripts/export-content-review.py           # write both files
+    python3 scripts/export-content-review.py --check   # fail if either is out of date
 
 Standard library only.
 """
 
+import csv
+import hashlib
+import io
 import json
+import random
 import re
 import sys
 from collections import Counter
@@ -19,9 +28,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "DieselReady" / "Resources" / "Content"
 OUTPUT = ROOT / "docs" / "content-review.md"
+CSV_OUTPUT = ROOT / "docs" / "quiz-review.csv"
 READER = ROOT / "DieselReady" / "Features" / "Learn" / "LessonReaderView.swift"
 LETTERS = "ABCD"
 DIFFICULTY = {1: "1 (easy)", 2: "2 (medium)", 3: "3 (hard)"}
+
+# Question ids the technical audit asked to be checked first (its section 7).
+PRIORITY_IDS = {
+    "m01-q004", "m01-q019", "m02-q010", "m02-q016", "m03-q004", "m03-q012", "m04-q020", "m05-q004",
+    "m05-q006", "m06-q009", "m06-q012", "m06-q014", "m07-q010", "m08-q006", "m08-q012",
+}
+P0_FINDINGS = {"S01", "S02", "S03", "S04"}
 
 
 def load():
@@ -30,7 +47,29 @@ def load():
     faults = None
     if manifest.get("faults"):
         faults = json.loads((CONTENT / manifest["faults"]).read_text(encoding="utf-8"))
-    return modules, faults
+    safety = None
+    if manifest.get("safety"):
+        safety = json.loads((CONTENT / manifest["safety"]).read_text(encoding="utf-8"))
+    return modules, faults, safety, manifest.get("contentInfo")
+
+
+def audit_refs(text):
+    """Finding and note ids mentioned in a review note, e.g. ['S12', 'note 24']."""
+    if not text:
+        return []
+    refs = sorted(set(re.findall(r"\bS\d{2}\b", text)))
+    refs += [f"note {n}" for n in sorted(set(re.findall(r"[Aa]udit note (\d+)", text)), key=int)]
+    return refs
+
+
+def severity(q):
+    """P0 for safety-critical questions, P1 for audit priority or corrected items, P2 otherwise."""
+    refs = set(audit_refs(q.get("reviewNote")))
+    if q.get("safetyNoticeIds") or refs & P0_FINDINGS:
+        return "P0"
+    if q["id"] in PRIORITY_IDS or refs:
+        return "P1"
+    return "P2"
 
 
 def handbook_reminder():
@@ -44,7 +83,16 @@ def note(lines, text):
     lines.append("")
 
 
-def render(modules, faults):
+def notice_block(lines, safety, notice_id):
+    notice = next(n for n in safety["notices"] if n["id"] == notice_id)
+    icon = "🛑" if notice["level"] == "stop" else "⚠️"
+    lines.append(f"> {icon} **{notice['title']}.** {notice['text']}")
+    lines.append("")
+
+
+def render(modules, faults, safety, info):
+    levels = {a["id"]: a["label"] for a in safety["actionLevels"]} if safety else {}
+    tags = {t["id"]: t["label"] for t in safety["tags"]} if safety else {}
     lessons_by_id = {}
     for module in modules:
         for index, lesson in enumerate(module["lessons"], start=1):
@@ -78,6 +126,17 @@ def render(modules, faults):
     w("The content deliberately gives no engine-specific figures (torque settings, pressures, clearances, "
       "oil grades or service intervals) and refers the reader to their engine handbook instead.")
     w("")
+    if info:
+        w(f"**Content version:** {info['version']} ({info['status']}) · **Technical review:** {info['reviewDate']} · "
+          f"**Engineer approval:** {info['engineerApproval']}")
+        w("")
+        w(f"**Changes in {info['changeLog'][0]['version']}:** {info['changeLog'][0]['summary']} "
+          "See `docs/review-ledger.md` for each change by finding.")
+        w("")
+    if safety:
+        w("Warnings are shown in the app **before** the steps they apply to. Each procedural step carries an "
+          "action level: " + "; ".join(f"**{a['label']}** ({a['description'].rstrip('.')})" for a in safety["actionLevels"]) + ".")
+        w("")
     w("## Summary")
     w("")
     w("| Module | Lessons | Questions | Difficulty 1 / 2 / 3 | Review notes | Reviewer sign-off |")
@@ -125,6 +184,14 @@ def render(modules, faults):
                 note(out, lesson["reviewNote"])
             w(lesson["intro"])
             w("")
+            for notice_id in lesson.get("safetyNoticeIds", []):
+                notice_block(out, safety, notice_id)
+            if lesson.get("caution"):
+                w(f"**Caution (shown before the steps):** {lesson['caution']}")
+                w("")
+            if lesson.get("appliesTo"):
+                w("*Applies to:* " + ", ".join(tags[t] for t in lesson["appliesTo"]))
+                w("")
             diagram = lesson.get("diagram")
             if diagram:
                 w(f"**Diagram ({diagram['kind']}).** {diagram['description']}")
@@ -138,11 +205,9 @@ def render(modules, faults):
                 w("")
             for number, step in enumerate(lesson["steps"], start=1):
                 title = f"**{step['title']}.** " if step.get("title") else ""
-                w(f"{number}. {title}{step['text']}")
+                action = f"`{levels[step['action']]}` " if step.get("action") else ""
+                w(f"{number}. {action}{title}{step['text']}")
             w("")
-            if lesson.get("caution"):
-                w(f"**Caution:** {lesson['caution']}")
-                w("")
             if lesson["handsOn"]:
                 w("*Ends with the handbook reminder.*")
                 w("")
@@ -165,6 +230,10 @@ def render(modules, faults):
                 w("")
                 w(f"*Explanation:* {q['explanation']}")
                 w("")
+                if q.get("safetyNoticeIds"):
+                    titles = [next(n for n in safety["notices"] if n["id"] == i) for i in q["safetyNoticeIds"]]
+                    w("*Feedback also shows:* " + "; ".join(f"{n['title']} (`{n['id']}`)" for n in titles))
+                    w("")
 
     if faults:
         w("## Fault finder")
@@ -173,6 +242,15 @@ def render(modules, faults):
         w("")
         w(f"Every symptom ends with: *{faults['reminder']}*")
         w("")
+        w("### Stop cards (shown first, before the symptoms)")
+        w("")
+        for card in faults["stopCards"]:
+            w(f"**🛑 {card['title']}** (`{card['id']}`)")
+            w("")
+            w(f"- **STOP:** {card['stop']}")
+            w(f"- **DO NOT RESTART:** {card['doNotRestart']}")
+            w(f"- **GET ASSISTANCE:** {card['getAssistance']}")
+            w("")
         for s in faults["symptoms"]:
             w(f'<a id="fault-{s["id"]}"></a>')
             w("")
@@ -182,15 +260,18 @@ def render(modules, faults):
             w("")
             if s.get("reviewNote"):
                 note(out, s["reviewNote"])
+            for notice_id in s.get("safetyNoticeIds", []):
+                notice_block(out, safety, notice_id)
+            if s.get("stopCardIds"):
+                w("Then the stop card" + ("s" if len(s["stopCardIds"]) > 1 else "") + ": "
+                  + ", ".join(f"`{c}`" for c in s["stopCardIds"]))
+                w("")
             w(s["summary"])
             w("")
-            if s.get("stopFirst"):
-                w(f"> **🛑 {s['stopFirst']['title']}.** {s['stopFirst']['text']}")
-                w("")
-            w("**Likely causes, most likely first**")
+            w("**Possible causes (not ranked)**")
             w("")
-            for i, cause in enumerate(s["causes"], start=1):
-                w(f"{i}. **{cause['title']}.** {cause['detail']}")
+            for cause in s["possibleCauses"]:
+                w(f"- **{cause['title']}.** {cause['detail']}")
             w("")
             w("**What to check first**")
             w("")
@@ -212,17 +293,41 @@ def render(modules, faults):
     return "\n".join(out)
 
 
+def render_csv(modules):
+    """One row per question. Options are shuffled with a fixed seed per question,
+    so the key is not always option A and a second reviewer can answer the
+    bank blind by hiding the key column."""
+    buffer = io.StringIO()
+    writer = csv.writer(buffer, lineterminator="\n")
+    writer.writerow(["id", "module", "lesson", "difficulty", "stem", "option_a", "option_b", "option_c", "option_d",
+                     "key", "explanation", "safety_notices", "severity", "audit_refs", "sign_off"])
+    for module in modules:
+        for q in module["questions"]:
+            order = list(range(4))
+            random.Random(int(hashlib.sha256(q["id"].encode()).hexdigest(), 16)).shuffle(order)
+            options = [q["options"][i] for i in order]
+            key = LETTERS[order.index(q["correctIndex"])]
+            writer.writerow([q["id"], f"{module['number']}. {module['title']}", q["lessonId"], q["difficulty"],
+                             q["prompt"], *options, key, q["explanation"],
+                             " ".join(q.get("safetyNoticeIds", [])), severity(q),
+                             " ".join(audit_refs(q.get("reviewNote"))), ""])
+    return buffer.getvalue()
+
+
 def main():
-    text = render(*load())
+    data = load()
+    outputs = {OUTPUT: render(*data), CSV_OUTPUT: render_csv(data[0])}
     if "--check" in sys.argv:
-        current = OUTPUT.read_text(encoding="utf-8") if OUTPUT.exists() else ""
-        if current != text:
-            print("docs/content-review.md is out of date. Run: python3 scripts/export-content-review.py")
+        stale = [p for p, text in outputs.items() if (p.read_text(encoding="utf-8") if p.exists() else "") != text]
+        for path in stale:
+            print(f"{path.relative_to(ROOT)} is out of date. Run: python3 scripts/export-content-review.py")
+        if stale:
             sys.exit(1)
-        print("docs/content-review.md is up to date.")
+        print("docs/content-review.md and docs/quiz-review.csv are up to date.")
         return
-    OUTPUT.write_text(text, encoding="utf-8")
-    print(f"Wrote {OUTPUT.relative_to(ROOT)}")
+    for path, text in outputs.items():
+        path.write_text(text, encoding="utf-8")
+        print(f"Wrote {path.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

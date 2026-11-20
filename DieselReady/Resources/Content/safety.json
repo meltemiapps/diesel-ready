@@ -1,0 +1,92 @@
+{
+  "notices": [
+    {
+      "id": "wet-exhaust-waterlock",
+      "level": "warning",
+      "title": "WARNING — WET EXHAUST / WATERLOCK",
+      "text": "If the engine repeatedly cranks but does not start, stop and follow the engine and exhaust-system manufacturer's procedure. On many wet-exhaust installations the seawater pump continues to deliver water while cranking; without exhaust gas flow, water can accumulate and enter the engine. **Never run the engine with the raw-water seacock closed.** Some manufacturers specify a controlled seawater-isolation procedure for extended troubleshooting. Use it only if it is documented for that installation, and positively confirm the seacock is **OPEN BEFORE THE ENGINE IS ALLOWED TO RUN**. If water ingestion is suspected, do not crank again; seek qualified assistance."
+    },
+    {
+      "id": "high-pressure-fuel",
+      "level": "warning",
+      "title": "WARNING — HIGH-PRESSURE FUEL INJECTION",
+      "text": "The steps in this lesson describe only manufacturer-approved **low-pressure** bleeding arrangements. Do not loosen injector pipes, common-rail components or other high-pressure fuel connections. Diesel fuel under high pressure can penetrate skin and cause severe injury; suspected injection injury requires immediate emergency medical treatment. Stop the engine, prevent accidental starting, contain spills and follow the exact handbook procedure. If the system does not have an approved owner bleeding method, use a qualified engineer."
+    },
+    {
+      "id": "oil-pressure-stop",
+      "level": "stop",
+      "title": "STOP-ENGINE CONDITION",
+      "text": "If the oil-pressure alarm activates or the gauge indicates abnormally low pressure, reduce power and stop the engine **as soon as vessel safety permits**. Secure the vessel first. Do not restart simply to test whether the alarm clears. Once stopped, check oil level and obvious leaks in accordance with the handbook. If the cause is not clear and corrected, seek engineering assistance."
+    },
+    {
+      "id": "overheating-stop",
+      "level": "stop",
+      "title": "STOP-ENGINE CONDITION",
+      "text": "If the engine overheats or cooling-water flow is lost, reduce power and stop the engine as soon as the vessel is safe. Do not open a hot coolant pressure cap or touch hot hoses/exhaust components. Allow the engine to cool before checking the seawater intake, strainer, pump drive, impeller and coolant level as applicable. Do not restart until the cause is corrected and the cooling circuit is confirmed ready."
+    }
+  ],
+  "actionLevels": [
+    {
+      "id": "observe",
+      "label": "Observe",
+      "description": "Look and check only. Nothing is opened, adjusted or taken apart."
+    },
+    {
+      "id": "owner",
+      "label": "Owner (handbook required)",
+      "description": "Owner maintenance or operation. Follow your engine handbook for your engine's exact method."
+    },
+    {
+      "id": "engineer",
+      "label": "Engineer only",
+      "description": "A job for a qualified marine engineer with the right tools and training."
+    }
+  ],
+  "tags": [
+    {
+      "id": "mechanical-injection",
+      "group": "Fuel injection",
+      "label": "Mechanical injection"
+    },
+    {
+      "id": "common-rail",
+      "group": "Fuel injection",
+      "label": "Common rail"
+    },
+    {
+      "id": "direct-cooling",
+      "group": "Cooling",
+      "label": "Direct (raw water) cooling"
+    },
+    {
+      "id": "heat-exchanger",
+      "group": "Cooling",
+      "label": "Heat-exchanger cooling"
+    },
+    {
+      "id": "keel-cooling",
+      "group": "Cooling",
+      "label": "Keel cooling"
+    },
+    {
+      "id": "packed-gland",
+      "group": "Shaft seal",
+      "label": "Packed gland"
+    },
+    {
+      "id": "shaft-seal",
+      "group": "Shaft seal",
+      "label": "Mechanical shaft seal"
+    },
+    {
+      "id": "lead-acid",
+      "group": "Batteries",
+      "label": "Lead-acid batteries"
+    },
+    {
+      "id": "lithium",
+      "group": "Batteries",
+      "label": "Lithium batteries"
+    }
+  ]
+}

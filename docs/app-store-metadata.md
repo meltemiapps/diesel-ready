@@ -68,7 +68,7 @@ TEST YOURSELF
 • Over 150 original questions
 
 FAULT FINDER
-Pick a symptom (exhaust smoke, won't start, overheating, stops suddenly, low oil pressure or not charging) and see the likely causes in order, what to check first, and links to the lessons that explain more. Symptoms that can damage the engine start with a clear instruction to stop it.
+Stop cards come first, with what to do at once for low oil pressure, overheating, water coming in, suspected water in the engine, fuel spray, smoke or fire, and a leaking shaft seal. Then pick a symptom (exhaust smoke, won't start, overheating, stops suddenly, low oil pressure or not charging) to see the possible causes, what to check first, and links to the lessons that explain more.
 
 PRIVATE BY DESIGN
 • No account, no sign-in

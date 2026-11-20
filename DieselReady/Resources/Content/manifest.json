@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "modules": [
     "01-how-a-diesel-engine-works.json",
     "02-fuel-system-and-bleeding.json",
@@ -10,5 +10,24 @@
     "07-routine-maintenance.json",
     "08-fault-finding.json"
   ],
-  "faults": "faults.json"
+  "faults": "faults.json",
+  "safety": "safety.json",
+  "contentInfo": {
+    "version": "1.1",
+    "status": "draft",
+    "reviewDate": "2026-11-20",
+    "engineerApproval": "pending",
+    "changeLog": [
+      {
+        "version": "1.1",
+        "date": "2026-11-20",
+        "summary": "Safety and accuracy corrections after an independent technical review: shared stop-engine and warning wording shown before the steps, statements scoped to installation type, an action level on every procedural step, Fault finder stop cards with unranked possible causes, and corrected quiz questions. Awaiting engineer approval."
+      },
+      {
+        "version": "1.0",
+        "date": "2026-11-19",
+        "summary": "First draft of eight modules, 35 lessons, 161 questions and the Fault finder."
+      }
+    ]
+  }
 }

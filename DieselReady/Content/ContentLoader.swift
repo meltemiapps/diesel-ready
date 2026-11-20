@@ -5,7 +5,7 @@ import Foundation
 /// Pure and synchronous so it can be unit-tested with in-memory data.
 struct ContentLoader: Sendable {
     /// Highest manifest schema version this build understands.
-    static let supportedSchemaVersion = 1
+    static let supportedSchemaVersion = 2
     static let contentDirectory = "Content"
 
     enum LoadError: Error, Equatable, CustomStringConvertible {
@@ -55,7 +55,9 @@ struct ContentLoader: Sendable {
         }
         let modules: [Module] = try manifest.modules.map { try decode("modules/\($0)") }
         let faults: FaultGuide? = try manifest.faults.map { try decode($0) }
-        let library = ContentLibrary(schemaVersion: manifest.schemaVersion, modules: modules, faults: faults)
+        let safety: SafetyGuide? = try manifest.safety.map { try decode($0) }
+        let library = ContentLibrary(schemaVersion: manifest.schemaVersion, modules: modules, faults: faults,
+                                     safety: safety, info: manifest.contentInfo)
 
         let problems = Self.validate(library, rules: rules)
         guard problems.isEmpty else { throw LoadError.invalid(problems) }
@@ -123,6 +125,7 @@ struct ContentLoader: Sendable {
                     let range = expected.count == 1 ? "\(expected.lowerBound)" : "\(expected.lowerBound) to \(expected.upperBound)"
                     problems.append("\(lesson.id): diagram \(diagram.kind) has \(diagram.labels.count) labels, expected \(range)")
                 }
+                problems += validateSafety(of: lesson, safety: library.safety)
             }
 
             for question in module.questions {
@@ -151,6 +154,9 @@ struct ContentLoader: Sendable {
                 if !(1...3).contains(question.difficulty) {
                     problems.append("\(question.id): difficulty \(question.difficulty) not in 1...3")
                 }
+                problems += unknownNotices(question.noticeIDs, in: library.safety, owner: question.id)
+                problems += rankingProblems(in: [question.prompt, question.explanation] + question.options,
+                                            owner: question.id)
             }
         }
 
@@ -160,7 +166,111 @@ struct ContentLoader: Sendable {
         }
 
         if let faults = library.faults {
-            problems += validate(faults, lessonIDs: Set(library.allLessons.map(\.id)))
+            let noticeIDs = Set(library.safety?.notices.map(\.id) ?? [])
+            problems += validate(faults, lessonIDs: Set(library.allLessons.map(\.id)), noticeIDs: noticeIDs)
+        }
+        if let safety = library.safety {
+            problems += validate(safety)
+        } else if rules.requireSafetyContent {
+            problems.append("manifest: no safety file")
+        }
+        if let info = library.info {
+            problems += validate(info)
+        } else if rules.requireSafetyContent {
+            problems.append("manifest: no contentInfo")
+        }
+        return problems
+    }
+
+    // MARK: Safety rules
+
+    /// Phrases that rank causes by frequency. The content lists possible
+    /// causes without ranking them, so these are not allowed anywhere.
+    static let rankingPhrases = ["most common", "most likely", "commonest", "most often", "in order of likelihood"]
+    /// Further frequency words not allowed in the Fault finder.
+    static let faultRankingPhrases = ["less common", "more common", "less likely", "more likely", "likely first"]
+
+    static func rankingProblems(in texts: [String], owner: String, phrases: [String] = rankingPhrases) -> [String] {
+        let joined = texts.joined(separator: " ").lowercased()
+        return phrases.filter { joined.contains($0) }.map { "\(owner): ranks causes with \"\($0)\"" }
+    }
+
+    /// Words that mark a warning. A step containing one would put a warning
+    /// after the steps before it, so warnings must go in `caution` or
+    /// `safetyNoticeIds`, which the app shows first.
+    static func containsWarningMarker(_ text: String) -> Bool {
+        let words = text.components(separatedBy: CharacterSet.letters.inverted).filter { !$0.isEmpty }
+        if let first = words.first, ["warning", "caution", "danger"].contains(first.lowercased()) { return true }
+        return words.contains { ["WARNING", "CAUTION", "DANGER", "STOP"].contains($0) }
+    }
+
+    private static func unknownNotices(_ ids: [String], in safety: SafetyGuide?, owner: String) -> [String] {
+        var problems: [String] = []
+        for id in ids where safety?.notice(withID: id) == nil {
+            problems.append("\(owner): unknown safety notice \(id)")
+        }
+        if Set(ids).count != ids.count { problems.append("\(owner): lists the same safety notice twice") }
+        return problems
+    }
+
+    /// Warnings before steps, action levels on procedures, known notices and tags.
+    static func validateSafety(of lesson: Lesson, safety: SafetyGuide?) -> [String] {
+        var problems = unknownNotices(lesson.noticeIDs, in: safety, owner: lesson.id)
+        for tag in lesson.tagIDs where safety?.tag(withID: tag) == nil {
+            problems.append("\(lesson.id): unknown applicability tag \(tag)")
+        }
+        if Set(lesson.tagIDs).count != lesson.tagIDs.count {
+            problems.append("\(lesson.id): lists the same applicability tag twice")
+        }
+        for (index, step) in lesson.steps.enumerated() {
+            let number = index + 1
+            if lesson.handsOn && step.action == nil {
+                problems.append("\(lesson.id) step \(number): procedural step has no action level")
+            }
+            if containsWarningMarker(step.text) || containsWarningMarker(step.title ?? "") {
+                problems.append("\(lesson.id) step \(number): contains a warning, which would come after earlier steps; move it to caution or safetyNoticeIds")
+            }
+        }
+        if lesson.isHazardousProcedure && !lesson.hasWarningBeforeSteps {
+            problems.append("\(lesson.id): hazardous procedure has no warning before its steps")
+        }
+        let texts = [lesson.title, lesson.intro, lesson.caution ?? ""] + lesson.steps.flatMap { [$0.title ?? "", $0.text] }
+        problems += rankingProblems(in: texts, owner: lesson.id)
+        return problems
+    }
+
+    /// Notices, action levels and tags are complete and unique.
+    static func validate(_ safety: SafetyGuide) -> [String] {
+        var problems: [String] = []
+        let ids = safety.notices.map(\.id)
+        if Set(ids).count != ids.count { problems.append("safety: duplicate notice id") }
+        for notice in safety.notices
+        where notice.title.trimmingCharacters(in: .whitespaces).isEmpty || notice.text.trimmingCharacters(in: .whitespaces).isEmpty {
+            problems.append("safety: notice \(notice.id) has no title or text")
+        }
+        for id in SafetyGuide.requiredNoticeIDs where !ids.contains(id) {
+            problems.append("safety: missing notice \(id)")
+        }
+        let levels = safety.actionLevels.map(\.id)
+        if Set(levels) != Set(ActionLevel.allCases) || levels.count != ActionLevel.allCases.count {
+            problems.append("safety: actionLevels must list observe, owner and engineer once each")
+        }
+        let tags = safety.tags.map(\.id)
+        if Set(tags).count != tags.count { problems.append("safety: duplicate tag id") }
+        return problems
+    }
+
+    static func validate(_ info: ContentInfo) -> [String] {
+        var problems: [String] = []
+        if info.reviewDateValue == nil { problems.append("contentInfo: reviewDate \(info.reviewDate) is not yyyy-MM-dd") }
+        if info.engineerApproval.trimmingCharacters(in: .whitespaces).isEmpty {
+            problems.append("contentInfo: engineerApproval is empty")
+        }
+        if info.changeLog.first?.version != info.version {
+            problems.append("contentInfo: the first change log entry must be version \(info.version)")
+        }
+        for entry in info.changeLog where ContentInfo.date(from: entry.date) == nil {
+            problems.append("contentInfo: change log date \(entry.date) is not yyyy-MM-dd")
         }
         return problems
     }
@@ -174,18 +284,35 @@ struct ContentLoader: Sendable {
             .joined(separator: " ")
     }
 
-    /// Fault finder checks, including that every lesson link resolves.
-    static func validate(_ faults: FaultGuide, lessonIDs: Set<Lesson.ID>) -> [String] {
+    /// Fault finder checks: lesson links resolve, every STOP condition has a
+    /// complete card, and the dangerous symptoms open with their notice and card.
+    static func validate(_ faults: FaultGuide, lessonIDs: Set<Lesson.ID>, noticeIDs: Set<String>) -> [String] {
         var problems: [String] = []
         var seen = Set<String>()
 
         if faults.reminder.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             problems.append("faults: reminder is empty")
         }
+        let cardIDs = faults.stopCards.map(\.id)
+        if Set(cardIDs).count != cardIDs.count { problems.append("faults: duplicate stop card id") }
+        for id in FaultGuide.requiredStopCardIDs {
+            guard let card = faults.stopCard(withID: id) else {
+                problems.append("faults: STOP condition \(id) has no card")
+                continue
+            }
+            let parts = [card.title, card.stop, card.doNotRestart, card.getAssistance]
+            if parts.contains(where: { $0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }) {
+                problems.append("faults: stop card \(id) needs a title, stop, doNotRestart and getAssistance")
+            }
+        }
+        let cardTexts = faults.stopCards.flatMap { [$0.title, $0.stop, $0.doNotRestart, $0.getAssistance] }
+        problems += rankingProblems(in: [faults.intro] + cardTexts, owner: "faults",
+                                    phrases: rankingPhrases + faultRankingPhrases)
+
         for symptom in faults.symptoms {
             let id = symptom.id
             if !seen.insert(id).inserted { problems.append("faults: duplicate symptom id \(id)") }
-            if symptom.causes.isEmpty { problems.append("\(id): has no causes") }
+            if symptom.possibleCauses.isEmpty { problems.append("\(id): has no possible causes") }
             if symptom.checkFirst.isEmpty { problems.append("\(id): has nothing to check first") }
             if symptom.lessonIds.isEmpty { problems.append("\(id): links to no lessons") }
             for lessonID in symptom.lessonIds where !lessonIDs.contains(lessonID) {
@@ -194,16 +321,23 @@ struct ContentLoader: Sendable {
             if Set(symptom.lessonIds).count != symptom.lessonIds.count {
                 problems.append("\(id): links to the same lesson twice")
             }
-            if FaultGuide.stopFirstSymptomIDs.contains(id) {
-                if let stop = symptom.stopFirst {
-                    if stop.title != FaultGuide.stopFirstTitle {
-                        problems.append("\(id): stopFirst title must be \"\(FaultGuide.stopFirstTitle)\"")
-                    }
-                    if stop.text.isEmpty { problems.append("\(id): stopFirst text is empty") }
-                } else {
-                    problems.append("\(id): must start with a stopFirst instruction")
+            for notice in symptom.noticeIDs where !noticeIDs.contains(notice) {
+                problems.append("\(id): unknown safety notice \(notice)")
+            }
+            for card in symptom.cardIDs where faults.stopCard(withID: card) == nil {
+                problems.append("\(id): unknown stop card \(card)")
+            }
+            if let required = FaultGuide.requiredSymptomSafety[id] {
+                if symptom.noticeIDs.first != required.noticeID {
+                    problems.append("\(id): must open with safety notice \(required.noticeID)")
+                }
+                if !symptom.cardIDs.contains(required.stopCardID) {
+                    problems.append("\(id): STOP condition \(required.stopCardID) lacks its card")
                 }
             }
+            let texts = [symptom.title, symptom.summary] + symptom.checkFirst
+                + symptom.possibleCauses.flatMap { [$0.title, $0.detail] }
+            problems += rankingProblems(in: texts, owner: id, phrases: rankingPhrases + faultRankingPhrases)
         }
         for missing in FaultGuide.requiredSymptomIDs.subtracting(seen).sorted() {
             problems.append("faults: missing symptom \(missing)")
@@ -219,18 +353,22 @@ struct ContentRules: Sendable, Equatable {
     var minQuestionsPerLesson: Int
     var minTotalQuestions: Int
     var requireEveryDifficultyPerModule: Bool
+    /// The manifest must list a safety file and content info.
+    var requireSafetyContent: Bool
 
     static let release = ContentRules(
         lessonsPerModule: 3...6,
         minQuestionsPerLesson: 3,
         minTotalQuestions: 150,
-        requireEveryDifficultyPerModule: true
+        requireEveryDifficultyPerModule: true,
+        requireSafetyContent: true
     )
 
     static let structural = ContentRules(
         lessonsPerModule: 1...Int.max,
         minQuestionsPerLesson: 0,
         minTotalQuestions: 0,
-        requireEveryDifficultyPerModule: false
+        requireEveryDifficultyPerModule: false,
+        requireSafetyContent: false
     )
 }

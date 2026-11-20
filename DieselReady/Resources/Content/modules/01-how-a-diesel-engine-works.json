@@ -28,6 +28,7 @@
         ],
         "description": "Three stages. First, the piston moves down and draws in air only. Second, the piston rises and compresses the air, which gets very hot. Third, fuel is sprayed into the hot air and ignites without a spark."
       },
+      "caution": null,
       "steps": [
         {
           "title": "Air comes in",
@@ -35,7 +36,7 @@
         },
         {
           "title": "The air is squeezed",
-          "text": "The piston rises and compresses the air into a small fraction of its original volume. On a typical small marine diesel the air ends up roughly 15 to 23 times smaller, which is known as the compression ratio."
+          "text": "The piston rises and compresses the air into a small fraction of its original volume. The ratio between the two volumes is called the compression ratio. On many conventional small marine diesels it is somewhere around 15 to 23 to 1, but that is a typical range, not a specification for any particular engine."
         },
         {
           "title": "The air gets very hot",
@@ -47,13 +48,12 @@
         },
         {
           "title": "More fuel means more power",
-          "text": "The throttle lever on a diesel controls how much fuel is injected. It does not restrict the air supply the way the throttle on a petrol engine does."
+          "text": "On a typical mechanically injected diesel, the throttle lever controls how much fuel is injected. On an electronically controlled engine it sends a signal to the engine's control unit, which does the same job. Either way, a diesel does not restrict its air supply the way the throttle on a petrol engine does."
         }
       ],
-      "caution": null,
       "handsOn": false,
       "reviewStatus": "draft",
-      "reviewNote": "Step 2 gives a typical compression ratio range of roughly 15 to 23 to 1 as general background. Please confirm the range is fair for small marine diesels, or suggest removing the figure."
+      "reviewNote": "Audit note 1, accept with qualification (S17): the 15 to 23 to 1 figure is now described as a typical range for many conventional small diesels, not a specification. Step 5 now also covers electronically controlled engines (S14). Please approve."
     },
     {
       "id": "m01-l02",
@@ -83,6 +83,7 @@
         ],
         "description": "Four stages. 1, induction: inlet valve open, piston moving down, drawing in air. 2, compression: both valves closed, piston moving up, fuel injected near the top. 3, power: both valves closed, burning gas forces the piston down. 4, exhaust: exhaust valve open, piston moving up, pushing out burnt gas."
       },
+      "caution": null,
       "steps": [
         {
           "title": "1. Induction",
@@ -102,12 +103,12 @@
         },
         {
           "title": "Timing it all",
-          "text": "The camshaft opens each valve once per cycle, so it turns at half the speed of the crankshaft. The injection pump is timed to the crankshaft so that fuel arrives at the right moment for each cylinder."
+          "text": "The camshaft opens each valve once per cycle, so it turns at half the speed of the crankshaft. On a mechanically injected engine the injection pump is driven and timed from the crankshaft; on a common-rail engine an electronic control unit times each injection instead. Either way, fuel arrives at the right moment for each cylinder."
         }
       ],
-      "caution": null,
       "handsOn": false,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "reviewNote": "S14: step 5 now distinguishes mechanical injection timing from electronically controlled common-rail injection. Please approve."
     },
     {
       "id": "m01-l03",
@@ -116,7 +117,7 @@
       "intro": "Whatever the make, small marine diesels are built from the same basic parts. Knowing what each one does makes the rest of this guide, and any conversation with an engineer, much easier to follow.",
       "diagram": {
         "kind": "engine-layout",
-        "caption": "A simplified side view of a small marine diesel with its main parts labelled.",
+        "caption": "A simplified side view of a typical mechanically injected small marine diesel with its main parts labelled.",
         "labels": [
           {
             "title": "Cylinder head with valves",
@@ -149,6 +150,11 @@
         ],
         "description": "Side view. From top to bottom: the cylinder head with valves and injectors, the cylinder block containing the pistons, the crankshaft, and the oil sump. The flywheel is on the end of the crankshaft and the fuel injection pump is on the side of the block."
       },
+      "caution": null,
+      "appliesTo": [
+        "mechanical-injection",
+        "common-rail"
+      ],
       "steps": [
         {
           "title": "Cylinder block and head",
@@ -167,17 +173,17 @@
           "text": "A heavy wheel on the end of the crankshaft. It smooths out the pulses from each power stroke, and its toothed outer ring is what the starter motor turns to start the engine."
         },
         {
-          "title": "Fuel injection pump and injectors",
-          "text": "The injection pump raises the fuel to a very high pressure and delivers a measured amount to each injector at the right time. The injectors spray it into the cylinders as a fine mist."
+          "title": "Fuel injection equipment",
+          "text": "On a typical mechanically injected diesel, the injection pump raises the fuel to a very high pressure and delivers a measured amount to each injector at the right time. Common-rail engines instead keep fuel at very high pressure in a shared rail, and an electronic control unit opens each injector. In both, the injectors spray the fuel into the cylinders as a fine mist."
         },
         {
           "title": "Supporting systems",
           "text": "Around the core engine you will find the cooling system, the lubrication system with its sump and oil filter, the air intake and exhaust, and the electrical parts such as the starter motor and alternator. Each has its own module in this guide."
         }
       ],
-      "caution": null,
       "handsOn": false,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "reviewNote": "S14: the injection step and diagram caption are now labelled as a typical mechanically injected engine, with a short common-rail description. Please approve."
     },
     {
       "id": "m01-l04",
@@ -185,37 +191,51 @@
       "estimatedMinutes": 10,
       "intro": "The best time to find the dipstick, filters and seacock is on a calm day in harbour, not when something has gone wrong at sea. This lesson walks you round your own engine so you know where everything is before you need it.",
       "diagram": null,
+      "caution": "Engine parts can stay hot for a long time after the engine stops, and belts and pulleys can trap fingers or clothing. Never reach into the engine space while the engine is running.",
+      "appliesTo": [
+        "mechanical-injection",
+        "common-rail",
+        "direct-cooling",
+        "heat-exchanger",
+        "keel-cooling"
+      ],
       "steps": [
         {
           "title": "Make the engine safe",
-          "text": "Check the engine is stopped and cool. Remove the key or switch off the engine isolator so nobody can start it while your hands are near moving parts."
+          "text": "Check the engine is stopped and cool. Remove the key or switch off the engine isolator so nobody can start it while your hands are near moving parts.",
+          "action": "owner"
         },
         {
           "title": "Open up and look",
-          "text": "Remove the engine covers and use a good torch. Note how easy or hard it is to reach each side of the engine."
+          "text": "Remove the engine covers and use a good torch. Note how easy or hard it is to reach each side of the engine.",
+          "action": "observe"
         },
         {
           "title": "Find the oil checks",
-          "text": "Locate the engine oil dipstick and filler cap, the oil filter and, if fitted separately, the gearbox dipstick."
+          "text": "Locate the engine oil dipstick and filler cap, the oil filter and, if fitted separately, the gearbox dipstick.",
+          "action": "observe"
         },
         {
           "title": "Follow the fuel",
-          "text": "Trace the fuel line from the tank shut-off valve to the primary filter (often with a water trap), then to the engine-mounted fine filter and the injection pump."
+          "text": "Trace the fuel line from the tank shut-off valve to the primary filter (on many installations with a water trap), then to the engine-mounted fine filter and the injection pump, or the high-pressure pump on a common-rail engine.",
+          "action": "observe"
         },
         {
           "title": "Follow the cooling water",
-          "text": "Find the raw water seacock and strainer, the raw water pump, and on most engines the heat exchanger and the coolant header tank with its filler cap."
+          "text": "Find the raw water seacock and strainer and the raw water pump. On an engine with indirect cooling, also find the heat exchanger and the coolant header tank with its filler cap. A keel-cooled engine has no raw water pump for cooling; find where its coolant pipes run instead.",
+          "action": "observe"
         },
         {
           "title": "Find the controls and electrics",
-          "text": "Identify the engine stop control, the drive belt or belts, the alternator, the starter motor and the battery isolator switch."
+          "text": "Identify the engine stop control, the drive belt or belts, the alternator, the starter motor and the battery isolator switch.",
+          "action": "observe"
         },
         {
           "title": "Write it down",
-          "text": "Make a simple sketch or take photos and label them. Keep a copy on board with your engine handbook."
+          "text": "Make a simple sketch or take photos and label them. Keep a copy on board with your engine handbook.",
+          "action": "observe"
         }
       ],
-      "caution": "Engine parts can stay hot for a long time after the engine stops, and belts and pulleys can trap fingers or clothing. Never reach into the engine space while the engine is running.",
       "handsOn": true,
       "reviewStatus": "draft"
     }
@@ -229,9 +249,9 @@
       "prompt": "How is the fuel ignited in a running diesel engine?",
       "options": [
         "By the heat of the compressed air in the cylinder",
-        "By a spark plug in each cylinder",
         "By glow plugs that stay switched on while the engine runs",
-        "By a spark from the alternator"
+        "By a spark plug in each cylinder",
+        "By the injector heating the fuel as it sprays it"
       ],
       "correctIndex": 0,
       "explanation": "Diesels rely on compression ignition. Squeezing the air makes it hot enough to ignite the fuel as soon as it is injected.",
@@ -247,7 +267,7 @@
         "The amount of fuel injected into each cylinder",
         "How far a butterfly valve in the air intake is opened",
         "The timing of the spark",
-        "The flow of raw cooling water"
+        "The speed of the camshaft compared with the crankshaft"
       ],
       "correctIndex": 0,
       "explanation": "A diesel's speed and power are set by the quantity of fuel injected. Unlike a petrol engine, it does not throttle the incoming air.",
@@ -263,7 +283,7 @@
         "To heat the air enough to ignite the fuel",
         "To keep the cylinders cool while the engine is running",
         "To raise the engine's oil pressure",
-        "To make the exhaust note quieter"
+        "To push more fuel through the injectors"
       ],
       "correctIndex": 0,
       "explanation": "The air must be squeezed hard to reach a temperature well above the point at which diesel fuel ignites on its own.",
@@ -274,17 +294,17 @@
       "moduleId": "m01",
       "lessonId": "m01-l01",
       "difficulty": 2,
-      "prompt": "Roughly what compression ratio would you expect on a small marine diesel?",
+      "prompt": "An engine's compression ratio is given as 18 to 1. What does that figure describe?",
       "options": [
-        "About 15:1 to 23:1",
-        "About 4:1 to 6:1",
-        "About 8:1 to 10:1",
-        "About 40:1 to 50:1 or higher"
+        "The space above the piston shrinks to an eighteenth as it rises",
+        "There are 18 parts of air to every part of fuel burnt in the cylinder",
+        "Fuel is injected at 18 times the pressure of the outside air",
+        "The crankshaft turns 18 times for every power stroke in each cylinder"
       ],
       "correctIndex": 0,
-      "explanation": "Small diesels typically compress the air to between about a fifteenth and a twenty-third of its volume. Ratios near 8:1 to 10:1 are more typical of petrol engines.",
+      "explanation": "The compression ratio compares the space above the piston at the bottom of its stroke with the space left at the top. Many conventional small diesels are somewhere around 15:1 to 23:1, but that is a typical range, not a specification.",
       "reviewStatus": "draft",
-      "reviewNote": "Confirm the 15:1 to 23:1 range is a fair general figure for small marine diesels; the distractors are deliberately far outside it."
+      "reviewNote": "Audit note 2, revise (S17): the question now tests what a compression ratio means rather than recall of a range, and the explanation gives the range as typical only. Please approve."
     },
     {
       "id": "m01-q005",
@@ -344,7 +364,7 @@
         "Air only",
         "A mixture of air and fuel",
         "Fuel only",
-        "Air mixed with exhaust gas from the previous cycle"
+        "Air mixed with a fine mist of lubricating oil"
       ],
       "correctIndex": 0,
       "explanation": "Only air is drawn in. The fuel is added later by the injector, directly into the hot compressed air.",
@@ -406,9 +426,9 @@
       "prompt": "Where are the inlet and exhaust valves usually found?",
       "options": [
         "In the cylinder head",
+        "In the cylinder block, beside the crankshaft",
         "In the sump",
-        "In the gearbox",
-        "In the heat exchanger"
+        "In the fuel injection pump"
       ],
       "correctIndex": 0,
       "explanation": "The cylinder head sits on top of the block and carries the valves and the injectors.",
@@ -424,7 +444,7 @@
         "Smoothing out the pulses from each power stroke",
         "Pumping oil round the engine",
         "Driving the raw water pump through a toothed belt",
-        "Charging the batteries"
+        "Setting the timing of each injection"
       ],
       "correctIndex": 0,
       "explanation": "The flywheel's weight carries the engine through the non-power strokes. Its toothed ring also gives the starter motor something to turn.",
@@ -439,8 +459,8 @@
       "options": [
         "The head gasket",
         "The rocker cover seal",
-        "The impeller",
-        "The thermostat"
+        "The sump gasket",
+        "The exhaust manifold gasket"
       ],
       "correctIndex": 0,
       "explanation": "The head gasket keeps compression, oil and coolant in their proper places where the head meets the block.",
@@ -472,10 +492,10 @@
         "So you can close it fast if a hose fails, or before working on the circuit",
         "So you can open it to top up the engine's coolant",
         "Because the gearbox oil level is checked beside it",
-        "Because it must always be closed before you start the engine"
+        "So you can close it to stop the engine quickly in an emergency"
       ],
       "correctIndex": 0,
-      "explanation": "The seacock lets sea water into the engine's cooling circuit. Being able to shut it fast can stop a leak becoming a flood.",
+      "explanation": "The seacock lets sea water into the engine's cooling circuit. Being able to shut it fast can stop a leak becoming a flood. Closing it is not a way to stop the engine: running with it closed quickly damages the pump and the exhaust.",
       "reviewStatus": "draft"
     },
     {
@@ -515,7 +535,7 @@
       "moduleId": "m01",
       "lessonId": "m01-l04",
       "difficulty": 2,
-      "prompt": "When you trace the fuel line on your own engine, what are you most likely to find between the tank and the engine-mounted filter?",
+      "prompt": "When you trace the fuel line on many installations, what will you often find between the tank and the engine-mounted filter?",
       "options": [
         "A primary filter, often with a water trap",
         "The raw water strainer and its removable basket",
@@ -523,9 +543,9 @@
         "The engine oil filter"
       ],
       "correctIndex": 0,
-      "explanation": "Fuel usually passes through a primary filter with a water trap before it reaches the finer filter on the engine. The strainer, heat exchanger and oil filter belong to the cooling and lubrication systems.",
+      "explanation": "Many installations have a primary filter with a water trap before the finer filter on the engine, although layouts vary and not every boat has one in the same place. The strainer, heat exchanger and oil filter belong to the cooling and lubrication systems.",
       "reviewStatus": "draft",
-      "reviewNote": "Fuel system layouts vary; confirm this is a fair description of a typical installation."
+      "reviewNote": "Audit note 3, accept with qualification: the question and explanation now say a primary filter with a water trap is common, not fitted on every layout. Please approve."
     },
     {
       "id": "m01-q020",
@@ -537,7 +557,7 @@
         "So you can find parts quickly when something goes wrong",
         "Because it is a legal requirement for all boats with engines",
         "So the engine warranty stays valid",
-        "Because the engine will not start without them"
+        "So a surveyor can value the engine"
       ],
       "correctIndex": 0,
       "explanation": "Faults tend to happen at awkward moments. A labelled picture saves time finding the dipstick, filters or seacock when you are under pressure. It is a good habit, not a legal or warranty requirement.",

@@ -6,20 +6,26 @@ This pack contains every lesson, quiz question and Fault finder entry in the app
 
 The content deliberately gives no engine-specific figures (torque settings, pressures, clearances, oil grades or service intervals) and refers the reader to their engine handbook instead.
 
+**Content version:** 1.1 (draft) · **Technical review:** 2026-11-20 · **Engineer approval:** pending
+
+**Changes in 1.1:** Safety and accuracy corrections after an independent technical review: shared stop-engine and warning wording shown before the steps, statements scoped to installation type, an action level on every procedural step, Fault finder stop cards with unranked possible causes, and corrected quiz questions. Awaiting engineer approval. See `docs/review-ledger.md` for each change by finding.
+
+Warnings are shown in the app **before** the steps they apply to. Each procedural step carries an action level: **Observe** (Look and check only. Nothing is opened, adjusted or taken apart); **Owner (handbook required)** (Owner maintenance or operation. Follow your engine handbook for your engine's exact method); **Engineer only** (A job for a qualified marine engineer with the right tools and training).
+
 ## Summary
 
 | Module | Lessons | Questions | Difficulty 1 / 2 / 3 | Review notes | Reviewer sign-off |
 |---|---|---|---|---|---|
-| 1. How a diesel engine works | 4 | 20 | 8 / 10 / 2 | 3 | |
-| 2. Fuel system and bleeding | 5 | 21 | 6 / 10 / 5 | 5 | |
-| 3. Cooling systems | 5 | 20 | 6 / 9 / 5 | 6 | |
-| 4. Lubrication | 4 | 20 | 8 / 8 / 4 | 3 | |
-| 5. Electrics and starting | 5 | 20 | 6 / 9 / 5 | 4 | |
-| 6. Drive belts and stern gear | 4 | 20 | 6 / 9 / 5 | 6 | |
-| 7. Routine maintenance | 4 | 20 | 7 / 9 / 4 | 2 | |
-| 8. Fault finding | 4 | 20 | 5 / 9 / 6 | 1 | |
-| Fault finder | 6 symptoms | | | 2 | |
-| **Total** | **35** | **161** | **52 / 73 / 36** | **32** | |
+| 1. How a diesel engine works | 4 | 20 | 8 / 10 / 2 | 5 | |
+| 2. Fuel system and bleeding | 5 | 23 | 6 / 10 / 7 | 8 | |
+| 3. Cooling systems | 5 | 22 | 6 / 10 / 6 | 9 | |
+| 4. Lubrication | 4 | 21 | 8 / 8 / 5 | 4 | |
+| 5. Electrics and starting | 5 | 21 | 5 / 11 / 5 | 8 | |
+| 6. Drive belts and stern gear | 4 | 21 | 6 / 9 / 6 | 8 | |
+| 7. Routine maintenance | 4 | 21 | 7 / 10 / 4 | 5 | |
+| 8. Fault finding | 4 | 22 | 4 / 12 / 6 | 8 | |
+| Fault finder | 6 symptoms | | | 3 | |
+| **Total** | **35** | **171** | **50 / 80 / 41** | **58** | |
 
 In the quiz, the four options are shuffled every time a question is shown. Here the correct answer is marked ✅.
 
@@ -29,38 +35,64 @@ Every lesson marked hands-on ends with this reminder, added by the app:
 
 ## All review notes
 
-- [m01-l01 lesson: Compression ignition](#m01-l01): Step 2 gives a typical compression ratio range of roughly 15 to 23 to 1 as general background. Please confirm the range is fair for small marine diesels, or suggest removing the figure.
-- [m01-q004 question](#m01-q004): Confirm the 15:1 to 23:1 range is a fair general figure for small marine diesels; the distractors are deliberately far outside it.
-- [m01-q019 question](#m01-q019): Fuel system layouts vary; confirm this is a fair description of a typical installation.
-- [m02-l01 lesson: From tank to injector](#m02-l01): The order of the lift pump and fine filter, and whether a separate primary filter is fitted, varies between installations. Please check that the general path described is fair for typical small marine diesels.
-- [m02-q010 question](#m02-q010): Some engines stop differently (for example with an air flap or a key-operated solenoid). Confirm 'most' is fair.
-- [m02-l04 lesson: Bleeding the fuel system](#m02-l04): Bleeding procedures vary widely: some engines are self-bleeding, some need the injection pump bled, and some need injector pipes loosened while cranking. The lesson deliberately avoids engine-specific steps. Please check the dead-lever advice and the general order are sound.
-- [m02-q016 question](#m02-q016): Confirm this is a fair explanation for the common mechanical lift pump design.
-- [m02-l05 lesson: Diesel bug and fuel care](#m02-l05): Whether to keep tanks full over winter is commonly recommended but debated (for example where fuel ages). Please confirm the wording on lay-up and on biodiesel content is balanced and current.
-- [m03-l01 lesson: Direct and indirect cooling](#m03-l01): Please check the keel cooling paragraph is accurate in general terms and that the claims about direct cooling (running cooler to limit salt deposits) are fair.
-- [m03-q004 question](#m03-q004): Please confirm this is a fair general explanation.
-- [m03-l02 lesson: The raw water circuit: seacock and strainer](#m03-l02): Anti-siphon arrangements and whether two clips are expected on every below-waterline hose vary with installation and guidance. Please confirm the wording is appropriately general.
-- [m03-l03 lesson: The raw water pump impeller](#m03-l03): Some impellers can be fitted either way round and the direction is set by rotation; others are handed. Please confirm the fitting advice and the lubricant wording (some makers specify a particular product or none).
-- [m03-q012 question](#m03-q012): Removing the impeller over winter is common practice but not universal advice; please confirm.
-- [m03-l04 lesson: Heat exchanger, coolant circuit and thermostat](#m03-l04): Whether the thermostat is on the coolant side, the raw water side (on direct cooling) or both varies, as do sacrificial anodes in heat exchangers. Please confirm the general description and the 'two liquids never mix' statement (true unless the exchanger has failed).
-- [m04-l03 lesson: Changing the oil and filter](#m04-l03): The filter-tightening advice is deliberately general ('as the filter's maker directs'). Please confirm the refill sequence (start, check pressure, check leaks, recheck level) is sound in general.
-- [m04-l04 lesson: Oil pressure warnings](#m04-l04): Please confirm the 'normal' behaviour described (lamp lit with ignition on before start, highest pressure cold, lowest hot at idle) applies to typical small marine diesels.
-- [m04-q020 question](#m04-q020): Confirm this applies generally.
-- [m05-l01 lesson: Batteries](#m05-l01): Battery chemistries vary (flooded, sealed, gel, AGM, lithium). The lesson avoids voltage figures deliberately. Please check the hydrogen and acid caution is fair given the range of battery types.
-- [m05-q004 question](#m05-q004): Applies mainly to lead-acid types; confirm wording.
-- [m05-l02 lesson: The alternator and charging](#m05-l02): Some installations have alternator protection devices that make isolator switching safe. Please confirm the 'unless your installation is designed for it' wording is appropriate.
-- [m05-l04 lesson: Glow plugs and cold starting](#m05-l04): Please confirm the glow plug failure symptoms and the starting spray warning are accurate in general.
-- [m06-l01 lesson: Drive belts](#m06-l01): No deflection figures are given, by design. Please confirm the guidance on new belts bedding in and the description of belt types is accurate.
-- [m06-l02 lesson: The gearbox](#m06-l02): Please confirm the gear-changing advice (idle, brief pause in neutral) is fair general guidance for common small-boat gearboxes.
-- [m06-q009 question](#m06-q009): Some gearboxes drag slightly in neutral when cold; confirm the answer is unambiguous.
-- [m06-l03 lesson: The stern gland](#m06-l03): Expected drip rates and the need to 'burp' dripless seals vary by product. The lesson defers to the maker. Please check the general descriptions are accurate.
-- [m06-q012 question](#m06-q012): Some packed glands are designed to be drip-free when stationary and drip only slowly when running. Confirm wording.
-- [m06-l04 lesson: Shaft, coupling and propeller](#m06-l04): Please check the description of cutless bearing wear and shaft anodes is accurate in general.
-- [m07-q010 question](#m07-q010): Some older panels have no hour meter; owners then estimate from a log. Consider whether this needs a mention.
-- [m07-l03 lesson: Winterising and recommissioning](#m07-l03): Winterising methods differ a great deal between engines and climates (draining versus antifreeze, removing impellers, fuel tank full or not). Please confirm the advice is balanced and adequately defers to the handbook.
-- [m08-l02 lesson: When the engine will not start](#m08-l02): The advice on closing the seacock during prolonged cranking is widely given but engine-dependent. Please confirm the wording is safe and defers appropriately to the handbook.
-- [Fault finder: Won't start](#fault-wont-start): The final check advises closing the raw water seacock during long cranking on wet-exhaust engines. This is engine-dependent; please confirm the wording is safe.
-- [Fault finder: Low oil pressure](#fault-low-oil-pressure): Please confirm the order of likely causes, and that advising against running with milky or fuel-smelling oil is appropriate.
+- [m01-l01 lesson: Compression ignition](#m01-l01): Audit note 1, accept with qualification (S17): the 15 to 23 to 1 figure is now described as a typical range for many conventional small diesels, not a specification. Step 5 now also covers electronically controlled engines (S14). Please approve.
+- [m01-q004 question](#m01-q004): Audit note 2, revise (S17): the question now tests what a compression ratio means rather than recall of a range, and the explanation gives the range as typical only. Please approve.
+- [m01-l02 lesson: The four-stroke cycle](#m01-l02): S14: step 5 now distinguishes mechanical injection timing from electronically controlled common-rail injection. Please approve.
+- [m01-l03 lesson: The main components](#m01-l03): S14: the injection step and diagram caption are now labelled as a typical mechanically injected engine, with a short common-rail description. Please approve.
+- [m01-q019 question](#m01-q019): Audit note 3, accept with qualification: the question and explanation now say a primary filter with a water trap is common, not fitted on every layout. Please approve.
+- [m02-l01 lesson: From tank to injector](#m02-l01): Audit note 4, revise (S14): the fuel path is now presented as one example configuration; the text says filter and lift-pump order vary, and the high-pressure side covers common rail. Please approve.
+- [m02-l03 lesson: Lift pump, injection pump and injectors](#m02-l03): S02 and S14, with audit note 5: added a common-rail overview with a strict no-owner boundary on the high-pressure side; the caution no longer implies high-pressure pipes may be loosened with the engine stopped; the stop-control step now says 'many mechanically injected diesels'. Please approve.
+- [m02-q010 question](#m02-q010): Audit note 5, revise: the question now says 'many mechanically injected' engines, with credible distractors and a warning about the isolator in the explanation. Please approve.
+- [m02-q022 question](#m02-q022): New in content 1.1 (S20): a safety-first scenario question on fuel spray, matching the Fault finder stop card. Please approve.
+- [m02-l04 lesson: Bleeding the fuel system](#m02-l04): Audit note 6, safety revise (P0, S02): warning B is now shown before the steps, verbatim, together with the wet-exhaust warning A for prolonged cranking. Instructions are limited to handbook-approved low-pressure bleeding, the reference to loosening injector pipes has been removed, and a final engineer-only step covers anything else. Audit note 7: the dead-lever step now applies to cam-operated pumps only. Please approve.
+- [m02-q016 question](#m02-q016): Audit note 7, accept with qualification: the question now names cam-operated mechanical pumps, and the explanation says electric pumps differ. Please approve.
+- [m02-q023 question](#m02-q023): New in content 1.1 (S02, S20): a safety-first question on the low-pressure boundary, with warning B in the feedback. Please approve.
+- [m02-l05 lesson: Diesel bug and fuel care](#m02-l05): Audit note 8, revise (S18): the lay-up advice no longer recommends full tanks; it stresses clean, dry fuel, water management, avoiding stale fuel and the maker's and supplier's guidance. Please approve.
+- [m03-l01 lesson: Direct and indirect cooling](#m03-l01): Audit note 9, revise (S05): 'both systems share' is now 'in common raw-water and heat-exchanger installations', and keel-cooled and dry-exhaust arrangements are explained separately. Please approve.
+- [m03-q004 question](#m03-q004): Audit note 10, verify: wording kept, with 'designed to' added; please check it against direct and indirect installations before approval.
+- [m03-l02 lesson: The raw water circuit: seacock and strainer](#m03-l02): Audit note 11, revise (S06): the hose-clip sentence is replaced with wording E, verbatim, and the anti-siphon step now says it depends on the installation design. The 'most common causes of overheating' claim is removed (S04). Please approve.
+- [m03-q021 question](#m03-q021): New in content 1.1 (S06): checks the corrected hose and fitting wording E. Please approve.
+- [m03-l03 lesson: The raw water pump impeller](#m03-l03): Audit note 12, revise (S07): the fitting step now defers to the pump or impeller maker for vane direction and lubricant and says not every impeller is handed; a new step covers inspecting the cover, cam, wear plate and missing vanes. Please approve.
+- [m03-q012 question](#m03-q012): Audit note 13, accept with qualification: the explanation now presents removing the impeller over winter as optional and engine-specific. Please approve.
+- [m03-l04 lesson: Heat exchanger, coolant circuit and thermostat](#m03-l04): Audit note 14, revise (S08): 'the two liquids never mix' is replaced with the audit's wording; thermostat position is described as varying between engines. Please approve.
+- [m03-l05 lesson: Checking the cooling system](#m03-l05): S04: the stop-engine condition D is now shown before the steps, verbatim, in place of the old closing caution. Please approve.
+- [m03-q022 question](#m03-q022): New in content 1.1 (S04, S20): a safety-first ordering question using stop-engine condition D. Please approve.
+- [m04-l03 lesson: Changing the oil and filter](#m04-l03): Audit note 15, accept with qualification: the refill step now requires immediate oil-pressure confirmation (stop at once if the warning stays on), a leak check, and a recheck after settling; disposal is in step 6. Please approve.
+- [m04-l04 lesson: Oil pressure warnings](#m04-l04): Audit note 16, accept with qualification, and S03: stop-engine condition C now opens the lesson, verbatim; the 'normal' behaviour is described as typical, with panels differing; 'most common' is removed and causes are unranked. The lesson is now a procedure, so it ends with the handbook reminder. Please approve.
+- [m04-q020 question](#m04-q020): Audit note 17, verify: the question now asks about a general tendency, with no universal figure or gauge response. Please confirm it applies generally.
+- [m04-q021 question](#m04-q021): New in content 1.1 (S03, S20): a scenario question showing that a normal oil level does not clear the stop condition. Please approve.
+- [m05-l01 lesson: Batteries](#m05-l01): Audit note 18, revise: the hydrogen and acid warning now applies to lead-acid batteries, with a separate statement that lithium batteries have different hazards and their own management system. Please approve.
+- [m05-q004 question](#m05-q004): Audit note 19, revise: the question is now limited to lead-acid batteries, and the explanation says lithium hazards differ. Please approve.
+- [m05-l02 lesson: The alternator and charging](#m05-l02): S09 and audit note 20, accept with qualification: a lit charge lamp now 'indicates a charging-system fault or failure to excite' rather than proving the alternator is not charging; the isolator step says 'specifically designed and approved'. Please approve.
+- [m05-q006 question](#m05-q006): S09: the key no longer says the lamp proves the alternator is not charging. Please approve.
+- [m05-l03 lesson: The starter motor and starting circuit](#m05-l03): S01: the wet-exhaust waterlock warning A is now shown before the steps, verbatim, because the lesson discusses cranking. Please approve.
+- [m05-l04 lesson: Glow plugs and cold starting](#m05-l04): Audit note 21, accept with qualification: the glow plug symptoms are now described as clues, not exclusive to glow plugs; the starting spray warning is unchanged. Please approve.
+- [m05-l05 lesson: Warning lights and basic electrical checks](#m05-l05): S10: the negative-lead-first advice is now limited to conventional negative-earth lead-acid systems, with the vessel's isolation procedure, separate starter and house banks and lithium systems covered. The meter step adds safe voltage use and a prohibition on measuring current across a battery (module 5 judgement). Please approve.
+- [m05-q021 question](#m05-q021): New in content 1.1 (module 5 judgement, S20): safe multimeter use. Please approve.
+- [m06-l01 lesson: Drive belts](#m06-l01): Audit note 22, accept with qualification: tensioning, re-tensioning and belt type now explicitly follow the engine maker. Please approve.
+- [m06-l02 lesson: The gearbox](#m06-l02): Audit note 23, accept with qualification: the neutral pause applies where the gearbox handbook supports it. Step 4 now distinguishes normal slight cold drag from positive drive (note 24). Please approve.
+- [m06-q009 question](#m06-q009): Audit note 24, revise: the question now describes steady drive with a warm engine, and the explanation separates normal slight cold drag from positive drive. Please approve.
+- [m06-l03 lesson: The stern gland](#m06-l03): Audit note 25, revise (S11): drip rates, venting and adjustment are now product-specific; new or increasing leakage is treated as urgent with a bilge pumping check; adjustment only with the shaft unable to turn. Please approve.
+- [m06-q012 question](#m06-q012): Audit note 26, accept with qualification (S11): a small drip while turning may be normal for some packed glands; the explanation makes drip rates product-specific. Please approve.
+- [m06-q014 question](#m06-q014): S11: the key now treats leakage from a seal designed not to drip as urgent and adds the bilge pumping check. Please approve.
+- [m06-q021 question](#m06-q021): New in content 1.1 (S11, S20): a safety-first scenario on shaft-seal leakage, matching the Fault finder stop card. Please approve.
+- [m06-l04 lesson: Shaft, coupling and propeller](#m06-l04): Audit note 27, accept with qualification: shaft play is now described as one clue, to be checked against the bearing maker's tolerances. Please approve.
+- [m07-l01 lesson: Daily pre-start checks](#m07-l01): S15: the pre-start checks now include water ingress, the air intake and engine space ventilation, the exhaust condition, and a propeller-clear check where safe and practicable. Please approve.
+- [m07-q021 question](#m07-q021): New in content 1.1 (S15): the propeller-clear pre-start check. Please approve.
+- [m07-l02 lesson: Service intervals and records](#m07-l02): S19: running hours now come from the hour meter where fitted, otherwise from a documented operating log. Please approve.
+- [m07-q010 question](#m07-q010): Audit note 28, revise (S19): the question now says 'where one is fitted', and the explanation covers keeping a log on engines without a meter. Please approve.
+- [m07-l03 lesson: Winterising and recommissioning](#m07-l03): Audit note 29, revise (S18): raw water circuit protection, antifreeze type and draining method now follow the engine maker; full tanks and impeller removal are no longer presented as universal. Please approve.
+- [m08-l01 lesson: A systematic approach](#m08-l01): S16 and the Fault finder judgement: the lesson now lists the seven stop conditions that have Fault finder cards, and no longer says the Fault finder ranks causes. Please approve.
+- [m08-q021 question](#m08-q021): New in content 1.1 (S20): a safety-first ordering question. Please approve.
+- [m08-l02 lesson: When the engine will not start](#m08-l02): Audit note 30, safety revise (P0, S01), and S13: the advice to close the seacock during long cranking is removed; warning A is now shown before the steps, verbatim, and any seawater isolation is left to a documented manufacturer procedure. The won't-fire step now covers the stop control, electronic inhibit, fuel, air intake, pre-heating and compression. Please approve.
+- [m08-q006 question](#m08-q006): S13: the question now asks for a sensible first check and includes the stop control; the explanation covers pre-heating, electronic inhibit, air intake and compression. Please approve.
+- [m08-q022 question](#m08-q022): New in content 1.1 (S01, S20): tests the corrected wet-exhaust advice, including the old 'close the seacock' advice as a wrong answer. Please approve.
+- [m08-l03 lesson: When the engine stops or loses power](#m08-l03): S12: stalling in gear is now 'one important possibility', with idle speed, gearbox and shaft binding listed and a safe-inspection instruction. Please approve.
+- [m08-q012 question](#m08-q012): S12: the question now teaches a safe inspection first instead of naming a single cause. Please approve.
+- [m08-l04 lesson: Overheating, smoke and alarms](#m08-l04): S03 and S04: stop-engine conditions C and D now open the lesson, verbatim; overheating checks happen only after the engine has cooled; 'most overheating starts on the raw water side' is removed; restarting only once the cause is corrected. Please approve.
+- [Fault finder: Won't start](#fault-wont-start): Audit note 31, safety revise (P0, S01): the advice to close the raw water seacock during long cranking is removed. Warning A is shown first, verbatim, with the waterlock stop card, consistent with lesson 8.2. Causes now include an engine inhibit, air intake and compression (S13). Please approve.
+- [Fault finder: Overheating](#fault-overheating): S04: stop-engine condition D is shown first, verbatim, with the overheating stop card; the blocked strainer is no longer called the most common cause, causes are unranked, and every check happens after the engine has cooled. Please approve.
+- [Fault finder: Low oil pressure](#fault-low-oil-pressure): Audit note 32, safety revise (P0, S03): stop-engine condition C is shown first, verbatim, with the stop card; 'the most common cause' is removed and causes are unranked; the checks begin with 'do not restart'. Please approve, including the advice against running with milky or fuel-smelling oil.
 
 ## Module 1: How a diesel engine works
 
@@ -72,7 +104,7 @@ Every lesson marked hands-on ends with this reminder, added by the app:
 
 `m01-l01` · about 6 min · draft
 
-> **⚠️ Review note:** Step 2 gives a typical compression ratio range of roughly 15 to 23 to 1 as general background. Please confirm the range is fair for small marine diesels, or suggest removing the figure.
+> **⚠️ Review note:** Audit note 1, accept with qualification (S17): the 15 to 23 to 1 figure is now described as a typical range for many conventional small diesels, not a specification. Step 5 now also covers electronically controlled engines (S14). Please approve.
 
 A diesel engine has no spark plugs. It squeezes air so hard that the air becomes hot enough to set fire to the fuel the moment it is sprayed in. Understanding this one idea explains most of what a diesel needs to run: clean air, clean fuel delivered at the right moment, and good compression.
 
@@ -85,10 +117,10 @@ A diesel engine has no spark plugs. It squeezes air so hard that the air becomes
 Caption: Air is compressed and heats up; fuel sprayed into the hot air ignites by itself.
 
 1. **Air comes in.** The piston moves down and draws a cylinder full of air in through the air filter and inlet valve. Only air enters, not a mixture of air and fuel.
-2. **The air is squeezed.** The piston rises and compresses the air into a small fraction of its original volume. On a typical small marine diesel the air ends up roughly 15 to 23 times smaller, which is known as the compression ratio.
+2. **The air is squeezed.** The piston rises and compresses the air into a small fraction of its original volume. The ratio between the two volumes is called the compression ratio. On many conventional small marine diesels it is somewhere around 15 to 23 to 1, but that is a typical range, not a specification for any particular engine.
 3. **The air gets very hot.** Squeezing air heats it, much as a bicycle pump gets warm in use. By the top of the stroke the air is hundreds of degrees hotter than the temperature at which diesel fuel will ignite on its own.
 4. **Fuel is sprayed in and burns.** Just before the piston reaches the top, an injector sprays a fine mist of fuel into the hot air. It ignites without a spark, and the expanding gas pushes the piston down.
-5. **More fuel means more power.** The throttle lever on a diesel controls how much fuel is injected. It does not restrict the air supply the way the throttle on a petrol engine does.
+5. **More fuel means more power.** On a typical mechanically injected diesel, the throttle lever controls how much fuel is injected. On an electronically controlled engine it sends a signal to the engine's control unit, which does the same job. Either way, a diesel does not restrict its air supply the way the throttle on a petrol engine does.
 
 #### Questions for lesson 1.1 (5)
 
@@ -99,9 +131,9 @@ Caption: Air is compressed and heats up; fuel sprayed into the hot air ignites b
 How is the fuel ignited in a running diesel engine?
 
 - A. By the heat of the compressed air in the cylinder ✅
-- B. By a spark plug in each cylinder
-- C. By glow plugs that stay switched on while the engine runs
-- D. By a spark from the alternator
+- B. By glow plugs that stay switched on while the engine runs
+- C. By a spark plug in each cylinder
+- D. By the injector heating the fuel as it sprays it
 
 *Explanation:* Diesels rely on compression ignition. Squeezing the air makes it hot enough to ignite the fuel as soon as it is injected.
 
@@ -114,7 +146,7 @@ What does moving the throttle lever on a diesel engine actually change?
 - A. The amount of fuel injected into each cylinder ✅
 - B. How far a butterfly valve in the air intake is opened
 - C. The timing of the spark
-- D. The flow of raw cooling water
+- D. The speed of the camshaft compared with the crankshaft
 
 *Explanation:* A diesel's speed and power are set by the quantity of fuel injected. Unlike a petrol engine, it does not throttle the incoming air.
 
@@ -127,7 +159,7 @@ Why does a diesel engine need a high compression ratio?
 - A. To heat the air enough to ignite the fuel ✅
 - B. To keep the cylinders cool while the engine is running
 - C. To raise the engine's oil pressure
-- D. To make the exhaust note quieter
+- D. To push more fuel through the injectors
 
 *Explanation:* The air must be squeezed hard to reach a temperature well above the point at which diesel fuel ignites on its own.
 
@@ -135,16 +167,16 @@ Why does a diesel engine need a high compression ratio?
 
 **m01-q004** · difficulty 2 (medium) · draft
 
-> **⚠️ Review note:** Confirm the 15:1 to 23:1 range is a fair general figure for small marine diesels; the distractors are deliberately far outside it.
+> **⚠️ Review note:** Audit note 2, revise (S17): the question now tests what a compression ratio means rather than recall of a range, and the explanation gives the range as typical only. Please approve.
 
-Roughly what compression ratio would you expect on a small marine diesel?
+An engine's compression ratio is given as 18 to 1. What does that figure describe?
 
-- A. About 15:1 to 23:1 ✅
-- B. About 4:1 to 6:1
-- C. About 8:1 to 10:1
-- D. About 40:1 to 50:1 or higher
+- A. The space above the piston shrinks to an eighteenth as it rises ✅
+- B. There are 18 parts of air to every part of fuel burnt in the cylinder
+- C. Fuel is injected at 18 times the pressure of the outside air
+- D. The crankshaft turns 18 times for every power stroke in each cylinder
 
-*Explanation:* Small diesels typically compress the air to between about a fifteenth and a twenty-third of its volume. Ratios near 8:1 to 10:1 are more typical of petrol engines.
+*Explanation:* The compression ratio compares the space above the piston at the bottom of its stroke with the space left at the top. Many conventional small diesels are somewhere around 15:1 to 23:1, but that is a typical range, not a specification.
 
 <a id="m01-q018"></a>
 
@@ -165,6 +197,8 @@ Why can a worn engine with poor compression be hard to start from cold?
 
 `m01-l02` · about 8 min · draft
 
+> **⚠️ Review note:** S14: step 5 now distinguishes mechanical injection timing from electronically controlled common-rail injection. Please approve.
+
 Most small marine diesels work on a four-stroke cycle. Each stroke is one movement of the piston, either up or down the cylinder. Four strokes make one complete cycle, and the crankshaft turns twice in that time.
 
 **Diagram (four-stroke-cycle).** Four stages. 1, induction: inlet valve open, piston moving down, drawing in air. 2, compression: both valves closed, piston moving up, fuel injected near the top. 3, power: both valves closed, burning gas forces the piston down. 4, exhaust: exhaust valve open, piston moving up, pushing out burnt gas.
@@ -180,7 +214,7 @@ Caption: Induction, compression, power and exhaust, shown with the valves open o
 2. **2. Compression.** Both valves close and the piston moves up, compressing and heating the trapped air. Near the top of this stroke the injector sprays in fuel.
 3. **3. Power.** The fuel burns and the hot, expanding gas forces the piston down. This is the only stroke that produces power; the flywheel keeps the engine turning through the other three.
 4. **4. Exhaust.** The exhaust valve opens and the rising piston pushes the burnt gas out of the cylinder and into the exhaust system. The cycle then starts again with induction.
-5. **Timing it all.** The camshaft opens each valve once per cycle, so it turns at half the speed of the crankshaft. The injection pump is timed to the crankshaft so that fuel arrives at the right moment for each cylinder.
+5. **Timing it all.** The camshaft opens each valve once per cycle, so it turns at half the speed of the crankshaft. On a mechanically injected engine the injection pump is driven and timed from the crankshaft; on a common-rail engine an electronic control unit times each injection instead. Either way, fuel arrives at the right moment for each cylinder.
 
 #### Questions for lesson 1.2 (5)
 
@@ -232,7 +266,7 @@ What does a diesel engine draw into the cylinder on the induction stroke?
 - A. Air only ✅
 - B. A mixture of air and fuel
 - C. Fuel only
-- D. Air mixed with exhaust gas from the previous cycle
+- D. Air mixed with a fine mist of lubricating oil
 
 *Explanation:* Only air is drawn in. The fuel is added later by the injector, directly into the hot compressed air.
 
@@ -255,7 +289,11 @@ How fast does the camshaft turn compared with the crankshaft?
 
 `m01-l03` · about 8 min · draft
 
+> **⚠️ Review note:** S14: the injection step and diagram caption are now labelled as a typical mechanically injected engine, with a short common-rail description. Please approve.
+
 Whatever the make, small marine diesels are built from the same basic parts. Knowing what each one does makes the rest of this guide, and any conversation with an engineer, much easier to follow.
+
+*Applies to:* Mechanical injection, Common rail
 
 **Diagram (engine-layout).** Side view. From top to bottom: the cylinder head with valves and injectors, the cylinder block containing the pistons, the crankshaft, and the oil sump. The flywheel is on the end of the crankshaft and the fuel injection pump is on the side of the block.
 
@@ -267,13 +305,13 @@ Whatever the make, small marine diesels are built from the same basic parts. Kno
 - *Flywheel*
 - *Fuel injection pump*
 
-Caption: A simplified side view of a small marine diesel with its main parts labelled.
+Caption: A simplified side view of a typical mechanically injected small marine diesel with its main parts labelled.
 
 1. **Cylinder block and head.** The block is the main casting that contains the cylinders. The cylinder head bolts on top and carries the valves and injectors. A gasket between them seals in compression, oil and coolant.
 2. **Pistons, connecting rods and crankshaft.** Each piston slides up and down in its cylinder. A connecting rod links it to the crankshaft, which turns that up-and-down motion into rotation.
 3. **Camshaft and valves.** The camshaft is driven from the crankshaft and opens the inlet and exhaust valves at the right moments in the cycle.
 4. **Flywheel.** A heavy wheel on the end of the crankshaft. It smooths out the pulses from each power stroke, and its toothed outer ring is what the starter motor turns to start the engine.
-5. **Fuel injection pump and injectors.** The injection pump raises the fuel to a very high pressure and delivers a measured amount to each injector at the right time. The injectors spray it into the cylinders as a fine mist.
+5. **Fuel injection equipment.** On a typical mechanically injected diesel, the injection pump raises the fuel to a very high pressure and delivers a measured amount to each injector at the right time. Common-rail engines instead keep fuel at very high pressure in a shared rail, and an electronic control unit opens each injector. In both, the injectors spray the fuel into the cylinders as a fine mist.
 6. **Supporting systems.** Around the core engine you will find the cooling system, the lubrication system with its sump and oil filter, the air intake and exhaust, and the electrical parts such as the starter motor and alternator. Each has its own module in this guide.
 
 #### Questions for lesson 1.3 (5)
@@ -311,9 +349,9 @@ What is the job of the fuel injection pump?
 Where are the inlet and exhaust valves usually found?
 
 - A. In the cylinder head ✅
-- B. In the sump
-- C. In the gearbox
-- D. In the heat exchanger
+- B. In the cylinder block, beside the crankshaft
+- C. In the sump
+- D. In the fuel injection pump
 
 *Explanation:* The cylinder head sits on top of the block and carries the valves and the injectors.
 
@@ -326,7 +364,7 @@ Which of these is a job of the flywheel?
 - A. Smoothing out the pulses from each power stroke ✅
 - B. Pumping oil round the engine
 - C. Driving the raw water pump through a toothed belt
-- D. Charging the batteries
+- D. Setting the timing of each injection
 
 *Explanation:* The flywheel's weight carries the engine through the non-power strokes. Its toothed ring also gives the starter motor something to turn.
 
@@ -338,8 +376,8 @@ What seals the joint between the cylinder head and the cylinder block?
 
 - A. The head gasket ✅
 - B. The rocker cover seal
-- C. The impeller
-- D. The thermostat
+- C. The sump gasket
+- D. The exhaust manifold gasket
 
 *Explanation:* The head gasket keeps compression, oil and coolant in their proper places where the head meets the block.
 
@@ -351,15 +389,17 @@ What seals the joint between the cylinder head and the cylinder block?
 
 The best time to find the dipstick, filters and seacock is on a calm day in harbour, not when something has gone wrong at sea. This lesson walks you round your own engine so you know where everything is before you need it.
 
-1. **Make the engine safe.** Check the engine is stopped and cool. Remove the key or switch off the engine isolator so nobody can start it while your hands are near moving parts.
-2. **Open up and look.** Remove the engine covers and use a good torch. Note how easy or hard it is to reach each side of the engine.
-3. **Find the oil checks.** Locate the engine oil dipstick and filler cap, the oil filter and, if fitted separately, the gearbox dipstick.
-4. **Follow the fuel.** Trace the fuel line from the tank shut-off valve to the primary filter (often with a water trap), then to the engine-mounted fine filter and the injection pump.
-5. **Follow the cooling water.** Find the raw water seacock and strainer, the raw water pump, and on most engines the heat exchanger and the coolant header tank with its filler cap.
-6. **Find the controls and electrics.** Identify the engine stop control, the drive belt or belts, the alternator, the starter motor and the battery isolator switch.
-7. **Write it down.** Make a simple sketch or take photos and label them. Keep a copy on board with your engine handbook.
+**Caution (shown before the steps):** Engine parts can stay hot for a long time after the engine stops, and belts and pulleys can trap fingers or clothing. Never reach into the engine space while the engine is running.
 
-**Caution:** Engine parts can stay hot for a long time after the engine stops, and belts and pulleys can trap fingers or clothing. Never reach into the engine space while the engine is running.
+*Applies to:* Mechanical injection, Common rail, Direct (raw water) cooling, Heat-exchanger cooling, Keel cooling
+
+1. `Owner (handbook required)` **Make the engine safe.** Check the engine is stopped and cool. Remove the key or switch off the engine isolator so nobody can start it while your hands are near moving parts.
+2. `Observe` **Open up and look.** Remove the engine covers and use a good torch. Note how easy or hard it is to reach each side of the engine.
+3. `Observe` **Find the oil checks.** Locate the engine oil dipstick and filler cap, the oil filter and, if fitted separately, the gearbox dipstick.
+4. `Observe` **Follow the fuel.** Trace the fuel line from the tank shut-off valve to the primary filter (on many installations with a water trap), then to the engine-mounted fine filter and the injection pump, or the high-pressure pump on a common-rail engine.
+5. `Observe` **Follow the cooling water.** Find the raw water seacock and strainer and the raw water pump. On an engine with indirect cooling, also find the heat exchanger and the coolant header tank with its filler cap. A keel-cooled engine has no raw water pump for cooling; find where its coolant pipes run instead.
+6. `Observe` **Find the controls and electrics.** Identify the engine stop control, the drive belt or belts, the alternator, the starter motor and the battery isolator switch.
+7. `Observe` **Write it down.** Make a simple sketch or take photos and label them. Keep a copy on board with your engine handbook.
 
 *Ends with the handbook reminder.*
 
@@ -387,9 +427,9 @@ Why is it worth knowing exactly where the raw water seacock is before you need i
 - A. So you can close it fast if a hose fails, or before working on the circuit ✅
 - B. So you can open it to top up the engine's coolant
 - C. Because the gearbox oil level is checked beside it
-- D. Because it must always be closed before you start the engine
+- D. So you can close it to stop the engine quickly in an emergency
 
-*Explanation:* The seacock lets sea water into the engine's cooling circuit. Being able to shut it fast can stop a leak becoming a flood.
+*Explanation:* The seacock lets sea water into the engine's cooling circuit. Being able to shut it fast can stop a leak becoming a flood. Closing it is not a way to stop the engine: running with it closed quickly damages the pump and the exhaust.
 
 <a id="m01-q017"></a>
 
@@ -408,16 +448,16 @@ Where would you normally check the engine oil level?
 
 **m01-q019** · difficulty 2 (medium) · draft
 
-> **⚠️ Review note:** Fuel system layouts vary; confirm this is a fair description of a typical installation.
+> **⚠️ Review note:** Audit note 3, accept with qualification: the question and explanation now say a primary filter with a water trap is common, not fitted on every layout. Please approve.
 
-When you trace the fuel line on your own engine, what are you most likely to find between the tank and the engine-mounted filter?
+When you trace the fuel line on many installations, what will you often find between the tank and the engine-mounted filter?
 
 - A. A primary filter, often with a water trap ✅
 - B. The raw water strainer and its removable basket
 - C. The heat exchanger and header tank
 - D. The engine oil filter
 
-*Explanation:* Fuel usually passes through a primary filter with a water trap before it reaches the finer filter on the engine. The strainer, heat exchanger and oil filter belong to the cooling and lubrication systems.
+*Explanation:* Many installations have a primary filter with a water trap before the finer filter on the engine, although layouts vary and not every boat has one in the same place. The strainer, heat exchanger and oil filter belong to the cooling and lubrication systems.
 
 <a id="m01-q020"></a>
 
@@ -428,7 +468,7 @@ Why is it useful to keep labelled photos or a sketch of your engine on board?
 - A. So you can find parts quickly when something goes wrong ✅
 - B. Because it is a legal requirement for all boats with engines
 - C. So the engine warranty stays valid
-- D. Because the engine will not start without them
+- D. So a surveyor can value the engine
 
 *Explanation:* Faults tend to happen at awkward moments. A labelled picture saves time finding the dipstick, filters or seacock when you are under pressure. It is a good habit, not a legal or warranty requirement.
 
@@ -442,9 +482,11 @@ Why is it useful to keep labelled photos or a sketch of your engine on board?
 
 `m02-l01` · about 6 min · draft
 
-> **⚠️ Review note:** The order of the lift pump and fine filter, and whether a separate primary filter is fitted, varies between installations. Please check that the general path described is fair for typical small marine diesels.
+> **⚠️ Review note:** Audit note 4, revise (S14): the fuel path is now presented as one example configuration; the text says filter and lift-pump order vary, and the high-pressure side covers common rail. Please approve.
 
 A diesel engine is fussy about its fuel. It needs a steady supply, free of air, water and dirt, delivered to the injectors at very high pressure. Following the fuel's path from the tank to the cylinders makes most fuel problems much easier to understand.
+
+*Applies to:* Mechanical injection, Common rail
 
 **Diagram (flow).** A flow diagram of a typical fuel system in seven stages: the fuel tank, the shut-off valve, the primary filter and water separator, the lift pump, the engine fine filter, the injection pump and the injectors, with spare fuel returning to the tank.
 
@@ -456,11 +498,11 @@ A diesel engine is fussy about its fuel. It needs a steady supply, free of air, 
 - *Injection pump*: Raises the fuel to a very high pressure and times its delivery.
 - *Injectors*: Spray a fine mist of fuel into each cylinder. Spare fuel returns to the tank.
 
-Caption: A typical fuel path. Your engine may have the parts in a slightly different order or combine some of them.
+Caption: One example layout on a mechanically injected engine. Yours may have the parts in a different order or combine some of them, and a common-rail engine has a high-pressure pump and rail in place of the injection pump.
 
 1. **The tank.** Fuel is drawn through a pick-up pipe that stops a little above the bottom of the tank, so that water and sludge which settle there are less likely to be drawn in. The tank also needs a vent so air can replace the fuel that is used.
-2. **The low-pressure side.** From the tank, fuel passes through a shut-off valve and a primary filter to the lift pump, then through a finer filter mounted on the engine. Everything up to the injection pump works at low pressure, and much of it is under suction. A small leak on the suction side lets air in rather than letting fuel out.
-3. **The high-pressure side.** The injection pump raises the fuel to a very high pressure and sends a measured amount along a separate steel pipe to each injector at exactly the right moment.
+2. **The low-pressure side.** In one common layout, fuel passes from the tank through a shut-off valve and a primary filter to the lift pump, then through a finer filter mounted on the engine. The order and number of filters vary between installations. Everything up to the injection pump works at low pressure, and much of it is under suction. A small leak on the suction side lets air in rather than letting fuel out.
+3. **The high-pressure side.** On a mechanically injected engine, the injection pump raises the fuel to a very high pressure and sends a measured amount along a separate steel pipe to each injector at exactly the right moment. On a common-rail engine, a high-pressure pump keeps fuel in a shared rail and electronically controlled injectors take it from there. Either way, the high-pressure side is not for owner work.
 4. **The return line.** The injection system is supplied with more fuel than it burns. The spare fuel, along with any air it has picked up, goes back to the tank through a return or leak-off line.
 5. **Why air is the enemy.** Air in the fuel compresses instead of building pressure, so the injection pump cannot deliver fuel properly. Even a small bubble can stop the engine. That is why the fuel system has to be bled after it has been opened or allowed to run dry.
 
@@ -473,7 +515,7 @@ Caption: A typical fuel path. Your engine may have the parts in a slightly diffe
 Why does the fuel pick-up pipe usually stop a little above the bottom of the tank?
 
 - A. So water and sludge that settle at the bottom are less likely to be drawn in ✅
-- B. So the tank can never be completely emptied by mistake while the engine is running
+- B. So that a reserve of fuel is kept back for emergencies
 - C. So the fuel stays warmer on its way to the engine in cold weather
 - D. So the tank vent cannot be blocked by fuel when the tank is full
 
@@ -516,7 +558,7 @@ Why can even a small bubble of air stop a diesel engine?
 - C. Air makes the fuel ignite too early, inside the lift pump itself
 - D. Air gets trapped in the filter element and blocks it completely
 
-*Explanation:* Liquid fuel barely compresses, which is how the pump builds very high pressure. Air squashes like a spring instead, so the pressure needed to open the injector is never reached.
+*Explanation:* Liquid fuel barely compresses, which is how the pump builds very high pressure. Air squashes like a spring instead, so the pressure needed to open the injector is not reached.
 
 <a id="m02-l02"></a>
 
@@ -526,14 +568,16 @@ Why can even a small bubble of air stop a diesel engine?
 
 Clean fuel is the single most important thing you can give a diesel engine. Two stages of filtering protect the expensive injection equipment, and the first stage also traps water before it can do harm.
 
-1. **Why filtering matters.** The injection pump and injectors are made to extremely fine tolerances. Particles too small to see, or a drop of water, can wear them, make them stick or stop the engine altogether.
-2. **The primary filter.** The first filter, usually mounted between the tank and the engine, catches larger dirt and separates water from the fuel. Water is heavier than diesel, so it sinks to the bottom of the filter bowl, where you can often see it as a separate layer.
-3. **The engine fine filter.** The second filter, usually on the engine itself, removes much smaller particles. It should only ever see fuel that has already been through the primary filter.
-4. **Checking and draining water.** With the engine stopped, look at the primary filter bowl. If you see water or dirt at the bottom, open the drain into a container until clean fuel runs out, then close it firmly. Make this part of your regular checks, and check again after rough weather or taking on fuel from an unfamiliar source.
-5. **Changing filters.** Filter elements are changed at the intervals in your engine handbook, or sooner if they block. Close the fuel valve, have rags and a container ready, and fit new seals with each element. Afterwards, the system will usually need bleeding to remove the air let in.
-6. **Carry spares.** Keep at least one spare element for each filter, with their seals, on board. A blocked filter is one of the most common reasons for an engine to stop at sea.
+**Caution (shown before the steps):** Diesel is slippery and irritates the skin. Wear gloves, mop up spills straight away, and never let fuel go into the bilge where it could be pumped overboard. No naked flames or smoking while the fuel system is open.
 
-**Caution:** Diesel is slippery and irritates the skin. Wear gloves, mop up spills straight away, and never let fuel go into the bilge where it could be pumped overboard. No naked flames or smoking while the fuel system is open.
+*Applies to:* Mechanical injection, Common rail
+
+1. `Observe` **Why filtering matters.** The injection pump and injectors are made to extremely fine tolerances. Particles too small to see, or a drop of water, can wear them, make them stick or stop the engine altogether.
+2. `Observe` **The primary filter.** The first filter, usually mounted between the tank and the engine, catches larger dirt and separates water from the fuel. Water is heavier than diesel, so it sinks to the bottom of the filter bowl, where you can often see it as a separate layer.
+3. `Observe` **The engine fine filter.** The second filter, usually on the engine itself, removes much smaller particles. It should only ever see fuel that has already been through the primary filter.
+4. `Owner (handbook required)` **Checking and draining water.** With the engine stopped, look at the primary filter bowl. If you see water or dirt at the bottom, open the drain into a container until clean fuel runs out, then close it firmly. Make this part of your regular checks, and check again after rough weather or taking on fuel from an unfamiliar source.
+5. `Owner (handbook required)` **Changing filters.** Filter elements are changed at the intervals in your engine handbook, or sooner if they block. Close the fuel valve, have rags and a container ready, and fit new seals with each element. Afterwards, the system will usually need bleeding or priming to remove the air let in; common-rail engines often have their own priming method in the handbook.
+6. `Owner (handbook required)` **Carry spares.** Keep at least one spare element for each filter, with their seals, on board. A blocked filter can stop an engine at sea, often at an awkward moment.
 
 *Ends with the handbook reminder.*
 
@@ -548,7 +592,7 @@ Where does water collect in a primary fuel filter with a clear bowl?
 - A. At the bottom of the bowl, below the fuel ✅
 - B. At the top of the bowl, floating above the fuel
 - C. Mixed evenly through the fuel
-- D. Inside the paper filter element only
+- D. Soaked into the paper filter element
 
 *Explanation:* Water is denser than diesel, so it sinks and forms a separate layer at the bottom of the bowl, where it can be seen and drained off.
 
@@ -597,17 +641,22 @@ After changing a fuel filter element, what will the engine usually need before i
 
 `m02-l03` · about 6 min · draft
 
-Three components move the fuel through the engine. Knowing what each one does helps you understand why the low-pressure side is something an owner can work on, while the high-pressure side is usually best left to a specialist.
+> **⚠️ Review note:** S02 and S14, with audit note 5: added a common-rail overview with a strict no-owner boundary on the high-pressure side; the caution no longer implies high-pressure pipes may be loosened with the engine stopped; the stop-control step now says 'many mechanically injected diesels'. Please approve.
+
+Several components move the fuel through the engine. Knowing what each one does helps you understand why the low-pressure side is something an owner can work on, while the high-pressure side is for a qualified engineer.
+
+**Caution (shown before the steps):** Fuel in high-pressure pipes and rails is at a pressure high enough to pierce skin and cause serious injury. Never feel for a leak with your hand, and do not loosen any high-pressure fuel connection: that work is for a qualified engineer.
+
+*Applies to:* Mechanical injection, Common rail
 
 1. **The lift pump.** The lift pump draws fuel from the tank and pushes it through the fine filter to the injection pump. Many are driven mechanically by the engine and have a small hand lever, which you use when bleeding the system. Some engines use an electric lift pump instead.
-2. **The injection pump.** The injection pump is the heart of the fuel system. Driven by the engine, it raises the fuel to a very high pressure, meters the amount for each cylinder according to the throttle, and times each delivery to the position of the pistons.
+2. **The injection pump (mechanical injection).** The injection pump is the heart of the fuel system. Driven by the engine, it raises the fuel to a very high pressure, meters the amount for each cylinder according to the throttle, and times each delivery to the position of the pistons.
 3. **The injectors.** Each injector holds a spring-loaded valve that opens only when the fuel pressure is high enough. The fuel then sprays through tiny holes as a fine mist, which mixes with the hot air and burns quickly and cleanly.
-4. **Signs of injector trouble.** A worn or sticking injector may give black smoke, a knock from one cylinder, rough running or hard starting. Injectors are tested and serviced with special equipment, so suspected injector faults are a job for a specialist.
-5. **The stop control.** Most small diesels are stopped by cutting off the fuel at the injection pump, either with a pull cable or an electric solenoid. If the stop control is not fully returned, the engine may crank but refuse to start.
+4. `Engineer only` **Common-rail systems.** Many newer engines use common-rail injection. A high-pressure pump keeps fuel in a shared rail at a far higher pressure than older systems, sensors report what the engine is doing, and an electronic control unit opens each injector. Owners can do low-pressure jobs such as changing filters and draining water where the handbook allows, but nothing on the high-pressure side: that is for trained technicians with the right equipment.
+5. `Engineer only` **Signs of injector trouble.** A worn or sticking injector may give black smoke, a knock from one cylinder, rough running or hard starting. Injectors are tested and serviced with special equipment, so suspected injector faults are a job for a specialist.
+6. **The stop control.** Many mechanically injected diesels are stopped by cutting off the fuel at the injection pump, with a pull cable or an electric solenoid. Electronically controlled engines are usually stopped through the key switch or control panel. If a stop cable is not fully returned, the engine may crank but refuse to start.
 
-**Caution:** Fuel in the high-pressure pipes is at a pressure high enough to pierce skin and cause serious injury. Never feel for a leak with your hand, and never loosen a high-pressure pipe while the engine is running.
-
-#### Questions for lesson 2.3 (4)
+#### Questions for lesson 2.3 (5)
 
 <a id="m02-q009"></a>
 
@@ -626,16 +675,16 @@ What is the main job of the lift pump?
 
 **m02-q010** · difficulty 2 (medium) · draft
 
-> **⚠️ Review note:** Some engines stop differently (for example with an air flap or a key-operated solenoid). Confirm 'most' is fair.
+> **⚠️ Review note:** Audit note 5, revise: the question now says 'many mechanically injected' engines, with credible distractors and a warning about the isolator in the explanation. Please approve.
 
-How are most small marine diesels stopped?
+How are many mechanically injected small marine diesels stopped?
 
 - A. By cutting off the fuel at the injection pump ✅
-- B. By switching off the ignition spark to the cylinders
-- C. By closing the raw water seacock at the hull
-- D. By closing a valve on the exhaust outlet
+- B. By switching off the glow plugs
+- C. By closing the fuel valve at the tank
+- D. By switching off the battery isolator
 
-*Explanation:* A diesel has no spark to switch off. The stop control, a cable or solenoid, shuts off fuel delivery at the injection pump, and the engine stops.
+*Explanation:* The stop control, a cable or solenoid, shuts off fuel delivery at the injection pump. Closing the tank valve would take a long time and lets air in, glow plugs only help starting, and switching off the isolator with the engine running can damage the alternator. Electronically controlled engines are stopped through their control system.
 
 <a id="m02-q011"></a>
 
@@ -657,11 +706,26 @@ Why should you never feel for a leak along a high-pressure fuel pipe with your h
 Which of these is a typical sign of a faulty injector?
 
 - A. Black smoke and rough running, sometimes with a knock from one cylinder ✅
-- B. The charge warning light staying on after the engine starts
-- C. A steady drip of water from the stern gland while motoring
-- D. Oil appearing in the raw water strainer basket after running
+- B. Black smoke only at full load that clears once the air filter is changed
+- C. Blue smoke that gets worse after long periods at idle
+- D. Steam and very little water coming out of the exhaust
 
-*Explanation:* An injector that dribbles or sprays poorly delivers fuel that does not burn completely, giving smoke, rough running and sometimes a knock. The other symptoms belong to the charging, stern gear and cooling systems.
+*Explanation:* An injector that dribbles or sprays poorly delivers fuel that does not burn completely, giving smoke, rough running and sometimes a knock. Black smoke cured by a new air filter points to the air supply, blue smoke to oil, and steam to cooling.
+
+<a id="m02-q022"></a>
+
+**m02-q022** · difficulty 3 (hard) · draft
+
+> **⚠️ Review note:** New in content 1.1 (S20): a safety-first scenario question on fuel spray, matching the Fault finder stop card. Please approve.
+
+With the engine running, you see a fine mist of fuel around one of the injector pipes. What should you do?
+
+- A. Stop and check the handbook; leave the high-pressure side to an engineer ✅
+- B. Loosen it slightly while someone cranks, to see whether fuel spurts out
+- C. Open it, because owners can safely bleed at any connection on a fuel system
+- D. Feel along the pipe while the engine turns to see whether it is under pressure
+
+*Explanation:* Fuel from a high-pressure leak can be injected through the skin, and the spray is a fire risk. Stop the engine, keep clear, contain any spill and do not restart until a qualified engineer has repaired it. Suspected injection injury needs emergency medical treatment.
 
 <a id="m02-l04"></a>
 
@@ -669,28 +733,35 @@ Which of these is a typical sign of a faulty injector?
 
 `m02-l04` · about 8 min · hands-on · draft
 
-> **⚠️ Review note:** Bleeding procedures vary widely: some engines are self-bleeding, some need the injection pump bled, and some need injector pipes loosened while cranking. The lesson deliberately avoids engine-specific steps. Please check the dead-lever advice and the general order are sound.
+> **⚠️ Review note:** Audit note 6, safety revise (P0, S02): warning B is now shown before the steps, verbatim, together with the wet-exhaust warning A for prolonged cranking. Instructions are limited to handbook-approved low-pressure bleeding, the reference to loosening injector pipes has been removed, and a final engineer-only step covers anything else. Audit note 7: the dead-lever step now applies to cam-operated pumps only. Please approve.
 
-If air gets into the fuel system, the engine will not start or will run briefly and stop. Bleeding means pushing fuel through the system until all the air has been driven out. Your engine handbook describes the exact points and order for your engine; this lesson explains the general idea.
+If air gets into the fuel system, the engine will not start or will run briefly and stop. Bleeding means pushing fuel through the low-pressure side until all the air has been driven out. This lesson describes a typical mechanically injected engine; your handbook gives the exact points and order for yours, and common-rail engines usually have their own priming procedure.
 
-1. **When you need to bleed.** After running out of fuel, after changing a fuel filter, after any part of the fuel system has been disconnected, or when air has been drawn in through a leak. Find and fix the cause first, or the air will come back.
-2. **Get ready.** Make sure there is fuel in the tank and the fuel valve is open. Have the right spanners, plenty of rags and a small container. Lay rags under each bleed point to catch fuel.
-3. **Work from the tank towards the engine.** Always start at the bleed point nearest the tank and work along the fuel's path. Bleeding further along first just pulls more air through from behind.
-4. **Pump until the bubbles stop.** Open the first bleed screw a little and operate the lift pump's hand lever, or switch on an electric lift pump. Keep pumping until fuel comes out with no bubbles, then close the screw while fuel is still flowing. Move on to the next bleed point and repeat.
-5. **If the hand lever feels dead.** On a mechanical lift pump, the engine's cam can leave the lever with no travel. Turning the engine a little, in the way your handbook describes, usually brings the lever back to life.
-6. **Finishing off.** Some engines bleed themselves once the low-pressure side is full. Others need further steps at the injection pump or injectors, which the handbook will explain. When the engine starts, let it run and watch for leaks at every point you opened, then clean up all spilt fuel.
+> ⚠️ **WARNING — HIGH-PRESSURE FUEL INJECTION.** The steps in this lesson describe only manufacturer-approved **low-pressure** bleeding arrangements. Do not loosen injector pipes, common-rail components or other high-pressure fuel connections. Diesel fuel under high pressure can penetrate skin and cause severe injury; suspected injection injury requires immediate emergency medical treatment. Stop the engine, prevent accidental starting, contain spills and follow the exact handbook procedure. If the system does not have an approved owner bleeding method, use a qualified engineer.
 
-**Caution:** Keep hands and face away from injector pipes while the engine is being cranked or is running. Avoid long periods of cranking, which can flatten the battery, overheat the starter and, on many boats, fill a wet exhaust with water.
+> ⚠️ **WARNING — WET EXHAUST / WATERLOCK.** If the engine repeatedly cranks but does not start, stop and follow the engine and exhaust-system manufacturer's procedure. On many wet-exhaust installations the seawater pump continues to deliver water while cranking; without exhaust gas flow, water can accumulate and enter the engine. **Never run the engine with the raw-water seacock closed.** Some manufacturers specify a controlled seawater-isolation procedure for extended troubleshooting. Use it only if it is documented for that installation, and positively confirm the seacock is **OPEN BEFORE THE ENGINE IS ALLOWED TO RUN**. If water ingestion is suspected, do not crank again; seek qualified assistance.
+
+**Caution (shown before the steps):** Avoid long periods of cranking while bleeding: it flattens the battery and overheats the starter. Wear gloves and keep naked flames away while the fuel system is open.
+
+*Applies to:* Mechanical injection
+
+1. `Observe` **When you need to bleed.** After running out of fuel, after changing a fuel filter, after any part of the fuel system has been disconnected, or when air has been drawn in through a leak. Find and fix the cause first, or the air will come back.
+2. `Owner (handbook required)` **Get ready.** Make sure there is fuel in the tank and the fuel valve is open, and that the engine cannot be started accidentally while you work. Have the right spanners, plenty of rags and a small container. Lay rags under each bleed point to catch fuel.
+3. `Owner (handbook required)` **Work from the tank towards the engine.** Start at the bleed point nearest the tank and work along the fuel's path. Bleeding further along first just pulls more air through from behind.
+4. `Owner (handbook required)` **Pump until the bubbles stop.** Open the first bleed screw a little and operate the lift pump's hand lever, or switch on an electric lift pump. Keep pumping until fuel comes out with no bubbles, then close the screw while fuel is still flowing. Move on to the next bleed point and repeat.
+5. `Owner (handbook required)` **If the hand lever feels dead.** On a cam-operated mechanical lift pump, the engine's cam can leave the lever with little travel. Turning the engine a little, in the way your handbook describes, usually brings the lever back to life. Electric lift pumps have no lever and do not have this problem.
+6. `Owner (handbook required)` **Finishing off.** Some engines bleed themselves once the low-pressure side is full. Others need further bleeding at the injection pump, which the handbook describes for your engine. When the engine starts, let it run and watch for leaks at every point you opened, then clean up all spilt fuel.
+7. `Engineer only` **If it still will not run.** Do not loosen injector pipes or any part of a common-rail system. If the handbook's owner procedure does not get the engine running, or your engine has no approved owner bleeding method, stop and get a qualified engineer.
 
 *Ends with the handbook reminder.*
 
-#### Questions for lesson 2.4 (5)
+#### Questions for lesson 2.4 (6)
 
 <a id="m02-q013"></a>
 
 **m02-q013** · difficulty 1 (easy) · draft
 
-Which of these is the most likely to mean you need to bleed the fuel system?
+Which of these usually means the fuel system will need bleeding?
 
 - A. The engine ran out of fuel ✅
 - B. The engine oil was changed
@@ -712,6 +783,8 @@ In what order should you work through the bleed points?
 
 *Explanation:* Fuel pushes air ahead of it along the system. Starting near the tank clears each section in turn; starting at the far end just draws more air through from behind.
 
+*Feedback also shows:* WARNING — HIGH-PRESSURE FUEL INJECTION (`high-pressure-fuel`)
+
 <a id="m02-q015"></a>
 
 **m02-q015** · difficulty 2 (medium) · draft
@@ -729,16 +802,16 @@ When should you close a bleed screw?
 
 **m02-q016** · difficulty 3 (hard) · draft
 
-> **⚠️ Review note:** Confirm this is a fair explanation for the common mechanical lift pump design.
+> **⚠️ Review note:** Audit note 7, accept with qualification: the question now names cam-operated mechanical pumps, and the explanation says electric pumps differ. Please approve.
 
-The hand lever on a mechanical lift pump has almost no movement. What is the most likely reason?
+The hand lever on a cam-operated mechanical lift pump has almost no movement. What is a likely reason?
 
 - A. The engine's cam is holding the pump's arm at the top of its travel ✅
-- B. The fuel tank is completely full, so there is no room left for the pump to push fuel
-- C. The fine filter element has been fitted upside down
-- D. The lift pump only works once the engine has warmed up
+- B. The fuel valve at the tank has been left closed
+- C. The primary filter is blocked, so the pump cannot draw fuel
+- D. The lift pump's diaphragm has split
 
-*Explanation:* A mechanical lift pump is worked by a cam on the engine. If the engine stopped with the cam lobe holding the arm, the hand lever has little travel; turning the engine a little frees it.
+*Explanation:* A mechanical lift pump is worked by a cam on the engine. If the engine stopped with the cam lobe holding the arm, the hand lever has little travel; turning the engine a little frees it. A closed valve, blocked filter or split diaphragm stops fuel flowing but does not usually stop the lever moving. Electric lift pumps have no lever.
 
 <a id="m02-q017"></a>
 
@@ -749,9 +822,26 @@ You bleed the system, the engine runs for a few minutes, then stops again with t
 - A. Air is still getting in somewhere, so the cause has not been found ✅
 - B. The engine needs a higher grade of oil before it will keep running for long
 - C. The bleeding was done while the engine was too cold
-- D. The battery is too fully charged for the injection pump
+- D. The injection pump was damaged when the tank ran dry
 
 *Explanation:* Bleeding removes air but does not stop it entering. If air returns, look for a loose joint, a damaged seal, a split hose on the suction side or a low tank.
+
+<a id="m02-q023"></a>
+
+**m02-q023** · difficulty 3 (hard) · draft
+
+> **⚠️ Review note:** New in content 1.1 (S02, S20): a safety-first question on the low-pressure boundary, with warning B in the feedback. Please approve.
+
+While bleeding, you are not sure whether the next connection is on the low-pressure or the high-pressure side. What should you do?
+
+- A. Stop and check the handbook, and leave anything on the high-pressure side to a qualified engineer ✅
+- B. Loosen it slightly while someone cranks, to see whether fuel spurts out
+- C. Open it, because owners can safely bleed at any connection on a fuel system
+- D. Feel along the pipe while the engine turns to see whether it is under pressure
+
+*Explanation:* Owner bleeding is limited to the handbook's low-pressure points. High-pressure fuel can penetrate skin and cause severe injury, so if you are unsure, stop and check, and use a qualified engineer for anything else.
+
+*Feedback also shows:* WARNING — HIGH-PRESSURE FUEL INJECTION (`high-pressure-fuel`)
 
 <a id="m02-l05"></a>
 
@@ -759,17 +849,17 @@ You bleed the system, the engine runs for a few minutes, then stops again with t
 
 `m02-l05` · about 6 min · draft
 
-> **⚠️ Review note:** Whether to keep tanks full over winter is commonly recommended but debated (for example where fuel ages). Please confirm the wording on lay-up and on biodiesel content is balanced and current.
+> **⚠️ Review note:** Audit note 8, revise (S18): the lay-up advice no longer recommends full tanks; it stresses clean, dry fuel, water management, avoiding stale fuel and the maker's and supplier's guidance. Please approve.
 
 Water in a fuel tank allows micro-organisms to grow where the fuel and water meet. The result, usually called diesel bug, is a dark slime that blocks filters, often at the worst possible moment.
+
+**Caution (shown before the steps):** Some fuel additives are hazardous. Read the label, wear gloves, and never mix products unless the maker says you can.
 
 1. **What diesel bug is.** Bacteria and fungi live in the thin layer where water meets fuel at the bottom of a tank. They feed on the fuel and form a dark, slimy sludge, and they can produce acids that attack metal tanks.
 2. **How water gets in.** Condensation inside a part-empty tank, leaking deck filler seals, rain or spray getting in while refuelling, and contaminated fuel from the supplier. Modern road diesel can contain a proportion of biodiesel, which holds more water than traditional diesel.
 3. **The signs.** Dark slime or sludge in the primary filter bowl, filters that block much sooner than usual, and an engine that loses power or stops after rough weather has stirred up the bottom of the tank.
-4. **Prevention.** Check the filler cap seal, drain the water trap regularly, buy fuel from a busy, reputable supplier, and refuel carefully in wet weather. Many owners keep the tank well filled during lay-up to reduce condensation. Fuel additives such as biocides can help, but must be used exactly as their maker directs.
+4. **Prevention.** Check the filler cap seal, drain the water trap regularly, buy fuel from a busy, reputable supplier, and refuel carefully in wet weather. What matters most is clean, dry fuel that is used and replaced regularly. Some owners keep the tank well filled over winter to limit condensation, while others prefer less fuel so that it does not go stale; follow your engine maker's and fuel supplier's guidance for your boat. Fuel additives such as biocides can help, but use them exactly as their maker directs.
 5. **When it is bad.** If the tank is badly contaminated, additives alone will not fix it. The fuel may need to be filtered by a specialist fuel polishing service, or the tank emptied and cleaned.
-
-**Caution:** Some fuel additives are hazardous. Read the label, wear gloves, and never mix products unless the maker says you can.
 
 #### Questions for lesson 2.5 (4)
 
@@ -806,11 +896,11 @@ Why do engines with fuel contamination often stop in rough weather?
 Which of these helps most to stop water getting into the fuel tank?
 
 - A. Keeping the deck filler cap seal in good condition ✅
-- B. Running the engine at full throttle for an hour once a month
-- C. Fitting a larger fuel return line
-- D. Changing the engine oil more often
+- B. Adding a biocide every time you refuel
+- C. Draining the primary filter bowl more often
+- D. Fitting a second fine filter on the engine
 
-*Explanation:* A worn filler seal lets rain and spray straight into the tank. The other actions have nothing to do with keeping water out of the fuel.
+*Explanation:* A worn filler seal lets rain and spray straight into the tank. A biocide treats the effects of water, draining the bowl removes water that has already got in, and an extra filter does nothing to keep it out.
 
 <a id="m02-q021"></a>
 
@@ -835,15 +925,17 @@ A tank is badly contaminated with diesel bug. Why are additives alone not enough
 
 `m03-l01` · about 5 min · draft
 
-> **⚠️ Review note:** Please check the keel cooling paragraph is accurate in general terms and that the claims about direct cooling (running cooler to limit salt deposits) are fair.
+> **⚠️ Review note:** Audit note 9, revise (S05): 'both systems share' is now 'in common raw-water and heat-exchanger installations', and keel-cooled and dry-exhaust arrangements are explained separately. Please approve.
 
 Only part of the energy in diesel fuel turns the propeller. Much of the rest becomes heat, which has to be carried away or the engine will be damaged. Marine engines use the water the boat floats in to do this, either directly or through a separate coolant circuit.
 
-1. **Direct (raw water) cooling.** Sea or river water is pumped straight through passages in the engine and then out with the exhaust. It is simple, but salt water is corrosive and the engine must run cooler to stop salt deposits forming, so it is found mainly on older or very small engines.
-2. **Indirect (fresh water) cooling.** A closed circuit of coolant, a mixture of fresh water and antifreeze with corrosion inhibitors, circulates through the engine. The coolant passes its heat to sea water in a heat exchanger. The sea water never enters the engine block itself.
+*Applies to:* Direct (raw water) cooling, Heat-exchanger cooling, Keel cooling
+
+1. **Direct (raw water) cooling.** Sea or river water is pumped straight through passages in the engine and then out with the exhaust. It is simple, but salt water is corrosive and the engine is designed to run cooler to limit salt deposits, so it is found mainly on older or very small engines.
+2. **Indirect (fresh water) cooling.** A closed circuit of coolant, a mixture of fresh water and antifreeze with corrosion inhibitors, circulates through the engine. The coolant passes its heat to sea water in a heat exchanger. In normal operation the sea water does not enter the engine block itself.
 3. **Why indirect cooling is more common.** Keeping salt water out of the engine greatly reduces internal corrosion and scale. The engine can also run at a steadier, warmer temperature, which suits it better.
-4. **What both systems share.** Both need sea water: a hull inlet with a seacock, a strainer, and a pump to drive the water round. In both, the used sea water is usually injected into the exhaust to cool it before it leaves the boat.
-5. **Keel cooling.** Some boats use a keel cooler instead of a heat exchanger: the coolant runs through pipes or a tank in contact with the water outside the hull. There is then no raw water pump for the engine itself, although the exhaust may be dry or need its own supply.
+4. **What common installations share.** In common raw-water and heat-exchanger installations, both need sea water: a hull inlet with a seacock, a strainer, and a pump to drive the water round. The used sea water is usually injected into the exhaust to cool it before it leaves the boat.
+5. **Keel cooling.** Keel-cooled engines are different. The coolant runs through pipes or a tank in contact with the water outside the hull, so the engine needs no raw water pump for cooling. Some keel-cooled boats have a dry exhaust, which gets very hot and has to be insulated; others have a separate small water supply just for a wet exhaust.
 
 #### Questions for lesson 3.1 (4)
 
@@ -858,7 +950,7 @@ In an indirectly cooled engine, what circulates through the engine block?
 - C. Engine oil only
 - D. Air blown by a fan
 
-*Explanation:* Indirect cooling keeps a closed circuit of coolant in the engine. The sea water only passes through the heat exchanger and the exhaust, so salt never reaches the block.
+*Explanation:* Indirect cooling keeps a closed circuit of coolant in the engine. The sea water passes through the heat exchanger and the exhaust, so in normal operation salt does not reach the block.
 
 <a id="m03-q002"></a>
 
@@ -868,19 +960,19 @@ What is the main advantage of indirect cooling over direct cooling?
 
 - A. Salt water is kept out of the engine, reducing corrosion and scale ✅
 - B. It does away with the raw water pump and its impeller
-- C. It lets the engine run safely without any coolant in it
+- C. It lets the engine run without a thermostat
 - D. It removes the need for a seacock on the cooling inlet
 
-*Explanation:* Sea water is corrosive and leaves deposits. With indirect cooling only the heat exchanger sees sea water, which protects the engine's internal passages. A raw water pump and seacock are still needed.
+*Explanation:* Sea water is corrosive and leaves deposits. With indirect cooling, only the raw water side (pump, heat exchanger and exhaust) sees sea water, which protects the engine's internal passages. A raw water pump and seacock are still needed.
 
 <a id="m03-q003"></a>
 
 **m03-q003** · difficulty 2 (medium) · draft
 
-On most small marine diesels, what happens to the raw water after it has cooled the engine?
+On a typical wet-exhaust installation, what happens to the raw water after it has cooled the engine?
 
 - A. It is sprayed into the exhaust and leaves the boat with the gases ✅
-- B. It is collected in a tank on board and used again later
+- B. It returns to the sea through the same seacock it came in by
 - C. It drains into the bilge, where the automatic bilge pump removes it
 - D. It is mixed with the engine coolant in the header tank
 
@@ -890,13 +982,13 @@ On most small marine diesels, what happens to the raw water after it has cooled 
 
 **m03-q004** · difficulty 3 (hard) · draft
 
-> **⚠️ Review note:** Please confirm this is a fair general explanation.
+> **⚠️ Review note:** Audit note 10, verify: wording kept, with 'designed to' added; please check it against direct and indirect installations before approval.
 
-Why do directly cooled engines usually run cooler than indirectly cooled ones?
+Why are directly cooled engines usually designed to run cooler than indirectly cooled ones?
 
 - A. To limit salt coming out of the sea water and building up inside the engine ✅
 - B. Because sea water boils at a lower temperature than fresh water
-- C. Because they have no thermostat of any kind
+- C. Because the raw water pump cannot move hot water fast enough
 - D. To make the engine use less fuel
 
 *Explanation:* Salt and minerals come out of sea water faster as it gets hotter, forming scale that blocks passages. Running cooler slows this, though a cooler engine is less efficient.
@@ -907,9 +999,13 @@ Why do directly cooled engines usually run cooler than indirectly cooled ones?
 
 `m03-l02` · about 7 min · hands-on · draft
 
-> **⚠️ Review note:** Anti-siphon arrangements and whether two clips are expected on every below-waterline hose vary with installation and guidance. Please confirm the wording is appropriately general.
+> **⚠️ Review note:** Audit note 11, revise (S06): the hose-clip sentence is replaced with wording E, verbatim, and the anti-siphon step now says it depends on the installation design. The 'most common causes of overheating' claim is removed (S04). Please approve.
 
 The raw water circuit brings outside water into the boat to cool the engine and its exhaust. It starts with a hole in the hull, so it matters for safety as well as for the engine.
+
+**Caution (shown before the steps):** Close the seacock before opening the strainer or any part of the raw water circuit, and open it again before the engine runs. Running with the seacock closed quickly ruins the impeller and overheats the engine and its exhaust.
+
+*Applies to:* Direct (raw water) cooling, Heat-exchanger cooling
 
 **Diagram (flow).** A flow diagram of the raw water circuit in six stages: hull inlet and seacock, strainer, raw water pump, heat exchanger, exhaust injection, and out of the boat with the exhaust.
 
@@ -922,18 +1018,16 @@ The raw water circuit brings outside water into the boat to cool the engine and 
 
 Caption: The raw water path on a typical indirectly cooled engine.
 
-1. **The seacock.** The seacock is a valve fitted directly to the hull inlet. It must be open whenever the engine runs, and it lets you stop water entering the boat if a hose fails or when you work on the circuit. Operate it regularly so it does not seize.
-2. **The strainer.** The strainer sits between the seacock and the pump. It has a removable basket that catches weed, shells and plastic. A blocked strainer is one of the most common causes of overheating.
-3. **Checking the strainer.** Through the clear lid, if it has one, look for debris in the basket as part of your daily checks. Make sure the water level in the strainer looks normal; if the lid seal leaks air, the pump can lose its suction.
-4. **Clearing the strainer.** With the engine stopped, close the seacock. Open the lid, lift out and clean the basket, check the lid seal, and refit everything firmly. Open the seacock again, then start the engine and check that water comes out of the exhaust and the strainer lid does not leak.
-5. **Anti-siphon protection.** If the engine sits close to or below the waterline, sea water can siphon back through the circuit and flood the engine through its exhaust. Such installations usually have a loop in the hose with an anti-siphon valve at its top, which needs to be kept clean so it works.
-6. **Hoses and clips.** Every hose below the waterline should be in good condition, ideally secured with two stainless clips at each end. A split hose here can sink the boat.
-
-**Caution:** Always close the seacock before opening the strainer or any part of the raw water circuit, and remember to open it again before starting the engine. Running with the seacock closed will quickly ruin the impeller and overheat the engine.
+1. `Owner (handbook required)` **The seacock.** The seacock is a valve fitted directly to the hull inlet. It has to be open whenever the engine runs, and it lets you stop water entering the boat if a hose fails or when you work on the circuit. Operate it regularly so it does not seize.
+2. `Observe` **The strainer.** The strainer sits between the seacock and the pump. It has a removable basket that catches weed, shells and plastic. A blocked strainer is one possible cause of overheating, among several.
+3. `Observe` **Checking the strainer.** Through the clear lid, if it has one, look for debris in the basket as part of your daily checks. Make sure the water level in the strainer looks normal; if the lid seal leaks air, the pump can lose its suction.
+4. `Owner (handbook required)` **Clearing the strainer.** With the engine stopped, close the seacock. Open the lid, lift out and clean the basket, check the lid seal, and refit everything firmly. Open the seacock again, then start the engine and check that water comes out of the exhaust and the strainer lid does not leak.
+5. `Owner (handbook required)` **Anti-siphon protection.** Where the engine sits close to or below the waterline, sea water can siphon back through the circuit and flood the engine through its exhaust. Installations designed for this usually have a raised loop with an anti-siphon valve or vent at its top. Whether one is needed, and where, depends on the installation design; keep any fitted valve clean so it works.
+6. `Owner (handbook required)` **Hoses and fittings.** All hoses and fittings connected to hull openings must be suitable for the installation, correctly secured and inspected for leaks and deterioration. Use the clamp type, size, number and placement specified by the hose/fitting manufacturer and applicable vessel guidance; double clamping is not a universal substitute for correct fit and installation.
 
 *Ends with the handbook reminder.*
 
-#### Questions for lesson 3.2 (4)
+#### Questions for lesson 3.2 (5)
 
 <a id="m03-q005"></a>
 
@@ -957,7 +1051,7 @@ The strainer lid seal is leaking air. What can this cause?
 - A. The raw water pump loses suction and the engine overheats ✅
 - B. Diesel leaks into the cooling water through the strainer lid
 - C. The engine oil becomes diluted with sea water
-- D. The alternator stops charging the engine battery
+- D. The impeller runs faster and wears out sooner
 
 *Explanation:* The pump draws water through the strainer. If the lid lets air in, the pump draws air instead of water, so the flow drops or stops and the engine overheats.
 
@@ -987,24 +1081,42 @@ What is the purpose of an anti-siphon valve in the raw water circuit?
 
 *Explanation:* Where the engine is near or below the waterline, water can siphon through the circuit and fill the exhaust and cylinders. The valve lets air into the top of the loop to break the siphon.
 
+<a id="m03-q021"></a>
+
+**m03-q021** · difficulty 2 (medium) · draft
+
+> **⚠️ Review note:** New in content 1.1 (S06): checks the corrected hose and fitting wording E. Please approve.
+
+Which is the right approach to securing a hose on a below-waterline fitting?
+
+- A. Use the clamp type, size, number and placement the maker specifies ✅
+- B. Fit two stainless clips at each end, whatever the hose or fitting
+- C. Fit as many clips as will go on the spigot
+- D. Use any clip, as long as it is tightened as hard as possible
+
+*Explanation:* Hoses on hull openings must suit the installation, be correctly secured and be inspected regularly. Double clamping is not a universal substitute for correct fit and installation, and overtightening can damage the hose.
+
 <a id="m03-l03"></a>
 
 ### Lesson 3.3: The raw water pump impeller
 
 `m03-l03` · about 7 min · hands-on · draft
 
-> **⚠️ Review note:** Some impellers can be fitted either way round and the direction is set by rotation; others are handed. Please confirm the fitting advice and the lubricant wording (some makers specify a particular product or none).
+> **⚠️ Review note:** Audit note 12, revise (S07): the fitting step now defers to the pump or impeller maker for vane direction and lubricant and says not every impeller is handed; a new step covers inspecting the cover, cam, wear plate and missing vanes. Please approve.
 
-Most raw water pumps use a flexible rubber impeller. It is cheap and effective, but it wears out, and it is quickly destroyed if it runs dry. Changing it is a job every owner should be able to do.
+Many raw water pumps use a flexible rubber impeller. It is cheap and effective, but it wears out, and it is quickly destroyed if it runs dry. On many engines, changing it is a job an owner can learn to do with the handbook.
 
-1. **How it works.** The impeller is a rubber wheel with flexible vanes, fitted off-centre in a round pump body. As it turns, the vanes bend and straighten, squeezing water from the inlet side to the outlet side.
-2. **Why impellers fail.** The rubber hardens and cracks with age, and the vanes take a permanent bend if the pump sits unused for long periods. Running without water, even briefly, overheats the vanes and tears them. Grit in the water wears them down.
-3. **Signs of a failing impeller.** Less water than usual coming out of the exhaust, a rising engine temperature, or an overheat alarm. A pump that has been run dry may squeal.
-4. **Changing the impeller.** Stop the engine and close the seacock. Remove the pump cover, ease out the old impeller with the tool or method your handbook suggests, and look at it closely. Fit the new one with the lubricant its maker recommends, turning it in the direction of rotation so the vanes bend the right way. Fit a new cover gasket or seal, open the seacock, then start the engine and check the water flow.
-5. **Missing vanes.** If any vanes are missing from the old impeller, find them before you run the engine. Pieces usually travel downstream and lodge in the heat exchanger inlet or a pipe, where they block the flow.
-6. **Spares and records.** Carry at least one spare impeller and cover seal. Note in your log when it was changed; the handbook will say how often it should be replaced as a precaution.
+**Caution (shown before the steps):** Make sure the engine cannot be started while the pump cover is off. Pump covers and housings can be hot after running.
 
-**Caution:** Make sure the engine cannot be started while the pump cover is off. Pump covers and housings can be hot after running.
+*Applies to:* Direct (raw water) cooling, Heat-exchanger cooling
+
+1. `Observe` **How it works.** The impeller is a rubber wheel with flexible vanes, fitted off-centre in a round pump body. As it turns, the vanes bend and straighten, squeezing water from the inlet side to the outlet side.
+2. `Observe` **Why impellers fail.** The rubber hardens and cracks with age, and the vanes take a permanent bend if the pump sits unused for long periods. Running without water, even briefly, overheats the vanes and tears them. Grit in the water wears them down.
+3. `Observe` **Signs of a failing impeller.** Less water than usual coming out of the exhaust, a rising engine temperature, or an overheat alarm. A pump that has been run dry may squeal.
+4. `Owner (handbook required)` **Changing the impeller.** Stop the engine, make sure it cannot be started, and close the seacock. Remove the pump cover and ease out the old impeller with the tool or method your handbook suggests. Fit the new one exactly as the pump or impeller maker directs, including which way the vanes should face and which assembly lubricant, if any, to use; not every impeller is handed. Fit a new cover gasket or seal, open the seacock, then start the engine and check the water flow.
+5. `Owner (handbook required)` **Inspect the pump.** While the pump is open, look at the inside of the cover and the wear plate for scoring, check that the cam is secure, and count the vanes on the old impeller.
+6. `Owner (handbook required)` **Missing vanes.** If any vanes are missing from the old impeller, find them before you run the engine. Pieces usually travel downstream and lodge in the heat exchanger inlet or a pipe, where they block the flow.
+7. `Owner (handbook required)` **Spares and records.** Carry at least one spare impeller and cover seal. Note in your log when it was changed; the handbook will say how often it should be replaced as a precaution.
 
 *Ends with the handbook reminder.*
 
@@ -1032,7 +1144,7 @@ What damages an impeller most quickly?
 - A. Running the pump without water ✅
 - B. Running the engine at low revs
 - C. Using the engine in fresh water
-- D. Changing the engine oil
+- D. Running the engine in very cold water
 
 *Explanation:* The water lubricates and cools the rubber vanes. Without it they overheat and tear within moments, for example if the seacock is left closed.
 
@@ -1045,7 +1157,7 @@ Your old impeller has two vanes missing. What should you do before running the e
 - A. Find the missing pieces, which have probably lodged further along ✅
 - B. Nothing, because the rubber pieces will soon dissolve in the water
 - C. Run the engine hard for a while to flush the pieces out
-- D. Fit two impellers next time to make up for the lost vanes
+- D. Fit the new impeller and check the flow, because small pieces pass through harmlessly
 
 *Explanation:* Broken vanes travel downstream and often block the heat exchanger inlet, causing overheating even with a new impeller. They do not break down on their own.
 
@@ -1053,16 +1165,16 @@ Your old impeller has two vanes missing. What should you do before running the e
 
 **m03-q012** · difficulty 3 (hard) · draft
 
-> **⚠️ Review note:** Removing the impeller over winter is common practice but not universal advice; please confirm.
+> **⚠️ Review note:** Audit note 13, accept with qualification: the explanation now presents removing the impeller over winter as optional and engine-specific. Please approve.
 
-Why do impellers often fail early in the season after a long lay-up?
+Why can impellers fail early in the season after a long lay-up?
 
 - A. The vanes take a set while standing and can crack when they start working again ✅
 - B. The impeller shrinks over winter and comes loose on its shaft
-- C. The antifreeze used in winter always dissolves the rubber vanes
+- C. The pump's shaft seal dries out, so the impeller slips on its shaft
 - D. The pump's drive belt slips for the first few hours of the season
 
-*Explanation:* Vanes held bent in one position for months set in that shape and lose their flexibility, so they crack or tear soon after recommissioning. Many owners fit a new impeller or remove it for the winter.
+*Explanation:* Vanes held bent in one position for months set in that shape and lose their flexibility, so they crack or tear soon after recommissioning. Some owners fit a new impeller in spring, or remove it for the winter where the handbook allows; practice varies between engines.
 
 <a id="m03-l04"></a>
 
@@ -1070,9 +1182,13 @@ Why do impellers often fail early in the season after a long lay-up?
 
 `m03-l04` · about 7 min · draft
 
-> **⚠️ Review note:** Whether the thermostat is on the coolant side, the raw water side (on direct cooling) or both varies, as do sacrificial anodes in heat exchangers. Please confirm the general description and the 'two liquids never mix' statement (true unless the exchanger has failed).
+> **⚠️ Review note:** Audit note 14, revise (S08): 'the two liquids never mix' is replaced with the audit's wording; thermostat position is described as varying between engines. Please approve.
 
 On an indirectly cooled engine, the coolant circuit keeps the engine at a steady working temperature. The thermostat controls the temperature and the heat exchanger hands the heat over to the sea water.
+
+**Caution (shown before the steps):** Never remove the pressure cap while the engine is hot. The coolant is under pressure and above its normal boiling point, and it can spray out and scald you.
+
+*Applies to:* Heat-exchanger cooling
 
 **Diagram (flow).** A flow diagram of the coolant circuit in five stages: header tank and pressure cap, circulating pump, engine block and head, thermostat, and heat exchanger, after which the coolant returns to the pump.
 
@@ -1084,14 +1200,12 @@ On an indirectly cooled engine, the coolant circuit keeps the engine at a steady
 
 Caption: The coolant circuit on a typical indirectly cooled engine. The thermostat decides how much coolant goes through the heat exchanger.
 
-1. **The circulating pump.** A pump, usually driven by the same belt as the alternator, keeps coolant moving through the block and head. If that belt breaks, the coolant stops circulating and the engine soon overheats.
-2. **The thermostat.** When the engine is cold, the thermostat stays closed so the coolant circulates only round the engine and warms it up quickly. As it reaches working temperature the thermostat opens and sends coolant through the heat exchanger.
-3. **The heat exchanger.** Inside the heat exchanger, coolant flows around a bundle of small tubes carrying raw water. Heat passes through the tube walls into the sea water, which then goes out with the exhaust. The two liquids never mix.
+1. **The circulating pump.** A pump, on many engines driven by the same belt as the alternator, keeps coolant moving through the block and head. If that belt breaks, the coolant stops circulating and the engine soon overheats.
+2. **The thermostat.** On many engines, the thermostat stays closed while the engine is cold, so the coolant circulates only round the engine and warms it up quickly. As it reaches working temperature the thermostat opens and sends coolant through the heat exchanger. Where the thermostat sits varies between engines.
+3. **The heat exchanger.** Inside the heat exchanger, coolant flows around a bundle of small tubes carrying raw water. Heat passes through the tube walls into the sea water, which then goes out with the exhaust. The circuits are normally separate; internal leakage or failure can allow mixing.
 4. **The header tank and pressure cap.** The header tank, often built into the heat exchanger, holds spare coolant. Its cap keeps the circuit under pressure, which raises the boiling point of the coolant. Check the level only when the engine is cold.
 5. **Coolant.** Use the type of coolant your handbook specifies, mixed as directed. It protects against freezing and corrosion, and its inhibitors wear out with time, so it needs renewing at the intervals the handbook gives.
 6. **Things that block.** Over time the raw water side of the heat exchanger can fur up with scale or be blocked by impeller pieces and debris. Some heat exchangers have a sacrificial anode that needs checking. A thermostat can also stick closed. Both lead to overheating once the engine is working hard.
-
-**Caution:** Never remove the pressure cap while the engine is hot. The coolant is under pressure and above its normal boiling point, and it can spray out and scald you.
 
 #### Questions for lesson 3.4 (4)
 
@@ -1104,7 +1218,7 @@ When should you check the coolant level in the header tank?
 - A. When the engine is cold ✅
 - B. While the engine is running at full power
 - C. Immediately after stopping a hot engine
-- D. Only when the overheat alarm sounds
+- D. With the engine running, once the temperature gauge reads normal
 
 *Explanation:* A hot coolant circuit is under pressure, and removing the cap can release scalding coolant. Checking cold is safe and gives a consistent reading.
 
@@ -1112,7 +1226,7 @@ When should you check the coolant level in the header tank?
 
 **m03-q014** · difficulty 2 (medium) · draft
 
-What does the thermostat do when the engine is cold?
+On a typical indirectly cooled engine, what does the thermostat do when the engine is cold?
 
 - A. Stays closed so coolant only circulates round the engine, warming it quickly ✅
 - B. Opens fully so that the heat exchanger can start cooling the engine straight away
@@ -1130,7 +1244,7 @@ Why is the coolant circuit kept under pressure by the cap?
 - A. To raise the boiling point of the coolant ✅
 - B. To push coolant into the exhaust
 - C. To stop the thermostat opening
-- D. To help the starter motor turn the engine over more easily
+- D. To keep air out of the raw water circuit
 
 *Explanation:* The higher the pressure, the higher the temperature a liquid can reach before it boils. This lets the engine run at its proper temperature without the coolant boiling.
 
@@ -1138,12 +1252,12 @@ Why is the coolant circuit kept under pressure by the cap?
 
 **m03-q016** · difficulty 3 (hard) · draft
 
-The engine runs at a normal temperature at low revs but overheats under load, and the raw water flow looks normal. Which is the most likely cause?
+The engine runs at a normal temperature at low revs but overheats under load, and the raw water flow looks normal. Which is a likely cause?
 
 - A. A scaled heat exchanger or a sticking thermostat ✅
 - B. A raw water seacock that has been left closed
 - C. An impeller that is missing all of its vanes
-- D. A flat engine battery that can no longer power the water pump
+- D. A blocked fuel filter starving the engine
 
 *Explanation:* A closed seacock or missing impeller would stop the water flow altogether. When flow is normal but the engine overheats only when working hard, heat is not being transferred well enough.
 
@@ -1153,32 +1267,38 @@ The engine runs at a normal temperature at low revs but overheats under load, an
 
 `m03-l05` · about 5 min · hands-on · draft
 
+> **⚠️ Review note:** S04: the stop-engine condition D is now shown before the steps, verbatim, in place of the old closing caution. Please approve.
+
 Most cooling problems give warning if you know what to look for. A few quick checks before and during every trip catch them early.
 
-1. **Before starting.** With the engine cold, check the coolant level in the header tank. Check the seacock is open and the strainer basket is clear. Look at hoses and clips for leaks, cracks or rust stains.
-2. **Straight after starting.** Look over the stern or at the exhaust outlet within the first few seconds. You should see a steady, pulsing flow of water with the exhaust. If there is none, stop the engine and find out why.
-3. **While running.** Glance at the temperature gauge, if fitted, and get to know where the needle normally sits. A slow rise, especially under load, can be the first sign of a blockage or a worn impeller.
-4. **Listen and look.** Steam from the exhaust, a change in the exhaust note, or a hot rubber smell all deserve a look. So does a squealing belt, which may mean the coolant pump is not being driven properly.
-5. **Know your alarms.** Find out whether your engine has an overheat alarm or warning light, and what it sounds or looks like. Test it as your handbook describes.
+> 🛑 **STOP-ENGINE CONDITION.** If the engine overheats or cooling-water flow is lost, reduce power and stop the engine as soon as the vessel is safe. Do not open a hot coolant pressure cap or touch hot hoses/exhaust components. Allow the engine to cool before checking the seawater intake, strainer, pump drive, impeller and coolant level as applicable. Do not restart until the cause is corrected and the cooling circuit is confirmed ready.
 
-**Caution:** If the exhaust has no water or the temperature is climbing, stop the engine as soon as it is safe to do so. See Overheating in the Fault finder.
+**Caution (shown before the steps):** Check the coolant level only with the engine cold, and keep clear of belts, pulleys and hot exhaust parts while it runs.
+
+*Applies to:* Direct (raw water) cooling, Heat-exchanger cooling
+
+1. `Owner (handbook required)` **Before starting.** Check the seacock is open and the strainer basket is clear. On an engine with a coolant circuit, check the level in the header tank while the engine is cold. Look at hoses and clips for leaks, cracks or rust stains.
+2. `Observe` **Straight after starting.** Look over the stern or at the exhaust outlet within the first few seconds. You should see a steady, pulsing flow of water with the exhaust. If there is none, stop the engine and find out why.
+3. `Observe` **While running.** Glance at the temperature gauge, if fitted, and get to know where the needle normally sits. A slow rise, especially under load, can be the first sign of a blockage or a worn impeller.
+4. `Observe` **Listen and look.** Steam from the exhaust, a change in the exhaust note, or a hot rubber smell all deserve a look. So does a squealing belt, which may mean the coolant pump is not being driven properly.
+5. `Owner (handbook required)` **Know your alarms.** Find out whether your engine has an overheat alarm or warning light, and what it sounds or looks like. Test it as your handbook describes.
 
 *Ends with the handbook reminder.*
 
-#### Questions for lesson 3.5 (4)
+#### Questions for lesson 3.5 (5)
 
 <a id="m03-q017"></a>
 
 **m03-q017** · difficulty 1 (easy) · draft
 
-What is the first thing to check straight after starting the engine?
+Straight after starting, what tells you the raw water circuit is working?
 
-- A. That cooling water is coming out with the exhaust ✅
-- B. That the fuel tank is completely full
-- C. That the oil filter is warm
-- D. That the propeller is turning slowly while in neutral
+- A. Cooling water coming out with the exhaust ✅
+- B. The temperature gauge reading normal straight away
+- C. The oil pressure warning light going out
+- D. The charge warning light going out
 
-*Explanation:* Water from the exhaust shows the raw water circuit is working. If there is none, stop the engine before the impeller and exhaust are damaged.
+*Explanation:* Water from the exhaust shows the raw water circuit is working. If there is none, stop the engine before the impeller and exhaust are damaged. The warning lights tell you about oil pressure and charging, and the gauge takes several minutes to rise.
 
 <a id="m03-q018"></a>
 
@@ -1187,9 +1307,9 @@ What is the first thing to check straight after starting the engine?
 Why is it worth learning where your temperature gauge normally sits?
 
 - A. So you notice a slow rise early, before it becomes serious ✅
-- B. Because the needle must always sit exactly halfway
+- B. Because the needle should sit exactly halfway on every engine
 - C. So you can set the throttle by its reading instead
-- D. Because on most panels it also shows how much fuel is left in the tank
+- D. Because the reading tells you when the oil needs changing
 
 *Explanation:* Every engine settles at its own normal reading. A slow drift above it is often the first sign of a blocked strainer, worn impeller or scaled heat exchanger.
 
@@ -1200,7 +1320,7 @@ Why is it worth learning where your temperature gauge normally sits?
 You hear a belt squealing and the temperature starts to rise. What is the link?
 
 - A. The belt may also drive the coolant pump, so slipping cuts coolant flow ✅
-- B. A squealing belt always means the engine oil level is low
+- B. The alternator is overcharging and heating the engine
 - C. The noise is caused by steam building up in the exhaust
 - D. There is no link, so the temperature rise is a coincidence
 
@@ -1218,6 +1338,25 @@ There is steam and very little water from the exhaust. Why is stopping the engin
 - D. Steam cools the exhaust too much and cracks the manifold
 
 *Explanation:* Wet exhaust systems use rubber hose and plastic or composite silencers that rely on the injected water to stay cool. Hot, dry exhaust gas can melt or burn them, risking fire and fumes inside the boat.
+
+*Feedback also shows:* STOP-ENGINE CONDITION (`overheating-stop`)
+
+<a id="m03-q022"></a>
+
+**m03-q022** · difficulty 3 (hard) · draft
+
+> **⚠️ Review note:** New in content 1.1 (S04, S20): a safety-first ordering question using stop-engine condition D. Please approve.
+
+The overheat alarm sounds as you motor out of a busy harbour. Which order of actions is best?
+
+- A. Get the boat safe, stop the engine, let it cool, then check the cooling ✅
+- B. Open the coolant pressure cap to check the level, then reduce power
+- C. Check the strainer with the engine running, and stop only if it is clear
+- D. Keep motoring to a quiet berth, then stop and investigate once tied up
+
+*Explanation:* Overheating is a stop-engine condition. Get the boat safe, reduce power and stop as soon as it is safe, and let the engine cool before you open anything. A hot pressure cap can spray scalding coolant, and running on can cause serious damage.
+
+*Feedback also shows:* STOP-ENGINE CONDITION (`overheating-stop`)
 
 ## Module 4: Lubrication
 
@@ -1275,7 +1414,7 @@ Apart from reducing friction, which of these is a job of engine oil?
 - A. Carrying heat away from hot parts such as the pistons ✅
 - B. Cooling the exhaust gases before they leave the boat's stern
 - C. Keeping the fuel system free of air
-- D. Charging the battery
+- D. Cleaning the fuel injectors as it circulates
 
 *Explanation:* Oil also carries heat, holds dirt in suspension, helps the rings seal and protects against corrosion. Cooling the exhaust is done by the raw water.
 
@@ -1286,7 +1425,7 @@ Apart from reducing friction, which of these is a job of engine oil?
 Why does diesel engine oil need changing even if the level stays correct?
 
 - A. Soot and acids build up in it and its additives get used up ✅
-- B. Over time the oil slowly turns back into diesel
+- B. Oil that has been heated many times turns into grease
 - C. The oil gets heavier and sinks below the pump's pick-up
 - D. The marks on the dipstick wear off and can no longer be read
 
@@ -1313,14 +1452,14 @@ What carries oil from the pump to the crankshaft and camshaft bearings?
 
 Checking the oil takes a minute and is part of every pre-start check. The dipstick tells you not only how much oil there is, but often what condition it is in.
 
-1. **When to check.** Check before starting, with the engine cold and the boat as level as possible. If the engine has just been running, wait several minutes for the oil to drain back into the sump, or the reading will be low.
-2. **Reading the dipstick.** Pull the dipstick out, wipe it clean, push it fully back in and pull it out again. The oil level should be between the minimum and maximum marks.
-3. **Topping up.** If the level is low, add a little of the oil your handbook specifies through the filler, wait a moment, and check again. Add small amounts at a time; it is easy to overfill.
-4. **Why overfilling matters.** Too much oil can be churned by the crankshaft, frothing it so it lubricates less well, and it can be pushed out through seals or burnt, giving blue smoke.
-5. **What the oil looks like.** Diesel engine oil turns black quickly because it holds soot, so dark oil on its own is normal. Look instead for oil that is milky or creamy, which suggests water is getting in, or oil that is thin and smells strongly of diesel, which suggests fuel is getting in.
-6. **A level that rises.** Oil does not make itself. If the level is higher than when you last checked and you have not added any, something else is getting into the sump. Do not run the engine until the cause has been found.
+**Caution (shown before the steps):** Hot oil and engine parts can burn. Make sure the engine is stopped and cannot be started before reaching into the engine space.
 
-**Caution:** Hot oil and engine parts can burn. Make sure the engine is stopped and cannot be started before reaching into the engine space.
+1. `Observe` **When to check.** Check before starting, with the engine cold and the boat as level as possible. If the engine has just been running, wait several minutes for the oil to drain back into the sump, or the reading will be low.
+2. `Observe` **Reading the dipstick.** Pull the dipstick out, wipe it clean, push it fully back in and pull it out again. The oil level should be between the minimum and maximum marks.
+3. `Owner (handbook required)` **Topping up.** If the level is low, add a little of the oil your handbook specifies through the filler, wait a moment, and check again. Add small amounts at a time; it is easy to overfill.
+4. `Observe` **Why overfilling matters.** Too much oil can be churned by the crankshaft, frothing it so it lubricates less well, and it can be pushed out through seals or burnt, giving blue smoke.
+5. `Observe` **What the oil looks like.** Diesel engine oil turns black quickly because it holds soot, so dark oil on its own is normal. Look instead for oil that is milky or creamy, which suggests water is getting in, or oil that is thin and smells strongly of diesel, which suggests fuel is getting in.
+6. `Observe` **A level that rises.** Oil does not make itself. If the level is higher than when you last checked and you have not added any, something else is getting into the sump. Do not run the engine until the cause has been found.
 
 *Ends with the handbook reminder.*
 
@@ -1372,11 +1511,11 @@ The oil on the dipstick is black. What does this usually mean on a diesel?
 The oil on the dipstick looks milky and creamy. What does this suggest?
 
 - A. Water or coolant is getting into the oil ✅
-- B. The oil is brand new
-- C. The engine has been run at low revs for long periods
-- D. The oil is the correct grade
+- B. Fuel is diluting the oil
+- C. The oil has been overheated
+- D. The engine has been run at low revs for long periods
 
-*Explanation:* Water mixed with oil forms a creamy emulsion. It can come from coolant leaking internally or sea water getting in, and it needs investigating before the engine is run.
+*Explanation:* Water mixed with oil forms a creamy emulsion. It can come from coolant leaking internally or sea water getting in, and it needs investigating before the engine is run. Fuel dilution makes oil thin and smell of diesel rather than milky.
 
 <a id="m04-q010"></a>
 
@@ -1389,7 +1528,7 @@ You have not added any oil, but the level on the dipstick is higher than last we
 - C. Ignore it, because oil expands a little in warmer weather
 - D. Pump out the extra oil, then carry on using the engine
 
-*Explanation:* A rising level means something else, usually fuel or water, is getting into the oil and diluting it. Running the engine with diluted oil risks serious damage.
+*Explanation:* A rising level shows that something else, usually fuel or water, is getting into the oil and diluting it. Running the engine with diluted oil risks serious damage.
 
 <a id="m04-l03"></a>
 
@@ -1397,18 +1536,18 @@ You have not added any oil, but the level on the dipstick is higher than last we
 
 `m04-l03` · about 8 min · hands-on · draft
 
-> **⚠️ Review note:** The filter-tightening advice is deliberately general ('as the filter's maker directs'). Please confirm the refill sequence (start, check pressure, check leaks, recheck level) is sound in general.
+> **⚠️ Review note:** Audit note 15, accept with qualification: the refill step now requires immediate oil-pressure confirmation (stop at once if the warning stays on), a leak check, and a recheck after settling; disposal is in step 6. Please approve.
 
 Changing the engine oil and filter is the most important routine service job. On many boats the sump cannot be drained from underneath, so the old oil is pumped out from above.
 
-1. **How often.** Your engine handbook gives an interval in running hours and usually a time limit as well, whichever comes first. Engines that are used little still need regular changes, because acids in old oil attack the engine while it stands.
-2. **Warm the engine first.** Run the engine for a short while so the oil is warm. Warm oil flows more easily and carries more of the dirt out with it. Stop the engine and make sure it cannot be restarted.
-3. **Remove the old oil.** Many marine engines are drained by pumping the oil out through the dipstick tube or a dedicated drain hose, using a hand or electric extraction pump. Pump into a container large enough for the whole sump.
-4. **Change the filter.** Put a tray and rags under the filter, then unscrew it. Make sure the old sealing ring has come away with it and is not stuck to the engine. Smear a little clean oil on the new filter's seal and screw it on by hand, as tight as the filter's maker directs.
-5. **Refill and check.** Fill with the grade and quantity of oil given in the handbook, then check the dipstick. Start the engine and check the oil pressure warning goes out promptly. Look for leaks around the filter, then stop the engine, wait, and check the level again.
-6. **Dispose of old oil properly.** Take used oil and filters to a waste oil facility, such as those at many marinas and recycling centres. Never put oil in the bilge, the drains or the water. Note the date and engine hours in your log.
+**Caution (shown before the steps):** Used engine oil is harmful to skin. Wear gloves and wash any oil off your skin promptly. Warm oil and engine parts can burn.
 
-**Caution:** Used engine oil is harmful to skin. Wear gloves and wash any oil off your skin promptly. Warm oil and engine parts can burn.
+1. `Observe` **How often.** Your engine handbook gives an interval in running hours and usually a time limit as well, whichever comes first. Engines that are used little still need regular changes, because acids in old oil attack the engine while it stands.
+2. `Owner (handbook required)` **Warm the engine first.** Run the engine for a short while so the oil is warm. Warm oil flows more easily and carries more of the dirt out with it. Stop the engine and make sure it cannot be restarted.
+3. `Owner (handbook required)` **Remove the old oil.** Many marine engines are drained by pumping the oil out through the dipstick tube or a dedicated drain hose, using a hand or electric extraction pump. Pump into a container large enough for the whole sump.
+4. `Owner (handbook required)` **Change the filter.** Put a tray and rags under the filter, then unscrew it. Make sure the old sealing ring has come away with it and is not stuck to the engine. Smear a little clean oil on the new filter's seal and screw it on by hand, as tight as the filter's maker directs.
+5. `Owner (handbook required)` **Refill and check.** Fill with the grade and quantity of oil given in the handbook, then check the dipstick. Start the engine and watch the oil pressure warning: if it does not go out within a few seconds, stop the engine at once. Check for leaks around the filter and any drain point, then stop the engine, let the oil settle and check the level again.
+6. `Owner (handbook required)` **Dispose of old oil properly.** Take used oil and filters to a waste oil facility, such as those at many marinas and recycling centres. Never put oil in the bilge, the drains or the water. Note the date and engine hours in your log.
 
 *Ends with the handbook reminder.*
 
@@ -1421,9 +1560,9 @@ Changing the engine oil and filter is the most important routine service job. On
 Where should you find the right oil grade and quantity for your engine?
 
 - A. In the engine manufacturer's handbook ✅
-- B. On any car oil bottle
+- B. From any oil marked as suitable for diesel engines
 - C. From the colour of the old oil on the dipstick
-- D. From the size of the fuel tank
+- D. From the oil grade printed on the filter
 
 *Explanation:* Different engines need different oil specifications and quantities. The handbook is the reliable source; general-purpose oils may not meet the engine's needs.
 
@@ -1436,7 +1575,7 @@ Why is the engine usually warmed up before the old oil is removed?
 - A. Warm oil flows more easily and carries more dirt out with it ✅
 - B. Cold oil cannot be pumped at all
 - C. Warming the engine makes the oil filter release its trapped dirt
-- D. It makes the new oil set faster
+- D. So the new filter's seal can seat properly
 
 *Explanation:* Warm oil is thinner, so more of it comes out and the soot and particles stay mixed in it rather than settling in the sump.
 
@@ -1483,22 +1622,26 @@ What should you do with the used oil and filter?
 
 ### Lesson 4.4: Oil pressure warnings
 
-`m04-l04` · about 5 min · draft
+`m04-l04` · about 5 min · hands-on · draft
 
-> **⚠️ Review note:** Please confirm the 'normal' behaviour described (lamp lit with ignition on before start, highest pressure cold, lowest hot at idle) applies to typical small marine diesels.
+> **⚠️ Review note:** Audit note 16, accept with qualification, and S03: stop-engine condition C now opens the lesson, verbatim; the 'normal' behaviour is described as typical, with panels differing; 'most common' is removed and causes are unranked. The lesson is now a procedure, so it ends with the handbook reminder. Please approve.
 
-The oil pressure warning is the one alarm you should never ignore. Low oil pressure means the bearings may not be getting the oil film they need, and serious damage can follow quickly.
+The oil pressure warning is one alarm you should never ignore. Low oil pressure means the bearings may not be getting the oil film they need, and serious damage can follow quickly, even if the oil level looks normal.
 
-1. **Gauge or warning light.** Most small engines have a pressure switch that lights a warning lamp and sounds an alarm when pressure falls below a safe level. Some also have a gauge that shows the actual pressure.
-2. **What is normal.** The warning normally comes on when the key is switched on before starting, which shows the lamp and alarm work. It should go out within a few seconds of the engine starting. Pressure is usually highest when the oil is cold and lowest at idle when the engine is hot.
-3. **If it comes on while running.** Stop the engine as soon as you can without putting the boat or crew in danger. Do not restart it until you have checked the oil level and looked for the cause.
-4. **Common causes.** Low oil level is the most common. Others include a faulty pressure switch or loose wire, oil thinned by fuel, a blocked or wrongly fitted filter, and, on older engines, a worn pump or bearings.
-5. **Treat it as real.** Even if you suspect a faulty switch, assume the warning is genuine until you have proved otherwise. A qualified engineer can fit a test gauge to measure the real pressure.
-6. **If it does not come on at all.** If the warning lamp does not light when you switch on before starting, the bulb, switch or wiring may have failed. Get it fixed, because a warning that cannot come on gives no protection.
+> 🛑 **STOP-ENGINE CONDITION.** If the oil-pressure alarm activates or the gauge indicates abnormally low pressure, reduce power and stop the engine **as soon as vessel safety permits**. Secure the vessel first. Do not restart simply to test whether the alarm clears. Once stopped, check oil level and obvious leaks in accordance with the handbook. If the cause is not clear and corrected, seek engineering assistance.
 
-**Caution:** Running an engine with low oil pressure, even for a short time, can destroy its bearings.
+**Caution (shown before the steps):** Running an engine with low oil pressure, even for a short time, can destroy its bearings.
 
-#### Questions for lesson 4.4 (5)
+1. `Observe` **Gauge or warning light.** Most small engines have a pressure switch that lights a warning lamp and sounds an alarm when pressure falls below a safe level. Some also have a gauge that shows the actual pressure.
+2. `Observe` **What is normal.** On many engines the warning comes on when the key is switched on before starting, which shows the lamp and alarm work, and goes out within a few seconds of the engine starting. Pressure tends to be highest when the oil is cold and lowest at idle when the engine is hot. Panels and gauges differ, so learn how yours behaves.
+3. `Owner (handbook required)` **If it comes on while running.** Follow the stop-engine condition at the top of this lesson: reduce power and stop the engine as soon as the boat is safe. Do not restart just to see whether the warning clears.
+4. `Observe` **Possible causes.** Possible causes include a low oil level, a faulty pressure switch or loose wire, oil thinned by fuel, a blocked or wrongly fitted filter, and, on older engines, a worn pump or bearings. A normal oil level does not prove the pressure is good.
+5. `Engineer only` **Treat it as real.** Even if you suspect a faulty switch, assume the warning is genuine until you have proved otherwise. A qualified engineer can fit a test gauge to measure the real pressure.
+6. `Engineer only` **If it does not come on at all.** If the warning lamp does not light when you switch on before starting, the bulb, switch or wiring may have failed. Get it fixed, because a warning that cannot come on gives no protection.
+
+*Ends with the handbook reminder.*
+
+#### Questions for lesson 4.4 (6)
 
 <a id="m04-q016"></a>
 
@@ -1506,12 +1649,14 @@ The oil pressure warning is the one alarm you should never ignore. Low oil press
 
 The oil pressure warning comes on while you are motoring. What should you do?
 
-- A. Stop the engine as soon as it is safe to do so ✅
+- A. Reduce power and stop the engine as soon as the boat is safe ✅
 - B. Increase the revs to raise the pressure
 - C. Carry on and check the oil at the end of the trip
-- D. Switch the alarm off and continue
+- D. Stop, then restart after a minute to see whether the warning clears
 
-*Explanation:* Low oil pressure can wreck the bearings within minutes. Stop as soon as you safely can, then check the oil level before thinking about restarting.
+*Explanation:* Low oil pressure can wreck the bearings within minutes. Reduce power and stop as soon as the boat is safe, then check the oil level and look for leaks. Do not restart just to test whether the warning clears.
+
+*Feedback also shows:* STOP-ENGINE CONDITION (`oil-pressure-stop`)
 
 <a id="m04-q017"></a>
 
@@ -1530,14 +1675,16 @@ The oil pressure lamp lights when you turn the key, before starting. What does t
 
 **m04-q018** · difficulty 2 (medium) · draft
 
-What is the most common cause of low oil pressure?
+The oil pressure warning came on and you have stopped the engine safely. What is a sensible first check?
 
-- A. A low oil level ✅
-- B. A blocked fuel filter
-- C. A worn propeller
-- D. A slack stern gland
+- A. The oil level on the dipstick, and any obvious leaks ✅
+- B. Restart the engine to see whether the warning clears
+- C. Replace the oil pressure switch, which is probably faulty
+- D. Top up the oil to the maximum mark without checking the level
 
-*Explanation:* If there is not enough oil in the sump, the pump draws air and the pressure falls. That is why the first check is the dipstick.
+*Explanation:* Once stopped, check the oil level and look for leaks as the handbook describes. Do not restart just to test the alarm, and do not assume the switch is at fault: a normal level does not prove the pressure is good.
+
+*Feedback also shows:* STOP-ENGINE CONDITION (`oil-pressure-stop`)
 
 <a id="m04-q019"></a>
 
@@ -1548,24 +1695,41 @@ You suspect the oil pressure warning is caused by a faulty switch. What is the r
 - A. Treat the warning as real until the pressure has been checked properly ✅
 - B. Disconnect the switch and keep using the engine
 - C. Assume the switch is faulty because the oil level is fine
-- D. Fit a brighter warning bulb
+- D. Run the engine at higher revs, where the warning goes out
 
-*Explanation:* A correct oil level does not prove the pressure is good. Only a test gauge shows the real pressure, so the warning should be trusted until then.
+*Explanation:* A correct oil level does not prove the pressure is good. Only a test gauge shows the real pressure, so the warning should be trusted until then; running on in the hope that it goes out risks the bearings.
 
 <a id="m04-q020"></a>
 
 **m04-q020** · difficulty 3 (hard) · draft
 
-> **⚠️ Review note:** Confirm this applies generally.
+> **⚠️ Review note:** Audit note 17, verify: the question now asks about a general tendency, with no universal figure or gauge response. Please confirm it applies generally.
 
-When is the oil pressure in a healthy engine usually at its lowest?
+In a healthy engine, when does oil pressure tend to be at its lowest?
 
 - A. At idle when the engine is fully warm ✅
 - B. At high revs when the engine is still cold
 - C. Just after starting from cold
-- D. It is always exactly the same
+- D. At full power once the engine is warm
 
-*Explanation:* Hot oil is thinner and the pump turns slowly at idle, so pressure is lowest then. This is why a borderline engine may show a warning only at hot idle.
+*Explanation:* Hot oil is thinner and the pump turns slowly at idle, so pressure tends to be lowest then. This is why a borderline engine may show a warning only at hot idle. Actual readings and warning behaviour differ between engines and panels.
+
+<a id="m04-q021"></a>
+
+**m04-q021** · difficulty 3 (hard) · draft
+
+> **⚠️ Review note:** New in content 1.1 (S03, S20): a scenario question showing that a normal oil level does not clear the stop condition. Please approve.
+
+The oil pressure alarm sounded and you stopped the engine. The dipstick shows the right level and there are no leaks. What should you do next?
+
+- A. Leave the engine stopped and get the pressure checked, treating the warning as real ✅
+- B. Restart it, because a correct level shows the switch must be faulty
+- C. Restart and run at low revs to reach harbour, watching the light
+- D. Add oil above the maximum mark and restart
+
+*Explanation:* A normal level does not prove the pressure is good, and genuine low oil pressure risks the bearings. Do not restart simply to test whether the alarm clears; if the cause is not clear and corrected, get engineering assistance.
+
+*Feedback also shows:* STOP-ENGINE CONDITION (`oil-pressure-stop`)
 
 ## Module 5: Electrics and starting
 
@@ -1577,17 +1741,19 @@ When is the oil pressure in a healthy engine usually at its lowest?
 
 `m05-l01` · about 6 min · draft
 
-> **⚠️ Review note:** Battery chemistries vary (flooded, sealed, gel, AGM, lithium). The lesson avoids voltage figures deliberately. Please check the hydrogen and acid caution is fair given the range of battery types.
+> **⚠️ Review note:** Audit note 18, revise: the hydrogen and acid warning now applies to lead-acid batteries, with a separate statement that lithium batteries have different hazards and their own management system. Please approve.
 
 A diesel engine needs no electricity to keep running, but it almost always needs a healthy battery to start. Most boats have at least two batteries, so that using the lights and instruments cannot leave you unable to start the engine.
+
+**Caution (shown before the steps):** Lead-acid batteries can give off explosive hydrogen gas when charging, and they contain corrosive acid. Lithium batteries have different hazards and are managed by their own battery management system: follow their maker's instructions. With any battery, a spanner across the terminals can cause sparks, severe burns or an explosion, so keep flames and sparks away, remove metal watches and rings, and protect your eyes.
+
+*Applies to:* Lead-acid batteries, Lithium batteries
 
 1. **Engine and domestic batteries.** The engine (or starting) battery is kept for starting. The domestic (or service) battery bank runs lights, instruments and other equipment. Keeping them separate means a flat domestic bank does not stop you starting the engine.
 2. **The battery isolator.** Isolator switches disconnect the batteries from the boat's wiring. They protect against fire from faulty wiring when the boat is left, and let you choose which battery is used. Know which switch does what on your boat.
 3. **Checking the state of charge.** A voltmeter reading taken when the battery has rested for a while, with no charging or heavy load, gives a rough guide to its state of charge. The battery maker's information explains what the readings mean for your type of battery.
 4. **Terminals and cables.** Terminals must be clean and tight. Corrosion or a loose clamp can stop the engine starting even when the battery itself is fully charged.
 5. **Keep them secure.** Batteries are heavy. They must be strapped down so they cannot move in rough weather, and their terminals covered so nothing can fall across them.
-
-**Caution:** Batteries can give off explosive hydrogen gas when charging, and a spanner across the terminals can cause sparks, severe burns or an explosion. Keep flames and sparks away, remove metal watches and rings, and protect your eyes. Some batteries contain corrosive acid.
 
 #### Questions for lesson 5.1 (4)
 
@@ -1634,16 +1800,16 @@ Why is a voltmeter reading of a battery's state of charge best taken after it ha
 
 **m05-q004** · difficulty 3 (hard) · draft
 
-> **⚠️ Review note:** Applies mainly to lead-acid types; confirm wording.
+> **⚠️ Review note:** Audit note 19, revise: the question is now limited to lead-acid batteries, and the explanation says lithium hazards differ. Please approve.
 
-Why must you keep sparks and flames away from batteries that are being charged?
+Why should sparks and flames be kept away from lead-acid batteries that are being charged?
 
 - A. Charging can give off hydrogen gas, which is explosive ✅
-- B. Sparks near the terminals drain the battery's charge
-- C. Heat from a flame makes the battery charge far too quickly
-- D. Flames make the battery switch to discharging
+- B. Sparks can damage the charger's electronics
+- C. Heat from a flame makes the battery overcharge
+- D. A spark can reverse the battery's polarity
 
-*Explanation:* Many batteries release hydrogen while charging. In a poorly ventilated locker, a spark from a loose connection or a dropped tool can ignite it.
+*Explanation:* Vented lead-acid batteries can release hydrogen while charging. In a poorly ventilated locker, a spark from a loose connection or a dropped tool can ignite it. Lithium batteries do not give off hydrogen in normal use but have hazards of their own.
 
 <a id="m05-l02"></a>
 
@@ -1651,15 +1817,15 @@ Why must you keep sparks and flames away from batteries that are being charged?
 
 `m05-l02` · about 6 min · draft
 
-> **⚠️ Review note:** Some installations have alternator protection devices that make isolator switching safe. Please confirm the 'unless your installation is designed for it' wording is appropriate.
+> **⚠️ Review note:** S09 and audit note 20, accept with qualification: a lit charge lamp now 'indicates a charging-system fault or failure to excite' rather than proving the alternator is not charging; the isolator step says 'specifically designed and approved'. Please approve.
 
 While the engine runs, the alternator recharges the batteries and powers the boat's equipment. It is driven by a belt from the engine and controlled by a regulator that stops the batteries being overcharged.
 
 1. **How it is driven.** A belt from a pulley on the crankshaft turns the alternator. If the belt is slack it slips, often squealing, and charging falls off; if it breaks, charging stops altogether.
 2. **The regulator.** The regulator, usually built into the alternator, controls the charging voltage so the batteries are charged fully without being damaged by overcharging.
 3. **Charging more than one battery.** Boats with separate engine and domestic batteries use a device such as a split-charge relay or a charge distributor so that both are charged while keeping them separate when the engine is stopped.
-4. **The charge warning light.** The charge light comes on with the key before starting and should go out once the engine is running. If it stays on, or comes on while running, the alternator is not charging.
-5. **Do not break the circuit while running.** Never switch the battery isolator off while the engine is running unless your installation is designed for it. Suddenly disconnecting the battery can damage the alternator's electronics.
+4. **The charge warning light.** The charge light comes on with the key before starting and should go out once the engine is running. If it stays on, or comes on while running, it indicates a charging-system fault or a failure to excite the alternator. Check the belt first, then verify using the handbook and suitable voltage checks.
+5. **Do not break the circuit while running.** Never switch the battery isolator off while the engine is running unless the installation is specifically designed and approved for it. Suddenly disconnecting the battery can damage the alternator's electronics.
 
 #### Questions for lesson 5.2 (4)
 
@@ -1672,22 +1838,24 @@ What drives the alternator?
 - A. A belt from the engine's crankshaft pulley ✅
 - B. The battery
 - C. The propeller shaft, through the gearbox
-- D. The raw water flow
+- D. An electric motor powered from the domestic bank
 
 *Explanation:* The alternator is turned by a belt from the engine, so it only charges while the engine runs and the belt is in good order.
 
 <a id="m05-q006"></a>
 
-**m05-q006** · difficulty 1 (easy) · draft
+**m05-q006** · difficulty 2 (medium) · draft
 
-The charge warning light stays on after the engine has started. What does this mean?
+> **⚠️ Review note:** S09: the key no longer says the lamp proves the alternator is not charging. Please approve.
 
-- A. The alternator is not charging the batteries ✅
+The charge warning light stays on after the engine has started. What does this indicate?
+
+- A. A charging-system fault, or the alternator failing to excite ✅
 - B. The batteries are fully charged and now resting
-- C. The engine coolant is starting to overheat
-- D. The engine oil is due to be changed
+- C. The alternator has definitely failed and needs replacing
+- D. The engine coolant is starting to overheat
 
-*Explanation:* The charge light should go out once the alternator starts producing power. If it stays on, check the belt and connections; see Not charging in the Fault finder.
+*Explanation:* The light points to a fault somewhere in the charging system, not necessarily the alternator itself. Check the belt and connections, then verify with the handbook and a voltage check; see Not charging in the Fault finder.
 
 <a id="m05-q007"></a>
 
@@ -1711,7 +1879,7 @@ Why should you not normally switch off the battery isolator while the engine is 
 - A. Cutting off the battery can damage the alternator's electronics ✅
 - B. The engine will stop at once without battery power
 - C. It drains the batteries back through the alternator instead
-- D. It locks the gearbox in whatever gear is selected
+- D. The starter motor can engage while the engine is running
 
 *Explanation:* With the battery disconnected, the alternator's output has nowhere to go and the voltage can spike, damaging its diodes or regulator. A diesel keeps running without the battery.
 
@@ -1721,7 +1889,11 @@ Why should you not normally switch off the battery isolator while the engine is 
 
 `m05-l03` · about 6 min · draft
 
+> **⚠️ Review note:** S01: the wet-exhaust waterlock warning A is now shown before the steps, verbatim, because the lesson discusses cranking. Please approve.
+
 The starter motor has to turn a cold engine fast enough to create the compression heat that lights the fuel. It draws a very large current, which is why it has its own heavy cables and switching.
+
+> ⚠️ **WARNING — WET EXHAUST / WATERLOCK.** If the engine repeatedly cranks but does not start, stop and follow the engine and exhaust-system manufacturer's procedure. On many wet-exhaust installations the seawater pump continues to deliver water while cranking; without exhaust gas flow, water can accumulate and enter the engine. **Never run the engine with the raw-water seacock closed.** Some manufacturers specify a controlled seawater-isolation procedure for extended troubleshooting. Use it only if it is documented for that installation, and positively confirm the seacock is **OPEN BEFORE THE ENGINE IS ALLOWED TO RUN**. If water ingestion is suspected, do not crank again; seek qualified assistance.
 
 **Diagram (flow).** A flow diagram of the starting circuit in five stages: the battery and isolator, the key or start button, the starter solenoid, the starter motor turning the flywheel, and the earth return to the battery.
 
@@ -1734,10 +1906,10 @@ The starter motor has to turn a cold engine fast enough to create the compressio
 Caption: A typical starting circuit. The key switch only carries a small current; the solenoid switches the heavy one.
 
 1. **The solenoid.** Turning the key sends a small current to the solenoid mounted on the starter. The solenoid pushes the starter's small gear into mesh with the flywheel and closes heavy contacts that send the battery's full current to the motor.
-2. **The earth return.** The current has to get back to the battery. On most engines it returns through the engine block and an earth cable. A corroded or loose earth connection is a common and easily missed cause of starting trouble.
-3. **Reading the symptoms.** Nothing at all usually points to the isolator, the key switch or a safety switch. A single click often means a weak battery or a poor connection. Slow turning suggests a weak battery, poor connections or a very cold engine. Normal turning without firing points away from the electrics and towards fuel or cold-starting.
+2. **The earth return.** The current has to get back to the battery. On many engines it returns through the engine block and an earth cable. A corroded or loose earth connection is an easily missed cause of starting trouble.
+3. **Reading the symptoms.** Nothing at all usually points to the isolator, the key switch or a safety switch. A single click often means a weak battery or a poor connection. Slow turning suggests a weak battery, poor connections or a very cold engine. Normal turning without firing usually points away from the starting circuit: check the stop control, the fuel and pre-heating next (lesson 8.2).
 4. **Safety switches.** Some installations will not let the starter turn unless the gear lever is in neutral. If nothing happens, check the lever is fully in neutral.
-5. **Look after the starter.** Crank in short bursts with pauses between, as your handbook advises. Long cranking overheats the starter, flattens the battery and, on boats with a wet exhaust, can fill the exhaust with water.
+5. **Look after the starter.** Crank in short bursts with pauses between, as your handbook advises. Long cranking overheats the starter and flattens the battery, and on a wet exhaust it can let water build up: see the wet-exhaust warning at the top of this lesson.
 
 #### Questions for lesson 5.3 (4)
 
@@ -1771,14 +1943,14 @@ Why is a solenoid used in the starting circuit?
 
 **m05-q011** · difficulty 2 (medium) · draft
 
-When you press the start button, nothing happens at all, not even a click. Which of these is the most likely cause?
+When you press the start button, nothing happens at all, not even a click. Which of these is a likely cause?
 
 - A. The battery isolator is off or the gear lever is not in neutral ✅
 - B. Air has been drawn into the fuel system through a loose joint
 - C. The raw water strainer is blocked with weed and debris
 - D. The engine oil level is below the minimum mark
 
-*Explanation:* Complete silence means no current is reaching the solenoid. Fuel, cooling and oil problems do not stop the starter turning.
+*Explanation:* Complete silence usually means no current is reaching the solenoid. Fuel, cooling and oil problems do not stop the starter turning.
 
 <a id="m05-q012"></a>
 
@@ -1786,12 +1958,12 @@ When you press the start button, nothing happens at all, not even a click. Which
 
 The battery is good and its terminals are clean, but the starter turns slowly. Which connection is often overlooked?
 
-- A. The engine earth cable between the engine and the battery ✅
-- B. The fuel tank vent pipe and its through-hull fitting on the side
-- C. The pressure cap on the coolant header tank
-- D. The coupling between the gearbox and the shaft
+- A. The engine earth cable ✅
+- B. The glow plug feed wire
+- C. The alternator output terminal
+- D. The fuse for the engine panel
 
-*Explanation:* Starting current returns to the battery through the engine and its earth cable. Corrosion there adds resistance and slows the starter just like a weak battery.
+*Explanation:* Starting current returns to the battery through the engine and its earth cable. Corrosion there adds resistance and slows the starter just like a weak battery. The glow plug and alternator wiring do not carry starting current, and a blown panel fuse would stop the starter altogether.
 
 <a id="m05-l04"></a>
 
@@ -1799,14 +1971,14 @@ The battery is good and its terminals are clean, but the starter turns slowly. W
 
 `m05-l04` · about 5 min · draft
 
-> **⚠️ Review note:** Please confirm the glow plug failure symptoms and the starting spray warning are accurate in general.
+> **⚠️ Review note:** Audit note 21, accept with qualification: the glow plug symptoms are now described as clues, not exclusive to glow plugs; the starting spray warning is unchanged. Please approve.
 
 A cold engine soaks up the heat of compression, so on a cold day the air may not get hot enough to light the fuel. Many small diesels have a cold-starting aid, usually glow plugs, to help.
 
 1. **What glow plugs do.** A glow plug is a small electric heater that pokes into each combustion chamber. Switched on before starting, it warms the air in the chamber so the fuel lights more easily.
 2. **Pre-heating.** On many engines you hold the key in a heat position, or press a separate button, for a time before cranking. Your handbook gives the recommended time; colder weather usually needs longer.
 3. **Other cold-start aids.** Some engines use an air intake heater instead of glow plugs, and some start well enough without any aid. A few have a cold-start device on the injection pump that adds extra fuel.
-4. **When glow plugs fail.** A failed glow plug usually shows as hard starting from cold, rough running and white smoke for the first minute or so, which then clears as the engine warms. The engine often starts normally once it is warm.
+4. **When glow plugs fail.** A failed glow plug can show as hard starting from cold, rough running and white smoke for the first minute or so, which then clears as the engine warms. The engine often starts normally once it is warm. Other faults can cause similar symptoms, so treat these as clues rather than proof.
 5. **Starting sprays.** Do not use aerosol starting sprays unless your engine's handbook allows them. On engines with glow plugs or intake heaters, the vapour can ignite early and cause serious engine damage.
 
 #### Questions for lesson 5.4 (4)
@@ -1819,7 +1991,7 @@ What does a glow plug do?
 
 - A. Heats the combustion chamber to help a cold engine start ✅
 - B. Creates a spark to light the fuel while the engine is running
-- C. Lights the engine space
+- C. Warms the fuel in the filter so it flows in cold weather
 - D. Warms the engine oil in the sump
 
 *Explanation:* A diesel has no spark. The glow plug is a small heater used before and during starting so the compressed air gets hot enough to light the fuel.
@@ -1869,20 +2041,24 @@ Why can aerosol starting sprays be dangerous in an engine with glow plugs?
 
 `m05-l05` · about 6 min · hands-on · draft
 
+> **⚠️ Review note:** S10: the negative-lead-first advice is now limited to conventional negative-earth lead-acid systems, with the vessel's isolation procedure, separate starter and house banks and lithium systems covered. The meter step adds safe voltage use and a prohibition on measuring current across a battery (module 5 judgement). Please approve.
+
 The engine panel is how the engine tells you something is wrong. Knowing what each light and alarm means, and a few simple electrical checks, will solve many problems without a specialist.
 
-1. **The usual lights.** Most panels have an oil pressure light, a charge light and a high temperature light, often with a buzzer. Some also have a glow plug light and gauges for temperature, oil pressure or battery voltage. Learn which is which on your own panel.
-2. **The key-on test.** When you switch on before starting, the oil and charge lights normally come on and the alarm sounds. This shows they are working. Both lights should go out within a few seconds of the engine starting.
-3. **Make it safe first.** Before working on any wiring, switch off the battery isolator. If you need to disconnect a battery, take off the negative lead first and put it back last, so a spanner touching the engine cannot cause a short circuit.
-4. **Check the connections.** Look for loose, corroded or damaged connections at the battery terminals, the isolator, the starter, the alternator and the engine earth. Green or white powder on a terminal is a sign of corrosion.
-5. **Fuses and breakers.** The engine panel and its instruments are usually protected by a fuse or circuit breaker. If the whole panel is dead, check this before anything else.
-6. **Use a meter.** A simple multimeter lets you compare battery voltage with the engine stopped and running, and check that power reaches each part of the circuit. It is worth carrying one and learning the basics.
+**Caution (shown before the steps):** Remove metal watches and rings before working near batteries or the starter circuit. A short circuit can heat metal enough to cause severe burns.
 
-**Caution:** Remove metal watches and rings before working near batteries or the starter circuit. A short circuit can heat metal enough to cause severe burns.
+*Applies to:* Lead-acid batteries, Lithium batteries
+
+1. `Observe` **The usual lights.** Most panels have an oil pressure light, a charge light and a high temperature light, often with a buzzer. Some also have a glow plug light and gauges for temperature, oil pressure or battery voltage. Learn which is which on your own panel.
+2. `Observe` **The key-on test.** When you switch on before starting, the oil and charge lights normally come on and the alarm sounds. This shows they are working. Both lights should go out within a few seconds of the engine starting.
+3. `Owner (handbook required)` **Make it safe first.** Before working on any wiring, switch off the battery isolator, following your boat's own isolation procedure. On a conventional negative-earth system with lead-acid batteries, if you need to disconnect a battery, take off the negative lead first and put it back last, so a spanner touching the engine cannot cause a short circuit. Starter and house banks may be wired differently, and lithium systems often have a battery management system with their own isolation steps, so follow the installer's or maker's instructions.
+4. `Observe` **Check the connections.** Look for loose, corroded or damaged connections at the battery terminals, the isolator, the starter, the alternator and the engine earth. Green or white powder on a terminal is a sign of corrosion.
+5. `Owner (handbook required)` **Fuses and breakers.** The engine panel and its instruments are usually protected by a fuse or circuit breaker. If the whole panel is dead, check this before anything else.
+6. `Owner (handbook required)` **Use a meter.** A simple multimeter lets you compare battery voltage with the engine stopped and running, and check that power reaches each part of the circuit. Use the voltage setting across the battery terminals; never connect a meter set to measure current (amps) across a battery, which makes a short circuit and can cause burns. It is worth carrying a meter and learning the basics.
 
 *Ends with the handbook reminder.*
 
-#### Questions for lesson 5.5 (4)
+#### Questions for lesson 5.5 (5)
 
 <a id="m05-q017"></a>
 
@@ -1892,7 +2068,7 @@ When you switch on before starting, which lights would you normally expect to co
 
 - A. The oil pressure and charge warning lights ✅
 - B. None at all
-- C. Only the navigation lights
+- C. The oil pressure light alone; the charge light comes on once the engine runs
 - D. The high temperature light, which stays on while running
 
 *Explanation:* With the engine stopped there is no oil pressure and no charging, so both lights come on. That shows they work. They should go out soon after starting.
@@ -1901,14 +2077,14 @@ When you switch on before starting, which lights would you normally expect to co
 
 **m05-q018** · difficulty 2 (medium) · draft
 
-When disconnecting a battery, which lead should you take off first?
+On a conventional negative-earth system with lead-acid batteries, which lead should you take off first when disconnecting a battery?
 
 - A. The negative lead ✅
 - B. The positive lead
 - C. Either, it makes no difference
-- D. Both at the same time
+- D. Whichever is easier to reach
 
-*Explanation:* The engine is connected to the negative side. With the negative removed first, a spanner touching the positive terminal and the engine cannot complete a circuit and cause a short.
+*Explanation:* On these systems the engine is connected to the negative side. With the negative removed first, a spanner touching the positive terminal and the engine cannot complete a circuit and cause a short. Other systems, such as lithium banks with a battery management system, may have their own isolation procedure.
 
 <a id="m05-q019"></a>
 
@@ -1936,6 +2112,21 @@ Why should you remove metal rings and watches before working near the batteries?
 
 *Explanation:* A battery can deliver a very large current. If a ring bridges a live terminal and earth, it heats almost instantly and can burn deeply.
 
+<a id="m05-q021"></a>
+
+**m05-q021** · difficulty 2 (medium) · draft
+
+> **⚠️ Review note:** New in content 1.1 (module 5 judgement, S20): safe multimeter use. Please approve.
+
+You want to check a battery with a multimeter. Which setting and connection is safe?
+
+- A. The voltage setting, with the probes across the battery terminals ✅
+- B. The current (amps) setting, with the probes across the battery terminals
+- C. The resistance setting, with the engine running
+- D. The current setting, with one probe on the engine and one on the positive terminal
+
+*Explanation:* A meter on its voltage setting has a high resistance, so it can be connected across the battery safely. On a current setting it is close to a short circuit: connected across a battery or to earth it can blow the meter, burn the leads and burn you.
+
 ## Module 6: Drive belts and stern gear
 
 *The belts that drive the alternator and pumps, the gearbox, and everything between the gearbox and the water: shaft, coupling, stern gland and propeller.*
@@ -1946,18 +2137,18 @@ Why should you remove metal rings and watches before working near the batteries?
 
 `m06-l01` · about 6 min · hands-on · draft
 
-> **⚠️ Review note:** No deflection figures are given, by design. Please confirm the guidance on new belts bedding in and the description of belt types is accurate.
+> **⚠️ Review note:** Audit note 22, accept with qualification: tensioning, re-tensioning and belt type now explicitly follow the engine maker. Please approve.
 
 A rubber belt on the front of the engine drives the alternator and, on many engines, the coolant circulating pump. A belt that fails can stop the charging and overheat the engine at the same time, so it deserves regular attention.
 
-1. **What the belts drive.** Find out what each belt on your engine turns. Usually it is the alternator and the coolant pump; on some engines the raw water pump too. That tells you what will stop working if the belt breaks.
-2. **Types of belt.** Older and smaller engines often use a V-belt, which grips by its sloping sides. Many newer engines use a flat ribbed belt, sometimes called poly-V or multi-rib. They are not interchangeable.
-3. **Inspecting a belt.** With the engine stopped and unable to start, look along the whole belt. Cracks across the ribs, fraying edges, a shiny glazed surface or black rubber dust around the pulleys all suggest it needs replacing.
-4. **Tension.** A slack belt slips and squeals and wears quickly. A belt that is too tight overloads the bearings in the alternator and pump. Your handbook explains how to check tension on your engine, usually by how far the belt moves when pressed at a given point.
-5. **Adjusting and replacing.** On many engines the tension is set by moving the alternator on its mounting and locking it in place; others have an automatic tensioner. When fitting a new belt, check its tension again after a short period of running, because new belts bed in.
-6. **Carry a spare.** Keep a spare belt of the right type and size on board, along with the tools to fit it. Check it fits before you need it.
+**Caution (shown before the steps):** Never touch or check a belt while the engine is running. Belts and pulleys can trap fingers, hair and clothing in an instant. Make sure the engine cannot be started before you inspect them.
 
-**Caution:** Never touch or check a belt while the engine is running. Belts and pulleys can trap fingers, hair and clothing in an instant. Make sure the engine cannot be started before you inspect them.
+1. `Observe` **What the belts drive.** Find out what each belt on your engine turns. Usually it is the alternator and the coolant pump; on some engines the raw water pump too. That tells you what will stop working if the belt breaks.
+2. `Observe` **Types of belt.** Older and smaller engines often use a V-belt, which grips by its sloping sides. Many newer engines use a flat ribbed belt, sometimes called poly-V or multi-rib. They are not interchangeable.
+3. `Observe` **Inspecting a belt.** With the engine stopped and unable to start, look along the whole belt. Cracks across the ribs, fraying edges, a shiny glazed surface or black rubber dust around the pulleys all suggest it needs replacing.
+4. `Owner (handbook required)` **Tension.** A slack belt slips and squeals and wears quickly. A belt that is too tight overloads the bearings in the alternator and pump. Your handbook explains how to check tension on your engine, usually by how far the belt moves when pressed at a given point.
+5. `Owner (handbook required)` **Adjusting and replacing.** On many engines the tension is set by moving the alternator on its mounting and locking it in place; others have an automatic tensioner. Follow your engine maker's instructions for the type of belt, its tension and when to check it again after fitting: new belts often need re-tensioning after a short period of running as they bed in.
+6. `Owner (handbook required)` **Carry a spare.** Keep a spare belt of the right type and size on board, along with the tools to fit it. Check it fits before you need it.
 
 *Ends with the handbook reminder.*
 
@@ -2034,15 +2225,15 @@ Why should the tension of a newly fitted belt be checked again after a short per
 
 `m06-l02` · about 5 min · draft
 
-> **⚠️ Review note:** Please confirm the gear-changing advice (idle, brief pause in neutral) is fair general guidance for common small-boat gearboxes.
+> **⚠️ Review note:** Audit note 23, accept with qualification: the neutral pause applies where the gearbox handbook supports it. Step 4 now distinguishes normal slight cold drag from positive drive (note 24). Please approve.
 
 The gearbox lets the engine run while the propeller is stopped, and lets you choose ahead or astern. It also reduces the speed of the shaft so the propeller turns at an efficient speed.
 
 1. **What it does.** The gearbox has three positions: ahead, neutral and astern. In neutral the engine can run without turning the propeller. Most marine gearboxes also reduce the shaft speed compared with the engine speed.
 2. **Gearbox oil.** Most gearboxes have their own oil, separate from the engine oil, with their own dipstick or level plug. Some use engine oil and some use other types such as transmission fluid. Use only what the handbook specifies, and check the level as often as it advises.
-3. **Changing gear.** Change gear only with the engine at idle. Pause briefly in neutral when going from ahead to astern, or the reverse, to let the shaft slow down. Slamming between ahead and astern at high revs strains the gearbox and couplings.
-4. **The gear cable.** A cable usually connects the gear lever to the gearbox. If it stretches or its fixings work loose, the gearbox may not fully engage or fully return to neutral. Check the lever positions match the gearbox lever at each end of its travel.
-5. **Warning signs.** Slipping or delayed engagement, new noises, a burning smell or oil leaking around the gearbox are all reasons to stop and investigate, and probably to get specialist advice.
+3. **Changing gear.** Change gear only with the engine at idle and, where your gearbox handbook supports it, pause briefly in neutral when going between ahead and astern so the shaft can slow down. Slamming between ahead and astern at high revs strains the gearbox and couplings.
+4. **The gear cable.** A cable usually connects the gear lever to the gearbox. If it stretches or its fixings work loose, the gearbox may not fully engage or fully return to neutral. Check the lever positions match the gearbox lever at each end of its travel. A slight drag in neutral when cold can be normal on some gearboxes, but the boat should not drive steadily ahead or astern in neutral.
+5. **Signs of trouble.** Slipping or delayed engagement, new noises, a burning smell or oil leaking around the gearbox are all reasons to stop and investigate, and probably to get specialist advice.
 
 #### Questions for lesson 6.2 (5)
 
@@ -2070,7 +2261,7 @@ What is the right way to change from ahead to astern?
 - C. Stop the engine, select astern, then restart the engine
 - D. Raise the revs in neutral, then select astern quickly
 
-*Explanation:* Changing at idle with a short pause lets the shaft slow before the gearbox engages the other direction, avoiding shock loads on the gearbox and coupling.
+*Explanation:* Changing at idle with a short pause lets the shaft slow before the gearbox engages the other direction, avoiding shock loads on the gearbox and coupling. Follow your gearbox handbook if it says otherwise.
 
 <a id="m06-q008"></a>
 
@@ -2089,16 +2280,16 @@ Where should you check the gearbox oil level on most installations?
 
 **m06-q009** · difficulty 3 (hard) · draft
 
-> **⚠️ Review note:** Some gearboxes drag slightly in neutral when cold; confirm the answer is unambiguous.
+> **⚠️ Review note:** Audit note 24, revise: the question now describes steady drive with a warm engine, and the explanation separates normal slight cold drag from positive drive. Please approve.
 
-The boat creeps forward slightly even with the gear lever in neutral. What is a likely cause?
+With the engine warm and the lever in neutral, the boat drives steadily forward as if in gear. What is a likely cause?
 
-- A. The gear cable is out of adjustment, so it is not fully in neutral ✅
-- B. The fuel tank is too full, making the stern sit low
-- C. The coolant is low, so the engine idles too fast
-- D. The battery is overcharged, so the starter keeps turning
+- A. The gear cable is out of adjustment ✅
+- B. The engine's idle speed is set slightly too high
+- C. The cutless bearing is worn and lets the shaft drag
+- D. The propeller is fouled with weed
 
-*Explanation:* If the cable has stretched or slipped, the lever and gearbox positions no longer match, and the gearbox may stay partly engaged. Check the lever travel at both ends.
+*Explanation:* If the cable has stretched or slipped, the lever and gearbox positions no longer match, and the gearbox may stay partly engaged. Some gearboxes drag slightly in neutral when cold, which can be normal, but steady drive in neutral is not. Idle speed, bearing wear and fouling do not make a gearbox drive in neutral.
 
 <a id="m06-q010"></a>
 
@@ -2119,21 +2310,23 @@ Apart from ahead, neutral and astern, what else does a marine gearbox usually do
 
 `m06-l03` · about 6 min · hands-on · draft
 
-> **⚠️ Review note:** Expected drip rates and the need to 'burp' dripless seals vary by product. The lesson defers to the maker. Please check the general descriptions are accurate.
+> **⚠️ Review note:** Audit note 25, revise (S11): drip rates, venting and adjustment are now product-specific; new or increasing leakage is treated as urgent with a bilge pumping check; adjustment only with the shaft unable to turn. Please approve.
 
 Where the propeller shaft passes out through the hull, a seal called the stern gland keeps the water out. There are two main kinds, and each needs a different sort of care.
 
-1. **The traditional packed gland.** A traditional gland, often called a stuffing box, squeezes rings of packing around the shaft. The packing is lubricated and cooled by water, so many are designed to drip slightly while the shaft turns. Some have a greaser that you turn to push grease into the packing.
-2. **Dripless seals.** Many modern boats use a seal with a face or lips running on the shaft, designed not to drip. They are held by a short length of flexible hose. Some need air letting out of them after the boat is launched, a process described by the seal's maker.
-3. **Daily check.** Look at the stern gland as part of your checks, and again after a long passage. Know how it should look: a slow drip from a packed gland may be normal, while any steady leak from a dripless seal is not.
-4. **Adjusting a packed gland.** If a packed gland leaks too much, it can be adjusted by tightening its nuts a little and evenly. Too tight and it will overheat and wear the shaft. Follow the maker's advice for how much drip to aim for, and when to repack it.
-5. **Hoses and clips.** Check the flexible hose that holds the gland or seal for cracks and perishing, and check its clips. This hose is below the waterline.
+**Caution (shown before the steps):** Never adjust or touch the stern gland while the shaft is turning. Make sure the engine is stopped and cannot be started.
 
-**Caution:** Never adjust or touch the stern gland while the shaft is turning. Make sure the engine is stopped and cannot be started.
+*Applies to:* Packed gland, Mechanical shaft seal
+
+1. `Observe` **The traditional packed gland.** A traditional gland, often called a stuffing box, squeezes rings of packing around the shaft. The packing is lubricated and cooled by water, so many are designed to drip slightly while the shaft turns; how much is acceptable depends on the gland and its maker. Some have a greaser that you turn to push grease into the packing.
+2. `Observe` **Mechanical shaft seals.** Many modern boats use a mechanical shaft seal, with a face or lips running on the shaft, designed not to drip. They are usually held by a short length of flexible hose. Some need venting after launch or at intervals, as described by the seal's maker.
+3. `Observe` **Daily check.** Look at the stern gland as part of your checks, and again after a long passage. Know what is normal for your seal type: a slow drip from a packed gland may be normal, while a steady leak from a seal designed not to drip is not. Treat any new or increasing leak as urgent: check the bilge and make sure your bilge pumping can keep up.
+4. `Owner (handbook required)` **Adjusting a packed gland.** Only with the engine stopped and the shaft unable to turn, a packed gland that leaks too much can be adjusted by tightening its nuts a little and evenly, as its maker describes. Too tight and it will overheat and wear the shaft. Follow the maker's advice for how much drip to aim for, and when to repack it. Never adjust it around a rotating shaft.
+5. `Observe` **Hoses and clips.** Check the flexible hose that holds the gland or seal for cracks and perishing, and check its clips. This hose is below the waterline.
 
 *Ends with the handbook reminder.*
 
-#### Questions for lesson 6.3 (5)
+#### Questions for lesson 6.3 (6)
 
 <a id="m06-q011"></a>
 
@@ -2152,16 +2345,16 @@ What is the job of the stern gland?
 
 **m06-q012** · difficulty 2 (medium) · draft
 
-> **⚠️ Review note:** Some packed glands are designed to be drip-free when stationary and drip only slowly when running. Confirm wording.
+> **⚠️ Review note:** Audit note 26, accept with qualification (S11): a small drip while turning may be normal for some packed glands; the explanation makes drip rates product-specific. Please approve.
 
 A traditional packed stern gland drips slowly while the shaft turns. What does this usually mean?
 
 - A. It may be normal: many packed glands use water to cool and lubricate ✅
-- B. The boat is taking on water and must be lifted out at once
-- C. The gland must be tightened straight away until the dripping stops completely
-- D. The engine is overheating and the coolant is escaping
+- B. The gland should be tightened straight away until all dripping stops
+- C. The packing has failed and the gland needs repacking now
+- D. The cutless bearing has worn and needs replacing
 
-*Explanation:* Many packed glands are meant to drip slightly in use. Tightening until all dripping stops can overheat the packing and wear the shaft. Follow the maker's guidance.
+*Explanation:* Many packed glands are meant to drip slightly in use; how much is normal depends on the gland and its maker. Tightening until all dripping stops can overheat the packing and wear the shaft. A new or increasing leak is different: treat it as urgent.
 
 <a id="m06-q013"></a>
 
@@ -2172,22 +2365,24 @@ What can happen if a packed stern gland is tightened too much?
 - A. The packing overheats and wears a groove in the shaft ✅
 - B. The propeller works loose and eventually falls off the shaft
 - C. The gearbox can no longer be put into gear
-- D. The battery goes flat from the extra load
+- D. The gland stops dripping and the shaft runs cooler
 
-*Explanation:* Too much pressure stops the water reaching the packing. Friction then heats it and wears the shaft, which can be costly to repair.
+*Explanation:* Too much pressure stops the water reaching the packing. Friction then heats it and wears the shaft, which can be costly to repair. A dry gland is not a sign that all is well.
 
 <a id="m06-q014"></a>
 
 **m06-q014** · difficulty 3 (hard) · draft
 
-A dripless shaft seal shows a steady trickle of water. How should you treat it?
+> **⚠️ Review note:** S11: the key now treats leakage from a seal designed not to drip as urgent and adds the bilge pumping check. Please approve.
 
-- A. As a fault, because these seals are designed not to leak ✅
+A shaft seal that its maker says should not drip shows a steady trickle of water. How should you treat it?
+
+- A. As an urgent fault, checking the bilge pumps can keep up ✅
 - B. As normal, because every kind of shaft seal drips a little
 - C. As a sign that the seal needs more grease pumping in
-- D. As a sign that the engine oil is due to be changed
+- D. As something to look at when the boat is next lifted out
 
-*Explanation:* Unlike a packed gland, a dripless seal should stay dry. A leak can mean wear, damage or a problem with its hose, and it is below the waterline.
+*Explanation:* A seal designed not to drip should stay dry. A leak can mean wear, damage or a problem with its hose, and it is below the waterline, so new or increasing leakage is a vessel-safety issue: check the bilge, make sure the pumps can keep up and get the seal looked at.
 
 <a id="m06-q015"></a>
 
@@ -2202,24 +2397,39 @@ When is it safe to adjust the stern gland?
 
 *Explanation:* A turning shaft can catch clothing, fingers or tools. Make sure it cannot turn before working near it.
 
+<a id="m06-q021"></a>
+
+**m06-q021** · difficulty 3 (hard) · draft
+
+> **⚠️ Review note:** New in content 1.1 (S11, S20): a safety-first scenario on shaft-seal leakage, matching the Fault finder stop card. Please approve.
+
+After a passage the bilge is filling faster than usual, and water is coming from the shaft seal. What should you do first?
+
+- A. Stop the shaft once safe, check the pumps keep up, and get help if it gains ✅
+- B. Tighten the seal with the shaft turning so you can see the leak slow down
+- C. Keep motoring to harbour and look at the seal when next lifted out
+- D. Pump the bilge dry and carry on unless the leak gets worse
+
+*Explanation:* An uncontrolled leak at the shaft seal is a vessel-safety issue. Stop the shaft once it is safe, make sure pumping keeps up, and call for assistance early if the water is gaining. Never adjust a seal on a turning shaft.
+
 <a id="m06-l04"></a>
 
 ### Lesson 6.4: Shaft, coupling and propeller
 
 `m06-l04` · about 6 min · draft
 
-> **⚠️ Review note:** Please check the description of cutless bearing wear and shaft anodes is accurate in general.
+> **⚠️ Review note:** Audit note 27, accept with qualification: shaft play is now described as one clue, to be checked against the bearing maker's tolerances. Please approve.
 
 The propeller shaft carries the engine's power out through the hull to the propeller. Most problems here show up as vibration, noise or a change in how the boat handles.
 
+**Caution (shown before the steps):** Before anyone goes near the propeller, in the water or out of it, stop the engine and make sure it cannot be started.
+
 1. **The coupling.** The shaft is bolted to the gearbox through a coupling. Some installations use a flexible coupling to absorb small movements and reduce noise. The bolts must stay tight.
 2. **Alignment and engine mounts.** The engine sits on flexible mounts, and it has to be lined up accurately with the shaft. Worn or collapsed mounts, or poor alignment, cause vibration and wear the cutless bearing and stern gland.
-3. **The cutless bearing.** Where the shaft leaves the hull, it runs in a rubber-lined bearing lubricated by the water outside. When the boat is out of the water, a shaft that can be moved sideways in this bearing shows it is worn.
+3. **The cutless bearing.** Where the shaft leaves the hull, it runs in a rubber-lined bearing lubricated by the water outside. When the boat is out of the water, noticeable sideways movement of the shaft in this bearing is one clue that it is worn; check it against the bearing maker's tolerances or ask an engineer.
 4. **The propeller.** Barnacles, weed or a damaged blade reduce performance and can cause vibration and black smoke as the engine labours. Inspect and clean the propeller whenever the boat is lifted out. Many boats also have a sacrificial anode on the shaft that needs replacing when worn.
 5. **Rope round the propeller.** A rope or net caught round the propeller can stall the engine or cause heavy vibration. Some boats carry a rope cutter on the shaft. Never try to clear the propeller unless the engine is stopped and cannot be started.
 6. **Noticing change.** Get to know how your boat normally feels and sounds under power. New vibration, knocking or a drop in speed for the same engine revs are all worth investigating.
-
-**Caution:** Before anyone goes near the propeller, in the water or out of it, stop the engine and make sure it cannot be started.
 
 #### Questions for lesson 6.4 (5)
 
@@ -2255,12 +2465,12 @@ What lubricates a typical cutless bearing?
 
 With the boat out of the water, the shaft can be moved sideways in the bearing where it leaves the hull. What does this suggest?
 
-- A. The cutless bearing is worn ✅
-- B. The gearbox oil is low
-- C. The propeller is too small for the boat
-- D. The engine mounts are new
+- A. The cutless bearing may be worn ✅
+- B. The stern gland packing needs adjusting
+- C. The shaft anode has worn away
+- D. The gearbox oil is low
 
-*Explanation:* A good bearing supports the shaft closely. Noticeable sideways movement shows the rubber lining has worn, which can cause vibration and noise.
+*Explanation:* A good bearing supports the shaft closely, so noticeable sideways movement is a clue that the rubber lining has worn. Check it against the bearing maker's tolerances, or ask an engineer.
 
 <a id="m06-q019"></a>
 
@@ -2268,7 +2478,7 @@ With the boat out of the water, the shaft can be moved sideways in the bearing w
 
 Why can a fouled propeller make the engine produce black smoke?
 
-- A. The extra load means more fuel than the air can burn cleanly ✅
+- A. The extra load calls for more fuel than the air can burn cleanly ✅
 - B. Barnacles on the propeller release oil that is drawn into the exhaust
 - C. The fouling blocks the exhaust outlet under the water
 - D. Weed is drawn into the engine's air filter and clogs it
@@ -2298,32 +2508,37 @@ Over a season, vibration under power slowly gets worse and the stern gland start
 
 `m07-l01` · about 6 min · hands-on · draft
 
+> **⚠️ Review note:** S15: the pre-start checks now include water ingress, the air intake and engine space ventilation, the exhaust condition, and a propeller-clear check where safe and practicable. Please approve.
+
 A few minutes of checks before starting catches most problems while you are still safely tied up. Doing them in the same order every time makes it hard to miss one.
 
-**Diagram (flow).** A flow diagram of seven pre-start checks: look in the bilge, check engine oil, check coolant, check fuel, check the raw water seacock and strainer, check belts, hoses and stern gland, then start and confirm water from the exhaust and warning lights out.
+**Caution (shown before the steps):** Do the hands-on checks with the engine stopped and unable to start. Close the engine space before starting, and keep clear of belts and pulleys while it runs.
 
-- *Look in the bilge*: Oil, fuel, coolant or more water than usual all point to a leak.
-- *Engine oil*: Level between the marks; no milky or thin oil.
-- *Coolant*: Header tank level, with the engine cold.
-- *Fuel*: Enough in the tank, valve open, no water in the filter bowl.
-- *Raw water*: Seacock open, strainer clear, lid tight.
-- *Belts, hoses and stern gland*: No cracks, leaks or loose clips.
-- *Start and confirm*: Water from the exhaust and warning lights out.
+*Applies to:* Direct (raw water) cooling, Heat-exchanger cooling, Keel cooling
+
+**Diagram (flow).** A flow diagram of the pre-start checks in seven stages: the bilge and any water coming in, engine oil and coolant, fuel, the raw water seacock and strainer, belts, hoses and the stern gland, the air intake, exhaust and propeller, and finally starting and confirming the warning lights and exhaust water.
+
+- *Bilge and water ingress*
+- *Oil and coolant*
+- *Fuel*
+- *Raw water*
+- *Belts, hoses and stern gland*
+- *Air, exhaust and propeller*
+- *Start and confirm*
 
 Caption: One way to order the checks so you work round the engine without missing anything.
 
-1. **Start with the bilge.** Before opening up the engine, look into the bilge beneath it. Fresh oil, fuel, coolant or extra water tells you something is leaking, and where to look first.
-2. **Fluids.** Check the engine oil on the dipstick and the coolant in the header tank. If your gearbox has a dipstick, check it as often as the handbook advises.
-3. **Fuel.** Make sure there is enough fuel for the trip with a good reserve, the fuel valve is open, and there is no water or dirt in the primary filter bowl.
-4. **Cooling water.** Check the raw water seacock is open, the strainer basket is clear and its lid is tight.
-5. **Look around.** Check belts for wear and tension, hoses and clips for leaks, and the stern gland for its normal condition. Make sure nothing loose is lying near belts or pulleys.
-6. **Starting.** Batteries on, gear lever in neutral, stop control pushed home. After starting, check the oil and charge lights have gone out and that water is coming from the exhaust. Let the engine warm gently before asking for full power.
-
-**Caution:** Do the hands-on checks with the engine stopped and unable to start. Close the engine space before starting, and keep clear of belts and pulleys while it runs.
+1. `Observe` **Start with the bilge.** Before opening up the engine, look into the bilge beneath it. Fresh oil, fuel, coolant or extra water tells you something is leaking, and where to look first. Check that no water is coming in anywhere else either.
+2. `Observe` **Fluids.** Check the engine oil on the dipstick and the coolant in the header tank. If your gearbox has a dipstick, check it as often as the handbook advises.
+3. `Observe` **Fuel.** Make sure there is enough fuel for the trip with a good reserve, the fuel valve is open, and there is no water or dirt in the primary filter bowl.
+4. `Observe` **Cooling water.** Check the raw water seacock is open, the strainer basket is clear and its lid is tight. A keel-cooled engine has no raw water seacock for cooling, but may have one for its exhaust.
+5. `Observe` **Look around.** Check belts for wear and tension, hoses and clips for leaks, and the stern gland for its normal condition. Make sure nothing loose is lying near belts or pulleys.
+6. `Observe` **Air, exhaust and propeller.** Make sure the engine's air intake and the engine space ventilation are clear, and look over the exhaust hose and outlet for damage or leaks. Where it is safe and practicable, check that no lines, fenders or people in the water are near the propeller before you engage gear.
+7. `Owner (handbook required)` **Starting.** Batteries on, gear lever in neutral, stop control pushed home. After starting, check the oil and charge lights have gone out and that water is coming from the exhaust. Let the engine warm gently before asking for full power.
 
 *Ends with the handbook reminder.*
 
-#### Questions for lesson 7.1 (5)
+#### Questions for lesson 7.1 (6)
 
 <a id="m07-q001"></a>
 
@@ -2371,9 +2586,9 @@ Why is it worth doing your pre-start checks in the same order every time?
 Why should you let the engine warm gently before using full power?
 
 - A. Oil flows and protects best once warm, and parts expand evenly ✅
-- B. Diesel will not burn at all in a cold engine
-- C. The alternator only charges once the engine is hot
-- D. The propeller needs to warm up before it can grip
+- B. Cold diesel is too thick for the injection pump at high revs
+- C. The gearbox will not engage properly until its oil is warm
+- D. The alternator needs time to recharge the battery before taking load
 
 *Explanation:* Cold oil is thick and reaches bearings more slowly, and a cold engine has tighter clearances in some places. A gentle warm-up reduces wear.
 
@@ -2390,15 +2605,32 @@ Before starting, you see a thin film of oil and a little coolant in the bilge th
 
 *Explanation:* New fluid in the bilge means something has changed. Checking levels and tracing the leak first can prevent an engine failure later, and oily water must not be pumped overboard.
 
+<a id="m07-q021"></a>
+
+**m07-q021** · difficulty 2 (medium) · draft
+
+> **⚠️ Review note:** New in content 1.1 (S15): the propeller-clear pre-start check. Please approve.
+
+You have started the engine and are about to engage gear for the first time. Where it is safe and practicable, what should you check first?
+
+- A. That the propeller is clear of lines and people ✅
+- B. That the engine has reached full working temperature
+- C. That the stern gland is dripping steadily
+- D. That the fuel tank is more than half full
+
+*Explanation:* A line or fender caught round the propeller can stall the engine and damage the shaft, and anyone in the water near it is in danger. Look before you engage gear.
+
 <a id="m07-l02"></a>
 
 ### Lesson 7.2: Service intervals and records
 
 `m07-l02` · about 5 min · draft
 
+> **⚠️ Review note:** S19: running hours now come from the hour meter where fitted, otherwise from a documented operating log. Please approve.
+
 Engines last longest when they are serviced on time. Your handbook contains a schedule of jobs to do at set intervals, and a simple log makes it easy to keep to it.
 
-1. **Running hours and time.** Most service jobs are due after a number of running hours shown on the engine's hour meter, or after a period of time, whichever comes first. Boats used little still need servicing by time.
+1. **Running hours and time.** Most service jobs are due after a number of running hours, shown on the engine hour meter where one is fitted or kept in a written operating log where it is not, or after a period of time, whichever comes first. Boats used little still need servicing by time.
 2. **Typical owner jobs.** Changing the engine oil and filter, fuel filters, the raw water impeller and the air filter; checking and renewing belts; checking anodes; and renewing coolant. Your handbook says which apply to your engine and how often.
 3. **Specialist jobs.** Some jobs, such as checking valve clearances, servicing injectors or checking engine alignment, need special tools or skills. The handbook may say these should be done by a qualified engineer.
 4. **Keep a log.** Write down each job with the date and engine hours, and the parts used. A log shows what is due next, helps an engineer find faults, and is valuable when you sell the boat.
@@ -2413,7 +2645,7 @@ Engines last longest when they are serviced on time. Your handbook contains a sc
 Where should you find the service schedule for your engine?
 
 - A. In the engine manufacturer's handbook ✅
-- B. On the fuel filler cap
+- B. On the engine's identification plate
 - C. On the battery label
 - D. In the boat's insurance policy documents
 
@@ -2428,7 +2660,7 @@ A service is due 'by running hours or by time, whichever comes first'. Your engi
 - A. The service is still due once the time limit is reached ✅
 - B. The service can wait until the running hours are reached
 - C. The service is no longer needed
-- D. Only the oil needs changing
+- D. The service is due only once both limits have been reached
 
 *Explanation:* Oil ages, rubber parts perish and corrosion continues even when the engine is not used. That is why there is a time limit as well as an hours limit.
 
@@ -2449,7 +2681,7 @@ Why is it useful to keep a written log of engine maintenance?
 
 **m07-q009** · difficulty 3 (hard) · draft
 
-Which of these jobs is most likely to be one for a qualified engineer rather than the owner?
+Which of these jobs is normally one for a qualified engineer rather than the owner?
 
 - A. Servicing the injectors ✅
 - B. Changing the engine oil
@@ -2462,16 +2694,16 @@ Which of these jobs is most likely to be one for a qualified engineer rather tha
 
 **m07-q010** · difficulty 1 (easy) · draft
 
-> **⚠️ Review note:** Some older panels have no hour meter; owners then estimate from a log. Consider whether this needs a mention.
+> **⚠️ Review note:** Audit note 28, revise (S19): the question now says 'where one is fitted', and the explanation covers keeping a log on engines without a meter. Please approve.
 
-What shows how many running hours the engine has done?
+Where one is fitted, what shows how many running hours the engine has done?
 
 - A. The engine hour meter ✅
-- B. The fuel gauge
-- C. The battery voltmeter
+- B. The tachometer (rev counter)
+- C. The service sticker on the oil filter
 - D. The temperature gauge
 
-*Explanation:* The hour meter records how long the engine has run. Most service intervals are based on it.
+*Explanation:* The hour meter records how long the engine has run, and many service intervals are based on it. Not every engine has one; without it, keep a written log of running time.
 
 <a id="m07-l03"></a>
 
@@ -2479,18 +2711,18 @@ What shows how many running hours the engine has done?
 
 `m07-l03` · about 8 min · hands-on · draft
 
-> **⚠️ Review note:** Winterising methods differ a great deal between engines and climates (draining versus antifreeze, removing impellers, fuel tank full or not). Please confirm the advice is balanced and adequately defers to the handbook.
+> **⚠️ Review note:** Audit note 29, revise (S18): raw water circuit protection, antifreeze type and draining method now follow the engine maker; full tanks and impeller removal are no longer presented as universal. Please approve.
 
 An engine left unused for months can suffer from frost, corrosion and stale fuel. Laying it up properly in autumn, and bringing it back carefully in spring, prevents most early-season problems.
 
-1. **Change the oil before lay-up.** Old oil contains acids that attack the engine while it stands. Changing the oil and filter before lay-up leaves the engine protected by clean oil all winter.
-2. **Protect against frost.** Water left in the raw water circuit can freeze and crack the pump, heat exchanger or exhaust parts. Depending on your engine and climate, the handbook may advise draining the circuit or running antifreeze through it. Check the coolant gives enough frost protection.
-3. **Fuel.** Drain any water from the filter bowl. Many owners keep the tank well filled to reduce condensation over winter; follow your engine and fuel supplier's advice on additives.
-4. **Impeller and openings.** Some owners remove the impeller for the winter so its vanes do not take a set. If you block the air intake or exhaust outlet against damp, put a clear note on the engine controls so the blanks are removed before starting.
-5. **Batteries.** Keep batteries charged over winter, either with a suitable charger or by charging them regularly. A flat battery left in the cold can be permanently damaged.
-6. **Recommissioning.** Remove any blanks and notes, refit the impeller, and check hoses, clips, belts and all fluid levels. Open the seacocks once afloat and check every through-hull and the stern seal for leaks. Start the engine, check for water from the exhaust and watch for leaks as it warms up.
+**Caution (shown before the steps):** Antifreeze is poisonous to people and animals. Store it securely and do not let it go into the water; follow local rules on disposal.
 
-**Caution:** Antifreeze is poisonous to people and animals. Store it securely and do not let it go into the water; follow local rules on disposal.
+1. `Owner (handbook required)` **Change the oil before lay-up.** Old oil contains acids that attack the engine while it stands. Changing the oil and filter before lay-up leaves the engine protected by clean oil all winter.
+2. `Owner (handbook required)` **Protect against frost.** Water left in the raw water circuit can freeze and crack the pump, heat exchanger or exhaust parts. How to protect it, whether by draining or by running a suitable antifreeze through it, and which type of antifreeze to use, depends on your engine and climate: follow the engine maker's method exactly. Check the coolant gives enough frost protection.
+3. `Owner (handbook required)` **Fuel.** Drain any water from the filter bowl. Aim to leave clean, dry fuel and keep water out. Whether to leave the tank full or low over winter depends on your fuel, how quickly you use it and where the boat is stored; follow your engine maker's and fuel supplier's advice, including on additives.
+4. `Owner (handbook required)` **Impeller and openings.** Some owners remove the impeller for the winter so its vanes do not take a set; this is optional and depends on the pump and the handbook. If you block the air intake or exhaust outlet against damp, put a clear note on the engine controls so the blanks are removed before starting.
+5. `Owner (handbook required)` **Batteries.** Keep batteries charged over winter, either with a suitable charger or by charging them regularly. A flat battery left in the cold can be permanently damaged.
+6. `Owner (handbook required)` **Recommissioning.** Remove any blanks and notes, refit the impeller, and check hoses, clips, belts and all fluid levels. Open the seacocks once afloat and check every through-hull and the stern seal for leaks. Start the engine, check for water from the exhaust and watch for leaks as it warms up.
 
 *Ends with the handbook reminder.*
 
@@ -2504,7 +2736,7 @@ Why is the engine oil usually changed before the winter lay-up rather than in sp
 
 - A. So the engine is not left standing all winter in acidic used oil ✅
 - B. Because new oil can freeze in the bottle if it is left until spring
-- C. Because engine oil is only sold by chandlers in the autumn
+- C. So the oil has the winter to settle before the first start
 - D. So the engine turns over faster on the first spring start
 
 *Explanation:* Used oil contains acids from combustion. Leaving it in the engine for months encourages corrosion, so fresh oil goes in before lay-up.
@@ -2530,7 +2762,7 @@ You block the exhaust outlet and air intake for the winter. What else should you
 
 - A. Put a clear note on the engine controls to remove them before starting ✅
 - B. Nothing, because the engine will push the blanks out as soon as it starts
-- C. Tell the marina office only
+- C. Note it in a logbook that you keep at home
 - D. Paint over them so they stay watertight
 
 *Explanation:* Starting with the intake or exhaust blocked can cause serious damage. A note on the controls makes sure whoever starts the engine next removes them.
@@ -2541,10 +2773,10 @@ You block the exhaust outlet and air intake for the winter. What else should you
 
 When recommissioning, why should you check the stern seal and through-hull fittings once the boat is afloat?
 
-- A. Leaks only show once water is pressing on them from outside ✅
-- B. They only need checking every few years, not at each launch
-- C. They can only leak once the engine is running in gear
-- D. They are only fitted once the boat is back afloat
+- A. Out of the water nothing is pressing on them, so leaks cannot show ✅
+- B. Hose clips loosen over winter and are easiest to tighten afloat
+- C. Through-hull fittings are checked by the insurer at each launch
+- D. Antifreeze left in them over winter has to be flushed out first
 
 *Explanation:* Out of the water there is nothing to leak. Checking straight after launch catches a perished hose, a loose clip or a seal that needs attention before you leave.
 
@@ -2556,7 +2788,7 @@ Why should batteries be kept charged over the winter?
 
 - A. A flat battery left in the cold can be permanently damaged ✅
 - B. Charged batteries give off a little heat that keeps the engine warm
-- C. Batteries must be charged to keep the fuel from freezing
+- C. Charging keeps the alternator bearings from seizing
 - D. Charging keeps the stern gland's seal from drying out
 
 *Explanation:* Many batteries are damaged if left discharged, and a flat battery is more likely to be harmed by frost. A suitable charger or regular charging prevents this.
@@ -2598,9 +2830,9 @@ Which of these is an essential engine spare to carry on board?
 Why should you carry spare fuel filter elements?
 
 - A. Blocked fuel filters are a common reason for an engine stopping ✅
-- B. Fuel filters must be changed every time you go out
+- B. Fuel filters need changing every time you go out
 - C. The engine will not start once a filter is a year old
-- D. Carrying spares helps the engine to burn its fuel more cleanly
+- D. Spare elements are needed to bleed the fuel system
 
 *Explanation:* Rough weather can stir up dirt that blocks a filter quickly. A spare element and the tools to fit it can get the engine running again at sea.
 
@@ -2624,11 +2856,11 @@ What is the point of checking that your spare belt and tools fit while you are i
 Which of these is most useful for a temporary repair to a leaking cooling hose?
 
 - A. Self-amalgamating tape ✅
-- B. Ordinary paper masking tape
-- C. Engine oil
-- D. Spare fuses
+- B. Electrical insulating tape
+- C. Ordinary duct tape
+- D. Bathroom silicone sealant
 
-*Explanation:* Self-amalgamating tape fuses to itself when stretched and wrapped, making a tight seal that can hold until the hose is replaced.
+*Explanation:* Self-amalgamating tape fuses to itself when stretched and wrapped, making a tight seal that can hold until the hose is replaced. Ordinary tapes and sealants do not hold against water pressure and heat.
 
 <a id="m07-q020"></a>
 
@@ -2653,6 +2885,8 @@ Why is it worth recording part numbers for your filters, impeller and belt in yo
 
 `m08-l01` · about 6 min · draft
 
+> **⚠️ Review note:** S16 and the Fault finder judgement: the lesson now lists the seven stop conditions that have Fault finder cards, and no longer says the Fault finder ranks causes. Please approve.
+
 When an engine misbehaves, it is tempting to start taking things apart. A few minutes spent thinking first usually finds the fault faster, and avoids creating new problems.
 
 **Diagram (flow).** A flow diagram of six steps for fault finding: make the boat safe, gather the clues, think in systems, check the simple things first, change one thing at a time, and know when to stop and get help.
@@ -2669,11 +2903,11 @@ Caption: A simple order of work for any engine fault.
 1. **The boat comes first.** A failed engine is rarely an emergency in itself, but losing propulsion near rocks, in a busy channel or in strong tide can be. Deal with the boat's safety first: sail, anchor, or call for help. Then turn to the engine.
 2. **Gather the clues.** Note what the engine did and how: a slow fade or a sudden stop, any noise, smoke, smell, warning light or alarm. Ask what changed recently: refuelling, rough weather, a filter change, a new crew member operating the controls.
 3. **Think in systems.** To run, a diesel needs clean fuel free of air, clean air, and good compression. To keep running it also needs cooling and lubrication, and to start it needs the electrics and enough heat. Decide which system the clues point to.
-4. **Simple and likely first.** Check the easy, common causes before the difficult, rare ones: control positions, switches, levels, filters and the strainer, before injectors or internal parts. The Fault finder tab lists causes in this order for each symptom.
+4. **Simple things first.** Check the easy causes before the difficult ones: control positions, switches, levels, filters and the strainer, before injectors or internal parts. The Fault finder lists possible causes for each symptom without ranking them, so use your clues to decide where to start.
 5. **One change at a time.** Make one change, then test. If you change several things at once, you will not know which one mattered, and you may introduce a new fault.
-6. **Know when to stop.** Some symptoms, such as low oil pressure, overheating, milky oil or a hard mechanical stop, mean the engine should not be run until the cause is found. If you are unsure, get advice from a qualified marine engineer.
+6. **Know when to stop.** Some conditions mean stop the engine first and do not restart until the cause is found: low oil pressure, overheating, water coming in, suspected water in the engine, fuel spraying, smoke or fire, and an uncontrolled leak at the shaft seal. The Fault finder has a card for each. If you are unsure, get advice from a qualified marine engineer.
 
-#### Questions for lesson 8.1 (5)
+#### Questions for lesson 8.1 (6)
 
 <a id="m08-q001"></a>
 
@@ -2682,9 +2916,9 @@ Caption: A simple order of work for any engine fault.
 Your engine stops while you are motoring near a rocky shore. What should you do first?
 
 - A. Make the boat safe: sail, anchor or call for help ✅
-- B. Open the engine space and start changing the fuel filters
+- B. Open the engine space and start looking for the fault
 - C. Keep trying to start the engine until it runs
-- D. Phone the engine manufacturer
+- D. Check the fuel filter bowl for water straight away
 
 *Explanation:* The boat's safety comes before the engine. Once you are no longer at risk, you can work on the engine calmly.
 
@@ -2695,7 +2929,7 @@ Your engine stops while you are motoring near a rocky shore. What should you do 
 Why is it useful to ask 'what changed recently?' when an engine develops a fault?
 
 - A. Recent events, such as refuelling, often point straight to the cause ✅
-- B. Engines only ever develop faults after something about them has changed
+- B. It tells you which part to replace without any further checks
 - C. It is the first question an insurer will ask after a claim
 - D. It tells you how old the engine is and when it was built
 
@@ -2708,7 +2942,7 @@ Why is it useful to ask 'what changed recently?' when an engine develops a fault
 Which three things does a diesel engine need in order to run?
 
 - A. Clean fuel free of air, clean air, and good compression ✅
-- B. A spark, petrol and oil
+- B. A charged battery, clean fuel and cooling water
 - C. Coolant, a fully charged battery and a full fuel tank
 - D. A gearbox, a propeller and a stern gland
 
@@ -2721,7 +2955,7 @@ Which three things does a diesel engine need in order to run?
 Why should you change only one thing at a time when fault finding?
 
 - A. So you can tell which change fixed the problem, without adding new faults ✅
-- B. Because the engine can only cope with one repair in a day
+- B. So the engine does not need bleeding more than once
 - C. Because most engine tools are designed to be used one at a time
 - D. So the job takes longer and is therefore done more carefully
 
@@ -2740,39 +2974,60 @@ In what order should you usually check possible causes?
 
 *Explanation:* Most faults have simple causes such as a control left in the wrong place, a blocked filter or a closed valve. Checking those first saves time and avoids unnecessary dismantling.
 
+<a id="m08-q021"></a>
+
+**m08-q021** · difficulty 2 (medium) · draft
+
+> **⚠️ Review note:** New in content 1.1 (S20): a safety-first ordering question. Please approve.
+
+Your engine stops while you are crossing a busy channel. Which order of actions is best?
+
+- A. Make the boat safe, gather the clues, then check the simple causes first ✅
+- B. Check the simple causes first, gather the clues, then make the boat safe
+- C. Gather the clues, try restarting several times, then make the boat safe
+- D. Make the boat safe, then change both fuel filters straight away
+
+*Explanation:* The boat comes first. Once it is safe, note how the engine stopped and what changed, then check the easy causes before dismantling anything or changing parts on a guess.
+
 <a id="m08-l02"></a>
 
 ### Lesson 8.2: When the engine will not start
 
 `m08-l02` · about 7 min · hands-on · draft
 
-> **⚠️ Review note:** The advice on closing the seacock during prolonged cranking is widely given but engine-dependent. Please confirm the wording is safe and defers appropriately to the handbook.
+> **⚠️ Review note:** Audit note 30, safety revise (P0, S01), and S13: the advice to close the seacock during long cranking is removed; warning A is now shown before the steps, verbatim, and any seawater isolation is left to a documented manufacturer procedure. The won't-fire step now covers the stop control, electronic inhibit, fuel, air intake, pre-heating and compression. Please approve.
 
-Starting failures divide neatly in two. Either the engine does not turn over properly, which is nearly always electrical, or it turns over but will not fire, which is nearly always fuel or heat.
+Starting failures divide roughly in two. Either the engine does not turn over properly, which usually points to the starting circuit, or it turns over but will not fire, which usually points to the stop control, fuel or heat.
 
-1. **First, the controls.** Before anything else, check the gear lever is in neutral, the stop control is pushed fully home, and the battery isolator and key switch are on. These catch out experienced skippers too.
-2. **If it does not turn over.** Work along the electrical path: battery charge, battery terminals, isolator, fuse or breaker for the panel, the starter solenoid and the engine earth. A click with no turning usually means not enough current is getting through.
-3. **If it turns but will not fire.** Check there is fuel in the tank, the fuel valve is open and there is no water in the filter bowl. If the fuel system has been opened or run dry, it probably needs bleeding.
-4. **Cold weather.** On a cold day, make sure you have pre-heated for long enough, as the handbook describes. If the engine starts once warm but struggles from cold, suspect the glow plugs or their circuit.
-5. **Protect the engine while cranking.** Crank in short bursts with rests between. On an engine with a wet exhaust, repeated cranking pumps water into the exhaust without the exhaust gas to blow it out, and it can flood back into the cylinders. Your handbook will say whether to close the raw water seacock during long attempts; if you do, open it again as soon as the engine runs.
-6. **When to stop trying.** If the engine turns a little and then stops hard, or you hear water, stop cranking. Water may have entered the cylinders, and forcing the engine round can bend internal parts.
+> ⚠️ **WARNING — WET EXHAUST / WATERLOCK.** If the engine repeatedly cranks but does not start, stop and follow the engine and exhaust-system manufacturer's procedure. On many wet-exhaust installations the seawater pump continues to deliver water while cranking; without exhaust gas flow, water can accumulate and enter the engine. **Never run the engine with the raw-water seacock closed.** Some manufacturers specify a controlled seawater-isolation procedure for extended troubleshooting. Use it only if it is documented for that installation, and positively confirm the seacock is **OPEN BEFORE THE ENGINE IS ALLOWED TO RUN**. If water ingestion is suspected, do not crank again; seek qualified assistance.
+
+**Caution (shown before the steps):** Crank only in short bursts, as your handbook advises, and keep hands, hair and clothing clear of belts and pulleys.
+
+1. `Observe` **First, the controls.** Before anything else, check the gear lever is in neutral, the stop control is pushed fully home, and the battery isolator and key switch are on. These catch out experienced skippers too.
+2. `Owner (handbook required)` **If it does not turn over.** Work along the electrical path: battery charge, battery terminals, isolator, fuse or breaker for the panel, the starter solenoid and the engine earth. A click with no turning usually means not enough current is getting through.
+3. `Owner (handbook required)` **If it turns but will not fire.** Check the stop control is fully home and that no engine fault or immobiliser is preventing a start; some electronic engines show a warning. Then check the fuel: tank level, fuel valve open, no water in the filter bowl. If the fuel system has been opened or run dry, it probably needs bleeding (lesson 2.4). Also make sure the air intake is not blocked. A worn engine with low compression can also struggle, especially from cold.
+4. `Owner (handbook required)` **Cold weather.** On a cold day, make sure you have pre-heated for long enough, as the handbook describes. If the engine starts once warm but struggles from cold, suspect the glow plugs or their circuit.
+5. `Owner (handbook required)` **Protect the engine while cranking.** Crank in short bursts with rests between. On an engine with a wet exhaust, follow the waterlock warning at the top of this lesson: if it repeatedly cranks without starting, stop and follow the engine and exhaust maker's procedure rather than carrying on.
+6. `Engineer only` **When to stop trying.** If the engine turns a little and then stops hard, or you hear water, stop cranking and do not crank again. Water may have entered the cylinders, and forcing the engine round can bend internal parts. Get qualified assistance.
 
 *Ends with the handbook reminder.*
 
-#### Questions for lesson 8.2 (5)
+#### Questions for lesson 8.2 (6)
 
 <a id="m08-q006"></a>
 
-**m08-q006** · difficulty 1 (easy) · draft
+**m08-q006** · difficulty 2 (medium) · draft
 
-The engine turns over normally but will not fire. Which system should you look at first?
+> **⚠️ Review note:** S13: the question now asks for a sensible first check and includes the stop control; the explanation covers pre-heating, electronic inhibit, air intake and compression. Please approve.
 
-- A. The fuel system ✅
-- B. The starter motor
-- C. The battery terminals
-- D. The alternator
+The engine turns over at normal speed but will not fire. Which is a sensible first check?
 
-*Explanation:* If the engine turns normally, the battery and starter are doing their job. A failure to fire points to fuel, or on a cold day to pre-heating.
+- A. That the stop control is fully home, then the fuel supply ✅
+- B. The battery terminals, because a weak battery causes this
+- C. The raw water strainer, because a blocked one stops it firing
+- D. The starter solenoid, because it may not be engaging fully
+
+*Explanation:* If the engine turns normally, the battery and starter are doing their job. Sensible first checks are the stop control and then the fuel; on a cold day, pre-heating; on an electronic engine, any fault warning or inhibit. A blocked air intake or low compression are further possibilities.
 
 <a id="m08-q007"></a>
 
@@ -2807,11 +3062,13 @@ The engine will not start on a cold morning but starts easily later in the day. 
 Why can long periods of cranking be harmful on an engine with a wet exhaust?
 
 - A. Water pumped into the exhaust is not blown out and can flood the cylinders ✅
-- B. Cranking without firing burns off the oil in the sump
-- C. Cranking for a long time reverses the flow of fuel
-- D. The exhaust gets dangerously hot while the engine is cranking
+- B. Unburnt diesel floods the cylinders and washes the oil off the bores
+- C. The exhaust gets dangerously hot while the engine is cranking
+- D. The raw water pump runs dry while the engine is only cranking
 
-*Explanation:* While cranking, the pump still pushes water into the exhaust, but without running exhaust gas to expel it. The water-lock fills and water can reach the cylinders, risking serious damage.
+*Explanation:* While cranking, the raw water pump still pushes water into the exhaust, but there is no exhaust gas flow to expel it, so water can build up and reach the cylinders. If repeated cranking fails, stop and follow the engine and exhaust maker's procedure; never run the engine with the seacock closed.
+
+*Feedback also shows:* WARNING — WET EXHAUST / WATERLOCK (`wet-exhaust-waterlock`)
 
 <a id="m08-q010"></a>
 
@@ -2824,7 +3081,26 @@ While cranking, the engine turns a little and then stops hard. What should you d
 - C. Use a starting spray to help it fire before it stops
 - D. Bleed the fuel system, then try cranking again straight away
 
-*Explanation:* Water does not compress. If a cylinder is full of it, forcing the engine round can bend a connecting rod. Stop and find out why.
+*Explanation:* Water does not compress. If a cylinder is full of it, forcing the engine round can bend a connecting rod. Do not crank again; get qualified assistance.
+
+*Feedback also shows:* WARNING — WET EXHAUST / WATERLOCK (`wet-exhaust-waterlock`)
+
+<a id="m08-q022"></a>
+
+**m08-q022** · difficulty 2 (medium) · draft
+
+> **⚠️ Review note:** New in content 1.1 (S01, S20): tests the corrected wet-exhaust advice, including the old 'close the seacock' advice as a wrong answer. Please approve.
+
+After several attempts, an engine with a wet exhaust still will not start. What should you do?
+
+- A. Stop cranking and follow the engine and exhaust maker's procedure ✅
+- B. Close the seacock and keep cranking until it fires, then open it
+- C. Keep cranking in longer bursts so the exhaust can clear itself
+- D. Use a starting spray so it fires before the exhaust fills
+
+*Explanation:* Repeated cranking can let water build up in a wet exhaust and enter the engine. Follow the documented procedure for your installation, never run the engine with the raw-water seacock closed, and if water may have got in, do not crank again.
+
+*Feedback also shows:* WARNING — WET EXHAUST / WATERLOCK (`wet-exhaust-waterlock`)
 
 <a id="m08-l03"></a>
 
@@ -2832,16 +3108,18 @@ While cranking, the engine turns a little and then stops hard. What should you d
 
 `m08-l03` · about 6 min · hands-on · draft
 
+> **⚠️ Review note:** S12: stalling in gear is now 'one important possibility', with idle speed, gearbox and shaft binding listed and a safe-inspection instruction. Please approve.
+
 An engine that stops by itself, or slowly loses power, is usually being starved of fuel or air, or is being overloaded. How it stopped is your best clue.
 
-1. **A slow fade.** If the revs drop away over several seconds, or the engine hunts up and down before stopping, think fuel: a blocked filter, water in the fuel, air getting in, a blocked tank vent or an empty tank.
-2. **A sudden stop when put in gear.** If the engine stops the moment it is put in gear, or with a thump, something is probably round the propeller. Stop the engine fully before investigating.
-3. **A hard stop with a warning.** If the engine stopped with an alarm, a bang, a burning smell or a jolt, do not restart it. It may have overheated, lost oil pressure or seized.
-4. **Gradual loss of power.** If the engine runs but will not reach its usual revs, or the boat is slower at the same revs, look at the air filter, the fuel filters, the exhaust for blockages, and the hull and propeller for fouling.
-5. **After rough weather.** Many fuel-related stops happen after a rough passage, when dirt and water are stirred up from the bottom of the tank. Check the primary filter bowl first and change the elements if needed.
-6. **Getting going again.** After clearing a fuel problem, bleed the system if air has got in. Then run the engine at moderate power for a while and watch it, in case the cause returns.
+**Caution (shown before the steps):** Never go near the propeller, in the water or from a dinghy, unless the engine is stopped and cannot be started.
 
-**Caution:** Never go near the propeller, in the water or from a dinghy, unless the engine is stopped and cannot be started.
+1. `Observe` **A slow fade.** If the revs drop away over several seconds, or the engine hunts up and down before stopping, think fuel: a blocked filter, water in the fuel, air getting in, a blocked tank vent or an empty tank.
+2. `Owner (handbook required)` **A sudden stop when put in gear.** If the engine stops the moment it is put in gear, or with a thump, something round the propeller is one important possibility; others include an idle speed set too low, a gearbox fault or a binding shaft. Stop the engine and make sure it cannot be started before you inspect anything near the propeller or shaft.
+3. `Observe` **A hard stop with a warning.** If the engine stopped with an alarm, a bang, a burning smell or a jolt, do not restart it. It may have overheated, lost oil pressure or seized.
+4. `Owner (handbook required)` **Gradual loss of power.** If the engine runs but will not reach its usual revs, or the boat is slower at the same revs, look at the air filter, the fuel filters, the exhaust for blockages, and the hull and propeller for fouling.
+5. `Owner (handbook required)` **After rough weather.** Many fuel-related stops happen after a rough passage, when dirt and water are stirred up from the bottom of the tank. Check the primary filter bowl first and change the elements if needed.
+6. `Owner (handbook required)` **Getting going again.** After clearing a fuel problem, bleed the system if air has got in, using the handbook's owner procedure (lesson 2.4). Then run the engine at moderate power for a while and watch it, in case the cause returns.
 
 *Ends with the handbook reminder.*
 
@@ -2851,27 +3129,29 @@ An engine that stops by itself, or slowly loses power, is usually being starved 
 
 **m08-q011** · difficulty 1 (easy) · draft
 
-The engine slows and fades over several seconds before stopping. What is the most likely type of cause?
+The engine slows and fades over several seconds before stopping. What type of cause does this usually point to?
 
 - A. A fuel supply problem ✅
-- B. A broken propeller blade
-- C. A failed alternator
-- D. A worn stern gland
+- B. A rope round the propeller
+- C. A failed glow plug
+- D. Low oil pressure
 
-*Explanation:* A gradual fade is typical of fuel starvation, such as a blocked filter or air in the fuel, as the supply dwindles rather than stopping instantly.
+*Explanation:* A gradual fade is typical of fuel starvation, such as a blocked filter or air in the fuel, as the supply dwindles. A rope usually stops the engine abruptly, a glow plug affects only starting, and low oil pressure would set off its alarm.
 
 <a id="m08-q012"></a>
 
 **m08-q012** · difficulty 2 (medium) · draft
 
-The engine runs fine in neutral but stalls as soon as you put it in gear. What should you suspect?
+> **⚠️ Review note:** S12: the question now teaches a safe inspection first instead of naming a single cause. Please approve.
 
-- A. Something caught round the propeller ✅
-- B. A faulty oil pressure warning switch or wire
-- C. Water mixed into the engine oil
-- D. A flat domestic battery bank
+The engine runs fine in neutral but stalls as soon as you put it in gear. What is the best response?
 
-*Explanation:* In neutral the propeller is not driven. If the engine stalls only when the propeller is loaded, a rope, net or weed round it is the usual reason.
+- A. Stop the engine, make sure it cannot start, then check for something round the propeller ✅
+- B. Raise the idle speed with the throttle and keep engaging gear until it holds
+- C. Assume the gearbox has failed and call for a tow without checking anything
+- D. Engage astern at higher revs to unwind whatever may be caught
+
+*Explanation:* Something round the propeller is one important possibility, but a low idle speed, a gearbox fault or a binding shaft can do the same. Make the engine safe before inspecting near the propeller, and rule things out one at a time rather than forcing it.
 
 <a id="m08-q013"></a>
 
@@ -2880,9 +3160,9 @@ The engine runs fine in neutral but stalls as soon as you put it in gear. What s
 Over a season, the boat gets slower at the same engine revs and the exhaust smokes black under load. What is a likely cause?
 
 - A. A fouled hull or propeller adding load ✅
-- B. A newly fitted, clean fuel filter
-- C. Slightly too little oil in the gearbox
-- D. A loose connection on the battery isolator
+- B. A worn cutless bearing letting the shaft vibrate
+- C. A slipping alternator belt robbing power
+- D. Water in the fuel, which burns poorly
 
 *Explanation:* Growth on the hull and propeller adds drag. The engine works harder, burns more fuel than it can use cleanly, and the boat goes slower.
 
@@ -2918,16 +3198,22 @@ After a rough passage the engine fades over a few seconds and stops. Where shoul
 
 `m08-l04` · about 7 min · hands-on · draft
 
+> **⚠️ Review note:** S03 and S04: stop-engine conditions C and D now open the lesson, verbatim; overheating checks happen only after the engine has cooled; 'most overheating starts on the raw water side' is removed; restarting only once the cause is corrected. Please approve.
+
 Warning lights, alarms and smoke are the engine's way of telling you something is wrong before it fails. Knowing which ones mean stop now, and which mean investigate soon, protects both the engine and the boat.
 
-1. **Stop now.** Low oil pressure and high temperature warnings mean stop the engine as soon as it is safe to do so. Running on can cause serious damage within minutes.
-2. **Overheating: raw water first.** Most overheating starts on the raw water side. Look at the exhaust: little or no water means check the seacock, strainer and impeller. Normal water flow but still overheating points to the belt, coolant level, thermostat or heat exchanger.
-3. **Reading the smoke.** White smoke that clears as the engine warms is usually unburnt fuel on a cold start. Black smoke under load means too much fuel for the air: check the air filter and look for overloading. Blue smoke means oil is being burnt. Steam with little exhaust water means a cooling problem.
-4. **Charge warning.** A charge warning is not usually an emergency in itself, but check the belt straight away: if it has broken and also drives the coolant pump, the engine will soon overheat.
-5. **After the alarm.** Once you have found and fixed the cause, restart carefully and watch the gauges and warning lights closely. If the warning comes back, stop again and get advice.
-6. **False alarms.** Sensors and wiring can fail, but treat every warning as real until you have proved otherwise. An engine that is damaged because a real warning was ignored costs far more than an unnecessary stop.
+> 🛑 **STOP-ENGINE CONDITION.** If the oil-pressure alarm activates or the gauge indicates abnormally low pressure, reduce power and stop the engine **as soon as vessel safety permits**. Secure the vessel first. Do not restart simply to test whether the alarm clears. Once stopped, check oil level and obvious leaks in accordance with the handbook. If the cause is not clear and corrected, seek engineering assistance.
 
-**Caution:** Never open the coolant pressure cap on a hot engine. Hot coolant can spray out and scald.
+> 🛑 **STOP-ENGINE CONDITION.** If the engine overheats or cooling-water flow is lost, reduce power and stop the engine as soon as the vessel is safe. Do not open a hot coolant pressure cap or touch hot hoses/exhaust components. Allow the engine to cool before checking the seawater intake, strainer, pump drive, impeller and coolant level as applicable. Do not restart until the cause is corrected and the cooling circuit is confirmed ready.
+
+**Caution (shown before the steps):** Keep clear of hot exhaust parts, belts and pulleys, and let the engine cool before you work on it.
+
+1. `Owner (handbook required)` **Stop now.** Low oil pressure and overheating are stop-engine conditions: follow the instructions at the top of this lesson. The Fault finder's stop cards list the other conditions that mean stop first.
+2. `Owner (handbook required)` **Overheating: use the clues.** Once the engine has stopped and cooled, start with what you saw. Little or no water from the exhaust points to the raw water side: intake, seacock, strainer, pump drive or impeller. Normal water flow but still overheating points to the belt, coolant level, thermostat or heat exchanger.
+3. `Observe` **Reading the smoke.** White smoke that clears as the engine warms is often unburnt fuel on a cold start. Black smoke under load suggests too much fuel for the air: check the air filter and look for overloading. Blue smoke suggests oil is being burnt. Steam with little exhaust water points to a cooling problem.
+4. `Observe` **Charge warning.** A charge warning is not usually an emergency in itself; it indicates a charging-system fault. Check the belt straight away: if it has broken and also drives the coolant pump, the engine will soon overheat.
+5. `Owner (handbook required)` **After the alarm.** Restart only once the cause has been found and corrected, then watch the gauges and warning lights closely. If the warning comes back, stop again and get advice.
+6. `Observe` **False alarms.** Sensors and wiring can fail, but treat every warning as real until you have proved otherwise. An engine that is damaged because a real warning was ignored costs far more than an unnecessary stop.
 
 *Ends with the handbook reminder.*
 
@@ -2940,17 +3226,19 @@ Warning lights, alarms and smoke are the engine's way of telling you something i
 Which two warnings mean you should stop the engine as soon as it is safe to do so?
 
 - A. Low oil pressure and high temperature ✅
-- B. Low fuel and low domestic battery
-- C. Charge warning and the glow plug light
-- D. Depth alarm and wind alarm
+- B. High temperature and the charge warning
+- C. Low oil pressure and the glow plug light
+- D. The charge warning and low fuel
 
-*Explanation:* Without oil pressure or cooling, the engine can be seriously damaged within minutes. Other warnings need attention but are not usually as urgent.
+*Explanation:* Both are stop-engine conditions: reduce power and stop as soon as the boat is safe, and do not restart until the cause is found and corrected. A charge warning needs prompt attention, mainly because the belt may also drive the coolant pump.
+
+*Feedback also shows:* STOP-ENGINE CONDITION (`oil-pressure-stop`); STOP-ENGINE CONDITION (`overheating-stop`)
 
 <a id="m08-q017"></a>
 
 **m08-q017** · difficulty 2 (medium) · draft
 
-The engine is overheating but water is flowing normally from the exhaust. Which of these should you check?
+The engine overheated although water was flowing normally from the exhaust. Once it has stopped and cooled, which of these should you check?
 
 - A. The drive belt and the coolant level ✅
 - B. The raw water seacock
@@ -2958,6 +3246,8 @@ The engine is overheating but water is flowing normally from the exhaust. Which 
 - D. Whether the raw water pump has an impeller fitted
 
 *Explanation:* Normal exhaust water shows the raw water side is working. The problem is more likely on the coolant side: a slipping belt, low coolant, the thermostat or a blocked heat exchanger.
+
+*Feedback also shows:* STOP-ENGINE CONDITION (`overheating-stop`)
 
 <a id="m08-q018"></a>
 
@@ -2970,7 +3260,7 @@ What does blue exhaust smoke usually mean?
 - C. There is unburnt fuel from a cold start
 - D. The exhaust is short of cooling water
 
-*Explanation:* Oil burning in the cylinders gives a bluish smoke. Black smoke means excess fuel, white on cold start means unburnt fuel, and steam points to cooling.
+*Explanation:* Oil burning in the cylinders gives a bluish smoke. Black smoke points to excess fuel, white smoke on a cold start to unburnt fuel, and steam to a cooling problem.
 
 <a id="m08-q019"></a>
 
@@ -2983,7 +3273,7 @@ The charge warning light comes on while motoring. Why should you check the drive
 - C. Because a broken belt will quickly cause low oil pressure
 - D. Because the belt helps keep the propeller shaft in line
 
-*Explanation:* On many engines the alternator belt also drives the coolant circulating pump. A charge warning can therefore be the first sign of an overheating problem to come.
+*Explanation:* A charge warning indicates a charging-system fault, and on many engines the alternator belt also drives the coolant circulating pump. The warning can therefore be the first sign of an overheating problem to come.
 
 <a id="m08-q020"></a>
 
@@ -2998,11 +3288,57 @@ You suspect a temperature alarm is false because the engine does not feel hot. W
 
 *Explanation:* Sensors can fail, but so can engines. Ignoring a real warning risks expensive damage, and opening a hot pressure cap risks scalding. Stop, check safely, and get advice if unsure.
 
+*Feedback also shows:* STOP-ENGINE CONDITION (`overheating-stop`)
+
 ## Fault finder
 
-Pick the symptom that best matches what you are seeing. Causes are listed with the most likely first, followed by what to check before anything else.
+Check the stop cards first: each one is a condition where you stop the engine before doing anything else. Then pick the symptom that best matches what you are seeing. Possible causes are not listed in any order, so use what you have seen to decide where to start, and do the checks in the order given.
 
 Every symptom ends with: *This is general guidance only. Engines differ, so follow your engine manufacturer's handbook, and if you are unsure or the fault comes back, ask a qualified marine engineer to look at it.*
+
+### Stop cards (shown first, before the symptoms)
+
+**🛑 Low oil pressure** (`low-oil-pressure`)
+
+- **STOP:** Reduce power and stop the engine as soon as the boat is safe.
+- **DO NOT RESTART:** Do not restart to see whether the warning clears, even if the oil level looks right.
+- **GET ASSISTANCE:** If the cause is not clear and corrected, get a qualified engineer to check the engine.
+
+**🛑 Overheating or loss of cooling water** (`overheating`)
+
+- **STOP:** Reduce power and stop the engine as soon as the boat is safe.
+- **DO NOT RESTART:** Do not restart until the cause is corrected and the cooling circuit is ready. Never open a hot pressure cap.
+- **GET ASSISTANCE:** If you cannot find and fix the cause once the engine has cooled, get qualified help.
+
+**🛑 Water coming into the boat** (`water-ingress`)
+
+- **STOP:** Make the boat safe and start pumping. Find where the water is coming in and close its seacock if you can. If the leak is at the engine, its hoses or the shaft, stop the engine as soon as the boat is safe.
+- **DO NOT RESTART:** Do not restart until the leak is stopped or under control.
+- **GET ASSISTANCE:** If the water is gaining or you cannot find the source, call for assistance early.
+
+**🛑 Suspected water in the engine (waterlock)** (`suspected-waterlock`)
+
+- **STOP:** Stop cranking at once if the engine turns a little and stops hard, or you hear water.
+- **DO NOT RESTART:** Do not crank again: forcing an engine with water in a cylinder can bend internal parts.
+- **GET ASSISTANCE:** Get qualified assistance before anyone tries to turn the engine again.
+
+**🛑 Fuel spraying or leaking** (`fuel-spray`)
+
+- **STOP:** Stop the engine at once and keep hands and face away from any spray. Contain spills and keep flames and sparks away.
+- **DO NOT RESTART:** Do not restart until the leak has been repaired. High-pressure fuel parts are engineer-only work.
+- **GET ASSISTANCE:** If fuel may have been injected into the skin, get emergency medical treatment immediately.
+
+**🛑 Smoke or fire in the engine space** (`smoke-or-fire`)
+
+- **STOP:** Stop the engine, shut off the fuel supply if you can reach it safely, and get everyone clear. Follow your boat's fire plan and do not open the engine space wide, because fresh air feeds a fire.
+- **DO NOT RESTART:** Do not restart until the cause has been found and repaired.
+- **GET ASSISTANCE:** If there is a fire, or the boat or crew are in danger, call for help immediately.
+
+**🛑 Uncontrolled leak at the shaft seal** (`shaft-seal-leak`)
+
+- **STOP:** Stop the engine and shaft as soon as the boat is safe. Never adjust a seal on a turning shaft.
+- **DO NOT RESTART:** Do not run the engine in gear until the leak is under control.
+- **GET ASSISTANCE:** Check the bilge pumps can keep up. If the water is gaining or the seal cannot be secured, call for assistance early.
 
 <a id="fault-exhaust-smoke"></a>
 
@@ -3010,15 +3346,17 @@ Every symptom ends with: *This is general guidance only. Engines differ, so foll
 
 `exhaust-smoke` · draft
 
-The colour of the smoke is your best clue. A puff of smoke on a cold start is normal; heavy smoke, or smoke that does not clear, is telling you something.
+Then the stop card: `smoke-or-fire`
 
-**Likely causes, most likely first**
+The colour of the smoke is a useful clue. A puff of smoke on a cold start can be normal; heavy smoke, or smoke that does not clear, is telling you something. Smoke inside the engine space is different: use the stop card.
 
-1. **White smoke on a cold start that clears.** Some fuel does not burn fully until the cylinders warm up, especially in cold weather or if a glow plug is weak. If it clears within a minute or two it is usually nothing to worry about.
-2. **Black smoke, mainly under load.** There is more fuel than the air can burn. Common reasons are a dirty air filter, a blocked air intake, or an engine working too hard because of a fouled hull, a fouled propeller or rope round the shaft. A worn injector can do the same.
-3. **White smoke or steam with little water coming out.** If the exhaust is dry or spitting rather than flowing, the cooling water is not getting through and the hot exhaust is turning what little there is into steam. Treat this as overheating.
-4. **Blue smoke.** The engine is burning its own lubricating oil. It may have been overfilled, or it may have worn piston rings or valve guides. Long periods of idling with little load make it worse.
-5. **White smoke that stays when the engine is warm.** Less common but serious: coolant may be getting into a cylinder, for example through a failed head gasket. Look for the coolant level dropping with no visible leak.
+**Possible causes (not ranked)**
+
+- **White smoke on a cold start that clears.** Some fuel does not burn fully until the cylinders warm up, especially in cold weather or if a glow plug is weak. If it clears within a minute or two it is usually nothing to worry about.
+- **Black smoke, mainly under load.** There is more fuel than the air can burn. Possible reasons are a dirty air filter, a blocked air intake, or an engine working too hard because of a fouled hull, a fouled propeller or rope round the shaft. A worn injector can do the same.
+- **White smoke or steam with little water coming out.** If the exhaust is dry or spitting rather than flowing, the cooling water is not getting through and the hot exhaust is turning what little there is into steam. Treat this as overheating.
+- **Blue smoke.** The engine is burning its own lubricating oil. It may have been overfilled, or it may have worn piston rings or valve guides. Long periods of idling with little load make it worse.
+- **White smoke that stays when the engine is warm.** Can be serious: coolant may be getting into a cylinder, for example through a failed head gasket. Look for the coolant level dropping with no visible leak.
 
 **What to check first**
 
@@ -3045,26 +3383,31 @@ The colour of the smoke is your best clue. A puff of smoke on a cold start is no
 
 `wont-start` · draft
 
-> **⚠️ Review note:** The final check advises closing the raw water seacock during long cranking on wet-exhaust engines. This is engine-dependent; please confirm the wording is safe.
+> **⚠️ Review note:** Audit note 31, safety revise (P0, S01): the advice to close the raw water seacock during long cranking is removed. Warning A is shown first, verbatim, with the waterlock stop card, consistent with lesson 8.2. Causes now include an engine inhibit, air intake and compression (S13). Please approve.
+
+> ⚠️ **WARNING — WET EXHAUST / WATERLOCK.** If the engine repeatedly cranks but does not start, stop and follow the engine and exhaust-system manufacturer's procedure. On many wet-exhaust installations the seawater pump continues to deliver water while cranking; without exhaust gas flow, water can accumulate and enter the engine. **Never run the engine with the raw-water seacock closed.** Some manufacturers specify a controlled seawater-isolation procedure for extended troubleshooting. Use it only if it is documented for that installation, and positively confirm the seacock is **OPEN BEFORE THE ENGINE IS ALLOWED TO RUN**. If water ingestion is suspected, do not crank again; seek qualified assistance.
+
+Then the stop card: `suspected-waterlock`
 
 Split the problem in two. Either the engine does not turn over when you press start, or it turns over but does not fire.
 
-**Likely causes, most likely first**
+**Possible causes (not ranked)**
 
-1. **Flat or weak battery, or a poor connection.** The starter turns slowly, clicks or does nothing. Loose or corroded terminals give exactly the same symptoms as a flat battery.
-2. **A control left in the wrong position.** The stop control not pushed fully home, the gear lever out of neutral, or the battery isolator or key switch off. Easy to miss and quick to put right.
-3. **Air in the fuel.** Running low on fuel, changing a filter or a loose fuel connection can let air in. The engine turns over normally but will not fire, or fires briefly and dies.
-4. **No fuel reaching the engine.** An empty tank, a closed fuel valve or a blocked filter. Water or sludge in the tank can block a filter very quickly.
-5. **Not enough heat to light the fuel.** A diesel lights its fuel with the heat of compression. In cold weather it relies on its cold-start aid, usually glow plugs. Failed glow plugs, or not pre-heating for long enough, can stop it firing.
-6. **Water in the cylinders.** Less common but serious. If the engine turns a little and then stops hard, water may have flooded back from the exhaust after a lot of cranking. Stop trying and get advice, because forcing it can bend internal parts.
+- **Flat or weak battery, or a poor connection.** The starter turns slowly, clicks or does nothing. Loose or corroded terminals give exactly the same symptoms as a flat battery.
+- **A control left in the wrong position, or an engine inhibit.** The stop control not pushed fully home, the gear lever out of neutral, or the battery isolator or key switch off. On an electronically controlled engine, a fault or immobiliser can also prevent starting, usually with a warning on the panel.
+- **Air in the fuel.** Running low on fuel, changing a filter or a loose fuel connection can let air in. The engine turns over normally but will not fire, or fires briefly and dies.
+- **No fuel reaching the engine.** An empty tank, a closed fuel valve or a blocked filter. Water or sludge in the tank can block a filter very quickly.
+- **Not enough heat to light the fuel.** A diesel lights its fuel with the heat of compression. In cold weather it relies on its cold-start aid, usually glow plugs. Failed glow plugs, or not pre-heating for long enough, can stop it firing.
+- **Blocked air intake or low compression.** A blocked intake starves the engine of air. A worn engine with low compression may not get hot enough to fire, which shows most from cold.
+- **Water in the cylinders.** Serious. If the engine turns a little and then stops hard, water may have flooded back from the exhaust after a lot of cranking. Do not crank again; get qualified assistance, because forcing it can bend internal parts.
 
 **What to check first**
 
 1. Gear lever in neutral, stop control pushed fully in, battery isolator and key switch on.
 2. Listen when you press start. Nothing at all, a single click, slow turning and normal turning each point to different causes.
 3. If it turns slowly or just clicks, check the battery and make sure its terminals are clean and tight.
-4. If it turns normally but will not fire, check there is fuel in the tank, the fuel valve is open and there is no water in the filter bowl.
-5. Crank in short bursts with a rest between them, as your handbook advises. On an engine with a wet exhaust, repeated cranking can fill the exhaust with water, so check your handbook for when to close the raw water seacock and remember to open it again as soon as the engine runs.
+4. If it turns normally but will not fire, check the stop control is fully home, then that there is fuel in the tank, the fuel valve is open and there is no water in the filter bowl. On a cold day, pre-heat as the handbook describes.
+5. Crank in short bursts with a rest between them, as your handbook advises. If the engine repeatedly cranks but does not start, stop and follow the wet-exhaust warning above; never run the engine with the raw-water seacock closed.
 
 **Related lessons**
 
@@ -3085,26 +3428,30 @@ Split the problem in two. Either the engine does not turn over when you press st
 
 `overheating` · draft
 
+> **⚠️ Review note:** S04: stop-engine condition D is shown first, verbatim, with the overheating stop card; the blocked strainer is no longer called the most common cause, causes are unranked, and every check happens after the engine has cooled. Please approve.
+
+> 🛑 **STOP-ENGINE CONDITION.** If the engine overheats or cooling-water flow is lost, reduce power and stop the engine as soon as the vessel is safe. Do not open a hot coolant pressure cap or touch hot hoses/exhaust components. Allow the engine to cool before checking the seawater intake, strainer, pump drive, impeller and coolant level as applicable. Do not restart until the cause is corrected and the cooling circuit is confirmed ready.
+
+Then the stop card: `overheating`
+
 A high temperature reading, an overheat alarm, steam in the exhaust or a dry exhaust all mean the engine is not being cooled properly.
 
-> **🛑 Stop the engine.** Stop the engine as soon as it is safe to do so, taking it out of gear first. Running an overheating engine can quickly cause serious damage, such as a warped cylinder head or a seized engine. Before you lose propulsion, make sure the boat is safe: sail, anchor or arrange a tow if you need to.
+**Possible causes (not ranked)**
 
-**Likely causes, most likely first**
-
-1. **Blocked raw water intake or strainer.** Weed, a plastic bag or debris over the hull inlet or packed into the strainer stops the cooling water. This is the most common cause.
-2. **Raw water seacock closed.** Often left closed after maintenance, after the boat has been laid up, or after a crew member closed it for safety.
-3. **Worn or broken water pump impeller.** The rubber vanes of the raw water pump wear, crack and break off, particularly if the pump has run dry. Broken pieces can lodge further along the system.
-4. **Slipping or broken drive belt.** On many engines the belt also drives the fresh water (coolant) pump. A squeal, or a battery that stops charging at the same time, are clues.
-5. **Low coolant in the fresh water circuit.** On engines with a closed coolant circuit, a leaking hose, pump seal or cap lets the level fall until the engine overheats.
-6. **Stuck thermostat or blocked heat exchanger.** Less common. A thermostat that stays closed, or a heat exchanger furred with scale or blocked by impeller pieces, stops heat being carried away.
+- **Blocked raw water intake or strainer.** Weed, a plastic bag or debris over the hull inlet or packed into the strainer stops the cooling water.
+- **Raw water seacock closed.** Often left closed after maintenance, after the boat has been laid up, or after a crew member closed it for safety.
+- **Worn or broken water pump impeller.** The rubber vanes of the raw water pump wear, crack and break off, particularly if the pump has run dry. Broken pieces can lodge further along the system.
+- **Slipping or broken drive belt.** On many engines the belt also drives the fresh water (coolant) pump. A squeal, or a battery that stops charging at the same time, are clues.
+- **Low coolant in the fresh water circuit.** On engines with a closed coolant circuit, a leaking hose, pump seal or cap lets the level fall until the engine overheats.
+- **Stuck thermostat or blocked heat exchanger.** A thermostat that stays closed, or a heat exchanger furred with scale or blocked by impeller pieces, stops heat being carried away.
 
 **What to check first**
 
-1. Never remove the pressure cap on the coolant system while the engine is hot. Hot coolant can spray out and scald you. Wait until it has cooled.
-2. Look at the exhaust. Little or no water coming out points to the raw water side: intake, seacock, strainer or impeller.
-3. Check the raw water seacock is open, then close it before opening the strainer to clear it.
+1. Before anything else, follow the stop-engine condition above and let the engine cool. Do not open a hot coolant pressure cap or touch hot hoses or exhaust parts.
+2. Think back to the exhaust before you stopped. Little or no water coming out points to the raw water side: intake, seacock, strainer, pump drive or impeller.
+3. Once cool, check the raw water seacock is open. Close it before opening the strainer to clear it, and open it again before the engine runs.
 4. Check the drive belt is in place, undamaged and tight.
-5. Once the engine has cooled, check the coolant level in the header tank.
+5. On an engine with a coolant circuit, check the level in the header tank.
 6. If all of those are fine, inspect the impeller. If any vanes are missing, find the pieces before you run the engine again.
 
 **Related lessons**
@@ -3124,21 +3471,23 @@ A high temperature reading, an overheat alarm, steam in the exhaust or a dry exh
 
 `stops-suddenly` · draft
 
-An engine that stops by itself is most often starved of fuel or air, or stalled by something round the propeller. How it stopped tells you where to look.
+Then the stop cards: `fuel-spray`, `smoke-or-fire`
 
-**Likely causes, most likely first**
+An engine that stops by itself is often starved of fuel or air, or stalled by something round the propeller. How it stopped tells you where to look.
 
-1. **Blocked fuel filter.** Rough weather stirs up water, sediment and fuel bug from the bottom of the tank, and it collects in the filters. The engine usually slows and fades over a few seconds.
-2. **Out of fuel, or air drawn into the fuel.** A low tank can uncover the pick-up pipe when the boat heels or rolls, letting air in. A loose connection on the suction side does the same.
-3. **Rope, net or weed round the propeller.** The engine stalls as soon as it is put in gear, or stops abruptly with a thump. Often there is vibration first.
-4. **Water in the fuel.** Water does not burn. A slug of it reaching the injectors stops the engine, often after rough weather or refuelling.
-5. **Blocked fuel tank vent.** As fuel is used, a vacuum builds in a tank that cannot breathe, until the lift pump can no longer draw fuel. The engine may restart after a rest and then stop again.
-6. **Serious mechanical fault.** Less common. If the engine stopped hard with an alarm, a bang or a smell of burning, it may have overheated, lost oil pressure or seized. Do not restart it.
+**Possible causes (not ranked)**
+
+- **Blocked fuel filter.** Rough weather stirs up water, sediment and fuel bug from the bottom of the tank, and it collects in the filters. The engine usually slows and fades over a few seconds.
+- **Out of fuel, or air drawn into the fuel.** A low tank can uncover the pick-up pipe when the boat heels or rolls, letting air in. A loose connection on the suction side does the same.
+- **Rope, net or weed round the propeller.** The engine stalls as soon as it is put in gear, or stops abruptly with a thump. Often there is vibration first. A low idle speed, a gearbox fault or a binding shaft can also stall an engine in gear.
+- **Water in the fuel.** Water does not burn. A slug of it reaching the injectors stops the engine, often after rough weather or refuelling.
+- **Blocked fuel tank vent.** As fuel is used, a vacuum builds in a tank that cannot breathe, until the lift pump can no longer draw fuel. The engine may restart after a rest and then stop again.
+- **Serious mechanical fault.** If the engine stopped hard with an alarm, a bang or a smell of burning, it may have overheated, lost oil pressure or seized. Do not restart it.
 
 **What to check first**
 
 1. Make the boat safe first. You have lost propulsion, so sail, anchor or call for help as the situation needs.
-2. Think about how it stopped. Fading over a few seconds suggests fuel; stopping as you put it in gear suggests the propeller; a hard stop with an alarm or a bang means do not restart.
+2. Think about how it stopped. Fading over a few seconds suggests fuel; stopping as you put it in gear suggests the propeller, though idle speed, the gearbox or the shaft are also possible; a hard stop with an alarm or a bang means do not restart.
 3. Check the fuel level and that the fuel valve is open.
 4. Look in the primary filter bowl for water or dirt.
 5. Before checking round the propeller, make sure the engine is stopped and cannot be started. Never go near the propeller with the engine running.
@@ -3159,27 +3508,30 @@ An engine that stops by itself is most often starved of fuel or air, or stalled 
 
 `low-oil-pressure` · draft
 
-> **⚠️ Review note:** Please confirm the order of likely causes, and that advising against running with milky or fuel-smelling oil is appropriate.
+> **⚠️ Review note:** Audit note 32, safety revise (P0, S03): stop-engine condition C is shown first, verbatim, with the stop card; 'the most common cause' is removed and causes are unranked; the checks begin with 'do not restart'. Please approve, including the advice against running with milky or fuel-smelling oil.
+
+> 🛑 **STOP-ENGINE CONDITION.** If the oil-pressure alarm activates or the gauge indicates abnormally low pressure, reduce power and stop the engine **as soon as vessel safety permits**. Secure the vessel first. Do not restart simply to test whether the alarm clears. Once stopped, check oil level and obvious leaks in accordance with the handbook. If the cause is not clear and corrected, seek engineering assistance.
+
+Then the stop card: `low-oil-pressure`
 
 The oil pressure warning light comes on, the alarm sounds or the gauge reads low while the engine is running.
 
-> **🛑 Stop the engine.** Stop the engine straight away, unless doing so would put the boat or crew in immediate danger. Without oil pressure the bearings can be damaged within minutes. Do not restart it until you have found the cause.
+**Possible causes (not ranked)**
 
-**Likely causes, most likely first**
-
-1. **Low oil level.** From a leak, from oil being burnt over time, or from the level simply not being checked. The most common cause, and the easiest to check.
-2. **Faulty sender, switch or wiring.** The warning can be false, caused by a failed pressure switch or a loose wire. Treat it as real until you have proved otherwise.
-3. **Thin or contaminated oil.** Oil diluted by diesel, the wrong grade of oil, or oil that has been overheated cannot hold its pressure.
-4. **Oil filter problem.** A blocked filter, the wrong filter, or a filter fitted badly after an oil change.
-5. **Worn oil pump or bearings.** Less common, and more likely on an older engine. This needs a qualified engineer.
+- **Low oil level.** From a leak, from oil being burnt over time, or from the level simply not being checked. Easy to check once the engine has stopped, but a normal level does not rule out a real loss of pressure.
+- **Faulty sender, switch or wiring.** The warning can be false, caused by a failed pressure switch or a loose wire. Treat it as real until you have proved otherwise.
+- **Thin or contaminated oil.** Oil diluted by diesel, the wrong grade of oil, or oil that has been overheated cannot hold its pressure.
+- **Oil filter problem.** A blocked filter, the wrong filter, or a filter fitted badly after an oil change.
+- **Worn oil pump or bearings.** Can happen on older engines. This needs a qualified engineer.
 
 **What to check first**
 
-1. Wait a few minutes for the oil to drain back to the sump, then check the level on the dipstick with the boat as level as possible.
-2. Look under the engine and around the oil filter for fresh oil.
-3. Look at the oil on the dipstick. If it smells of diesel, looks milky or feels unusually thin, do not run the engine; get advice.
-4. If the oil and filter were changed recently, check that the right filter is fitted, it is tight and its seal is in place.
-5. If the level is right and the oil looks normal, the switch or its wiring may be at fault. A qualified engineer can measure the real pressure with a gauge before you rely on the engine.
+1. Do not restart to see whether the warning clears.
+2. Wait a few minutes for the oil to drain back to the sump, then check the level on the dipstick with the boat as level as possible.
+3. Look under the engine and around the oil filter for fresh oil.
+4. Look at the oil on the dipstick. If it smells of diesel, looks milky or feels unusually thin, do not run the engine; get advice.
+5. If the oil and filter were changed recently, check that the right filter is fitted, it is tight and its seal is in place.
+6. If the level is right and the oil looks normal, still treat the warning as real: the switch or wiring may be at fault, but only a test gauge proves it. Get a qualified engineer to measure the real pressure before you run the engine again.
 
 **Related lessons**
 
@@ -3198,15 +3550,15 @@ The oil pressure warning light comes on, the alarm sounds or the gauge reads low
 
 `not-charging` · draft
 
-The charge warning light stays on with the engine running, or the battery voltage does not rise when the engine is started.
+The charge warning light stays on with the engine running, or the battery voltage does not rise when the engine is started. Either indicates a charging-system fault, not necessarily a failed alternator.
 
-**Likely causes, most likely first**
+**Possible causes (not ranked)**
 
-1. **Loose, slipping or broken drive belt.** The alternator is driven by a belt. A slipping belt often squeals, especially when the engine speeds up or the batteries are low.
-2. **Loose or corroded connections.** At the alternator, the battery terminals or the isolator switch. Damp engine spaces make corrosion common.
-3. **Isolator or charge switch set wrongly.** Battery switches set to a position that disconnects the battery being charged, or a charge-splitting device that has failed.
-4. **Battery that will not hold its charge.** An old or deeply discharged battery may accept little charge, so it looks as if nothing is charging it.
-5. **Faulty alternator or regulator.** Less common. Once the belt, wiring and battery have been ruled out, the alternator needs testing.
+- **Loose, slipping or broken drive belt.** The alternator is driven by a belt. A slipping belt often squeals, especially when the engine speeds up or the batteries are low.
+- **Loose or corroded connections.** At the alternator, the battery terminals or the isolator switch. Damp engine spaces make corrosion common.
+- **Isolator or charge switch set wrongly.** Battery switches set to a position that disconnects the battery being charged, or a charge-splitting device that has failed.
+- **Battery that will not hold its charge.** An old or deeply discharged battery may accept little charge, so it looks as if nothing is charging it.
+- **Faulty alternator or regulator.** Once the belt, wiring and battery have been ruled out, the alternator needs testing.
 
 **What to check first**
 

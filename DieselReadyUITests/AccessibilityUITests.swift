@@ -76,6 +76,8 @@ final class AccessibilityUITests: XCTestCase {
             app.tabBars.buttons[tab].tap()
             if tab == "Faults" { app.buttons["Overheating"].tap() }
             let tabBarFrame = app.tabBars.firstMatch.frame
+            let navigationBar = app.navigationBars.firstMatch
+            let navigationBarFrame = navigationBar.exists ? navigationBar.frame : .zero
             try app.performAccessibilityAudit { issue in
                 // System-drawn tab bar items are outside the app's control.
                 if let element = issue.element, element.elementType == .tabBar || element.elementType == .tab {
@@ -87,9 +89,11 @@ final class AccessibilityUITests: XCTestCase {
                 if issue.auditType == .contrast && issue.element == nil {
                     return true
                 }
-                // Text that has scrolled underneath the translucent tab bar is measured
-                // against the blurred glass, not the background it is designed for.
-                if issue.auditType == .contrast, let frame = issue.element?.frame, frame.intersects(tabBarFrame) {
+                // Text that has scrolled underneath the translucent tab bar or navigation
+                // bar is measured against the blurred glass, not the background it is
+                // designed for.
+                if issue.auditType == .contrast, let frame = issue.element?.frame,
+                   frame.intersects(tabBarFrame) || frame.intersects(navigationBarFrame) {
                     return true
                 }
                 let element = issue.element

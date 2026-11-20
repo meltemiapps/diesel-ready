@@ -10,6 +10,7 @@
       "estimatedMinutes": 5,
       "intro": "Every moving part inside the engine runs on a thin film of oil. Without it, metal rubs on metal, heats up and wears or seizes within minutes. The lubrication system keeps that film in place whenever the engine turns.",
       "diagram": null,
+      "caution": null,
       "steps": [
         {
           "title": "The sump",
@@ -36,7 +37,6 @@
           "text": "Diesel engines produce soot and acidic combustion products that find their way into the oil. Over time the oil's additives are used up and it protects less well, which is why it is changed at regular intervals."
         }
       ],
-      "caution": null,
       "handsOn": false,
       "reviewStatus": "draft"
     },
@@ -46,33 +46,39 @@
       "estimatedMinutes": 5,
       "intro": "Checking the oil takes a minute and is part of every pre-start check. The dipstick tells you not only how much oil there is, but often what condition it is in.",
       "diagram": null,
+      "caution": "Hot oil and engine parts can burn. Make sure the engine is stopped and cannot be started before reaching into the engine space.",
       "steps": [
         {
           "title": "When to check",
-          "text": "Check before starting, with the engine cold and the boat as level as possible. If the engine has just been running, wait several minutes for the oil to drain back into the sump, or the reading will be low."
+          "text": "Check before starting, with the engine cold and the boat as level as possible. If the engine has just been running, wait several minutes for the oil to drain back into the sump, or the reading will be low.",
+          "action": "observe"
         },
         {
           "title": "Reading the dipstick",
-          "text": "Pull the dipstick out, wipe it clean, push it fully back in and pull it out again. The oil level should be between the minimum and maximum marks."
+          "text": "Pull the dipstick out, wipe it clean, push it fully back in and pull it out again. The oil level should be between the minimum and maximum marks.",
+          "action": "observe"
         },
         {
           "title": "Topping up",
-          "text": "If the level is low, add a little of the oil your handbook specifies through the filler, wait a moment, and check again. Add small amounts at a time; it is easy to overfill."
+          "text": "If the level is low, add a little of the oil your handbook specifies through the filler, wait a moment, and check again. Add small amounts at a time; it is easy to overfill.",
+          "action": "owner"
         },
         {
           "title": "Why overfilling matters",
-          "text": "Too much oil can be churned by the crankshaft, frothing it so it lubricates less well, and it can be pushed out through seals or burnt, giving blue smoke."
+          "text": "Too much oil can be churned by the crankshaft, frothing it so it lubricates less well, and it can be pushed out through seals or burnt, giving blue smoke.",
+          "action": "observe"
         },
         {
           "title": "What the oil looks like",
-          "text": "Diesel engine oil turns black quickly because it holds soot, so dark oil on its own is normal. Look instead for oil that is milky or creamy, which suggests water is getting in, or oil that is thin and smells strongly of diesel, which suggests fuel is getting in."
+          "text": "Diesel engine oil turns black quickly because it holds soot, so dark oil on its own is normal. Look instead for oil that is milky or creamy, which suggests water is getting in, or oil that is thin and smells strongly of diesel, which suggests fuel is getting in.",
+          "action": "observe"
         },
         {
           "title": "A level that rises",
-          "text": "Oil does not make itself. If the level is higher than when you last checked and you have not added any, something else is getting into the sump. Do not run the engine until the cause has been found."
+          "text": "Oil does not make itself. If the level is higher than when you last checked and you have not added any, something else is getting into the sump. Do not run the engine until the cause has been found.",
+          "action": "observe"
         }
       ],
-      "caution": "Hot oil and engine parts can burn. Make sure the engine is stopped and cannot be started before reaching into the engine space.",
       "handsOn": true,
       "reviewStatus": "draft"
     },
@@ -82,73 +88,88 @@
       "estimatedMinutes": 8,
       "intro": "Changing the engine oil and filter is the most important routine service job. On many boats the sump cannot be drained from underneath, so the old oil is pumped out from above.",
       "diagram": null,
+      "caution": "Used engine oil is harmful to skin. Wear gloves and wash any oil off your skin promptly. Warm oil and engine parts can burn.",
       "steps": [
         {
           "title": "How often",
-          "text": "Your engine handbook gives an interval in running hours and usually a time limit as well, whichever comes first. Engines that are used little still need regular changes, because acids in old oil attack the engine while it stands."
+          "text": "Your engine handbook gives an interval in running hours and usually a time limit as well, whichever comes first. Engines that are used little still need regular changes, because acids in old oil attack the engine while it stands.",
+          "action": "observe"
         },
         {
           "title": "Warm the engine first",
-          "text": "Run the engine for a short while so the oil is warm. Warm oil flows more easily and carries more of the dirt out with it. Stop the engine and make sure it cannot be restarted."
+          "text": "Run the engine for a short while so the oil is warm. Warm oil flows more easily and carries more of the dirt out with it. Stop the engine and make sure it cannot be restarted.",
+          "action": "owner"
         },
         {
           "title": "Remove the old oil",
-          "text": "Many marine engines are drained by pumping the oil out through the dipstick tube or a dedicated drain hose, using a hand or electric extraction pump. Pump into a container large enough for the whole sump."
+          "text": "Many marine engines are drained by pumping the oil out through the dipstick tube or a dedicated drain hose, using a hand or electric extraction pump. Pump into a container large enough for the whole sump.",
+          "action": "owner"
         },
         {
           "title": "Change the filter",
-          "text": "Put a tray and rags under the filter, then unscrew it. Make sure the old sealing ring has come away with it and is not stuck to the engine. Smear a little clean oil on the new filter's seal and screw it on by hand, as tight as the filter's maker directs."
+          "text": "Put a tray and rags under the filter, then unscrew it. Make sure the old sealing ring has come away with it and is not stuck to the engine. Smear a little clean oil on the new filter's seal and screw it on by hand, as tight as the filter's maker directs.",
+          "action": "owner"
         },
         {
           "title": "Refill and check",
-          "text": "Fill with the grade and quantity of oil given in the handbook, then check the dipstick. Start the engine and check the oil pressure warning goes out promptly. Look for leaks around the filter, then stop the engine, wait, and check the level again."
+          "text": "Fill with the grade and quantity of oil given in the handbook, then check the dipstick. Start the engine and watch the oil pressure warning: if it does not go out within a few seconds, stop the engine at once. Check for leaks around the filter and any drain point, then stop the engine, let the oil settle and check the level again.",
+          "action": "owner"
         },
         {
           "title": "Dispose of old oil properly",
-          "text": "Take used oil and filters to a waste oil facility, such as those at many marinas and recycling centres. Never put oil in the bilge, the drains or the water. Note the date and engine hours in your log."
+          "text": "Take used oil and filters to a waste oil facility, such as those at many marinas and recycling centres. Never put oil in the bilge, the drains or the water. Note the date and engine hours in your log.",
+          "action": "owner"
         }
       ],
-      "caution": "Used engine oil is harmful to skin. Wear gloves and wash any oil off your skin promptly. Warm oil and engine parts can burn.",
       "handsOn": true,
       "reviewStatus": "draft",
-      "reviewNote": "The filter-tightening advice is deliberately general ('as the filter's maker directs'). Please confirm the refill sequence (start, check pressure, check leaks, recheck level) is sound in general."
+      "reviewNote": "Audit note 15, accept with qualification: the refill step now requires immediate oil-pressure confirmation (stop at once if the warning stays on), a leak check, and a recheck after settling; disposal is in step 6. Please approve."
     },
     {
       "id": "m04-l04",
       "title": "Oil pressure warnings",
       "estimatedMinutes": 5,
-      "intro": "The oil pressure warning is the one alarm you should never ignore. Low oil pressure means the bearings may not be getting the oil film they need, and serious damage can follow quickly.",
+      "intro": "The oil pressure warning is one alarm you should never ignore. Low oil pressure means the bearings may not be getting the oil film they need, and serious damage can follow quickly, even if the oil level looks normal.",
       "diagram": null,
+      "safetyNoticeIds": [
+        "oil-pressure-stop"
+      ],
+      "caution": "Running an engine with low oil pressure, even for a short time, can destroy its bearings.",
       "steps": [
         {
           "title": "Gauge or warning light",
-          "text": "Most small engines have a pressure switch that lights a warning lamp and sounds an alarm when pressure falls below a safe level. Some also have a gauge that shows the actual pressure."
+          "text": "Most small engines have a pressure switch that lights a warning lamp and sounds an alarm when pressure falls below a safe level. Some also have a gauge that shows the actual pressure.",
+          "action": "observe"
         },
         {
           "title": "What is normal",
-          "text": "The warning normally comes on when the key is switched on before starting, which shows the lamp and alarm work. It should go out within a few seconds of the engine starting. Pressure is usually highest when the oil is cold and lowest at idle when the engine is hot."
+          "text": "On many engines the warning comes on when the key is switched on before starting, which shows the lamp and alarm work, and goes out within a few seconds of the engine starting. Pressure tends to be highest when the oil is cold and lowest at idle when the engine is hot. Panels and gauges differ, so learn how yours behaves.",
+          "action": "observe"
         },
         {
           "title": "If it comes on while running",
-          "text": "Stop the engine as soon as you can without putting the boat or crew in danger. Do not restart it until you have checked the oil level and looked for the cause."
+          "text": "Follow the stop-engine condition at the top of this lesson: reduce power and stop the engine as soon as the boat is safe. Do not restart just to see whether the warning clears.",
+          "action": "owner"
         },
         {
-          "title": "Common causes",
-          "text": "Low oil level is the most common. Others include a faulty pressure switch or loose wire, oil thinned by fuel, a blocked or wrongly fitted filter, and, on older engines, a worn pump or bearings."
+          "title": "Possible causes",
+          "text": "Possible causes include a low oil level, a faulty pressure switch or loose wire, oil thinned by fuel, a blocked or wrongly fitted filter, and, on older engines, a worn pump or bearings. A normal oil level does not prove the pressure is good.",
+          "action": "observe"
         },
         {
           "title": "Treat it as real",
-          "text": "Even if you suspect a faulty switch, assume the warning is genuine until you have proved otherwise. A qualified engineer can fit a test gauge to measure the real pressure."
+          "text": "Even if you suspect a faulty switch, assume the warning is genuine until you have proved otherwise. A qualified engineer can fit a test gauge to measure the real pressure.",
+          "action": "engineer"
         },
         {
           "title": "If it does not come on at all",
-          "text": "If the warning lamp does not light when you switch on before starting, the bulb, switch or wiring may have failed. Get it fixed, because a warning that cannot come on gives no protection."
+          "text": "If the warning lamp does not light when you switch on before starting, the bulb, switch or wiring may have failed. Get it fixed, because a warning that cannot come on gives no protection.",
+          "action": "engineer"
         }
       ],
-      "caution": "Running an engine with low oil pressure, even for a short time, can destroy its bearings.",
-      "handsOn": false,
+      "handsOn": true,
       "reviewStatus": "draft",
-      "reviewNote": "Please confirm the 'normal' behaviour described (lamp lit with ignition on before start, highest pressure cold, lowest hot at idle) applies to typical small marine diesels."
+      "reviewNote": "Audit note 16, accept with qualification, and S03: stop-engine condition C now opens the lesson, verbatim; the 'normal' behaviour is described as typical, with panels differing; 'most common' is removed and causes are unranked. The lesson is now a procedure, so it ends with the handbook reminder. Please approve."
     }
   ],
   "questions": [
@@ -194,7 +215,7 @@
         "Carrying heat away from hot parts such as the pistons",
         "Cooling the exhaust gases before they leave the boat's stern",
         "Keeping the fuel system free of air",
-        "Charging the battery"
+        "Cleaning the fuel injectors as it circulates"
       ],
       "correctIndex": 0,
       "explanation": "Oil also carries heat, holds dirt in suspension, helps the rings seal and protects against corrosion. Cooling the exhaust is done by the raw water.",
@@ -208,7 +229,7 @@
       "prompt": "Why does diesel engine oil need changing even if the level stays correct?",
       "options": [
         "Soot and acids build up in it and its additives get used up",
-        "Over time the oil slowly turns back into diesel",
+        "Oil that has been heated many times turns into grease",
         "The oil gets heavier and sinks below the pump's pick-up",
         "The marks on the dipstick wear off and can no longer be read"
       ],
@@ -288,12 +309,12 @@
       "prompt": "The oil on the dipstick looks milky and creamy. What does this suggest?",
       "options": [
         "Water or coolant is getting into the oil",
-        "The oil is brand new",
-        "The engine has been run at low revs for long periods",
-        "The oil is the correct grade"
+        "Fuel is diluting the oil",
+        "The oil has been overheated",
+        "The engine has been run at low revs for long periods"
       ],
       "correctIndex": 0,
-      "explanation": "Water mixed with oil forms a creamy emulsion. It can come from coolant leaking internally or sea water getting in, and it needs investigating before the engine is run.",
+      "explanation": "Water mixed with oil forms a creamy emulsion. It can come from coolant leaking internally or sea water getting in, and it needs investigating before the engine is run. Fuel dilution makes oil thin and smell of diesel rather than milky.",
       "reviewStatus": "draft"
     },
     {
@@ -309,7 +330,7 @@
         "Pump out the extra oil, then carry on using the engine"
       ],
       "correctIndex": 0,
-      "explanation": "A rising level means something else, usually fuel or water, is getting into the oil and diluting it. Running the engine with diluted oil risks serious damage.",
+      "explanation": "A rising level shows that something else, usually fuel or water, is getting into the oil and diluting it. Running the engine with diluted oil risks serious damage.",
       "reviewStatus": "draft"
     },
     {
@@ -320,9 +341,9 @@
       "prompt": "Where should you find the right oil grade and quantity for your engine?",
       "options": [
         "In the engine manufacturer's handbook",
-        "On any car oil bottle",
+        "From any oil marked as suitable for diesel engines",
         "From the colour of the old oil on the dipstick",
-        "From the size of the fuel tank"
+        "From the oil grade printed on the filter"
       ],
       "correctIndex": 0,
       "explanation": "Different engines need different oil specifications and quantities. The handbook is the reliable source; general-purpose oils may not meet the engine's needs.",
@@ -338,7 +359,7 @@
         "Warm oil flows more easily and carries more dirt out with it",
         "Cold oil cannot be pumped at all",
         "Warming the engine makes the oil filter release its trapped dirt",
-        "It makes the new oil set faster"
+        "So the new filter's seal can seat properly"
       ],
       "correctIndex": 0,
       "explanation": "Warm oil is thinner, so more of it comes out and the soot and particles stay mixed in it rather than settling in the sump.",
@@ -399,13 +420,16 @@
       "difficulty": 1,
       "prompt": "The oil pressure warning comes on while you are motoring. What should you do?",
       "options": [
-        "Stop the engine as soon as it is safe to do so",
+        "Reduce power and stop the engine as soon as the boat is safe",
         "Increase the revs to raise the pressure",
         "Carry on and check the oil at the end of the trip",
-        "Switch the alarm off and continue"
+        "Stop, then restart after a minute to see whether the warning clears"
       ],
       "correctIndex": 0,
-      "explanation": "Low oil pressure can wreck the bearings within minutes. Stop as soon as you safely can, then check the oil level before thinking about restarting.",
+      "explanation": "Low oil pressure can wreck the bearings within minutes. Reduce power and stop as soon as the boat is safe, then check the oil level and look for leaks. Do not restart just to test whether the warning clears.",
+      "safetyNoticeIds": [
+        "oil-pressure-stop"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -429,15 +453,18 @@
       "moduleId": "m04",
       "lessonId": "m04-l04",
       "difficulty": 2,
-      "prompt": "What is the most common cause of low oil pressure?",
+      "prompt": "The oil pressure warning came on and you have stopped the engine safely. What is a sensible first check?",
       "options": [
-        "A low oil level",
-        "A blocked fuel filter",
-        "A worn propeller",
-        "A slack stern gland"
+        "The oil level on the dipstick, and any obvious leaks",
+        "Restart the engine to see whether the warning clears",
+        "Replace the oil pressure switch, which is probably faulty",
+        "Top up the oil to the maximum mark without checking the level"
       ],
       "correctIndex": 0,
-      "explanation": "If there is not enough oil in the sump, the pump draws air and the pressure falls. That is why the first check is the dipstick.",
+      "explanation": "Once stopped, check the oil level and look for leaks as the handbook describes. Do not restart just to test the alarm, and do not assume the switch is at fault: a normal level does not prove the pressure is good.",
+      "safetyNoticeIds": [
+        "oil-pressure-stop"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -450,10 +477,10 @@
         "Treat the warning as real until the pressure has been checked properly",
         "Disconnect the switch and keep using the engine",
         "Assume the switch is faulty because the oil level is fine",
-        "Fit a brighter warning bulb"
+        "Run the engine at higher revs, where the warning goes out"
       ],
       "correctIndex": 0,
-      "explanation": "A correct oil level does not prove the pressure is good. Only a test gauge shows the real pressure, so the warning should be trusted until then.",
+      "explanation": "A correct oil level does not prove the pressure is good. Only a test gauge shows the real pressure, so the warning should be trusted until then; running on in the hope that it goes out risks the bearings.",
       "reviewStatus": "draft"
     },
     {
@@ -461,17 +488,37 @@
       "moduleId": "m04",
       "lessonId": "m04-l04",
       "difficulty": 3,
-      "prompt": "When is the oil pressure in a healthy engine usually at its lowest?",
+      "prompt": "In a healthy engine, when does oil pressure tend to be at its lowest?",
       "options": [
         "At idle when the engine is fully warm",
         "At high revs when the engine is still cold",
         "Just after starting from cold",
-        "It is always exactly the same"
+        "At full power once the engine is warm"
       ],
       "correctIndex": 0,
-      "explanation": "Hot oil is thinner and the pump turns slowly at idle, so pressure is lowest then. This is why a borderline engine may show a warning only at hot idle.",
+      "explanation": "Hot oil is thinner and the pump turns slowly at idle, so pressure tends to be lowest then. This is why a borderline engine may show a warning only at hot idle. Actual readings and warning behaviour differ between engines and panels.",
       "reviewStatus": "draft",
-      "reviewNote": "Confirm this applies generally."
+      "reviewNote": "Audit note 17, verify: the question now asks about a general tendency, with no universal figure or gauge response. Please confirm it applies generally."
+    },
+    {
+      "id": "m04-q021",
+      "moduleId": "m04",
+      "lessonId": "m04-l04",
+      "difficulty": 3,
+      "prompt": "The oil pressure alarm sounded and you stopped the engine. The dipstick shows the right level and there are no leaks. What should you do next?",
+      "options": [
+        "Leave the engine stopped and get the pressure checked, treating the warning as real",
+        "Restart it, because a correct level shows the switch must be faulty",
+        "Restart and run at low revs to reach harbour, watching the light",
+        "Add oil above the maximum mark and restart"
+      ],
+      "correctIndex": 0,
+      "explanation": "A normal level does not prove the pressure is good, and genuine low oil pressure risks the bearings. Do not restart simply to test whether the alarm clears; if the cause is not clear and corrected, get engineering assistance.",
+      "safetyNoticeIds": [
+        "oil-pressure-stop"
+      ],
+      "reviewStatus": "draft",
+      "reviewNote": "New in content 1.1 (S03, S20): a scenario question showing that a normal oil level does not clear the stop condition. Please approve."
     }
   ]
 }

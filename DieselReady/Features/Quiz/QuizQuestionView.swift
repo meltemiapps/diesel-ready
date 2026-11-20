@@ -2,6 +2,7 @@ import SwiftUI
 
 /// One question: prompt, four shuffled options, instant feedback and the explanation.
 struct QuizQuestionView: View {
+    @Environment(ContentStore.self) private var content
     let session: QuizSession
 
     var body: some View {
@@ -79,6 +80,8 @@ struct QuizQuestionView: View {
     private func feedback(current: PresentedQuestion, chosen: Int) -> some View {
         let correct = current.isCorrect(displayIndex: chosen)
         return VStack(alignment: .leading, spacing: Theme.Spacing.m) {
+            // Safety notices come first, so the feedback starts with them.
+            SafetyNoticeList(ids: current.question.noticeIDs, guide: content.library.safety)
             Callout(
                 kind: correct ? .success : .error,
                 text: (correct ? "Correct. " : "Not quite. The answer is \u{201C}\(current.question.correctAnswer)\u{201D}. ")

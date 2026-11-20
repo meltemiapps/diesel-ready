@@ -84,11 +84,16 @@ the same files unchanged. See [docs/content-schema.md](docs/content-schema.md).
 
 [docs/content-review.md](docs/content-review.md) is a readable export of every
 lesson, question and Fault finder entry, with all review notes highlighted, for
-sign-off by a qualified marine engineer. Regenerate it after any content change:
+sign-off by a qualified marine engineer.
+[docs/quiz-review.csv](docs/quiz-review.csv) lists every question with its key,
+severity and an empty sign-off column, and
+[docs/review-ledger.md](docs/review-ledger.md) records how each finding of the
+independent technical review was handled. Regenerate the pack and the CSV after
+any content change:
 
 ```sh
-python3 scripts/export-content-review.py          # rewrite the pack
-python3 scripts/export-content-review.py --check  # fail if it is out of date
+python3 scripts/export-content-review.py          # rewrite the pack and the CSV
+python3 scripts/export-content-review.py --check  # fail if either is out of date
 ```
 
 ## Release tools
@@ -99,7 +104,7 @@ All in `scripts/`, using only the standard library and Apple frameworks:
 |---|---|
 | `render-app-icon.swift` | Draws the app icon (standard, dark and tinted) and the website icon |
 | `check-app-store-metadata.py` | Checks `docs/app-store-metadata.md` against App Store limits and scans it and the website pages for organisation or manufacturer names |
-| `export-content-review.py` | Writes `docs/content-review.md`, the content pack for expert review |
+| `export-content-review.py` | Writes `docs/content-review.md` and `docs/quiz-review.csv` for expert review |
 | `capture-screenshots.sh` | Runs the screenshot UI tests: Dark Mode and largest-text audit screenshots, and App Store screenshots for iPhone and iPad, into `docs/screenshots/` (git-ignored, not committed) |
 
 The website pages for meltemiapps.co.uk are in `docs/site/diesel-ready/`.

@@ -29,6 +29,10 @@ struct ThemeContrastTests {
         (P.ink, P.errorBackground, "option text on wrong answer"),
         (P.onSelectedChip, P.selectedChip, "selected chip"),
         (P.secondaryText, P.divider, "disabled button text"),
+        (P.error, P.surface, "stop card headings on surface"),
+        (P.link, P.background, "observe badge"),
+        (P.caution, P.cautionBackground, "owner badge"),
+        (P.error, P.errorBackground, "engineer badge"),
     ]
 
     @Test("WCAG AA contrast in light and dark mode", arguments: [UIUserInterfaceStyle.light, .dark])

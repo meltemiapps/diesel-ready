@@ -3,6 +3,7 @@ import SwiftUI
 
 struct AboutView: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(ContentStore.self) private var content
 
     @State private var confirmingReset = false
     @State private var resetMessage: String?
@@ -18,10 +19,10 @@ struct AboutView: View {
                     }
                     .padding(.vertical, Theme.Spacing.xs)
                 } header: {
-                    Text("Unofficial study guide")
+                    AboutHeader("Unofficial study guide")
                 }
 
-                Section("Privacy") {
+                Section(header: AboutHeader("Privacy")) {
                     ForEach(AppInfo.privacySummary, id: \.self) { line in
                         Label {
                             Text(line).foregroundStyle(Theme.Palette.ink)
@@ -36,14 +37,18 @@ struct AboutView: View {
                     }
                 }
 
-                Section("Safety and trademarks") {
+                if let info = content.library.info {
+                    ContentInfoSection(info: info)
+                }
+
+                Section(header: AboutHeader("Safety and trademarks")) {
                     Text(AppInfo.safetyNotice)
                         .foregroundStyle(Theme.Palette.ink)
                     Text(AppInfo.trademarkNotice)
                         .foregroundStyle(Theme.Palette.secondaryText)
                 }
 
-                Section("Your progress") {
+                Section(header: AboutHeader("Your progress")) {
                     Button("Reset progress", role: .destructive) {
                         confirmingReset = true
                     }
@@ -55,7 +60,7 @@ struct AboutView: View {
                     }
                 }
 
-                Section("Support and source") {
+                Section(header: AboutHeader("Support and source")) {
                     LinkRow(title: "Email support", detail: AppInfo.supportEmail,
                             systemImage: "envelope", url: AppInfo.supportEmailURL)
                     LinkRow(title: "Website", detail: "meltemiapps.co.uk/diesel-ready",
@@ -70,7 +75,7 @@ struct AboutView: View {
                     LinkRow(title: "Content licence", detail: "CC BY-NC-SA 4.0",
                             systemImage: "doc.richtext", url: AppInfo.contentLicenceURL)
                 } header: {
-                    Text("Licences")
+                    AboutHeader("Licences")
                 } footer: {
                     Text("\(AppInfo.name) \(AppInfo.version) · © 2026 \(AppInfo.studio)")
                         .frame(maxWidth: .infinity)
@@ -136,7 +141,100 @@ private struct LinkRow: View {
     }
 }
 
+/// A section header in the theme's secondary text colour, which meets WCAG AA
+/// (the system default grey only just misses it on the app background).
+private struct AboutHeader: View {
+    let title: String
+    init(_ title: String) { self.title = title }
+
+    var body: some View {
+        Text(title).foregroundStyle(Theme.Palette.secondaryText)
+    }
+}
+
+/// Content version, review date, engineer approval and the latest change.
+private struct ContentInfoSection: View {
+    let info: ContentInfo
+
+    private func row(_ label: String, _ value: String) -> some View {
+        LabeledContent {
+            Text(value).foregroundStyle(Theme.Palette.secondaryText)
+        } label: {
+            Text(label).foregroundStyle(Theme.Palette.ink)
+        }
+    }
+
+    var body: some View {
+        Section {
+            row("Content version", "\(info.version) (\(info.status))")
+            row("Content reviewed", ContentInfoFormat.date(info.reviewDate))
+            Label {
+                Text("Engineer approval: \(info.engineerApproval)")
+                    .foregroundStyle(Theme.Palette.ink)
+            } icon: {
+                Image(systemName: info.engineerApproval == "pending" ? "hourglass" : "checkmark.seal")
+                    .foregroundStyle(Theme.Palette.link)
+                    .accessibilityHidden(true)
+            }
+            .accessibilityIdentifier("engineer-approval")
+            if let latest = info.changeLog.first {
+                VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
+                    Text("What changed in \(latest.version)")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(Theme.Palette.ink)
+                    Text(latest.summary)
+                        .font(.callout)
+                        .foregroundStyle(Theme.Palette.ink)
+                }
+                .padding(.vertical, Theme.Spacing.xs)
+                .accessibilityElement(children: .combine)
+            }
+            NavigationLink("Change log") {
+                ChangeLogView(entries: info.changeLog)
+            }
+        } header: {
+            AboutHeader("Content")
+        } footer: {
+            Text("The content is a draft until a qualified marine engineer has approved it.")
+                .foregroundStyle(Theme.Palette.secondaryText)
+        }
+    }
+}
+
+private struct ChangeLogView: View {
+    let entries: [ChangeLogEntry]
+
+    var body: some View {
+        List(entries, id: \.self) { entry in
+            VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
+                Text("Version \(entry.version) · \(ContentInfoFormat.date(entry.date))")
+                    .font(.headline)
+                    .foregroundStyle(Theme.Palette.ink)
+                Text(entry.summary)
+                    .foregroundStyle(Theme.Palette.ink)
+            }
+            .padding(.vertical, Theme.Spacing.xs)
+            .accessibilityElement(children: .combine)
+        }
+        .scrollContentBackground(.hidden)
+        .background(Theme.Palette.background)
+        .navigationTitle("Change log")
+    }
+}
+
+enum ContentInfoFormat {
+    /// "2026-11-20" as "20 November 2026"; the raw text if it is not a date.
+    static func date(_ text: String) -> String {
+        guard let date = ContentInfo.date(from: text) else { return text }
+        var style = Date.FormatStyle(date: .long, time: .omitted)
+        style.locale = Locale(identifier: "en_GB")
+        style.timeZone = TimeZone(identifier: "UTC") ?? .gmt
+        return date.formatted(style)
+    }
+}
+
 #Preview {
     AboutView()
         .modelContainer(for: ProgressSchema.models, inMemory: true)
+        .environment(ContentStore())
 }

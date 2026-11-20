@@ -1,13 +1,16 @@
 import SwiftData
 import SwiftUI
 
-/// Reads one lesson: intro, optional diagram, numbered steps, caution, the
-/// handbook reminder for hands-on lessons, and "Check your knowledge".
+/// Reads one lesson: intro, then any safety notices and the caution (always
+/// before the steps), the installation types it applies to, an optional
+/// diagram, numbered steps with their action levels, the handbook reminder for
+/// hands-on lessons, and "Check your knowledge".
 /// The lesson is marked complete when the reader scrolls to the end.
 struct LessonReaderView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    @Environment(ContentStore.self) private var content
     @Query private var progressRecords: [LessonProgress]
 
     @State private var model: LessonReaderModel
@@ -33,15 +36,20 @@ struct LessonReaderView: View {
                         .foregroundStyle(Theme.Palette.ink)
                         .fixedSize(horizontal: false, vertical: true)
 
+                    // Warnings always come before the steps, never after them.
+                    SafetyNoticeList(ids: model.lesson.noticeIDs, guide: safety)
+                    if let caution = model.lesson.caution {
+                        Callout(kind: .caution, text: caution)
+                            .accessibilityIdentifier("lesson-caution")
+                    }
+
+                    ApplicabilityRow(tags: model.lesson.tagIDs.compactMap { safety?.tag(withID: $0) })
+
                     if let diagram = model.lesson.diagram, let view = LessonDiagram(diagram: diagram) {
                         view
                     }
 
                     steps
-
-                    if let caution = model.lesson.caution {
-                        Callout(kind: .caution, text: caution)
-                    }
 
                     if model.lesson.handsOn {
                         HandbookReminder()
@@ -71,6 +79,8 @@ struct LessonReaderView: View {
     }
 
     private enum ScrollAnchor: Hashable { case top }
+
+    private var safety: SafetyGuide? { content.library.safety }
 
     // MARK: Sections
 
@@ -108,7 +118,8 @@ struct LessonReaderView: View {
     private var steps: some View {
         VStack(alignment: .leading, spacing: Theme.Spacing.l) {
             ForEach(Array(model.lesson.steps.enumerated()), id: \.offset) { index, step in
-                StepRow(number: index + 1, step: step)
+                StepRow(number: index + 1, step: step,
+                        actionLabel: step.action.flatMap { safety?.info(for: $0)?.label })
             }
         }
     }
@@ -157,6 +168,8 @@ struct LessonReaderView: View {
 private struct StepRow: View {
     let number: Int
     let step: Step
+    /// The action level's label from the content, e.g. "Engineer only".
+    let actionLabel: String?
 
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: Theme.Spacing.m) {
@@ -168,6 +181,9 @@ private struct StepRow: View {
                         .font(.headline)
                         .foregroundStyle(Theme.Palette.ink)
                 }
+                if let action = step.action, let actionLabel {
+                    ActionBadge(level: action, label: actionLabel)
+                }
                 Text(step.text)
                     .foregroundStyle(Theme.Palette.ink)
                     .fixedSize(horizontal: false, vertical: true)
@@ -175,7 +191,14 @@ private struct StepRow: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("Step \(number). \(step.title.map { "\($0). " } ?? "")\(step.text)")
+        .accessibilityLabel(accessibilityText)
+        .accessibilityIdentifier("lesson-step-\(number)")
+    }
+
+    private var accessibilityText: String {
+        let title = step.title.map { "\($0). " } ?? ""
+        let action = actionLabel.map { "\($0). " } ?? ""
+        return "Step \(number). \(title)\(action)\(step.text)"
     }
 }
 

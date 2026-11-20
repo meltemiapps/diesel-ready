@@ -1,7 +1,9 @@
 import SwiftUI
 
-/// Fault finder tab: symptom chips, then the chosen symptom's causes, checks
-/// and related lessons. All wording comes from `Content/faults.json`.
+/// Fault finder tab: the STOP / DO NOT RESTART / GET ASSISTANCE cards first,
+/// then symptom chips, then the chosen symptom's notices and stop cards,
+/// possible causes (unranked), checks and related lessons. All wording comes
+/// from `Content/faults.json` and `Content/safety.json`.
 struct FaultsView: View {
     @Environment(ContentStore.self) private var content
     @SceneStorage("faults.selectedSymptom") private var selectedID = ""
@@ -33,6 +35,21 @@ struct FaultsView: View {
                     .foregroundStyle(Theme.Palette.secondaryText)
                     .fixedSize(horizontal: false, vertical: true)
 
+                VStack(alignment: .leading, spacing: Theme.Spacing.m) {
+                    Text("Stop first")
+                        .font(.sectionTitle)
+                        .foregroundStyle(Theme.Palette.ink)
+                        .accessibilityAddTraits(.isHeader)
+                    ForEach(guide.stopCards) { card in
+                        StopCardView(card: card)
+                    }
+                }
+
+                Text("What are you seeing?")
+                    .font(.sectionTitle)
+                    .foregroundStyle(Theme.Palette.ink)
+                    .accessibilityAddTraits(.isHeader)
+
                 FlowLayout(spacing: Theme.Spacing.s) {
                     ForEach(guide.symptoms) { symptom in
                         SymptomChip(symptom: symptom, isSelected: symptom.id == selectedID) {
@@ -42,7 +59,7 @@ struct FaultsView: View {
                 }
 
                 if let symptom = guide.symptom(withID: selectedID) {
-                    SymptomDetailView(symptom: symptom, reminder: guide.reminder, library: content.library)
+                    SymptomDetailView(symptom: symptom, guide: guide, library: content.library)
                         .id(symptom.id)
                 }
             }
@@ -89,7 +106,7 @@ private struct SymptomChip: View {
         .buttonStyle(.plain)
         .accessibilityLabel(symptom.title)
         .accessibilityAddTraits(isSelected ? .isSelected : [])
-        .accessibilityHint(isSelected ? "" : "Shows likely causes and checks")
+        .accessibilityHint(isSelected ? "" : "Shows stop instructions, possible causes and checks")
     }
 }
 
@@ -97,7 +114,7 @@ private struct SymptomChip: View {
 
 private struct SymptomDetailView: View {
     let symptom: Symptom
-    let reminder: String
+    let guide: FaultGuide
     let library: ContentLibrary
 
     var body: some View {
@@ -107,18 +124,21 @@ private struct SymptomDetailView: View {
                     .font(.screenTitle)
                     .foregroundStyle(Theme.Palette.ink)
                     .accessibilityAddTraits(.isHeader)
-                Text(symptom.summary)
-                    .foregroundStyle(Theme.Palette.ink)
-                    .fixedSize(horizontal: false, vertical: true)
             }
 
-            if let stop = symptom.stopFirst {
-                StopFirstCallout(instruction: stop)
+            // Safety first: the notice, then the stop cards, before any diagnosis.
+            SafetyNoticeList(ids: symptom.noticeIDs, guide: library.safety)
+            ForEach(symptom.cardIDs.compactMap { guide.stopCard(withID: $0) }) { card in
+                StopCardView(card: card)
             }
 
-            section("Likely causes", subtitle: "Most likely first") {
-                ForEach(Array(symptom.causes.enumerated()), id: \.offset) { index, cause in
-                    CauseRow(rank: index + 1, cause: cause)
+            Text(symptom.summary)
+                .foregroundStyle(Theme.Palette.ink)
+                .fixedSize(horizontal: false, vertical: true)
+
+            section("Possible causes", subtitle: "Not in order of likelihood") {
+                ForEach(Array(symptom.possibleCauses.enumerated()), id: \.offset) { _, cause in
+                    CauseRow(cause: cause)
                 }
             }
 
@@ -149,7 +169,7 @@ private struct SymptomDetailView: View {
                 }
             }
 
-            ReminderCard(text: reminder)
+            ReminderCard(text: guide.reminder)
         }
     }
 
@@ -172,53 +192,16 @@ private struct SymptomDetailView: View {
     }
 }
 
-/// Prominent instruction shown before any diagnosis.
-private struct StopFirstCallout: View {
-    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
-    let instruction: StopInstruction
-
-    var body: some View {
-        // Icon above the text at accessibility sizes, so the text keeps the full width.
-        let layout = dynamicTypeSize.isAccessibilitySize
-            ? AnyLayout(VStackLayout(alignment: .leading, spacing: Theme.Spacing.s))
-            : AnyLayout(HStackLayout(alignment: .firstTextBaseline, spacing: Theme.Spacing.m))
-        layout {
-            Image(systemName: "exclamationmark.octagon.fill")
-                .font(.title2)
-                .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
-                Text(instruction.title)
-                    .font(.cardTitle)
-                Text(instruction.text)
-                    .font(.callout)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .foregroundStyle(Theme.Palette.error)
-        .padding(Theme.Spacing.l)
-        .background(
-            RoundedRectangle(cornerRadius: Theme.Radius.card, style: .continuous)
-                .fill(Theme.Palette.errorBackground)
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: Theme.Radius.card, style: .continuous)
-                .strokeBorder(Theme.Palette.error, lineWidth: 2)
-        )
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("\(instruction.title). \(instruction.text)")
-        .accessibilityAddTraits(.isHeader)
-        .accessibilityIdentifier("stop-first")
-    }
-}
-
+/// One possible cause. Bulleted, not numbered, because causes are not ranked.
 private struct CauseRow: View {
-    let rank: Int
     let cause: FaultCause
 
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: Theme.Spacing.m) {
-            NumberBadge("\(rank)", fill: Theme.Palette.deepBlue, foreground: Theme.Palette.onHero)
+            Image(systemName: "circle.fill")
+                .font(.system(size: 8))
+                .foregroundStyle(Theme.Palette.link)
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
                 Text(cause.title)
                     .font(.headline)
@@ -231,7 +214,7 @@ private struct CauseRow: View {
         }
         .card()
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Cause \(rank). \(cause.title). \(cause.detail)")
+        .accessibilityLabel("Possible cause. \(cause.title). \(cause.detail)")
     }
 }
 

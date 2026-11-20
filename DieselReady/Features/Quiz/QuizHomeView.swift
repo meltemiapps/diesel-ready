@@ -147,12 +147,10 @@ private struct ModuleQuizRow: View {
 
     var body: some View {
         Button(action: action) {
-            HStack(spacing: Theme.Spacing.l) {
-                Text("\(module.number)")
-                    .font(.cardTitle)
-                    .foregroundStyle(Theme.Palette.onHero)
-                    .frame(width: Theme.minTouchTarget, height: Theme.minTouchTarget)
-                    .background(Circle().fill(Theme.Palette.deepBlue))
+            AdaptiveRow {
+                NumberBadge("\(module.number)", fill: Theme.Palette.deepBlue, foreground: Theme.Palette.onHero,
+                            diameter: Theme.minTouchTarget, font: .cardTitle, relativeTo: .headline)
+            } content: {
                 VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
                     Text(module.title)
                         .font(.cardTitle)
@@ -162,7 +160,7 @@ private struct ModuleQuizRow: View {
                         .font(.subheadline)
                         .foregroundStyle(Theme.Palette.secondaryText)
                 }
-                Spacer(minLength: 0)
+            } trailing: {
                 Image(systemName: "play.circle.fill")
                     .font(.title2)
                     .foregroundStyle(Theme.Palette.link)

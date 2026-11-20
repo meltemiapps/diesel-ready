@@ -4,6 +4,7 @@ import SwiftUI
 struct DisclaimerView: View {
     let onAccept: () -> Void
 
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var understood = false
     @State private var showingPrivacy = false
 
@@ -82,7 +83,10 @@ struct DisclaimerView: View {
         Button {
             understood.toggle()
         } label: {
-            HStack(alignment: .top, spacing: Theme.Spacing.m) {
+            let layout = dynamicTypeSize.isAccessibilitySize
+                ? AnyLayout(VStackLayout(alignment: .leading, spacing: Theme.Spacing.s))
+                : AnyLayout(HStackLayout(alignment: .top, spacing: Theme.Spacing.m))
+            layout {
                 Image(systemName: understood ? "checkmark.square.fill" : "square")
                     .font(.title2)
                     .foregroundStyle(understood ? Theme.Palette.accent : Theme.Palette.onHero)

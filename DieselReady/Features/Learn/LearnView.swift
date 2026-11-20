@@ -148,7 +148,7 @@ private struct ProgressCard: View {
                     Text(summary.hasStarted ? "Continue lesson" : "Start learning")
                     Text(position.lesson.title)
                         .font(.footnote)
-                        .lineLimit(1)
+                        .multilineTextAlignment(.center)
                 }
                 .padding(.vertical, Theme.Spacing.xs)
             }
@@ -186,12 +186,10 @@ struct ModuleRow: View {
     private var isComplete: Bool { !module.lessons.isEmpty && completedLessons == module.lessons.count }
 
     var body: some View {
-        HStack(spacing: Theme.Spacing.l) {
-            Text("\(module.number)")
-                .font(.cardTitle)
-                .foregroundStyle(Theme.Palette.onHero)
-                .frame(width: Theme.minTouchTarget, height: Theme.minTouchTarget)
-                .background(Circle().fill(Theme.Palette.deepBlue))
+        AdaptiveRow {
+            NumberBadge("\(module.number)", fill: Theme.Palette.deepBlue, foreground: Theme.Palette.onHero,
+                        diameter: Theme.minTouchTarget, font: .cardTitle, relativeTo: .headline)
+        } content: {
             VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
                 Text(module.title)
                     .font(.cardTitle)
@@ -206,7 +204,7 @@ struct ModuleRow: View {
                         .foregroundStyle(Theme.Palette.secondaryText)
                 }
             }
-            Spacer(minLength: 0)
+        } trailing: {
             if isComplete {
                 Image(systemName: "checkmark.circle.fill")
                     .font(.title2)

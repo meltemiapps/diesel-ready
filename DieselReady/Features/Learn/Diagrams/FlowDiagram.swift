@@ -9,11 +9,7 @@ struct FlowDiagram: View {
         VStack(spacing: Theme.Spacing.xs) {
             ForEach(Array(labels.enumerated()), id: \.offset) { index, label in
                 HStack(alignment: .firstTextBaseline, spacing: Theme.Spacing.m) {
-                    Text("\(index + 1)")
-                        .font(.subheadline.weight(.bold))
-                        .foregroundStyle(Theme.Palette.onHero)
-                        .frame(minWidth: 28, minHeight: 28)
-                        .background(Circle().fill(Theme.Palette.deepBlue))
+                    NumberBadge("\(index + 1)", fill: Theme.Palette.deepBlue, foreground: Theme.Palette.onHero)
                     VStack(alignment: .leading, spacing: 2) {
                         Text(label.title)
                             .font(.headline)

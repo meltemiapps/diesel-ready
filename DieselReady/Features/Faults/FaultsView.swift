@@ -78,10 +78,11 @@ private struct SymptomChip: View {
         Button(action: action) {
             Label(symptom.title, systemImage: SymptomIcon.name(for: symptom.id))
                 .font(.subheadline.weight(.semibold))
-                .foregroundStyle(isSelected ? Theme.Palette.onHero : Theme.Palette.ink)
+                .foregroundStyle(isSelected ? Theme.Palette.onSelectedChip : Theme.Palette.ink)
                 .padding(.horizontal, Theme.Spacing.l)
+                .padding(.vertical, Theme.Spacing.xs)
                 .frame(minHeight: Theme.minTouchTarget)
-                .background(Capsule().fill(isSelected ? Theme.Palette.navy : Theme.Palette.surface))
+                .background(Capsule().fill(isSelected ? Theme.Palette.selectedChip : Theme.Palette.surface))
                 .overlay(Capsule().strokeBorder(isSelected ? Color.clear : Theme.Palette.divider, lineWidth: 1))
                 .contentShape(Capsule())
         }
@@ -173,10 +174,15 @@ private struct SymptomDetailView: View {
 
 /// Prominent instruction shown before any diagnosis.
 private struct StopFirstCallout: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     let instruction: StopInstruction
 
     var body: some View {
-        HStack(alignment: .firstTextBaseline, spacing: Theme.Spacing.m) {
+        // Icon above the text at accessibility sizes, so the text keeps the full width.
+        let layout = dynamicTypeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(alignment: .leading, spacing: Theme.Spacing.s))
+            : AnyLayout(HStackLayout(alignment: .firstTextBaseline, spacing: Theme.Spacing.m))
+        layout {
             Image(systemName: "exclamationmark.octagon.fill")
                 .font(.title2)
                 .accessibilityHidden(true)
@@ -212,11 +218,7 @@ private struct CauseRow: View {
 
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: Theme.Spacing.m) {
-            Text("\(rank)")
-                .font(.subheadline.weight(.bold))
-                .foregroundStyle(Theme.Palette.onHero)
-                .frame(minWidth: 28, minHeight: 28)
-                .background(Circle().fill(Theme.Palette.deepBlue))
+            NumberBadge("\(rank)", fill: Theme.Palette.deepBlue, foreground: Theme.Palette.onHero)
             VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
                 Text(cause.title)
                     .font(.headline)
@@ -239,11 +241,7 @@ private struct CheckRow: View {
 
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: Theme.Spacing.m) {
-            Text("\(number)")
-                .font(.subheadline.weight(.bold))
-                .foregroundStyle(Theme.Palette.onAccent)
-                .frame(minWidth: 28, minHeight: 28)
-                .background(Circle().fill(Theme.Palette.accent))
+            NumberBadge("\(number)", fill: Theme.Palette.accent, foreground: Theme.Palette.onAccent)
             Text(text)
                 .foregroundStyle(Theme.Palette.ink)
                 .fixedSize(horizontal: false, vertical: true)
@@ -299,58 +297,6 @@ private struct ReminderCard: View {
         .card()
         .accessibilityElement(children: .combine)
         .accessibilityIdentifier("fault-reminder")
-    }
-}
-
-// MARK: - Layout
-
-/// Lays out children left to right, wrapping onto new lines as needed, so
-/// the chips stay readable at large Dynamic Type sizes.
-struct FlowLayout: Layout {
-    var spacing: CGFloat
-
-    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
-        let rows = arrange(width: proposal.width ?? .infinity, subviews: subviews)
-        let width = rows.map(\.width).max() ?? 0
-        let height = rows.reduce(0) { $0 + $1.height } + spacing * CGFloat(max(rows.count - 1, 0))
-        return CGSize(width: proposal.width ?? width, height: height)
-    }
-
-    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
-        var y = bounds.minY
-        for row in arrange(width: bounds.width, subviews: subviews) {
-            var x = bounds.minX
-            for index in row.indices {
-                let size = subviews[index].sizeThatFits(ProposedViewSize(width: bounds.width, height: nil))
-                subviews[index].place(at: CGPoint(x: x, y: y), proposal: ProposedViewSize(size))
-                x += size.width + spacing
-            }
-            y += row.height + spacing
-        }
-    }
-
-    private struct Row {
-        var indices: [Int] = []
-        var width: CGFloat = 0
-        var height: CGFloat = 0
-    }
-
-    private func arrange(width: CGFloat, subviews: Subviews) -> [Row] {
-        var rows: [Row] = []
-        var current = Row()
-        for index in subviews.indices {
-            let size = subviews[index].sizeThatFits(ProposedViewSize(width: width, height: nil))
-            let needed = current.indices.isEmpty ? size.width : current.width + spacing + size.width
-            if needed > width, !current.indices.isEmpty {
-                rows.append(current)
-                current = Row()
-            }
-            current.width = current.indices.isEmpty ? size.width : current.width + spacing + size.width
-            current.height = max(current.height, size.height)
-            current.indices.append(index)
-        }
-        if !current.indices.isEmpty { rows.append(current) }
-        return rows
     }
 }
 

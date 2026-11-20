@@ -9,6 +9,7 @@ struct QuizQuestionView: View {
             ScrollViewReader { proxy in
                 ScrollView {
                     VStack(alignment: .leading, spacing: Theme.Spacing.l) {
+                        Color.clear.frame(height: 0).id(Anchor.top)
                         if session.index == 0, let message = session.selection.shortfallMessage {
                             Callout(kind: .caution, text: message)
                         }
@@ -52,14 +53,20 @@ struct QuizQuestionView: View {
                     .padding(Theme.Spacing.l)
                     .frame(maxWidth: 700)
                     .frame(maxWidth: .infinity)
-                    // New identity per question so scroll position and focus reset.
+                    // New identity per question so focus resets.
                     .id(current.question.id)
+                }
+                // Each new question starts at the top. Without this, at large text
+                // sizes the next question opened where the last one was scrolled to,
+                // below its own options.
+                .onChange(of: session.index) {
+                    proxy.scrollTo(Anchor.top, anchor: .top)
                 }
             }
         }
     }
 
-    private enum Anchor: Hashable { case feedback }
+    private enum Anchor: Hashable { case top, feedback }
     private static let letters = ["A", "B", "C", "D"]
 
     private func state(for displayIndex: Int, in current: PresentedQuestion) -> OptionButton.State {
@@ -102,11 +109,7 @@ private struct OptionButton: View {
     var body: some View {
         Button(action: action) {
             HStack(alignment: .firstTextBaseline, spacing: Theme.Spacing.m) {
-                Text(letter)
-                    .font(.subheadline.weight(.bold))
-                    .foregroundStyle(foreground)
-                    .frame(minWidth: 28, minHeight: 28)
-                    .background(Circle().strokeBorder(foreground, lineWidth: 1.5))
+                NumberBadge(letter, stroke: foreground, foreground: foreground)
                 Text(text)
                     .foregroundStyle(state == .dimmed ? Theme.Palette.secondaryText : Theme.Palette.ink)
                     .multilineTextAlignment(.leading)

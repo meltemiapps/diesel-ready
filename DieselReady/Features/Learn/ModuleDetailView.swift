@@ -72,13 +72,15 @@ struct ModuleDetailView: View {
 }
 
 private struct LessonRow: View {
+    @ScaledMetric(relativeTo: .headline) private var scaledBadge: CGFloat = Theme.minTouchTarget
+    private var badge: CGFloat { min(scaledBadge, Theme.minTouchTarget * 1.8) }
     let number: Int
     let lesson: Lesson
     let isCompleted: Bool
     let isStarted: Bool
 
     var body: some View {
-        HStack(spacing: Theme.Spacing.l) {
+        AdaptiveRow {
             ZStack {
                 Circle()
                     .fill(isCompleted ? Theme.Palette.successBackground : Theme.Palette.background)
@@ -92,16 +94,17 @@ private struct LessonRow: View {
                     Text("\(number)")
                         .font(.cardTitle)
                         .foregroundStyle(Theme.Palette.ink)
+                        .minimumScaleFactor(0.5)
                 }
             }
-            .frame(width: Theme.minTouchTarget, height: Theme.minTouchTarget)
-
+            .frame(width: badge, height: badge)
+        } content: {
             VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
                 Text(lesson.title)
                     .font(.cardTitle)
                     .foregroundStyle(Theme.Palette.ink)
                     .multilineTextAlignment(.leading)
-                HStack(spacing: Theme.Spacing.s) {
+                FlowLayout(spacing: Theme.Spacing.s) {
                     Text("\(lesson.estimatedMinutes) min")
                     if lesson.handsOn {
                         Label("Hands-on", systemImage: "hand.raised")
@@ -113,7 +116,7 @@ private struct LessonRow: View {
                 .font(.footnote)
                 .foregroundStyle(Theme.Palette.secondaryText)
             }
-            Spacer(minLength: 0)
+        } trailing: {
             Image(systemName: "chevron.right")
                 .foregroundStyle(Theme.Palette.secondaryText)
         }

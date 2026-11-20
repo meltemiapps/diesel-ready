@@ -7,6 +7,7 @@ import SwiftUI
 struct LessonReaderView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @Query private var progressRecords: [LessonProgress]
 
     @State private var model: LessonReaderModel
@@ -75,11 +76,15 @@ struct LessonReaderView: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: Theme.Spacing.s) {
-            HStack {
+            // Side by side normally; stacked at accessibility text sizes.
+            let layout = dynamicTypeSize.isAccessibilitySize
+                ? AnyLayout(VStackLayout(alignment: .leading, spacing: Theme.Spacing.xs))
+                : AnyLayout(HStackLayout())
+            layout {
                 Text("Module \(model.module.number) · Lesson \(model.positionText)")
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(Theme.Palette.secondaryText)
-                Spacer()
+                if !dynamicTypeSize.isAccessibilitySize { Spacer() }
                 if isCompleted {
                     Label("Read", systemImage: "checkmark.circle.fill")
                         .font(.subheadline.weight(.semibold))
@@ -133,7 +138,7 @@ struct LessonReaderView: View {
                 } label: {
                     VStack(spacing: 2) {
                         Text("Next lesson")
-                        Text(next.title).font(.footnote).lineLimit(1)
+                        Text(next.title).font(.footnote).multilineTextAlignment(.center)
                     }
                     .padding(.vertical, Theme.Spacing.xs)
                 }
@@ -155,11 +160,7 @@ private struct StepRow: View {
 
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: Theme.Spacing.m) {
-            Text("\(number)")
-                .font(.subheadline.weight(.bold))
-                .foregroundStyle(Theme.Palette.onAccent)
-                .frame(minWidth: 28, minHeight: 28)
-                .background(Circle().fill(Theme.Palette.accent))
+            NumberBadge("\(number)", fill: Theme.Palette.accent, foreground: Theme.Palette.onAccent)
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
                 if let title = step.title {

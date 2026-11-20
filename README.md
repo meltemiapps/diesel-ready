@@ -1,6 +1,6 @@
 # Diesel Ready
 
-**Diesel Ready: Marine Diesel Study Guide** is a free, offline iOS study guide for
+**Diesel Ready: Marine Diesel** is a free, offline iOS study guide for
 leisure boaters learning basic marine diesel engine care and fault-finding. It is
 made by [Meltemi Apps](https://meltemiapps.co.uk), an independent app studio.
 
@@ -74,7 +74,7 @@ DieselReady/
 DieselReadyTests/    Unit tests (Swift Testing)
 DieselReadyUITests/  UI tests: a mock test end to end, and every Fault finder symptom
 docs/                Content schema, content review pack and, later, store metadata
-scripts/             Developer tools (standard-library Python, not part of the app)
+scripts/             Developer tools (not part of the app): see below
 ```
 
 Content is plain, platform-neutral JSON so the planned Android version can read
@@ -90,6 +90,19 @@ sign-off by a qualified marine engineer. Regenerate it after any content change:
 python3 scripts/export-content-review.py          # rewrite the pack
 python3 scripts/export-content-review.py --check  # fail if it is out of date
 ```
+
+## Release tools
+
+All in `scripts/`, using only the standard library and Apple frameworks:
+
+| Script | What it does |
+|---|---|
+| `render-app-icon.swift` | Draws the app icon (standard, dark and tinted) and the website icon |
+| `check-app-store-metadata.py` | Checks `docs/app-store-metadata.md` against App Store limits and scans it and the website pages for organisation or manufacturer names |
+| `export-content-review.py` | Writes `docs/content-review.md`, the content pack for expert review |
+| `capture-screenshots.sh` | Runs the screenshot UI tests: Dark Mode and largest-text audit screenshots, and App Store screenshots for iPhone and iPad, into `docs/screenshots/` (git-ignored, not committed) |
+
+The website pages for meltemiapps.co.uk are in `docs/site/diesel-ready/`.
 
 ## Contributing
 

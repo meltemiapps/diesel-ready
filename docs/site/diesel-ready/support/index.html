@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support · Diesel Ready · Meltemi Apps</title>
+<link rel="canonical" href="https://meltemiapps.co.uk/diesel-ready/support/">
+<meta name="description" content="Help and frequently asked questions for Diesel Ready, the unofficial marine diesel engine study guide.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%231f5f8b'/%3E%3Cpath d='M8 17c4-4 8-4 12 0s8 4 12 0' stroke='%23fff' stroke-width='2.6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M8 25c4-4 8-4 12 0s8 4 12 0' stroke='%23d9a441' stroke-width='2.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f7f5f0; --surface: #ffffff; --ink: #14212b; --muted: #5b6872; --line: #e4e0d6; --sea: #1f5f8b; --sea-deep: #123f5e; --sand: #d9a441; --tint: #e8f0f5; --radius: 18px; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #0e171d; --surface: #15222b; --ink: #eef2f4; --muted: #9aa8b2; --line: #24343f; --sea: #6fb3df; --sea-deep: #9fcdeb; --sand: #e6b85c; --tint: #1a2c38; }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--ink); font: 16px / 1.65 Inter, system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--sea); }
+a:hover { color: var(--sea-deep); }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+header.top { padding: 28px 0; }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-family: Fraunces, Georgia, serif; font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+.brand span { color: var(--muted); font-weight: 400; }
+.mark { width: 34px; height: 34px; flex: 0 0 auto; }
+nav.top a { color: var(--muted); text-decoration: none; font-size: 15px; margin-left: 20px; }
+nav.top a:hover { color: var(--ink); }
+.hero { padding: 56px 0 40px; }
+.eyebrow { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sand); font-weight: 600; }
+h1 { font-family: Fraunces, Georgia, serif; font-weight: 500; font-size: clamp(36px, 6vw, 58px); line-height: 1.08; letter-spacing: -0.02em; margin: 14px 0 18px; max-width: 14ch; }
+.lede { font-size: 19px; color: var(--muted); max-width: 52ch; }
+h2 { font-family: Fraunces, Georgia, serif; font-weight: 500; font-size: 28px; letter-spacing: -0.01em; margin: 0 0 18px; }
+h3 { font-size: 17px; font-weight: 600; margin: 28px 0 6px; }
+section.apps { padding: 24px 0 72px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; display: grid; grid-template-columns: 88px 1fr; gap: 24px; align-items: start; }
+.icon { width: 88px; height: 88px; border-radius: 22px; background: linear-gradient(145deg, rgb(43, 123, 176), rgb(18, 63, 94)); display: grid; place-items: center; box-shadow: rgba(18, 63, 94, 0.25) 0 8px 24px; }
+.card h3 { font-family: Fraunces, Georgia, serif; font-size: 26px; font-weight: 500; margin: 0; }
+.card .tag { color: var(--muted); margin: 2px 0 14px; }
+.card ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; }
+.card li { background: var(--tint); color: var(--sea-deep); font-size: 13px; font-weight: 500; padding: 5px 11px; border-radius: 999px; }
+.stores { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+.store { display: inline-flex; align-items: center; gap: 10px; border-radius: 12px; padding: 10px 16px; background: var(--ink); color: var(--bg); text-decoration: none; min-width: 170px; }
+.appstore-badge { display: inline-block; flex: none; align-self: center; padding: 10px; margin: -10px; line-height: 0; }
+.appstore-badge img { display: block; width: 120px; height: 40px; }
+.store[aria-disabled="true"] { opacity: 0.55; cursor: default; }
+.store small { display: block; font-size: 11px; opacity: 0.75; line-height: 1.1; }
+.store b { display: block; font-size: 16px; font-weight: 600; line-height: 1.2; }
+.links { font-size: 14px; }
+.links a { margin-right: 16px; }
+.doc { padding: 24px 0 72px; max-width: 720px; }
+.doc p, .doc li { color: var(--ink); }
+.doc p { margin: 0 0 12px; }
+.doc ul { margin: 0 0 12px 20px; }
+.meta { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+.summary { background: var(--tint); border-radius: 14px; padding: 18px 20px; margin: 0 0 8px; }
+.summary strong { color: var(--sea-deep); }
+details { border-bottom: 1px solid var(--line); padding: 16px 0; }
+details summary { cursor: pointer; font-weight: 600; list-style: none; }
+details summary::-webkit-details-marker { display: none; }
+details summary::after { content: "+"; float: right; color: var(--muted); }
+details[open] summary::after { content: "–"; }
+details p { margin: 10px 0 0; color: var(--muted); }
+.contact { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; margin: 8px 0 32px; }
+.contact a.btn { display: inline-block; margin-top: 10px; background: var(--sea); color: #fff; text-decoration: none; padding: 10px 18px; border-radius: 10px; font-weight: 600; }
+.qr { background: #fff; display: inline-block; padding: 12px; border-radius: 12px; border: 1px solid var(--line); margin: 8px 0 12px; }
+.qr img { display: block; width: min(320px, 70vw); height: auto; }
+code, pre { font-family: Menlo, Consolas, monospace; font-size: 13px; }
+pre { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; overflow-x: auto; margin: 0 0 12px; }
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+footer a { color: var(--muted); }
+@media (max-width: 560px) {
+  .card { grid-template-columns: 1fr; }
+  nav.top a { margin-left: 14px; }
+  .store { min-width: 0; flex: 1 1 0%; }
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="https://meltemiapps.co.uk/"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--sea)"></circle><path d="M8 17c4-4 8-4 12 0s8 4 12 0" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"></path><path d="M8 25c4-4 8-4 12 0s8 4 12 0" stroke="var(--sand)" stroke-width="2.6" fill="none" stroke-linecap="round"></path></svg>Meltemi<span>Apps</span></a>
+  <nav class="top"><a href="https://meltemiapps.co.uk/#apps">Apps</a><a href="https://meltemiapps.co.uk/diesel-ready/support/">Support</a></nav>
+</div></header>
+<main class="wrap doc">
+  <div class="eyebrow">Diesel Ready</div>
+  <h1>Support</h1>
+  <p class="meta">Current version 1.0 · iOS</p>
+
+  <div class="contact">
+    <strong>Need help or have a suggestion?</strong>
+    <p style="color:var(--muted);margin:4px 0 0">Email us and we will reply within two working days.</p>
+    <a class="btn" href="mailto:support@meltemiapps.co.uk?subject=Diesel%20Ready%20support">Email support@meltemiapps.co.uk</a>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <details><summary>Is Diesel Ready an official course?</summary><p>No. It is an independent revision aid. It is not an official course, does not award any certificate, and is not affiliated with, endorsed by or connected to any training organisation, sailing association or engine manufacturer.</p></details>
+  <details><summary>Does it replace my engine handbook?</summary><p>No. The lessons give general guidance that applies to typical small marine diesels. Engines differ, so always follow your engine manufacturer&#8217;s handbook for procedures, settings and service intervals, and ask a qualified marine engineer if you are unsure.</p></details>
+  <details><summary>Who wrote the content?</summary><p>All lessons and questions are original, written for the app in plain English. They are being reviewed by a qualified marine engineer. The content is shared under the CC BY-NC-SA 4.0 licence.</p></details>
+  <details><summary>Does it work without a signal?</summary><p>Yes. Everything is built into the app, and it never needs an internet connection.</p></details>
+  <details><summary>Do I need an account?</summary><p>No. There is no sign-in, and your progress stays on your phone.</p></details>
+  <details><summary>How do I start again?</summary><p>Open the About tab and choose Reset progress. This clears your lesson progress and quiz results from your phone.</p></details>
+  <details><summary>Is there an Android version?</summary><p>Not yet. An Android version is planned after the iOS release.</p></details>
+  <details><summary>I think an answer is wrong. How do I tell you?</summary><p>Email us with the question and why you think it is wrong, or open an issue on <a href="https://github.com/meltemiapps/diesel-ready/issues">GitHub Issues</a>. Corrections are very welcome.</p></details>
+  <details><summary>How do I report a bug?</summary><p>Email us with your phone model, the app version (shown in the About tab) and what happened, or open an issue on <a href="https://github.com/meltemiapps/diesel-ready/issues">GitHub Issues</a>.</p></details>
+</main>
+<footer><div class="wrap">
+  <span>© 2026 Meltemi Apps</span>
+  <span><a href="https://meltemiapps.co.uk/diesel-ready/privacy/">Privacy</a> &nbsp;·&nbsp; <a href="https://meltemiapps.co.uk/diesel-ready/support/">Support</a> &nbsp;·&nbsp; <a href="mailto:support@meltemiapps.co.uk">support@meltemiapps.co.uk</a></span>
+</div></footer>
+</body>
+</html>

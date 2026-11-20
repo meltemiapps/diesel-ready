@@ -67,6 +67,14 @@ struct QuizFlowView: View {
             .navigationTitle(session.mode.title(in: library))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text(session.mode.title(in: library))
+                        .font(.headline)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.center)
+                        .minimumScaleFactor(0.7)
+                        .accessibilityAddTraits(.isHeader)
+                }
                 ToolbarItem(placement: .cancellationAction) {
                     Button {
                         if session.isFinished || session.answers.isEmpty {

@@ -37,6 +37,11 @@ enum Theme {
         /// Tab bar and control tint. Amber fails contrast on light backgrounds,
         /// so light mode uses link blue and dark mode uses amber.
         static let tint = Color(light: 0x1F4E6B, dark: 0xF2A33A)
+
+        /// Selected filter chips: navy in light mode, amber in dark mode, where
+        /// navy would barely stand out from the background.
+        static let selectedChip = Color(light: 0x0F2A3D, dark: 0xF2A33A)
+        static let onSelectedChip = Color(light: 0xFFFFFF, dark: 0x0F2A3D)
     }
 
     // MARK: Shape and spacing

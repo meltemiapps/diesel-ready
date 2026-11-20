@@ -141,3 +141,79 @@ struct Callout: View {
         .accessibilityElement(children: .combine)
     }
 }
+
+// MARK: - Number badges
+
+/// A number or letter in a circle (step numbers, option letters, module
+/// numbers). The circle grows with Dynamic Type and always stays round, so the
+/// text is never clipped at the largest accessibility sizes.
+struct NumberBadge: View {
+    let text: String
+    var fill: Color? = nil
+    var stroke: Color? = nil
+    var foreground: Color
+    var font: Font = .subheadline.weight(.bold)
+    private let base: CGFloat
+    @ScaledMetric private var scaled: CGFloat
+    /// Grows with the text, but no more than about twice its normal size.
+    private var diameter: CGFloat { min(scaled, base * 1.8) }
+
+    init(_ text: String, fill: Color? = nil, stroke: Color? = nil, foreground: Color,
+         diameter: CGFloat = 28, font: Font = .subheadline.weight(.bold),
+         relativeTo textStyle: Font.TextStyle = .subheadline) {
+        self.text = text
+        self.fill = fill
+        self.stroke = stroke
+        self.foreground = foreground
+        self.font = font
+        base = diameter
+        _scaled = ScaledMetric(wrappedValue: diameter, relativeTo: textStyle)
+    }
+
+    var body: some View {
+        Text(text)
+            .font(font)
+            .foregroundStyle(foreground)
+            .lineLimit(1)
+            .minimumScaleFactor(0.5)
+            .padding(diameter * 0.12)
+            .frame(width: diameter, height: diameter)
+            .background {
+                if let fill { Circle().fill(fill) }
+                if let stroke { Circle().strokeBorder(stroke, lineWidth: 1.5) }
+            }
+    }
+}
+
+// MARK: - Adaptive rows
+
+/// A list row with a leading badge, the main text and a trailing icon. At
+/// accessibility text sizes the badge and icon move onto their own line above
+/// the text, so the text keeps the full width instead of wrapping a word (or
+/// a few letters) per line.
+struct AdaptiveRow<Leading: View, Content: View, Trailing: View>: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    @ViewBuilder var leading: Leading
+    @ViewBuilder var content: Content
+    @ViewBuilder var trailing: Trailing
+
+    var body: some View {
+        if dynamicTypeSize.isAccessibilitySize {
+            VStack(alignment: .leading, spacing: Theme.Spacing.m) {
+                HStack {
+                    leading
+                    Spacer(minLength: 0)
+                    trailing
+                }
+                content
+            }
+        } else {
+            HStack(spacing: Theme.Spacing.l) {
+                leading
+                content
+                Spacer(minLength: 0)
+                trailing
+            }
+        }
+    }
+}

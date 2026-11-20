@@ -11,6 +11,9 @@ build/
 *.dSYM.zip
 *.dSYM
 
+# Generated screenshots (scripts/capture-screenshots.sh); kept out of the repo
+docs/screenshots/
+
 # Local signing settings (holds your Team ID)
 Config/Local.xcconfig
 

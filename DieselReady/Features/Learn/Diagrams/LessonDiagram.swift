@@ -33,6 +33,12 @@ struct LessonDiagram: View {
                 case .flow: FlowDiagram(labels: diagram.labels)
                 }
             }
+            // Labels inside drawings cannot reflow, so cap their size; the
+            // steps repeat the same information at full size, and VoiceOver
+            // reads the description instead.
+            .dynamicTypeSize(kind == .flow
+                ? DynamicTypeSize.xSmall...DynamicTypeSize.accessibility5
+                : DynamicTypeSize.xSmall...DynamicTypeSize.xLarge)
             .accessibilityHidden(true)
             if let caption = diagram.caption {
                 Text(caption)

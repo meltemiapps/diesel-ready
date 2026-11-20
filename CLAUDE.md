@@ -2,7 +2,7 @@
 
 ---
 
-You are building a native iOS app called **Diesel Ready** for **Meltemi Apps** (independent app studio, https://meltemiapps.co.uk). It sits alongside the studio's other apps, such as Callsign Ready, and follows the same model: free, no data collected, no tracking, and open source. Its App Store name is **"Diesel Ready: Marine Diesel Study Guide"** and its subtitle is **"Unofficial engine revision aid"**. It is an independent, offline study guide for leisure boaters learning basic marine diesel engine care and fault-finding.
+You are building a native iOS app called **Diesel Ready** for **Meltemi Apps** (independent app studio, https://meltemiapps.co.uk). It sits alongside the studio's other apps, such as Callsign Ready, and follows the same model: free, no data collected, no tracking, and open source. Its App Store name is **"Diesel Ready: Marine Diesel"** and its subtitle is **"Unofficial engine revision aid"**. It is an independent, offline study guide for leisure boaters learning basic marine diesel engine care and fault-finding.
 
 ## Non-negotiable constraints
 

@@ -381,6 +381,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FF0E87A1F3922B6DB620340 /* Build configuration list for PBXNativeTarget "DieselReady" */;
 			buildPhases = (
+				95768DADF8F538BD5B9FCDE0 /* Release content must be engineer-approved */,
 				9C6F15A7618E24F9EEFEE37E /* Sources */,
 				A3736110210B262A6EB06B34 /* Resources */,
 			);
@@ -449,6 +450,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		95768DADF8F538BD5B9FCDE0 /* Release content must be engineer-approved */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/scripts/check-review-status.sh",
+				"$(SRCROOT)/DieselReady/Resources/Content/manifest.json",
+				"$(SRCROOT)/DieselReady/Resources/Content/faults.json",
+				"$(SRCROOT)/DieselReady/Resources/Content/checklists.json",
+				"$(SRCROOT)/DieselReady/Resources/Content/modules/01-how-a-diesel-engine-works.json",
+				"$(SRCROOT)/DieselReady/Resources/Content/modules/02-fuel-system-and-bleeding.json",
+				"$(SRCROOT)/DieselReady/Resources/Content/modules/03-cooling-systems.json",
+				"$(SRCROOT)/DieselReady/Resources/Content/modules/04-lubrication.json",
+				"$(SRCROOT)/DieselReady/Resources/Content/modules/05-electrics-and-starting.json",
+				"$(SRCROOT)/DieselReady/Resources/Content/modules/06-drive-belts-and-stern-gear.json",
+				"$(SRCROOT)/DieselReady/Resources/Content/modules/07-routine-maintenance.json",
+				"$(SRCROOT)/DieselReady/Resources/Content/modules/08-fault-finding.json",
+			);
+			name = "Release content must be engineer-approved";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Release builds and archives fail if any content is still a draft.\nif [ \"$CONFIGURATION\" = \"Release\" ]; then\n  \"$SRCROOT/scripts/check-review-status.sh\" \"$SRCROOT/DieselReady/Resources/Content\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C6F15A7618E24F9EEFEE37E /* Sources */ = {
@@ -629,7 +664,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -700,7 +735,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;

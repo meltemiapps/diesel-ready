@@ -72,7 +72,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 4, revise (S14): the fuel path is now presented as one example configuration; the text says filter and lift-pump order vary, and the high-pressure side covers common rail. Please approve."
     },
     {
@@ -119,7 +119,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S14: filter changes now mention common-rail priming, and the 'one of the most common reasons' claim is removed. Please approve."
     },
     {
@@ -162,7 +162,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S02 and S14, with audit note 5: added a common-rail overview with a strict no-owner boundary on the high-pressure side; the caution no longer implies high-pressure pipes may be loosened with the engine stopped; the stop-control step now says 'many mechanically injected diesels'. Please approve."
     },
     {
@@ -217,7 +217,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 6, safety revise (P0, S02): warning B is now shown before the steps, verbatim, together with the wet-exhaust warning A for prolonged cranking. Instructions are limited to handbook-approved low-pressure bleeding, the reference to loosening injector pipes has been removed, and a final engineer-only step covers anything else. Audit note 7: the dead-lever step now applies to cam-operated pumps only. Please approve."
     },
     {
@@ -250,7 +250,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 8, revise (S18): the lay-up advice no longer recommends full tanks; it stresses clean, dry fuel, water management, avoiding stale fuel and the maker's and supplier's guidance. Please approve."
     }
   ],
@@ -269,7 +269,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Water is heavier than diesel and dirt settles out, so both collect at the bottom of the tank. Drawing from slightly higher up keeps most of it out of the fuel system.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q002",
@@ -285,7 +285,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Between the tank and the lift pump the fuel is under suction, so a loose joint pulls air in. That air reaches the injection pump, which cannot build pressure with air in it.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q003",
@@ -301,7 +301,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The injection system is given more fuel than it burns. The surplus, along with any air bubbles, flows back to the tank. Letting air into the tank is the vent's job.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q004",
@@ -317,7 +317,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Liquid fuel barely compresses, which is how the pump builds very high pressure. Air squashes like a spring instead, so the pressure needed to open the injector is not reached.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q005",
@@ -333,7 +333,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Water is denser than diesel, so it sinks and forms a separate layer at the bottom of the bowl, where it can be seen and drained off.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q006",
@@ -353,7 +353,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q007",
@@ -369,7 +369,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Removing the water and bigger particles first protects the fine filter, which then takes out the very small particles that would damage the injection pump and injectors.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q008",
@@ -385,7 +385,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Opening a filter lets air into the fuel system. Unless the engine is self-bleeding, that air must be pushed out before the injection pump can work.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q009",
@@ -401,7 +401,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The lift pump works on the low-pressure side, keeping the injection pump supplied. Creating the very high injection pressure is the injection pump's job.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q010",
@@ -420,7 +420,7 @@
       "categories": [
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 5, revise: the question now says 'many mechanically injected' engines, with credible distractors and a warning about the isolator in the explanation. Please approve."
     },
     {
@@ -440,7 +440,7 @@
       "categories": [
         "safety-critical"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q012",
@@ -456,7 +456,7 @@
       ],
       "correctIndex": 0,
       "explanation": "An injector that dribbles or sprays poorly delivers fuel that does not burn completely, giving smoke, rough running and sometimes a knock. Black smoke cured by a new air filter points to the air supply, blue smoke to oil, and steam to cooling.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q022",
@@ -477,7 +477,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.1 (S20): a safety-first scenario question on fuel spray, matching the Fault finder stop card. Please approve."
     },
     {
@@ -494,7 +494,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Running the tank dry lets air into the fuel lines. Oil changes, belt work and impeller changes do not open the fuel system.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q014",
@@ -516,7 +516,7 @@
       "categories": [
         "safety-critical"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q015",
@@ -532,7 +532,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Closing while clean fuel is still flowing stops air being drawn back in. The first drops often still carry bubbles, so keep pumping until they stop.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q016",
@@ -551,7 +551,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 7, accept with qualification: the question now names cam-operated mechanical pumps, and the explanation says electric pumps differ. Please approve."
     },
     {
@@ -571,7 +571,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q023",
@@ -595,7 +595,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.1 (S02, S20): a safety-first question on the low-pressure boundary, with warning B in the feedback. Please approve."
     },
     {
@@ -612,7 +612,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Bacteria and fungi live at the boundary between water and fuel. They feed on the fuel and form a slime that blocks filters. Cold-weather waxing is a separate problem.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q019",
@@ -628,7 +628,7 @@
       ],
       "correctIndex": 0,
       "explanation": "In calm conditions, dirt and water sit undisturbed below the pick-up. Rough water churns them into the fuel, and the filters block soon afterwards.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q020",
@@ -644,7 +644,7 @@
       ],
       "correctIndex": 0,
       "explanation": "A worn filler seal lets rain and spray straight into the tank. A biocide treats the effects of water, draining the bowl removes water that has already got in, and an extra filter does nothing to keep it out.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m02-q021",
@@ -660,7 +660,7 @@
       ],
       "correctIndex": 0,
       "explanation": "A biocide can stop further growth, but the dead sludge remains and will still block filters. A badly affected tank needs the fuel polished or the tank cleaned.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     }
   ]
 }

@@ -38,7 +38,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 18, revise: the hydrogen and acid warning now applies to lead-acid batteries, with a separate statement that lithium batteries have different hazards and their own management system. Please approve."
     },
     {
@@ -71,7 +71,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S09 and audit note 20, accept with qualification: a lit charge lamp now 'indicates a charging-system fault or failure to excite' rather than proving the alternator is not charging; the isolator step says 'specifically designed and approved'. Please approve."
     },
     {
@@ -133,7 +133,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S01: the wet-exhaust waterlock warning A is now shown before the steps, verbatim, because the lesson discusses cranking. Please approve."
     },
     {
@@ -166,7 +166,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 21, accept with qualification: the glow plug symptoms are now described as clues, not exclusive to glow plugs; the starting spray warning is unchanged. Please approve."
     },
     {
@@ -213,7 +213,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S10: the negative-lead-first advice is now limited to conventional negative-earth lead-acid systems, with the vessel's isolation procedure, separate starter and house banks and lithium systems covered. The meter step adds safe voltage use and a prohibition on measuring current across a battery (module 5 judgement). Please approve."
     }
   ],
@@ -232,7 +232,7 @@
       ],
       "correctIndex": 0,
       "explanation": "If the domestic bank is run flat overnight, the separate engine battery still has the charge needed to start, and the engine can then recharge both.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q002",
@@ -251,7 +251,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q003",
@@ -267,7 +267,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Just after charging the voltage is higher than the true state of charge, and under load it is lower. After a rest it settles to a value that better reflects the charge.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q004",
@@ -286,7 +286,7 @@
       "categories": [
         "safety-critical"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 19, revise: the question is now limited to lead-acid batteries, and the explanation says lithium hazards differ. Please approve."
     },
     {
@@ -303,7 +303,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The alternator is turned by a belt from the engine, so it only charges while the engine runs and the belt is in good order.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q006",
@@ -322,7 +322,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S09: the key no longer says the lamp proves the alternator is not charging. Please approve."
     },
     {
@@ -339,7 +339,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Without regulation the alternator's output would rise with engine speed and could damage the batteries. The regulator holds the voltage at a safe charging level.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q008",
@@ -355,7 +355,7 @@
       ],
       "correctIndex": 0,
       "explanation": "With the battery disconnected, the alternator's output has nowhere to go and the voltage can spike, damaging its diodes or regulator. A diesel keeps running without the battery.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q009",
@@ -371,7 +371,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The starter's small gear meshes with the teeth around the flywheel, which is bolted to the crankshaft, and turns the engine over.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q010",
@@ -387,7 +387,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The starter draws far more current than a key switch could handle. The solenoid is a heavy-duty switch that the key operates with a small current.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q011",
@@ -406,7 +406,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q012",
@@ -425,7 +425,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q013",
@@ -441,7 +441,7 @@
       ],
       "correctIndex": 0,
       "explanation": "A diesel has no spark. The glow plug is a small heater used before and during starting so the compressed air gets hot enough to light the fuel.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q014",
@@ -457,7 +457,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Compression ignition depends on the air getting very hot. A cold block and head draw heat out of the air, which is why pre-heating helps.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q015",
@@ -476,7 +476,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q016",
@@ -495,7 +495,7 @@
       "categories": [
         "safety-critical"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q017",
@@ -511,7 +511,7 @@
       ],
       "correctIndex": 0,
       "explanation": "With the engine stopped there is no oil pressure and no charging, so both lights come on. That shows they work. They should go out soon after starting.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q018",
@@ -531,7 +531,7 @@
         "safety-critical",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q019",
@@ -550,7 +550,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q020",
@@ -569,7 +569,7 @@
       "categories": [
         "safety-critical"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m05-q021",
@@ -589,7 +589,7 @@
         "safety-critical",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.1 (module 5 judgement, S20): safe multimeter use. Please approve."
     }
   ]

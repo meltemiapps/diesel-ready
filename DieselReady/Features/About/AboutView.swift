@@ -166,17 +166,29 @@ private struct ContentInfoSection: View {
 
     var body: some View {
         Section {
-            row("Content version", "\(info.version) (\(info.status))")
+            row("Content version", info.isApproved ? info.version : "\(info.version) (\(info.status))")
             row("Content reviewed", ContentInfoFormat.date(info.reviewDate))
-            Label {
-                Text("Engineer approval: \(info.engineerApproval)")
-                    .foregroundStyle(Theme.Palette.ink)
-            } icon: {
-                Image(systemName: info.engineerApproval == "pending" ? "hourglass" : "checkmark.seal")
-                    .foregroundStyle(Theme.Palette.link)
-                    .accessibilityHidden(true)
+            if info.isApproved {
+                Label {
+                    Text("Technical review: approved by a qualified marine engineer")
+                        .foregroundStyle(Theme.Palette.ink)
+                } icon: {
+                    Image(systemName: "checkmark.seal")
+                        .foregroundStyle(Theme.Palette.success)
+                        .accessibilityHidden(true)
+                }
+                .accessibilityIdentifier("engineer-approval")
+            } else {
+                Label {
+                    Text("Engineer approval: \(info.engineerApproval)")
+                        .foregroundStyle(Theme.Palette.ink)
+                } icon: {
+                    Image(systemName: "hourglass")
+                        .foregroundStyle(Theme.Palette.link)
+                        .accessibilityHidden(true)
+                }
+                .accessibilityIdentifier("engineer-approval")
             }
-            .accessibilityIdentifier("engineer-approval")
             if let latest = info.changeLog.first {
                 VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
                     Text("What changed in \(latest.version)")
@@ -195,7 +207,9 @@ private struct ContentInfoSection: View {
         } header: {
             AboutHeader("Content")
         } footer: {
-            Text("The content is a draft until a qualified marine engineer has approved it.")
+            Text(info.isApproved
+                 ? LocalizedStringKey("A qualified marine engineer has reviewed this version of the content. It is still general guidance: always follow your engine handbook.")
+                 : "The content is a draft until a qualified marine engineer has approved it.")
                 .foregroundStyle(Theme.Palette.secondaryText)
         }
     }

@@ -113,24 +113,57 @@ struct SafetyContentTests {
         #expect(library.lesson(withID: "m02-l03")?.tagIDs.contains("common-rail") == true)
     }
 
-    @Test("Content info shows the version, review date and pending engineer approval")
+    @Test("Content info shows version 1.2, the review date and engineer approval")
     func contentInfo() throws {
         let info = try #require(try Self.library().info)
         #expect(info.version == "1.2")
-        #expect(info.status == "draft")
-        #expect(info.engineerApproval == "pending")
+        #expect(info.status == "reviewed")
+        #expect(info.engineerApproval == "approved")
+        #expect(info.isApproved)
         #expect(info.reviewDateValue != nil)
         #expect(ContentInfoFormat.date(info.reviewDate) == "20 November 2026")
         #expect(info.changeLog.first?.version == "1.2")
     }
 
-    @Test("At least 150 questions remain, every item is still a draft")
-    func volumeAndDraft() throws {
+    @Test("At least 150 questions remain, and every item is reviewed")
+    func volumeAndReviewed() throws {
         let library = try Self.library()
         #expect(library.allQuestions.count >= 150)
-        #expect(library.allLessons.allSatisfy { $0.reviewStatus == .draft })
-        #expect(library.allQuestions.allSatisfy { $0.reviewStatus == .draft })
-        #expect(library.faults?.symptoms.allSatisfy { $0.reviewStatus == .draft } == true)
+        #expect(library.allLessons.allSatisfy { $0.reviewStatus == .reviewed })
+        #expect(library.allQuestions.allSatisfy { $0.reviewStatus == .reviewed })
+        #expect(library.faults?.symptoms.allSatisfy { $0.reviewStatus == .reviewed } == true)
+        #expect(library.checks?.allItems.allSatisfy { $0.reviewStatus == .reviewed } == true)
+        #expect(ContentLoader.unreviewedItems(in: library).isEmpty)
+    }
+
+    @Test("Release rules fail on any draft item or unapproved content info; debug launch rules do not")
+    func releaseRequiresReviewed() throws {
+        let bundled = try Self.library()
+        let module = try #require(bundled.modules.first)
+        var lessons = module.lessons
+        let first = lessons[0]
+        lessons[0] = Lesson(id: first.id, title: first.title, estimatedMinutes: first.estimatedMinutes,
+                            intro: first.intro, diagram: first.diagram, steps: first.steps, caution: first.caution,
+                            handsOn: first.handsOn, reviewStatus: .draft, safetyNoticeIds: first.safetyNoticeIds,
+                            appliesTo: first.appliesTo, checklistIds: first.checklistIds)
+        let draftModule = Module(id: module.id, number: module.number, title: module.title, summary: module.summary,
+                                 lessons: lessons, questions: module.questions)
+        let old = try #require(bundled.info)
+        let pending = ContentInfo(version: old.version, status: "draft", reviewDate: old.reviewDate,
+                                  engineerApproval: "pending", changeLog: old.changeLog)
+        let library = ContentLibrary(schemaVersion: bundled.schemaVersion,
+                                     modules: [draftModule] + bundled.modules.dropFirst(),
+                                     faults: bundled.faults, safety: bundled.safety, info: pending, checks: bundled.checks)
+        #expect(!pending.isApproved)
+
+        let release = ContentLoader.validate(library, rules: .release)
+        #expect(release.contains("\(first.id): reviewStatus is draft, release content must be reviewed"))
+        #expect(release.contains("contentInfo: status is draft, release content must be reviewed"))
+        #expect(release.contains("contentInfo: engineerApproval is pending, expected approved"))
+        #expect(ContentLoader.validate(library, rules: .structural).isEmpty)
+        #expect(ContentLoader.validate(bundled, rules: .release).isEmpty)
+        // Tests run a Debug build, where draft content can still be tried out.
+        #expect(!ContentRules.launch.requireReviewed)
     }
 
     @Test("Notice markup renders as plain text for VoiceOver")

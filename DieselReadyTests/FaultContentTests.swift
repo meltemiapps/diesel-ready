@@ -16,7 +16,7 @@ struct FaultContentTests {
             "Exhaust smoke", "Won't start", "Overheating", "Stops suddenly", "Low oil pressure", "Not charging",
         ])
         #expect(guide.stopCards.map(\.id) == FaultGuide.requiredStopCardIDs)
-        #expect(guide.symptoms.allSatisfy { $0.reviewStatus == .draft })
+        #expect(guide.symptoms.allSatisfy { $0.reviewStatus == .reviewed })
         #expect(guide.symptoms.allSatisfy { !$0.possibleCauses.isEmpty && !$0.checkFirst.isEmpty && !$0.lessonIds.isEmpty })
     }
 

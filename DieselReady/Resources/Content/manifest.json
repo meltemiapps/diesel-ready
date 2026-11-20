@@ -15,14 +15,14 @@
   "checklists": "checklists.json",
   "contentInfo": {
     "version": "1.2",
-    "status": "draft",
+    "status": "reviewed",
     "reviewDate": "2026-11-20",
-    "engineerApproval": "pending",
+    "engineerApproval": "approved",
     "changeLog": [
       {
         "version": "1.2",
         "date": "2026-11-20",
-        "summary": "New pre-start and post-start engine checklists built on the WOBBLE memory aid, lesson 7.1 aligned with them, and nine new questions on the checks. Awaiting engineer approval."
+        "summary": "New pre-start and post-start engine checklists built on the WOBBLE memory aid, lesson 7.1 aligned with them, and nine new questions on the checks. A qualified marine engineer has reviewed and approved all of the content in this version: every lesson, question, checklist and Fault finder entry."
       },
       {
         "version": "1.1",

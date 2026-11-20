@@ -29,7 +29,7 @@ struct ContentLoader: Sendable {
     }
 
     /// Volume rules applied on top of the structural checks.
-    var rules: ContentRules = .release
+    var rules: ContentRules = .launch
 
     /// Supplies the raw bytes for a path relative to the content directory.
     let dataForPath: @Sendable (String) throws -> Data
@@ -197,12 +197,38 @@ struct ContentLoader: Sendable {
         } else if rules.requireChecklists {
             problems.append("manifest: no checklists file")
         }
+        if rules.requireReviewed {
+            problems += unreviewedItems(in: library)
+        }
         for lesson in library.allLessons {
             if Set(lesson.checklistIDs).count != lesson.checklistIDs.count {
                 problems.append("\(lesson.id): links to the same checklist twice")
             }
             for id in lesson.checklistIDs where library.checks?.checklist(withID: id) == nil {
                 problems.append("\(lesson.id): links to unknown checklist \(id)")
+            }
+        }
+        return problems
+    }
+
+    // MARK: Review status
+
+    /// Every lesson, question, Fault finder entry, checklist and checklist item
+    /// that is still a draft, and content info that is not marked approved.
+    /// Release builds must ship only engineer-approved content.
+    static func unreviewedItems(in library: ContentLibrary) -> [String] {
+        var ids: [String] = library.allLessons.filter { $0.reviewStatus != .reviewed }.map(\.id)
+        ids += library.allQuestions.filter { $0.reviewStatus != .reviewed }.map(\.id)
+        ids += library.faults?.symptoms.filter { $0.reviewStatus != .reviewed }.map(\.id) ?? []
+        ids += library.checks?.checklists.filter { $0.reviewStatus != .reviewed }.map(\.id) ?? []
+        ids += library.checks?.allItems.filter { $0.reviewStatus != .reviewed }.map(\.id) ?? []
+        var problems = ids.map { "\($0): reviewStatus is draft, release content must be reviewed" }
+        if let info = library.info {
+            if info.status != "reviewed" {
+                problems.append("contentInfo: status is \(info.status), release content must be reviewed")
+            }
+            if info.engineerApproval != "approved" {
+                problems.append("contentInfo: engineerApproval is \(info.engineerApproval), expected approved")
             }
         }
         return problems
@@ -481,6 +507,8 @@ struct ContentRules: Sendable, Equatable {
     var requireMockBlueprint: Bool
     /// The manifest must list the pre-start and post-start checklists.
     var requireChecklists: Bool
+    /// Every item must be `reviewed` and the content info approved.
+    var requireReviewed: Bool
 
     static let release = ContentRules(
         lessonsPerModule: 3...6,
@@ -489,8 +517,21 @@ struct ContentRules: Sendable, Equatable {
         requireEveryDifficultyPerModule: true,
         requireSafetyContent: true,
         requireMockBlueprint: true,
-        requireChecklists: true
+        requireChecklists: true,
+        requireReviewed: true
     )
+
+    /// What the app checks at launch. Debug builds accept draft content so new
+    /// material can be tried before review; release builds do not.
+    static var launch: ContentRules {
+        #if DEBUG
+        var rules = ContentRules.release
+        rules.requireReviewed = false
+        return rules
+        #else
+        return .release
+        #endif
+    }
 
     static let structural = ContentRules(
         lessonsPerModule: 1...Int.max,
@@ -499,6 +540,7 @@ struct ContentRules: Sendable, Equatable {
         requireEveryDifficultyPerModule: false,
         requireSafetyContent: false,
         requireMockBlueprint: false,
-        requireChecklists: false
+        requireChecklists: false,
+        requireReviewed: false
     )
 }

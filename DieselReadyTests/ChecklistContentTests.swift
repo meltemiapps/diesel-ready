@@ -115,16 +115,16 @@ struct ChecklistContentTests {
         }
     }
 
-    @Test("Checklists give no engine-specific figures, and every item is a draft")
-    func noFiguresAndDraft() throws {
+    @Test("Checklists give no engine-specific figures, and every item is reviewed")
+    func noFiguresAndReviewed() throws {
         let guide = try #require(try Self.library().checks)
         let texts = guide.allItems.flatMap { [$0.title, $0.detail] }
             + guide.checklists.flatMap { [$0.title, $0.subtitle, $0.intro, $0.banner ?? ""] }
         for text in texts {
             #expect(text.rangeOfCharacter(from: .decimalDigits) == nil, "no figures: \(text)")
         }
-        #expect(guide.allItems.allSatisfy { $0.reviewStatus == .draft })
-        #expect(guide.checklists.allSatisfy { $0.reviewStatus == .draft })
+        #expect(guide.allItems.allSatisfy { $0.reviewStatus == .reviewed })
+        #expect(guide.checklists.allSatisfy { $0.reviewStatus == .reviewed })
     }
 
     @Test("At least six questions on the checks, safety-critical ones in the mock test pool")
@@ -133,7 +133,7 @@ struct ChecklistContentTests {
         let ids = (22...30).map { String(format: "m07-q%03d", $0) }
         let questions = library.allQuestions.filter { ids.contains($0.id) }
         #expect(questions.count == ids.count)
-        #expect(questions.allSatisfy { $0.lessonId == "m07-l01" && $0.reviewStatus == .draft })
+        #expect(questions.allSatisfy { $0.lessonId == "m07-l01" && $0.reviewStatus == .reviewed })
         #expect(questions.filter(\.isSafetyCritical).count >= 6)
         let noWater = try #require(questions.first { $0.prompt.contains("no cooling water") })
         #expect(noWater.noticeIDs == ["overheating-stop"] && noWater.isScenario)

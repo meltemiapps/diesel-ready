@@ -38,7 +38,7 @@
       "intro": "Work through these with the engine stopped and unable to start.",
       "engineRunning": false,
       "lessonId": "m07-l01",
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.2 (owner request): pre/post-start checklists. Please approve the wording and action levels.",
       "sections": [
         {
@@ -52,7 +52,7 @@
               "detail": "Freshwater coolant at the correct level in the header tank or expansion bottle. Check it with the engine cold, and never open a hot pressure cap.",
               "action": "owner",
               "lessonId": "m03-l04",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             },
             {
               "id": "pre-seacock",
@@ -60,7 +60,7 @@
               "detail": "The cooling-water seacock is open. A keel-cooled engine may have a seacock only for its exhaust, or none at all.",
               "action": "owner",
               "lessonId": "m03-l02",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             },
             {
               "id": "pre-strainer",
@@ -68,7 +68,7 @@
               "detail": "The raw-water strainer is clear of weed and debris, and its lid is seated and sealed so it cannot draw in air.",
               "action": "observe",
               "lessonId": "m03-l02",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             }
           ]
         },
@@ -83,7 +83,7 @@
               "detail": "Between the marks on the dipstick.",
               "action": "observe",
               "lessonId": "m04-l02",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             },
             {
               "id": "pre-gearbox-oil",
@@ -91,7 +91,7 @@
               "detail": "On the gearbox dipstick, or checked as your handbook describes.",
               "action": "observe",
               "lessonId": "m06-l02",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             },
             {
               "id": "pre-oil-condition",
@@ -99,7 +99,7 @@
               "detail": "Milky, frothy or fuel-smelling oil means something is getting into it. Do not start the engine; get advice from a qualified engineer.",
               "action": "observe",
               "lessonId": "m04-l02",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             }
           ]
         },
@@ -114,7 +114,7 @@
               "detail": "Alternator and pump drive belts show no wear, cracking or fraying.",
               "action": "observe",
               "lessonId": "m06-l01",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             },
             {
               "id": "pre-belt-tension",
@@ -122,7 +122,7 @@
               "detail": "Tensioned as your engine handbook specifies, checked with the engine stopped and unable to start.",
               "action": "owner",
               "lessonId": "m06-l01",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             }
           ]
         },
@@ -137,7 +137,7 @@
               "detail": "Under the engine and in the bilge: no standing water, oil or fuel. Any of these is a leak to trace before you start.",
               "action": "observe",
               "lessonId": "m07-l01",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             }
           ]
         },
@@ -152,7 +152,7 @@
               "detail": "Enough fuel for the trip with a good reserve, and the fuel valve open.",
               "action": "owner",
               "lessonId": "m02-l01",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             },
             {
               "id": "pre-leaks",
@@ -160,7 +160,7 @@
               "detail": "No drips or weeping at seacocks, hoses, clips or fittings, and the exhaust hose undamaged.",
               "action": "observe",
               "lessonId": "m03-l05",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             },
             {
               "id": "pre-batteries",
@@ -168,7 +168,7 @@
               "detail": "Batteries in good condition, connections clean and tight, and the battery isolator set for starting.",
               "action": "owner",
               "lessonId": "m05-l01",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             }
           ]
         },
@@ -182,7 +182,7 @@
               "detail": "The engine space and air intake are open and clear.",
               "action": "owner",
               "lessonId": "m07-l01",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             },
             {
               "id": "pre-propeller",
@@ -190,7 +190,7 @@
               "detail": "No ropes, fenders or people in the water near the propeller, where it is safe and practicable to check.",
               "action": "observe",
               "lessonId": "m06-l04",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             },
             {
               "id": "pre-neutral",
@@ -198,7 +198,7 @@
               "detail": "So the boat cannot move off as the engine starts.",
               "action": "owner",
               "lessonId": "m06-l02",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             },
             {
               "id": "pre-stop-control",
@@ -206,7 +206,7 @@
               "detail": "The stop control moves freely and is returned to the run position, or the stop switch works as your handbook describes.",
               "action": "owner",
               "lessonId": "m05-l03",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             }
           ]
         }
@@ -220,7 +220,7 @@
       "banner": "Engine running: observe only. Keep clear of belts, pulleys, the shaft and other moving parts.",
       "engineRunning": true,
       "lessonId": "m07-l01",
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.2 (owner request): pre/post-start checklists. Please approve the wording and action levels.",
       "sections": [
         {
@@ -237,7 +237,7 @@
               "safetyNoticeIds": [
                 "overheating-stop"
               ],
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             }
           ]
         },
@@ -254,7 +254,7 @@
               "safetyNoticeIds": [
                 "oil-pressure-stop"
               ],
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             },
             {
               "id": "post-temperature",
@@ -262,7 +262,7 @@
               "detail": "Once warm, the temperature gauge or light shows normal running temperature.",
               "action": "observe",
               "lessonId": "m03-l04",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             }
           ]
         },
@@ -277,7 +277,7 @@
               "action": "observe",
               "lessonId": "m08-l04",
               "symptomId": "exhaust-smoke",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             }
           ]
         },
@@ -291,7 +291,7 @@
               "detail": "Look again for leaks of water, oil or fuel, by eye only. Do not reach near belts, pulleys or the shaft while the engine runs.",
               "action": "observe",
               "lessonId": "m03-l05",
-              "reviewStatus": "draft"
+              "reviewStatus": "reviewed"
             }
           ]
         }

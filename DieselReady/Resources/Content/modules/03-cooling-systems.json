@@ -39,7 +39,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 9, revise (S05): 'both systems share' is now 'in common raw-water and heat-exchanger installations', and keel-cooled and dry-exhaust arrangements are explained separately. Please approve."
     },
     {
@@ -116,7 +116,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 11, revise (S06): the hose-clip sentence is replaced with wording E, verbatim, and the anti-siphon step now says it depends on the installation design. The 'most common causes of overheating' claim is removed (S04). Please approve."
     },
     {
@@ -168,7 +168,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 12, revise (S07): the fitting step now defers to the pump or impeller maker for vane direction and lubricant and says not every impeller is handed; a new step covers inspecting the cover, cam, wear plate and missing vanes. Please approve."
     },
     {
@@ -234,7 +234,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 14, revise (S08): 'the two liquids never mix' is replaced with the audit's wording; thermostat position is described as varying between engines. Please approve."
     },
     {
@@ -279,7 +279,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S04: the stop-engine condition D is now shown before the steps, verbatim, in place of the old closing caution. Please approve."
     }
   ],
@@ -298,7 +298,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Indirect cooling keeps a closed circuit of coolant in the engine. The sea water passes through the heat exchanger and the exhaust, so in normal operation salt does not reach the block.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q002",
@@ -314,7 +314,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Sea water is corrosive and leaves deposits. With indirect cooling, only the raw water side (pump, heat exchanger and exhaust) sees sea water, which protects the engine's internal passages. A raw water pump and seacock are still needed.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q003",
@@ -330,7 +330,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Spraying the water into the exhaust cools the hot gas so the exhaust can run through rubber hose and a water-lock silencer, and it is why you see water coming out with the exhaust.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q004",
@@ -346,7 +346,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Salt and minerals come out of sea water faster as it gets hotter, forming scale that blocks passages. Running cooler slows this, though a cooler engine is less efficient.",
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 10, verify: wording kept, with 'designed to' added; please check it against direct and indirect installations before approval."
     },
     {
@@ -367,7 +367,7 @@
         "safety-critical",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q006",
@@ -386,7 +386,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q007",
@@ -402,7 +402,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Seacocks left in one position can seize with growth and corrosion. If a hose fails, you need to be able to close it at once.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q008",
@@ -418,7 +418,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Where the engine is near or below the waterline, water can siphon through the circuit and fill the exhaust and cylinders. The valve lets air into the top of the loop to break the siphon.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q021",
@@ -438,7 +438,7 @@
         "safety-critical",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.1 (S06): checks the corrected hose and fitting wording E. Please approve."
     },
     {
@@ -455,7 +455,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The vanes need to bend and straighten as the impeller turns off-centre in the pump body, which is why it is made of flexible rubber, and why it wears out.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q010",
@@ -471,7 +471,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The water lubricates and cools the rubber vanes. Without it they overheat and tear within moments, for example if the seacock is left closed.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q011",
@@ -491,7 +491,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q012",
@@ -507,7 +507,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Vanes held bent in one position for months set in that shape and lose their flexibility, so they crack or tear soon after recommissioning. Some owners fit a new impeller in spring, or remove it for the winter where the handbook allows; practice varies between engines.",
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 13, accept with qualification: the explanation now presents removing the impeller over winter as optional and engine-specific. Please approve."
     },
     {
@@ -528,7 +528,7 @@
         "safety-critical",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q014",
@@ -544,7 +544,7 @@
       ],
       "correctIndex": 0,
       "explanation": "By keeping coolant away from the heat exchanger at first, the thermostat helps the engine reach its working temperature sooner. It opens as the engine warms.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q015",
@@ -560,7 +560,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The higher the pressure, the higher the temperature a liquid can reach before it boils. This lets the engine run at its proper temperature without the coolant boiling.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q016",
@@ -579,7 +579,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q017",
@@ -595,7 +595,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Water from the exhaust shows the raw water circuit is working. If there is none, stop the engine before the impeller and exhaust are damaged. The warning lights tell you about oil pressure and charging, and the gauge takes several minutes to rise.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q018",
@@ -611,7 +611,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Every engine settles at its own normal reading. A slow drift above it is often the first sign of a blocked strainer, worn impeller or scaled heat exchanger.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q019",
@@ -630,7 +630,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q020",
@@ -653,7 +653,7 @@
         "safety-critical",
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m03-q022",
@@ -677,7 +677,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.1 (S04, S20): a safety-first ordering question using stop-engine condition D. Please approve."
     }
   ]

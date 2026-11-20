@@ -68,7 +68,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S16 and the Fault finder judgement: the lesson now lists the seven stop conditions that have Fault finder cards, and no longer says the Fault finder ranks causes. Please approve."
     },
     {
@@ -114,7 +114,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 30, safety revise (P0, S01), and S13: the advice to close the seacock during long cranking is removed; warning A is now shown before the steps, verbatim, and any seawater isolation is left to a documented manufacturer procedure. The won't-fire step now covers the stop control, electronic inhibit, fuel, air intake, pre-heating and compression. Please approve."
     },
     {
@@ -157,7 +157,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S12: stalling in gear is now 'one important possibility', with idle speed, gearbox and shaft binding listed and a safe-inspection instruction. Please approve."
     },
     {
@@ -204,7 +204,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S03 and S04: stop-engine conditions C and D now open the lesson, verbatim; overheating checks happen only after the engine has cooled; 'most overheating starts on the raw water side' is removed; restarting only once the cause is corrected. Please approve."
     }
   ],
@@ -228,7 +228,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q002",
@@ -244,7 +244,7 @@
       ],
       "correctIndex": 0,
       "explanation": "A fault that appears after refuelling suggests fuel quality; after a filter change, air or a poor seal. Linking the fault to a recent event narrows the search quickly.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q003",
@@ -260,7 +260,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Compression heats the air, the fuel is injected and burns. If any of the three is missing, the engine will not run. Cooling, lubrication and electrics matter too, but for keeping going and starting.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q004",
@@ -276,7 +276,7 @@
       ],
       "correctIndex": 0,
       "explanation": "If you change several things and the engine runs, you will not know which mattered. Each extra change also adds a chance of a new problem, such as letting air into the fuel.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q005",
@@ -292,7 +292,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Most faults have simple causes such as a control left in the wrong place, a blocked filter or a closed valve. Checking those first saves time and avoids unnecessary dismantling.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q021",
@@ -313,7 +313,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.1 (S20): a safety-first ordering question. Please approve."
     },
     {
@@ -333,7 +333,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S13: the question now asks for a sensible first check and includes the stop control; the explanation covers pre-heating, electronic inhibit, air intake and compression. Please approve."
     },
     {
@@ -353,7 +353,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q008",
@@ -372,7 +372,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q009",
@@ -394,7 +394,7 @@
       "categories": [
         "safety-critical"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q010",
@@ -418,7 +418,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q022",
@@ -442,7 +442,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.1 (S01, S20): tests the corrected wet-exhaust advice, including the old 'close the seacock' advice as a wrong answer. Please approve."
     },
     {
@@ -462,7 +462,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q012",
@@ -483,7 +483,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S12: the question now teaches a safe inspection first instead of naming a single cause. Please approve."
     },
     {
@@ -503,7 +503,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q014",
@@ -522,7 +522,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q015",
@@ -541,7 +541,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q016",
@@ -564,7 +564,7 @@
       "categories": [
         "safety-critical"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q017",
@@ -587,7 +587,7 @@
         "safety-critical",
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q018",
@@ -603,7 +603,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Oil burning in the cylinders gives a bluish smoke. Black smoke points to excess fuel, white smoke on a cold start to unburnt fuel, and steam to a cooling problem.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q019",
@@ -622,7 +622,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m08-q020",
@@ -646,7 +646,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     }
   ]
 }

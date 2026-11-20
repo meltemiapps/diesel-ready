@@ -10,8 +10,8 @@ platform-specific fields.
 ```json
 { "schemaVersion": 2, "modules": ["01-how-a-diesel-engine-works.json"], "faults": "faults.json",
   "safety": "safety.json", "checklists": "checklists.json",
-  "contentInfo": { "version": "1.2", "status": "draft", "reviewDate": "2026-11-20",
-  "engineerApproval": "pending", "changeLog": [{ "version": "1.2", "date": "2026-11-20", "summary": "..." }] } }
+  "contentInfo": { "version": "1.2", "status": "reviewed", "reviewDate": "2026-11-20",
+  "engineerApproval": "approved", "changeLog": [{ "version": "1.2", "date": "2026-11-20", "summary": "..." }] } }
 ```
 
 | Field | Type | Notes |
@@ -28,9 +28,9 @@ platform-specific fields.
 | Field | Type | Notes |
 |---|---|---|
 | `version` | string | Content version, e.g. `"1.1"`. |
-| `status` | string | `"draft"` until a qualified marine engineer has approved the content. |
+| `status` | string | `"draft"` until a qualified marine engineer has approved the content, then `"reviewed"`. Release builds require `"reviewed"`. |
 | `reviewDate` | string | Date of the latest technical review, `yyyy-MM-dd`. |
-| `engineerApproval` | string | `"pending"`, or the approving engineer once approved. |
+| `engineerApproval` | string | `"pending"`, then `"approved"`. Never a person's name or credentials. Release builds require `"approved"`. |
 | `changeLog` | `{ "version", "date", "summary" }[]` | Newest first. The first entry must have the current `version`. Dates are `yyyy-MM-dd`. |
 
 ## `safety.json`
@@ -179,3 +179,9 @@ The iOS loader (`ContentLoader.validate`) enforces every rule above, and the
 unit tests run it against the bundled files. `scripts/export-content-review.py`
 writes the review pack (`docs/content-review.md`) and the question-level QA
 sheet (`docs/quiz-review.csv`).
+
+Review rules (release only):
+
+- Every lesson, question, checklist, checklist item and Fault finder symptom is `"reviewStatus": "reviewed"`, and `contentInfo` is `"status": "reviewed"` with `"engineerApproval": "approved"`.
+- `ContentRules.release` reports every item that breaks this. The app checks it at launch in Release builds only, so Debug builds can still try out draft content.
+- Release builds and archives also run `scripts/check-review-status.sh` as a build phase, which fails the build if any item is still `"draft"`.

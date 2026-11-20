@@ -99,7 +99,7 @@
         "m08-l01",
         "m08-l04"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "wont-start",
@@ -160,7 +160,7 @@
         "m08-l01",
         "m08-l02"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 31, safety revise (P0, S01): the advice to close the raw water seacock during long cranking is removed. Warning A is shown first, verbatim, with the waterlock stop card, consistent with lesson 8.2. Causes now include an engine inhibit, air intake and compression (S13). Please approve."
     },
     {
@@ -217,7 +217,7 @@
         "m08-l01",
         "m08-l04"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S04: stop-engine condition D is shown first, verbatim, with the overheating stop card; the blocked strainer is no longer called the most common cause, causes are unranked, and every check happens after the engine has cooled. Please approve."
     },
     {
@@ -270,7 +270,7 @@
         "m08-l01",
         "m08-l03"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "low-oil-pressure",
@@ -322,7 +322,7 @@
         "m08-l01",
         "m08-l04"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 32, safety revise (P0, S03): stop-engine condition C is shown first, verbatim, with the stop card; 'the most common cause' is removed and causes are unranked; the checks begin with 'do not restart'. Please approve, including the advice against running with milky or fuel-smelling oil."
     },
     {
@@ -367,7 +367,7 @@
         "m08-l01",
         "m08-l04"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     }
   ]
 }

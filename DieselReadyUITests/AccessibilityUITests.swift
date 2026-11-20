@@ -108,6 +108,24 @@ final class AccessibilityUITests: XCTestCase {
         }
     }
 
+    /// The About tab shows the approved content version, with no "(draft)".
+    @MainActor
+    func testAboutShowsEngineerApproval() throws {
+        let app = XCUIApplication()
+        app.launchArguments += ["-disclaimerAcceptedVersion", "1"]
+        app.launch()
+        app.tabBars.buttons["About"].tap()
+        let approval = app.descendants(matching: .any)["engineer-approval"].firstMatch
+        scrollTo(approval, in: app)
+        XCTAssertEqual(approval.label, "Technical review: approved by a qualified marine engineer")
+        XCTAssertTrue(app.staticTexts["1.2"].exists, "content version without (draft)")
+        XCTAssertFalse(app.staticTexts["1.2 (draft)"].exists)
+        XCTAssertTrue(app.staticTexts["20 November 2026"].exists)
+        let changed = app.descendants(matching: .any)
+            .matching(NSPredicate(format: "label BEGINSWITH 'What changed in 1.2'")).firstMatch
+        XCTAssertTrue(changed.label.contains("approved"), changed.label)
+    }
+
     @MainActor
     private func scrollTo(_ element: XCUIElement, in app: XCUIApplication) {
         var tries = 0

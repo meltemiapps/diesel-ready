@@ -11,8 +11,8 @@ struct ContentLoaderTests {
         let library = try ContentLoader.bundled(.main).load()
         #expect(!library.modules.isEmpty)
         #expect(library.modules.first?.id == "m01")
-        #expect(library.allQuestions.allSatisfy { $0.reviewStatus == .draft })
-        #expect(library.allLessons.allSatisfy { $0.reviewStatus == .draft })
+        #expect(library.allQuestions.allSatisfy { $0.reviewStatus == .reviewed })
+        #expect(library.allLessons.allSatisfy { $0.reviewStatus == .reviewed })
     }
 
     @Test("Every bundled lesson has at least 3 questions and every module 3 to 6 lessons")

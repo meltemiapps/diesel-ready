@@ -52,7 +52,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 1, accept with qualification (S17): the 15 to 23 to 1 figure is now described as a typical range for many conventional small diesels, not a specification. Step 5 now also covers electronically controlled engines (S14). Please approve."
     },
     {
@@ -107,7 +107,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S14: step 5 now distinguishes mechanical injection timing from electronically controlled common-rail injection. Please approve."
     },
     {
@@ -182,7 +182,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S14: the injection step and diagram caption are now labelled as a typical mechanically injected engine, with a short common-rail description. Please approve."
     },
     {
@@ -237,7 +237,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S14 and S05: the fuel trace now covers common-rail engines, and the cooling step distinguishes indirect and keel-cooled engines. Please approve."
     }
   ],
@@ -256,7 +256,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Diesels rely on compression ignition. Squeezing the air makes it hot enough to ignite the fuel as soon as it is injected.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q002",
@@ -272,7 +272,7 @@
       ],
       "correctIndex": 0,
       "explanation": "A diesel's speed and power are set by the quantity of fuel injected. Unlike a petrol engine, it does not throttle the incoming air.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q003",
@@ -288,7 +288,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The air must be squeezed hard to reach a temperature well above the point at which diesel fuel ignites on its own.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q004",
@@ -304,7 +304,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The compression ratio compares the space above the piston at the bottom of its stroke with the space left at the top. Many conventional small diesels are somewhere around 15:1 to 23:1, but that is a typical range, not a specification.",
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 2, revise (S17): the question now tests what a compression ratio means rather than recall of a range, and the explanation gives the range as typical only. Please approve."
     },
     {
@@ -321,7 +321,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Air is drawn in, compressed, burnt with the fuel to drive the piston down, and then pushed out as exhaust.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q006",
@@ -337,7 +337,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Each stroke is half a turn of the crankshaft, so four strokes take two full revolutions.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q007",
@@ -353,7 +353,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Fuel is sprayed in just before the piston reaches the top of the compression stroke, when the air is at its hottest.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q008",
@@ -369,7 +369,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Only air is drawn in. The fuel is added later by the injector, directly into the hot compressed air.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q009",
@@ -385,7 +385,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Each valve opens once per cycle, and a cycle takes two crankshaft turns, so the camshaft turns once for every two turns of the crank.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q010",
@@ -401,7 +401,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Connecting rods link each piston to the crankshaft, which converts their reciprocating motion into rotation.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q011",
@@ -417,7 +417,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The injection pump meters, pressurises and times the fuel for each cylinder. Lifting fuel from the tank is the lift pump's job.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q012",
@@ -433,7 +433,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The cylinder head sits on top of the block and carries the valves and the injectors.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q013",
@@ -449,7 +449,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The flywheel's weight carries the engine through the non-power strokes. Its toothed ring also gives the starter motor something to turn.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q014",
@@ -465,7 +465,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The head gasket keeps compression, oil and coolant in their proper places where the head meets the block.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q015",
@@ -485,7 +485,7 @@
         "safety-critical",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q016",
@@ -505,7 +505,7 @@
         "safety-critical",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q017",
@@ -521,7 +521,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The dipstick shows the oil level in the sump. Check it with the engine stopped and the boat as level as possible.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q018",
@@ -537,7 +537,7 @@
       ],
       "correctIndex": 0,
       "explanation": "A diesel relies on the heat of compression to light its fuel. If air leaks past worn rings or valves, it does not get hot enough, and a cold engine makes this worse because the metal soaks up heat.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m01-q019",
@@ -553,7 +553,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Many installations have a primary filter with a water trap before the finer filter on the engine, although layouts vary and not every boat has one in the same place. The strainer, heat exchanger and oil filter belong to the cooling and lubrication systems.",
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 3, accept with qualification: the question and explanation now say a primary filter with a water trap is common, not fitted on every layout. Please approve."
     },
     {
@@ -570,7 +570,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Faults tend to happen at awkward moments. A labelled picture saves time finding the dipstick, filters or seacock when you are under pressure. It is a good habit, not a legal or warranty requirement.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     }
   ]
 }

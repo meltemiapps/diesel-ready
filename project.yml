@@ -14,7 +14,7 @@ settings:
   base:
     SWIFT_VERSION: "6.0"
     MARKETING_VERSION: "1.0"
-    CURRENT_PROJECT_VERSION: "3"
+    CURRENT_PROJECT_VERSION: "4"
     CODE_SIGN_STYLE: Automatic
     LOCALIZATION_PREFERS_STRING_CATALOGS: YES
     SWIFT_EMIT_LOC_STRINGS: YES
@@ -31,6 +31,27 @@ targets:
       - path: DieselReady/Resources/Content
         type: folder
         buildPhase: resources
+    preBuildScripts:
+      - name: Release content must be engineer-approved
+        basedOnDependencyAnalysis: false
+        inputFiles:
+          - $(SRCROOT)/scripts/check-review-status.sh
+          - $(SRCROOT)/DieselReady/Resources/Content/manifest.json
+          - $(SRCROOT)/DieselReady/Resources/Content/faults.json
+          - $(SRCROOT)/DieselReady/Resources/Content/checklists.json
+          - $(SRCROOT)/DieselReady/Resources/Content/modules/01-how-a-diesel-engine-works.json
+          - $(SRCROOT)/DieselReady/Resources/Content/modules/02-fuel-system-and-bleeding.json
+          - $(SRCROOT)/DieselReady/Resources/Content/modules/03-cooling-systems.json
+          - $(SRCROOT)/DieselReady/Resources/Content/modules/04-lubrication.json
+          - $(SRCROOT)/DieselReady/Resources/Content/modules/05-electrics-and-starting.json
+          - $(SRCROOT)/DieselReady/Resources/Content/modules/06-drive-belts-and-stern-gear.json
+          - $(SRCROOT)/DieselReady/Resources/Content/modules/07-routine-maintenance.json
+          - $(SRCROOT)/DieselReady/Resources/Content/modules/08-fault-finding.json
+        script: |
+          # Release builds and archives fail if any content is still a draft.
+          if [ "$CONFIGURATION" = "Release" ]; then
+            "$SRCROOT/scripts/check-review-status.sh" "$SRCROOT/DieselReady/Resources/Content"
+          fi
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: uk.co.meltemiapps.dieselready

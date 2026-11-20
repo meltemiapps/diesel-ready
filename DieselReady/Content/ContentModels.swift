@@ -24,12 +24,17 @@ struct ContentManifest: Codable, Sendable, Equatable {
 struct ContentInfo: Codable, Sendable, Hashable {
     /// For example "1.1".
     let version: String
-    /// "draft" until a qualified marine engineer has approved the content.
+    /// "draft" until a qualified marine engineer has approved the content,
+    /// then "reviewed".
     let status: String
     /// Date of the latest technical review, as yyyy-MM-dd.
     let reviewDate: String
-    /// "pending", or who approved the content once it has been approved.
+    /// "pending" until the content is approved, then "approved". Never a
+    /// person's name or credentials.
     let engineerApproval: String
+
+    /// Reviewed and approved by a qualified marine engineer.
+    var isApproved: Bool { status == "reviewed" && engineerApproval == "approved" }
     /// Newest first.
     let changeLog: [ChangeLogEntry]
 

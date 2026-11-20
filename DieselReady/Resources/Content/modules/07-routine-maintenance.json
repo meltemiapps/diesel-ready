@@ -88,7 +88,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S15: the pre-start checks include water ingress, the air intake and engine space ventilation, the exhaust condition, and a propeller-clear check where safe and practicable. Revised in content 1.2 (owner request): now follows the WOBBLE memory aid, with the same checks as the pre-start and post-start checklists. Please approve.",
       "safetyNoticeIds": [
         "overheating-stop"
@@ -128,7 +128,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "S19: running hours now come from the hour meter where fitted, otherwise from a documented operating log. Please approve."
     },
     {
@@ -171,7 +171,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 29, revise (S18): raw water circuit protection, antifreeze type and draining method now follow the engine maker; full tanks and impeller removal are no longer presented as universal. Please approve."
     },
     {
@@ -208,7 +208,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     }
   ],
   "questions": [
@@ -226,7 +226,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Fluids that leak from the engine collect in the bilge beneath it. Spotting them before starting lets you trace a leak while it is still minor.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q002",
@@ -242,7 +242,7 @@
       ],
       "correctIndex": 0,
       "explanation": "These two checks confirm that the oil pressure, charging and raw water cooling are all working before you rely on the engine.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q003",
@@ -258,7 +258,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Routine turns the checks into a habit, so a missing step feels wrong. Changing the order each time makes it easy to skip something.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q004",
@@ -274,7 +274,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Cold oil is thick and reaches bearings more slowly, and a cold engine has tighter clearances in some places. A gentle warm-up reduces wear.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q005",
@@ -295,7 +295,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q021",
@@ -315,7 +315,7 @@
         "safety-critical",
         "scenario"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.1 (S15): the propeller-clear pre-start check. Please approve."
     },
     {
@@ -332,7 +332,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The handbook lists each service job and when it is due. Intervals vary between engines, so the handbook is the reference.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q007",
@@ -351,7 +351,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q008",
@@ -367,7 +367,7 @@
       ],
       "correctIndex": 0,
       "explanation": "A log of dates, hours and parts tells you when jobs are due and gives an engineer a history to work from. It also adds value when you sell the boat.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q009",
@@ -383,7 +383,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Injectors need specialist equipment to test and set them. The other jobs are routine owner maintenance.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q010",
@@ -399,7 +399,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The hour meter records how long the engine has run, and many service intervals are based on it. Not every engine has one; without it, keep a written log of running time.",
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 28, revise (S19): the question now says 'where one is fitted', and the explanation covers keeping a log on engines without a meter. Please approve."
     },
     {
@@ -416,7 +416,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Used oil contains acids from combustion. Leaving it in the engine for months encourages corrosion, so fresh oil goes in before lay-up.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q012",
@@ -432,7 +432,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Water expands when it freezes, and the force can split castings and pipes. Handbooks explain whether to drain the circuit or fill it with antifreeze.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q013",
@@ -453,7 +453,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q014",
@@ -469,7 +469,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Out of the water there is nothing to leak. Checking straight after launch catches a perished hose, a loose clip or a seal that needs attention before you leave.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q015",
@@ -485,7 +485,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Many batteries are damaged if left discharged, and a flat battery is more likely to be harmed by frost. A suitable charger or regular charging prevents this.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q016",
@@ -501,7 +501,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Impellers wear out and fail without warning, and changing one is a common at-sea repair. Major engine parts are not practical spares.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q017",
@@ -517,7 +517,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Rough weather can stir up dirt that blocks a filter quickly. A spare element and the tools to fit it can get the engine running again at sea.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q018",
@@ -533,7 +533,7 @@
       ],
       "correctIndex": 0,
       "explanation": "A belt of the wrong size or a spanner that does not fit is only discovered when you try to use it. Trying in calm conditions avoids nasty surprises.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q019",
@@ -549,7 +549,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Self-amalgamating tape fuses to itself when stretched and wrapped, making a tight seal that can hold until the hose is replaced. Ordinary tapes and sealants do not hold against water pressure and heat.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q020",
@@ -565,7 +565,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Similar-looking parts often differ in size, thread or rating. Having the exact numbers to hand means you get the right part first time, even from a chandler far from home.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m07-q022",
@@ -581,7 +581,7 @@
       ],
       "correctIndex": 0,
       "explanation": "WOBBLE covers the coolant and raw water, oil, drive belts, bilges, leaks and fuel and battery levels, and finally the exhaust once the engine is running.",
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
     },
     {
@@ -598,7 +598,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The E is the only check that needs the engine running: water from a wet exhaust shows the raw water pump is delivering. Belts, bilges and oil are checked with the engine off.",
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
     },
     {
@@ -623,7 +623,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
     },
     {
@@ -645,7 +645,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
     },
     {
@@ -670,7 +670,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve. Please confirm the recommended response, including whether the impeller should always be inspected."
     },
     {
@@ -690,7 +690,7 @@
       "categories": [
         "safety-critical"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
     },
     {
@@ -712,7 +712,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
     },
     {
@@ -729,7 +729,7 @@
       ],
       "correctIndex": 0,
       "explanation": "A worn or wrongly tensioned belt can slip or break, stopping the raw water pump or alternator. Too tight a belt loads the bearings, and oil on a belt makes it slip; follow the handbook's tension.",
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
     },
     {
@@ -750,7 +750,7 @@
         "safety-critical",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.2 (owner request): question on the pre/post-start checklists. Please approve."
     }
   ]

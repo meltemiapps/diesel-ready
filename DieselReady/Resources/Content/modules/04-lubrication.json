@@ -38,7 +38,7 @@
         }
       ],
       "handsOn": false,
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-l02",
@@ -80,7 +80,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-l03",
@@ -122,7 +122,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 15, accept with qualification: the refill step now requires immediate oil-pressure confirmation (stop at once if the warning stays on), a leak check, and a recheck after settling; disposal is in step 6. Please approve."
     },
     {
@@ -168,7 +168,7 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 16, accept with qualification, and S03: stop-engine condition C now opens the lesson, verbatim; the 'normal' behaviour is described as typical, with panels differing; 'most common' is removed and causes are unranked. The lesson is now a procedure, so it ends with the handbook reminder. Please approve."
     }
   ],
@@ -187,7 +187,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Oil drains back to the sump after lubricating the engine, and the oil pump draws it from there. The header tank holds coolant, not oil.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q002",
@@ -203,7 +203,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The oil filter traps particles that would otherwise wear the bearings. Water in fuel is caught by the fuel filter, and the cooling system has its own strainer.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q003",
@@ -219,7 +219,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Oil also carries heat, holds dirt in suspension, helps the rings seal and protects against corrosion. Cooling the exhaust is done by the raw water.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q004",
@@ -235,7 +235,7 @@
       ],
       "correctIndex": 0,
       "explanation": "A correct level says nothing about condition. Contamination and spent additives mean old oil protects the engine less well, so it is replaced at set intervals.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q005",
@@ -251,7 +251,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Oil galleries are passages drilled through the block and head that deliver pressurised oil to the bearings and valve gear.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q006",
@@ -267,7 +267,7 @@
       ],
       "correctIndex": 0,
       "explanation": "With the engine cold, all the oil has drained into the sump, and with the boat level the dipstick gives a true reading.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q007",
@@ -283,7 +283,7 @@
       ],
       "correctIndex": 0,
       "explanation": "The dipstick is often coated with oil above the real level. Wiping it and dipping again shows where the oil actually sits.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q008",
@@ -302,7 +302,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q009",
@@ -321,7 +321,7 @@
       "categories": [
         "scenario"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q010",
@@ -342,7 +342,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q011",
@@ -358,7 +358,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Different engines need different oil specifications and quantities. The handbook is the reliable source; general-purpose oils may not meet the engine's needs.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q012",
@@ -374,7 +374,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Warm oil is thinner, so more of it comes out and the soot and particles stay mixed in it rather than settling in the sump.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q013",
@@ -393,7 +393,7 @@
       "categories": [
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q014",
@@ -409,7 +409,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Combustion products in used oil form acids, and condensation adds water. Both cause corrosion inside an idle engine, which is why handbooks give a time limit as well as running hours.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q015",
@@ -428,7 +428,7 @@
       "categories": [
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q016",
@@ -452,7 +452,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q017",
@@ -468,7 +468,7 @@
       ],
       "correctIndex": 0,
       "explanation": "With the engine stopped there is no oil pressure, so the lamp should light. It should go out within a few seconds once the engine starts.",
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q018",
@@ -492,7 +492,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q019",
@@ -513,7 +513,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft"
+      "reviewStatus": "reviewed"
     },
     {
       "id": "m04-q020",
@@ -529,7 +529,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Hot oil is thinner and the pump turns slowly at idle, so pressure tends to be lowest then. This is why a borderline engine may show a warning only at hot idle. Actual readings and warning behaviour differ between engines and panels.",
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "Audit note 17, verify: the question now asks about a general tendency, with no universal figure or gauge response. Please confirm it applies generally."
     },
     {
@@ -554,7 +554,7 @@
         "scenario",
         "unsafe-distractor"
       ],
-      "reviewStatus": "draft",
+      "reviewStatus": "reviewed",
       "reviewNote": "New in content 1.1 (S03, S20): a scenario question showing that a normal oil level does not clear the stop condition. Please approve."
     }
   ]

@@ -73,7 +73,11 @@ fi
 # store_shots <device name> <output dir>
 store_shots() {
   local device=$(udid "$1")
+  # Restart the simulator so nothing from another app (such as a "back to
+  # app" link in the status bar) appears in the screenshots.
+  xcrun simctl shutdown "$device" 2>/dev/null || true
   xcrun simctl boot "$device" 2>/dev/null || true
+  xcrun simctl bootstatus "$device" >/dev/null
   xcrun simctl ui "$device" appearance light
   xcrun simctl ui "$device" content_size large
   xcrun simctl status_bar "$device" override --time "9:41" --dataNetwork wifi --wifiMode active --wifiBars 3 \

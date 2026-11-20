@@ -222,7 +222,12 @@
         "Check the fuel filter bowl for water straight away"
       ],
       "correctIndex": 0,
-      "explanation": "The boat's safety comes before the engine. Once you are no longer at risk, you can work on the engine calmly.",
+      "explanation": "The boat's safety comes before the engine. Opening up the engine or cranking it while the boat drifts towards rocks puts everyone in danger. Once you are no longer at risk, you can work on the engine calmly.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -302,7 +307,12 @@
         "Make the boat safe, then change both fuel filters straight away"
       ],
       "correctIndex": 0,
-      "explanation": "The boat comes first. Once it is safe, note how the engine stopped and what changed, then check the easy causes before dismantling anything or changing parts on a guess.",
+      "explanation": "The boat comes first: trying to restart while drifting in a busy channel puts the boat at risk of collision. Once it is safe, note how the engine stopped and what changed, then check the easy causes before dismantling anything or changing parts on a guess.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "New in content 1.1 (S20): a safety-first ordering question. Please approve."
     },
@@ -320,6 +330,9 @@
       ],
       "correctIndex": 0,
       "explanation": "If the engine turns normally, the battery and starter are doing their job. Sensible first checks are the stop control and then the fuel; on a cold day, pre-heating; on an electronic engine, any fault warning or inhibit. A blocked air intake or low compression are further possibilities.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "S13: the question now asks for a sensible first check and includes the stop control; the explanation covers pre-heating, electronic inhibit, air intake and compression. Please approve."
     },
@@ -337,6 +350,9 @@
       ],
       "correctIndex": 0,
       "explanation": "The click is the solenoid trying to engage. Without enough current, the starter cannot turn. Fuel and cooling faults do not stop the engine turning over.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -353,6 +369,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Cold starting relies on extra heat from the glow plugs. Once the air is warmer the engine manages without them, which hides the fault.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -372,6 +391,9 @@
       "safetyNoticeIds": [
         "wet-exhaust-waterlock"
       ],
+      "categories": [
+        "safety-critical"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -387,9 +409,14 @@
         "Bleed the fuel system, then try cranking again straight away"
       ],
       "correctIndex": 0,
-      "explanation": "Water does not compress. If a cylinder is full of it, forcing the engine round can bend a connecting rod. Do not crank again; get qualified assistance.",
+      "explanation": "Water does not compress. If a cylinder is full of it, forcing the engine round, with more cranking or a starting spray, can bend a connecting rod. Do not crank again; get qualified assistance.",
       "safetyNoticeIds": [
         "wet-exhaust-waterlock"
+      ],
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
       ],
       "reviewStatus": "draft"
     },
@@ -406,9 +433,14 @@
         "Use a starting spray so it fires before the exhaust fills"
       ],
       "correctIndex": 0,
-      "explanation": "Repeated cranking can let water build up in a wet exhaust and enter the engine. Follow the documented procedure for your installation, never run the engine with the raw-water seacock closed, and if water may have got in, do not crank again.",
+      "explanation": "Repeated cranking can let water build up in a wet exhaust and enter the engine. Follow the documented procedure for your installation, and never run the engine with the raw-water seacock closed: an engine that fires with it shut quickly destroys its impeller and exhaust. Longer cranking or a starting spray only adds to the risk, and if water may have got in, do not crank again.",
       "safetyNoticeIds": [
         "wet-exhaust-waterlock"
+      ],
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
       ],
       "reviewStatus": "draft",
       "reviewNote": "New in content 1.1 (S01, S20): tests the corrected wet-exhaust advice, including the old 'close the seacock' advice as a wrong answer. Please approve."
@@ -427,6 +459,9 @@
       ],
       "correctIndex": 0,
       "explanation": "A gradual fade is typical of fuel starvation, such as a blocked filter or air in the fuel, as the supply dwindles. A rope usually stops the engine abruptly, a glow plug affects only starting, and low oil pressure would set off its alarm.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -442,7 +477,12 @@
         "Engage astern at higher revs to unwind whatever may be caught"
       ],
       "correctIndex": 0,
-      "explanation": "Something round the propeller is one important possibility, but a low idle speed, a gearbox fault or a binding shaft can do the same. Make the engine safe before inspecting near the propeller, and rule things out one at a time rather than forcing it.",
+      "explanation": "Something round the propeller is one important possibility, but a low idle speed, a gearbox fault or a binding shaft can do the same. Make the engine safe before inspecting near the propeller, and rule things out one at a time. Forcing it in gear or at higher revs can wrap a rope tighter and damage the shaft, gearbox or stern gear.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "S12: the question now teaches a safe inspection first instead of naming a single cause. Please approve."
     },
@@ -460,6 +500,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Growth on the hull and propeller adds drag. The engine works harder, burns more fuel than it can use cleanly, and the boat goes slower.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -476,6 +519,9 @@
       ],
       "correctIndex": 0,
       "explanation": "With a blocked vent, a vacuum builds in the tank as fuel is used until the lift pump cannot draw any more. Resting lets air leak back in slowly, so the cycle repeats.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -492,6 +538,9 @@
       ],
       "correctIndex": 0,
       "explanation": "A fading stop points to fuel starvation, and rough water stirs up water and sediment from the bottom of the tank. The primary filter bowl shows quickly whether any has come through.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -512,6 +561,9 @@
         "oil-pressure-stop",
         "overheating-stop"
       ],
+      "categories": [
+        "safety-critical"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -530,6 +582,10 @@
       "explanation": "Normal exhaust water shows the raw water side is working. The problem is more likely on the coolant side: a slipping belt, low coolant, the thermostat or a blocked heat exchanger.",
       "safetyNoticeIds": [
         "overheating-stop"
+      ],
+      "categories": [
+        "safety-critical",
+        "scenario"
       ],
       "reviewStatus": "draft"
     },
@@ -563,6 +619,9 @@
       ],
       "correctIndex": 0,
       "explanation": "A charge warning indicates a charging-system fault, and on many engines the alternator belt also drives the coolant circulating pump. The warning can therefore be the first sign of an overheating problem to come.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -581,6 +640,11 @@
       "explanation": "Sensors can fail, but so can engines. Ignoring a real warning risks expensive damage, and opening a hot pressure cap risks scalding. Stop, check safely, and get advice if unsure.",
       "safetyNoticeIds": [
         "overheating-stop"
+      ],
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
       ],
       "reviewStatus": "draft"
     }

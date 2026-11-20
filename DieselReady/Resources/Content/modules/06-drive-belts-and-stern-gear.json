@@ -191,6 +191,10 @@
       ],
       "correctIndex": 0,
       "explanation": "Belts and pulleys can trap fingers and clothing instantly. Inspect only with the engine stopped and the key removed or isolator off.",
+      "categories": [
+        "safety-critical",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -207,6 +211,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Rubber dust comes from the belt itself wearing away. Check the tension, the pulley alignment and the belt's condition.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -303,6 +310,9 @@
       ],
       "correctIndex": 0,
       "explanation": "If the cable has stretched or slipped, the lever and gearbox positions no longer match, and the gearbox may stay partly engaged. Some gearboxes drag slightly in neutral when cold, which can be normal, but steady drive in neutral is not. Idle speed, bearing wear and fouling do not make a gearbox drive in neutral.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "Audit note 24, revise: the question now describes steady drive with a warm engine, and the explanation separates normal slight cold drag from positive drive. Please approve."
     },
@@ -352,6 +362,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Many packed glands are meant to drip slightly in use; how much is normal depends on the gland and its maker. Tightening until all dripping stops can overheat the packing and wear the shaft. A new or increasing leak is different: treat it as urgent.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "Audit note 26, accept with qualification (S11): a small drip while turning may be normal for some packed glands; the explanation makes drip rates product-specific. Please approve."
     },
@@ -384,7 +397,12 @@
         "As something to look at when the boat is next lifted out"
       ],
       "correctIndex": 0,
-      "explanation": "A seal designed not to drip should stay dry. A leak can mean wear, damage or a problem with its hose, and it is below the waterline, so new or increasing leakage is a vessel-safety issue: check the bilge, make sure the pumps can keep up and get the seal looked at.",
+      "explanation": "A seal designed not to drip should stay dry. A leak can mean wear, damage or a problem with its hose, and it is below the waterline, so new or increasing leakage is a vessel-safety issue: leaving it until the boat is next lifted out risks flooding. Check the bilge, make sure the pumps can keep up and get the seal looked at.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "S11: the key now treats leakage from a seal designed not to drip as urgent and adds the bilge pumping check. Please approve."
     },
@@ -402,6 +420,10 @@
       ],
       "correctIndex": 0,
       "explanation": "A turning shaft can catch clothing, fingers or tools. Make sure it cannot turn before working near it.",
+      "categories": [
+        "safety-critical",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -418,6 +440,11 @@
       ],
       "correctIndex": 0,
       "explanation": "An uncontrolled leak at the shaft seal is a vessel-safety issue. Stop the shaft once it is safe, make sure pumping keeps up, and call for assistance early if the water is gaining. Never adjust a seal on a turning shaft.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "New in content 1.1 (S11, S20): a safety-first scenario on shaft-seal leakage, matching the Fault finder stop card. Please approve."
     },
@@ -435,6 +462,11 @@
       ],
       "correctIndex": 0,
       "explanation": "Even in neutral, a gearbox can drag or be knocked into gear. Stopping and isolating the engine is the only safe state for working near the propeller.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -467,6 +499,9 @@
       ],
       "correctIndex": 0,
       "explanation": "A good bearing supports the shaft closely, so noticeable sideways movement is a clue that the rubber lining has worn. Check it against the bearing maker's tolerances, or ask an engineer.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -499,6 +534,9 @@
       ],
       "correctIndex": 0,
       "explanation": "If the engine sags on worn mounts or is out of line with the shaft, the shaft runs off-centre, causing vibration and wearing the gland and cutless bearing.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     }
   ]

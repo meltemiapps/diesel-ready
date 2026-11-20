@@ -65,7 +65,7 @@ def audit_refs(text):
 def severity(q):
     """P0 for safety-critical questions, P1 for audit priority or corrected items, P2 otherwise."""
     refs = set(audit_refs(q.get("reviewNote")))
-    if q.get("safetyNoticeIds") or refs & P0_FINDINGS:
+    if q.get("safetyNoticeIds") or "safety-critical" in q.get("categories", []) or refs & P0_FINDINGS:
         return "P0"
     if q["id"] in PRIORITY_IDS or refs:
         return "P1"
@@ -218,7 +218,8 @@ def render(modules, faults, safety, info):
             for q in questions:
                 w(f'<a id="{q["id"]}"></a>')
                 w("")
-                w(f"**{q['id']}** · difficulty {DIFFICULTY[q['difficulty']]} · {q['reviewStatus']}")
+                cats = "".join(f" · {c}" for c in q.get("categories", []))
+                w(f"**{q['id']}** · difficulty {DIFFICULTY[q['difficulty']]}{cats} · {q['reviewStatus']}")
                 w("")
                 if q.get("reviewNote"):
                     note(out, q["reviewNote"])
@@ -300,7 +301,8 @@ def render_csv(modules):
     buffer = io.StringIO()
     writer = csv.writer(buffer, lineterminator="\n")
     writer.writerow(["id", "module", "lesson", "difficulty", "stem", "option_a", "option_b", "option_c", "option_d",
-                     "key", "explanation", "safety_notices", "severity", "audit_refs", "sign_off"])
+                     "key", "explanation", "safety_notices", "safety_critical", "scenario", "unsafe_distractor",
+                     "severity", "audit_refs", "sign_off"])
     for module in modules:
         for q in module["questions"]:
             order = list(range(4))
@@ -309,7 +311,9 @@ def render_csv(modules):
             key = LETTERS[order.index(q["correctIndex"])]
             writer.writerow([q["id"], f"{module['number']}. {module['title']}", q["lessonId"], q["difficulty"],
                              q["prompt"], *options, key, q["explanation"],
-                             " ".join(q.get("safetyNoticeIds", [])), severity(q),
+                             " ".join(q.get("safetyNoticeIds", [])),
+                             *("yes" if c in q.get("categories", []) else "" for c in ("safety-critical", "scenario", "unsafe-distractor")),
+                             severity(q),
                              " ".join(audit_refs(q.get("reviewNote"))), ""])
     return buffer.getvalue()
 

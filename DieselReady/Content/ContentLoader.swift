@@ -155,6 +155,7 @@ struct ContentLoader: Sendable {
                     problems.append("\(question.id): difficulty \(question.difficulty) not in 1...3")
                 }
                 problems += unknownNotices(question.noticeIDs, in: library.safety, owner: question.id)
+                problems += validateCategories(of: question)
                 problems += rankingProblems(in: [question.prompt, question.explanation] + question.options,
                                             owner: question.id)
             }
@@ -163,6 +164,17 @@ struct ContentLoader: Sendable {
         let total = library.allQuestions.count
         if total < rules.minTotalQuestions {
             problems.append("Only \(total) questions in total, needs at least \(rules.minTotalQuestions)")
+        }
+        if rules.requireMockBlueprint {
+            let blueprint = MockBlueprint.standard
+            let safety = library.allQuestions.filter(\.isSafetyCritical).count
+            let scenario = library.allQuestions.filter(\.isScenario).count
+            if safety < blueprint.minSafetyCritical {
+                problems.append("Only \(safety) safety-critical questions, a mock test needs \(blueprint.minSafetyCritical)")
+            }
+            if scenario < blueprint.minScenario {
+                problems.append("Only \(scenario) scenario questions, a mock test needs \(blueprint.minScenario)")
+            }
         }
 
         if let faults = library.faults {
@@ -178,6 +190,22 @@ struct ContentLoader: Sendable {
             problems += validate(info)
         } else if rules.requireSafetyContent {
             problems.append("manifest: no contentInfo")
+        }
+        return problems
+    }
+
+    // MARK: Question categories
+
+    static func validateCategories(of question: Question) -> [String] {
+        var problems: [String] = []
+        let raw = question.categories ?? []
+        let known = Set(QuestionCategory.allCases.map(\.rawValue))
+        for category in raw where !known.contains(category) {
+            problems.append("\(question.id): unknown category \(category)")
+        }
+        if Set(raw).count != raw.count { problems.append("\(question.id): lists the same category twice") }
+        if !question.noticeIDs.isEmpty && !question.isSafetyCritical {
+            problems.append("\(question.id): has a safety notice, so it must be safety-critical")
         }
         return problems
     }
@@ -355,13 +383,16 @@ struct ContentRules: Sendable, Equatable {
     var requireEveryDifficultyPerModule: Bool
     /// The manifest must list a safety file and content info.
     var requireSafetyContent: Bool
+    /// There are enough safety-critical and scenario questions for a mock test.
+    var requireMockBlueprint: Bool
 
     static let release = ContentRules(
         lessonsPerModule: 3...6,
         minQuestionsPerLesson: 3,
         minTotalQuestions: 150,
         requireEveryDifficultyPerModule: true,
-        requireSafetyContent: true
+        requireSafetyContent: true,
+        requireMockBlueprint: true
     )
 
     static let structural = ContentRules(
@@ -369,6 +400,7 @@ struct ContentRules: Sendable, Equatable {
         minQuestionsPerLesson: 0,
         minTotalQuestions: 0,
         requireEveryDifficultyPerModule: false,
-        requireSafetyContent: false
+        requireSafetyContent: false,
+        requireMockBlueprint: false
     )
 }

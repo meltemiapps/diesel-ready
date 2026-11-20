@@ -53,6 +53,20 @@ final class QuizFlowUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["Results by module"].exists)
         snapshot(app, "4-results")
 
+        // Each mock test has at least 6 safety-critical questions and the answers
+        // here are effectively random, so some are missed; they are listed first.
+        let safetyCards = app.descendants(matching: .any).matching(identifier: "missed-safety-critical")
+        let otherCards = app.descendants(matching: .any).matching(identifier: "missed-other")
+        XCTAssertGreaterThan(safetyCards.count, 0, "Some safety-critical questions should have been missed")
+        let safetyHeading = app.descendants(matching: .any)["missed-safety-heading"].firstMatch
+        XCTAssertTrue(safetyHeading.exists)
+        let lastSafety = safetyCards.allElementsBoundByIndex.map(\.frame.maxY).max() ?? 0
+        XCTAssertLessThan(safetyHeading.frame.minY, lastSafety)
+        if let firstOther = otherCards.allElementsBoundByIndex.map(\.frame.minY).min() {
+            XCTAssertLessThan(lastSafety, firstOther, "Safety-critical misses must be listed before the others")
+        }
+        XCTAssertTrue(safetyCards.firstMatch.label.hasPrefix("Safety-critical"))
+
         let retry = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Retry missed'")).firstMatch
         if retry.exists {
             retry.tap()

@@ -98,6 +98,7 @@ Known kinds and their label counts:
 | `correctIndex` | integer | 0-based index into `options`. Apps shuffle options when displaying them. |
 | `explanation` | string | One or two sentences. |
 | `safetyNoticeIds` | string[] (optional) | Notices from `safety.json`, shown first in the answer feedback. |
+| `categories` | string[] (optional) | Any of `"safety-critical"` (keeps people, the boat or the engine safe; required on every question with a safety notice), `"scenario"` (built around a situation) and `"unsafe-distractor"` (a wrong answer is an unsafe action, so the explanation must say why it is dangerous). Mock tests and the results screen use the first two. |
 | `reviewStatus` | `"draft"` or `"reviewed"` | |
 | `reviewNote` | string (optional) | What the expert reviewer should check. Never shown in the app; exported to `docs/content-review.md`. |
 
@@ -135,6 +136,13 @@ Volume rules for the bundled course:
 - Every module has questions at each difficulty, 1 to 3.
 - At least 150 questions in total.
 - No two questions with the same text (ignoring case, spacing and punctuation).
+
+Question rules:
+
+- Categories are known values, listed once each, and every question with a safety notice is safety-critical.
+- The course has enough safety-critical and scenario questions to build a mock test (at least 6 of each).
+
+Mock tests (built by the app, not stored): 30 questions balanced across all modules (each module's share differs by at most one), at least 6 safety-critical, at least 6 scenario and at least 5 of each difficulty, never repeating a question, in a shuffled order with shuffled options. The results list missed safety-critical questions first.
 
 Safety rules:
 

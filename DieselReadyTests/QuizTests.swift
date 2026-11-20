@@ -295,3 +295,124 @@ struct QuizScoringTests {
         #expect(saved.first?.missedQuestionIDs == ["m01-q1"])
     }
 }
+
+@Suite("Quiz: mock test blueprint")
+struct MockBlueprintTests {
+
+    private static func bundled() throws -> ContentLibrary { try ContentLoader.bundled(.main).load() }
+
+    @Test("Every bundled mock test meets the blueprint", arguments: Array(UInt64(1)...UInt64(60)))
+    func bundledMockMeetsBlueprint(seed: UInt64) throws {
+        let library = try Self.bundled()
+        var rng = SeededGenerator(seed: seed)
+        let questions = QuestionSelector.select(.mock, from: library, using: &rng).questions
+        let blueprint = MockBlueprint.standard
+
+        #expect(questions.count == 30)
+        #expect(Set(questions.map(\.id)).count == 30, "no question is repeated")
+        let perModule = Dictionary(grouping: questions, by: \.moduleId).mapValues(\.count)
+        #expect(Set(perModule.keys) == Set(library.modules.map(\.id)), "every module is included")
+        #expect((perModule.values.max() ?? 0) - (perModule.values.min() ?? 0) <= 1, "balanced: \(perModule)")
+        #expect(questions.filter(\.isSafetyCritical).count >= blueprint.minSafetyCritical)
+        #expect(questions.filter(\.isScenario).count >= blueprint.minScenario)
+        for level in 1...3 {
+            #expect(questions.filter { $0.difficulty == level }.count >= blueprint.minPerDifficulty, "difficulty \(level)")
+        }
+        #expect(blueprint.shortfall(of: questions) == 0)
+    }
+
+    @Test("Mock tests differ from one run to the next and are not grouped by module")
+    func mockVaries() throws {
+        let library = try Self.bundled()
+        var rng = SeededGenerator(seed: 99)
+        let first = QuestionSelector.select(.mock, from: library, using: &rng).questions
+        let second = QuestionSelector.select(.mock, from: library, using: &rng).questions
+        #expect(Set(first.map(\.id)) != Set(second.map(\.id)))
+        #expect(first.map(\.moduleId) != first.map(\.moduleId).sorted(), "the order is shuffled")
+    }
+
+    @Test("Options are shuffled each time a mock question is shown")
+    func optionsShuffled() throws {
+        let library = try Self.bundled()
+        var rng = SeededGenerator(seed: 4)
+        let questions = QuestionSelector.select(.mock, from: library, using: &rng).questions
+        let positions = questions.map { PresentedQuestion.shuffled($0, using: &rng).correctDisplayIndex }
+        #expect(Set(positions).count == 4, "the key moves between positions")
+    }
+
+    @Test("Module quotas split the test evenly and top up from larger modules")
+    func quotas() {
+        var rng = SeededGenerator(seed: 2)
+        let even = QuestionSelector.moduleQuotas(Array(repeating: 20, count: 8), total: 30, using: &rng)
+        #expect(even.reduce(0, +) == 30)
+        #expect(Set(even).isSubset(of: [3, 4]))
+        #expect(even.filter { $0 == 4 }.count == 6)
+        let uneven = QuestionSelector.moduleQuotas([2, 40, 40], total: 30, using: &rng)
+        #expect(uneven[0] == 2)
+        #expect(Set(uneven[1...]) == [14])
+    }
+
+    @Test("A library that cannot meet the blueprint still gives 30 balanced, unique questions")
+    func bestEffort() {
+        var rng = SeededGenerator(seed: 8)
+        let questions = QuestionSelector.select(.mock, from: QuizFixtures.library([20, 20, 20]), using: &rng).questions
+        #expect(questions.count == 30)
+        #expect(Set(questions.map(\.id)).count == 30)
+        #expect(MockBlueprint.standard.shortfall(of: questions) > 0, "the fixtures have no categories or difficulty spread")
+    }
+
+    @Test("The blueprint counts each shortfall")
+    func shortfall() {
+        let q = Question(id: "q", moduleId: "m01", lessonId: "l", difficulty: 1, prompt: "P", options: ["a", "b", "c", "d"],
+                         correctIndex: 0, explanation: "E", reviewStatus: .draft, categories: ["safety-critical"])
+        let blueprint = MockBlueprint(count: 2, minSafetyCritical: 1, minScenario: 1, minPerDifficulty: 1, attempts: 1)
+        // One question short, no scenario, no difficulty 2 or 3.
+        #expect(blueprint.shortfall(of: [q]) == 1 + 1 + 2)
+        #expect(blueprint.shortfall(of: [q, q]) >= 100, "repeats are heavily penalised")
+    }
+
+    @Test("Results list missed safety-critical questions first")
+    func safetyCriticalFirst() {
+        func question(_ id: String, safety: Bool) -> Question {
+            Question(id: id, moduleId: "m01", lessonId: "l", difficulty: 1, prompt: id, options: ["a", "b", "c", "d"],
+                     correctIndex: 0, explanation: "E", reviewStatus: .draft,
+                     categories: safety ? ["safety-critical"] : nil)
+        }
+        let answers = [
+            AnsweredQuestion(question: question("plain-1", safety: false), chosenIndex: 1),
+            AnsweredQuestion(question: question("safe-1", safety: true), chosenIndex: 0),
+            AnsweredQuestion(question: question("safe-2", safety: true), chosenIndex: 2),
+            AnsweredQuestion(question: question("plain-2", safety: false), chosenIndex: 3),
+            AnsweredQuestion(question: question("safe-3", safety: true), chosenIndex: 1),
+        ]
+        let result = QuizResult(mode: .mock, answers: answers)
+        #expect(result.missed.map(\.id) == ["safe-2", "safe-3", "plain-1", "plain-2"])
+        #expect(result.missedSafetyCritical.map(\.id) == ["safe-2", "safe-3"])
+    }
+
+    @Test("Categories are validated, and every question with a notice is safety-critical")
+    func categoryValidation() throws {
+        let q = Question(id: "q1", moduleId: "m01", lessonId: "l", difficulty: 1, prompt: "P", options: ["a", "b", "c", "d"],
+                         correctIndex: 0, explanation: "E", reviewStatus: .draft,
+                         safetyNoticeIds: ["oil-pressure-stop"], categories: ["scenario", "nonsense", "scenario"])
+        let problems = ContentLoader.validateCategories(of: q)
+        #expect(problems.contains("q1: unknown category nonsense"))
+        #expect(problems.contains("q1: lists the same category twice"))
+        #expect(problems.contains("q1: has a safety notice, so it must be safety-critical"))
+
+        let library = try Self.bundled()
+        #expect(library.allQuestions.filter { !$0.noticeIDs.isEmpty }.allSatisfy { $0.isSafetyCritical })
+    }
+
+    @Test("Questions with an unsafe wrong answer explain why it is dangerous")
+    func unsafeDistractorsExplained() throws {
+        let warningWords = ["never", "do not", "must not", "danger", "risk", "injur", "scald", "burn", "damage",
+                            "flood", "trap", "catch", "short", "spray", "not safe", "can ", "removes your only"]
+        let unsafe = try Self.bundled().allQuestions.filter { $0.has(.unsafeDistractor) }
+        #expect(unsafe.count >= 30)
+        for question in unsafe {
+            let text = question.explanation.lowercased()
+            #expect(warningWords.contains { text.contains($0) }, "\(question.id) explanation should warn")
+        }
+    }
+}

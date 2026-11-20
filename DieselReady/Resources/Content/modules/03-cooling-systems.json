@@ -362,7 +362,11 @@
         "Disconnect the battery"
       ],
       "correctIndex": 0,
-      "explanation": "With the seacock open, water can pour in through the strainer, because it is below the waterline on many boats. Stopping the engine also stops the pump running dry.",
+      "explanation": "With the seacock open, water can pour in through the strainer, because it is below the waterline on many boats. Stopping the engine also stops the pump running dry. Opening the strainer with the seacock open can flood the boat, and opening a hot coolant pressure cap can spray scalding coolant.",
+      "categories": [
+        "safety-critical",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -379,6 +383,9 @@
       ],
       "correctIndex": 0,
       "explanation": "The pump draws water through the strainer. If the lid lets air in, the pump draws air instead of water, so the flow drops or stops and the engine overheats.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -427,6 +434,10 @@
       ],
       "correctIndex": 0,
       "explanation": "Hoses on hull openings must suit the installation, be correctly secured and be inspected regularly. Double clamping is not a universal substitute for correct fit and installation, and overtightening can damage the hose.",
+      "categories": [
+        "safety-critical",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "New in content 1.1 (S06): checks the corrected hose and fitting wording E. Please approve."
     },
@@ -475,7 +486,11 @@
         "Fit the new impeller and check the flow, because small pieces pass through harmlessly"
       ],
       "correctIndex": 0,
-      "explanation": "Broken vanes travel downstream and often block the heat exchanger inlet, causing overheating even with a new impeller. They do not break down on their own.",
+      "explanation": "Broken vanes travel downstream and often block the heat exchanger inlet, causing overheating even with a new impeller. They do not break down on their own, and running the engine hard to flush them out drives them further in and can overheat the engine.",
+      "categories": [
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -509,6 +524,10 @@
       ],
       "correctIndex": 0,
       "explanation": "A hot coolant circuit is under pressure, and removing the cap can release scalding coolant. Checking cold is safe and gives a consistent reading.",
+      "categories": [
+        "safety-critical",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -557,6 +576,9 @@
       ],
       "correctIndex": 0,
       "explanation": "A closed seacock or missing impeller would stop the water flow altogether. When flow is normal but the engine overheats only when working hard, heat is not being transferred well enough.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -605,6 +627,9 @@
       ],
       "correctIndex": 0,
       "explanation": "On many engines one belt drives both the alternator and the coolant circulating pump. If it slips, the pump slows and the engine gets hotter.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -624,6 +649,10 @@
       "safetyNoticeIds": [
         "overheating-stop"
       ],
+      "categories": [
+        "safety-critical",
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -639,9 +668,14 @@
         "Keep motoring to a quiet berth, then stop and investigate once tied up"
       ],
       "correctIndex": 0,
-      "explanation": "Overheating is a stop-engine condition. Get the boat safe, reduce power and stop as soon as it is safe, and let the engine cool before you open anything. A hot pressure cap can spray scalding coolant, and running on can cause serious damage.",
+      "explanation": "Overheating is a stop-engine condition. Get the boat safe, reduce power and stop as soon as it is safe, and let the engine cool before you open anything. A hot pressure cap can spray scalding coolant, opening the strainer with the engine running can flood the boat or run the pump dry, and running on can cause serious damage.",
       "safetyNoticeIds": [
         "overheating-stop"
+      ],
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
       ],
       "reviewStatus": "draft",
       "reviewNote": "New in content 1.1 (S04, S20): a safety-first ordering question using stop-engine condition D. Please approve."

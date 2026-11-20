@@ -119,7 +119,8 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "reviewNote": "S14: filter changes now mention common-rail priming, and the 'one of the most common reasons' claim is removed. Please approve."
     },
     {
       "id": "m02-l03",
@@ -347,7 +348,11 @@
         "Drain it into the bilge so the bilge pump can take it away"
       ],
       "correctIndex": 0,
-      "explanation": "Water must be removed before it reaches the injection equipment. Drain it into a container, never into the bilge, because fuel-contaminated water must not be pumped overboard.",
+      "explanation": "Water must be removed before it reaches the injection equipment. Drain it into a container, never into the bilge, because fuel-contaminated water must not be pumped overboard. Running the engine to 'burn off' water is not safe: water reaching the injection pump can damage it or stop the engine at sea.",
+      "categories": [
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -412,6 +417,9 @@
       ],
       "correctIndex": 0,
       "explanation": "The stop control, a cable or solenoid, shuts off fuel delivery at the injection pump. Closing the tank valve would take a long time and lets air in, glow plugs only help starting, and switching off the isolator with the engine running can damage the alternator. Electronically controlled engines are stopped through their control system.",
+      "categories": [
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "Audit note 5, revise: the question now says 'many mechanically injected' engines, with credible distractors and a warning about the isolator in the explanation. Please approve."
     },
@@ -429,6 +437,9 @@
       ],
       "correctIndex": 0,
       "explanation": "A fine jet of fuel from a high-pressure leak can be injected through the skin. This is a medical emergency, so look for leaks visually or with a piece of card instead.",
+      "categories": [
+        "safety-critical"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -461,6 +472,11 @@
       ],
       "correctIndex": 0,
       "explanation": "Fuel from a high-pressure leak can be injected through the skin, and the spray is a fire risk. Stop the engine, keep clear, contain any spill and do not restart until a qualified engineer has repaired it. Suspected injection injury needs emergency medical treatment.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "New in content 1.1 (S20): a safety-first scenario question on fuel spray, matching the Fault finder stop card. Please approve."
     },
@@ -497,6 +513,9 @@
       "safetyNoticeIds": [
         "high-pressure-fuel"
       ],
+      "categories": [
+        "safety-critical"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -529,6 +548,9 @@
       ],
       "correctIndex": 0,
       "explanation": "A mechanical lift pump is worked by a cam on the engine. If the engine stopped with the cam lobe holding the arm, the hand lever has little travel; turning the engine a little frees it. A closed valve, blocked filter or split diaphragm stops fuel flowing but does not usually stop the lever moving. Electric lift pumps have no lever.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "Audit note 7, accept with qualification: the question now names cam-operated mechanical pumps, and the explanation says electric pumps differ. Please approve."
     },
@@ -546,6 +568,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Bleeding removes air but does not stop it entering. If air returns, look for a loose joint, a damaged seal, a split hose on the suction side or a low tank.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -564,6 +589,11 @@
       "explanation": "Owner bleeding is limited to the handbook's low-pressure points. High-pressure fuel can penetrate skin and cause severe injury, so if you are unsure, stop and check, and use a qualified engineer for anything else.",
       "safetyNoticeIds": [
         "high-pressure-fuel"
+      ],
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
       ],
       "reviewStatus": "draft",
       "reviewNote": "New in content 1.1 (S02, S20): a safety-first question on the low-pressure boundary, with warning B in the feedback. Please approve."

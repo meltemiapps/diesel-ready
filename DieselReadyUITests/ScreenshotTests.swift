@@ -143,6 +143,18 @@ final class ScreenshotTests: XCTestCase {
         tab(app, "Faults").tap()
         app.buttons["Overheating"].tap()
         Thread.sleep(forTimeInterval: 0.8)
+        // Bring the chosen symptom and its stop-engine warning to the top of the screen.
+        let notice = app.descendants(matching: .any)["safety-notice-overheating-stop"].firstMatch
+        var tries = 0
+        while notice.exists && notice.frame.minY > app.frame.height * 0.3 && tries < 12 {
+            app.swipeUp(velocity: .slow)
+            tries += 1
+        }
+        while notice.exists && notice.frame.minY < app.frame.height * 0.12 && tries < 20 {
+            app.swipeDown(velocity: .slow)
+            tries += 1
+        }
+        Thread.sleep(forTimeInterval: 0.8)
         snap(app, "4-fault-finder")
 
         tab(app, "About").tap()

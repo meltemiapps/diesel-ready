@@ -165,9 +165,28 @@ struct Question: Codable, Sendable, Identifiable, Hashable {
     var reviewNote: String? = nil
     /// Shared safety notices shown with the answer feedback.
     var safetyNoticeIds: [String]? = nil
+    /// Raw `QuestionCategory` values, e.g. "safety-critical".
+    var categories: [String]? = nil
 
     var correctAnswer: String { options[correctIndex] }
     var noticeIDs: [String] { safetyNoticeIds ?? [] }
+
+    func has(_ category: QuestionCategory) -> Bool {
+        categories?.contains(category.rawValue) ?? false
+    }
+    var isSafetyCritical: Bool { has(.safetyCritical) }
+    var isScenario: Bool { has(.scenario) }
+}
+
+/// How a question is used when building mock tests and reviewing content.
+enum QuestionCategory: String, CaseIterable, Sendable {
+    /// Tests knowledge that keeps people, the boat or the engine safe. Every
+    /// question with a safety notice is safety-critical.
+    case safetyCritical = "safety-critical"
+    /// Built around a situation the learner has to respond to.
+    case scenario
+    /// A wrong answer is an unsafe action, so the explanation must say why.
+    case unsafeDistractor = "unsafe-distractor"
 }
 
 enum ReviewStatus: String, Codable, Sendable {

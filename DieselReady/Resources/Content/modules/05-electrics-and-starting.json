@@ -248,6 +248,9 @@
       ],
       "correctIndex": 0,
       "explanation": "A loose or corroded terminal cannot pass the heavy starting current, even from a good battery, so it behaves like a flat one.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -280,6 +283,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Vented lead-acid batteries can release hydrogen while charging. In a poorly ventilated locker, a spark from a loose connection or a dropped tool can ignite it. Lithium batteries do not give off hydrogen in normal use but have hazards of their own.",
+      "categories": [
+        "safety-critical"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "Audit note 19, revise: the question is now limited to lead-acid batteries, and the explanation says lithium hazards differ. Please approve."
     },
@@ -313,6 +319,9 @@
       ],
       "correctIndex": 0,
       "explanation": "The light points to a fault somewhere in the charging system, not necessarily the alternator itself. Check the belt and connections, then verify with the handbook and a voltage check; see Not charging in the Fault finder.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "S09: the key no longer says the lamp proves the alternator is not charging. Please approve."
     },
@@ -394,6 +403,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Complete silence usually means no current is reaching the solenoid. Fuel, cooling and oil problems do not stop the starter turning.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -410,6 +422,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Starting current returns to the battery through the engine and its earth cable. Corrosion there adds resistance and slows the starter just like a weak battery. The glow plug and alternator wiring do not carry starting current, and a blown panel fuse would stop the starter altogether.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -458,6 +473,9 @@
       ],
       "correctIndex": 0,
       "explanation": "These are classic signs of poor cold starting. Once warm, the engine does not need the glow plugs, so it runs and restarts normally.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -474,6 +492,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Starting spray is highly flammable. Lit by a hot glow plug or intake heater before the piston is in position, it can cause violent combustion that damages the engine. Only use it if the handbook allows.",
+      "categories": [
+        "safety-critical"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -506,6 +527,10 @@
       ],
       "correctIndex": 0,
       "explanation": "On these systems the engine is connected to the negative side. With the negative removed first, a spanner touching the positive terminal and the engine cannot complete a circuit and cause a short. Other systems, such as lithium banks with a battery management system, may have their own isolation procedure.",
+      "categories": [
+        "safety-critical",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -522,6 +547,9 @@
       ],
       "correctIndex": 0,
       "explanation": "If nothing at all lights, power is not reaching the panel. The isolator, fuse or breaker are the simplest things that cut it off.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -538,6 +566,9 @@
       ],
       "correctIndex": 0,
       "explanation": "A battery can deliver a very large current. If a ring bridges a live terminal and earth, it heats almost instantly and can burn deeply.",
+      "categories": [
+        "safety-critical"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -554,6 +585,10 @@
       ],
       "correctIndex": 0,
       "explanation": "A meter on its voltage setting has a high resistance, so it can be connected across the battery safely. On a current setting it is close to a short circuit: connected across a battery or to earth it can blow the meter, burn the leads and burn you.",
+      "categories": [
+        "safety-critical",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "New in content 1.1 (module 5 judgement, S20): safe multimeter use. Please approve."
     }

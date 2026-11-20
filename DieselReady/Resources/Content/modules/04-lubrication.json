@@ -299,6 +299,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Diesel combustion produces soot, which the oil holds in suspension, so it turns dark soon after a change. Milky oil, not black oil, points to water.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -315,6 +318,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Water mixed with oil forms a creamy emulsion. It can come from coolant leaking internally or sea water getting in, and it needs investigating before the engine is run. Fuel dilution makes oil thin and smell of diesel rather than milky.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -331,6 +337,11 @@
       ],
       "correctIndex": 0,
       "explanation": "A rising level shows that something else, usually fuel or water, is getting into the oil and diluting it. Running the engine with diluted oil risks serious damage.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -378,7 +389,10 @@
         "That the fuel valve is left open so the engine can restart easily"
       ],
       "correctIndex": 0,
-      "explanation": "If the old seal stays on the engine and the new filter is fitted over it, the joint will not seal and oil can be pumped out quickly once the engine starts.",
+      "explanation": "If the old seal stays on the engine and the new filter is fitted over it, the joint will not seal and oil can be pumped out quickly once the engine starts. Never change a filter with the engine running: hot oil sprays out under pressure and moving parts can catch you.",
+      "categories": [
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -411,6 +425,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Used oil is a pollutant. Marinas and recycling centres often have waste oil facilities; it must never go into the bilge, drains or water.",
+      "categories": [
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -429,6 +446,11 @@
       "explanation": "Low oil pressure can wreck the bearings within minutes. Reduce power and stop as soon as the boat is safe, then check the oil level and look for leaks. Do not restart just to test whether the warning clears.",
       "safetyNoticeIds": [
         "oil-pressure-stop"
+      ],
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
       ],
       "reviewStatus": "draft"
     },
@@ -465,6 +487,11 @@
       "safetyNoticeIds": [
         "oil-pressure-stop"
       ],
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -480,7 +507,12 @@
         "Run the engine at higher revs, where the warning goes out"
       ],
       "correctIndex": 0,
-      "explanation": "A correct oil level does not prove the pressure is good. Only a test gauge shows the real pressure, so the warning should be trusted until then; running on in the hope that it goes out risks the bearings.",
+      "explanation": "A correct oil level does not prove the pressure is good. Only a test gauge shows the real pressure, so the warning should be trusted until then. Disconnecting the switch removes your only warning, and running on in the hope that it goes out risks the bearings.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -516,6 +548,11 @@
       "explanation": "A normal level does not prove the pressure is good, and genuine low oil pressure risks the bearings. Do not restart simply to test whether the alarm clears; if the cause is not clear and corrected, get engineering assistance.",
       "safetyNoticeIds": [
         "oil-pressure-stop"
+      ],
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
       ],
       "reviewStatus": "draft",
       "reviewNote": "New in content 1.1 (S03, S20): a scenario question showing that a normal oil level does not clear the stop condition. Please approve."

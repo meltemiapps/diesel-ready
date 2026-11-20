@@ -282,7 +282,12 @@
         "Top up the oil and coolant, then ignore it unless it gets worse"
       ],
       "correctIndex": 0,
-      "explanation": "New fluid in the bilge means something has changed. Checking levels and tracing the leak first can prevent an engine failure later, and oily water must not be pumped overboard.",
+      "explanation": "New fluid in the bilge means something has changed. Checking levels and tracing the leak first can prevent an engine failure later. Running the engine hard to see whether a leak gets worse can turn a small fault into a failure or a fire, and oily water must not be pumped overboard.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -299,6 +304,10 @@
       ],
       "correctIndex": 0,
       "explanation": "A line or fender caught round the propeller can stall the engine and damage the shaft, and anyone in the water near it is in danger. Look before you engage gear.",
+      "categories": [
+        "safety-critical",
+        "scenario"
+      ],
       "reviewStatus": "draft",
       "reviewNote": "New in content 1.1 (S15): the propeller-clear pre-start check. Please approve."
     },
@@ -332,6 +341,9 @@
       ],
       "correctIndex": 0,
       "explanation": "Oil ages, rubber parts perish and corrosion continues even when the engine is not used. That is why there is a time limit as well as an hours limit.",
+      "categories": [
+        "scenario"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -429,6 +441,11 @@
       ],
       "correctIndex": 0,
       "explanation": "Starting with the intake or exhaust blocked can cause serious damage. A note on the controls makes sure whoever starts the engine next removes them.",
+      "categories": [
+        "safety-critical",
+        "scenario",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {

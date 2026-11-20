@@ -237,7 +237,8 @@
         }
       ],
       "handsOn": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "reviewNote": "S14 and S05: the fuel trace now covers common-rail engines, and the cooling step distinguishes indirect and keel-cooled engines. Please approve."
     }
   ],
   "questions": [
@@ -479,7 +480,11 @@
         "Remove the drive belts"
       ],
       "correctIndex": 0,
-      "explanation": "Stop the engine and remove the key or isolate it, so nobody can start it while your hands are near belts and pulleys.",
+      "explanation": "Stop the engine and remove the key or isolate it, so nobody can start it while your hands are near belts and pulleys. Reaching into a running engine is dangerous: belts and pulleys can trap fingers and clothing in an instant.",
+      "categories": [
+        "safety-critical",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {
@@ -496,6 +501,10 @@
       ],
       "correctIndex": 0,
       "explanation": "The seacock lets sea water into the engine's cooling circuit. Being able to shut it fast can stop a leak becoming a flood. Closing it is not a way to stop the engine: running with it closed quickly damages the pump and the exhaust.",
+      "categories": [
+        "safety-critical",
+        "unsafe-distractor"
+      ],
       "reviewStatus": "draft"
     },
     {

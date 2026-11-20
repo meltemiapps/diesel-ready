@@ -16,8 +16,8 @@ Warnings are shown in the app **before** the steps they apply to. Each procedura
 
 | Module | Lessons | Questions | Difficulty 1 / 2 / 3 | Review notes | Reviewer sign-off |
 |---|---|---|---|---|---|
-| 1. How a diesel engine works | 4 | 20 | 8 / 10 / 2 | 5 | |
-| 2. Fuel system and bleeding | 5 | 23 | 6 / 10 / 7 | 8 | |
+| 1. How a diesel engine works | 4 | 20 | 8 / 10 / 2 | 6 | |
+| 2. Fuel system and bleeding | 5 | 23 | 6 / 10 / 7 | 9 | |
 | 3. Cooling systems | 5 | 22 | 6 / 10 / 6 | 9 | |
 | 4. Lubrication | 4 | 21 | 8 / 8 / 5 | 4 | |
 | 5. Electrics and starting | 5 | 21 | 5 / 11 / 5 | 8 | |
@@ -25,7 +25,7 @@ Warnings are shown in the app **before** the steps they apply to. Each procedura
 | 7. Routine maintenance | 4 | 21 | 7 / 10 / 4 | 5 | |
 | 8. Fault finding | 4 | 22 | 4 / 12 / 6 | 8 | |
 | Fault finder | 6 symptoms | | | 3 | |
-| **Total** | **35** | **171** | **50 / 80 / 41** | **58** | |
+| **Total** | **35** | **171** | **50 / 80 / 41** | **60** | |
 
 In the quiz, the four options are shuffled every time a question is shown. Here the correct answer is marked ✅.
 
@@ -39,8 +39,10 @@ Every lesson marked hands-on ends with this reminder, added by the app:
 - [m01-q004 question](#m01-q004): Audit note 2, revise (S17): the question now tests what a compression ratio means rather than recall of a range, and the explanation gives the range as typical only. Please approve.
 - [m01-l02 lesson: The four-stroke cycle](#m01-l02): S14: step 5 now distinguishes mechanical injection timing from electronically controlled common-rail injection. Please approve.
 - [m01-l03 lesson: The main components](#m01-l03): S14: the injection step and diagram caption are now labelled as a typical mechanically injected engine, with a short common-rail description. Please approve.
+- [m01-l04 lesson: Getting to know your own engine](#m01-l04): S14 and S05: the fuel trace now covers common-rail engines, and the cooling step distinguishes indirect and keel-cooled engines. Please approve.
 - [m01-q019 question](#m01-q019): Audit note 3, accept with qualification: the question and explanation now say a primary filter with a water trap is common, not fitted on every layout. Please approve.
 - [m02-l01 lesson: From tank to injector](#m02-l01): Audit note 4, revise (S14): the fuel path is now presented as one example configuration; the text says filter and lift-pump order vary, and the high-pressure side covers common rail. Please approve.
+- [m02-l02 lesson: Filters and water separation](#m02-l02): S14: filter changes now mention common-rail priming, and the 'one of the most common reasons' claim is removed. Please approve.
 - [m02-l03 lesson: Lift pump, injection pump and injectors](#m02-l03): S02 and S14, with audit note 5: added a common-rail overview with a strict no-owner boundary on the high-pressure side; the caution no longer implies high-pressure pipes may be loosened with the engine stopped; the stop-control step now says 'many mechanically injected diesels'. Please approve.
 - [m02-q010 question](#m02-q010): Audit note 5, revise: the question now says 'many mechanically injected' engines, with credible distractors and a warning about the isolator in the explanation. Please approve.
 - [m02-q022 question](#m02-q022): New in content 1.1 (S20): a safety-first scenario question on fuel spray, matching the Fault finder stop card. Please approve.
@@ -387,6 +389,8 @@ What seals the joint between the cylinder head and the cylinder block?
 
 `m01-l04` · about 10 min · hands-on · draft
 
+> **⚠️ Review note:** S14 and S05: the fuel trace now covers common-rail engines, and the cooling step distinguishes indirect and keel-cooled engines. Please approve.
+
 The best time to find the dipstick, filters and seacock is on a calm day in harbour, not when something has gone wrong at sea. This lesson walks you round your own engine so you know where everything is before you need it.
 
 **Caution (shown before the steps):** Engine parts can stay hot for a long time after the engine stops, and belts and pulleys can trap fingers or clothing. Never reach into the engine space while the engine is running.
@@ -407,7 +411,7 @@ The best time to find the dipstick, filters and seacock is on a calm day in harb
 
 <a id="m01-q015"></a>
 
-**m01-q015** · difficulty 1 (easy) · draft
+**m01-q015** · difficulty 1 (easy) · safety-critical · unsafe-distractor · draft
 
 What should you do before reaching into the engine space to find its parts?
 
@@ -416,11 +420,11 @@ What should you do before reaching into the engine space to find its parts?
 - C. Close the fuel tank valve and then bleed the fuel system
 - D. Remove the drive belts
 
-*Explanation:* Stop the engine and remove the key or isolate it, so nobody can start it while your hands are near belts and pulleys.
+*Explanation:* Stop the engine and remove the key or isolate it, so nobody can start it while your hands are near belts and pulleys. Reaching into a running engine is dangerous: belts and pulleys can trap fingers and clothing in an instant.
 
 <a id="m01-q016"></a>
 
-**m01-q016** · difficulty 2 (medium) · draft
+**m01-q016** · difficulty 2 (medium) · safety-critical · unsafe-distractor · draft
 
 Why is it worth knowing exactly where the raw water seacock is before you need it?
 
@@ -566,6 +570,8 @@ Why can even a small bubble of air stop a diesel engine?
 
 `m02-l02` · about 7 min · hands-on · draft
 
+> **⚠️ Review note:** S14: filter changes now mention common-rail priming, and the 'one of the most common reasons' claim is removed. Please approve.
+
 Clean fuel is the single most important thing you can give a diesel engine. Two stages of filtering protect the expensive injection equipment, and the first stage also traps water before it can do harm.
 
 **Caution (shown before the steps):** Diesel is slippery and irritates the skin. Wear gloves, mop up spills straight away, and never let fuel go into the bilge where it could be pumped overboard. No naked flames or smoking while the fuel system is open.
@@ -598,7 +604,7 @@ Where does water collect in a primary fuel filter with a clear bowl?
 
 <a id="m02-q006"></a>
 
-**m02-q006** · difficulty 1 (easy) · draft
+**m02-q006** · difficulty 1 (easy) · scenario · unsafe-distractor · draft
 
 You see a layer of water in the primary filter bowl. What should you do?
 
@@ -607,7 +613,7 @@ You see a layer of water in the primary filter bowl. What should you do?
 - C. Run the engine hard for an hour so that the water is burnt off
 - D. Drain it into the bilge so the bilge pump can take it away
 
-*Explanation:* Water must be removed before it reaches the injection equipment. Drain it into a container, never into the bilge, because fuel-contaminated water must not be pumped overboard.
+*Explanation:* Water must be removed before it reaches the injection equipment. Drain it into a container, never into the bilge, because fuel-contaminated water must not be pumped overboard. Running the engine to 'burn off' water is not safe: water reaching the injection pump can damage it or stop the engine at sea.
 
 <a id="m02-q007"></a>
 
@@ -673,7 +679,7 @@ What is the main job of the lift pump?
 
 <a id="m02-q010"></a>
 
-**m02-q010** · difficulty 2 (medium) · draft
+**m02-q010** · difficulty 2 (medium) · unsafe-distractor · draft
 
 > **⚠️ Review note:** Audit note 5, revise: the question now says 'many mechanically injected' engines, with credible distractors and a warning about the isolator in the explanation. Please approve.
 
@@ -688,7 +694,7 @@ How are many mechanically injected small marine diesels stopped?
 
 <a id="m02-q011"></a>
 
-**m02-q011** · difficulty 3 (hard) · draft
+**m02-q011** · difficulty 3 (hard) · safety-critical · draft
 
 Why should you never feel for a leak along a high-pressure fuel pipe with your hand?
 
@@ -714,7 +720,7 @@ Which of these is a typical sign of a faulty injector?
 
 <a id="m02-q022"></a>
 
-**m02-q022** · difficulty 3 (hard) · draft
+**m02-q022** · difficulty 3 (hard) · safety-critical · scenario · unsafe-distractor · draft
 
 > **⚠️ Review note:** New in content 1.1 (S20): a safety-first scenario question on fuel spray, matching the Fault finder stop card. Please approve.
 
@@ -772,7 +778,7 @@ Which of these usually means the fuel system will need bleeding?
 
 <a id="m02-q014"></a>
 
-**m02-q014** · difficulty 2 (medium) · draft
+**m02-q014** · difficulty 2 (medium) · safety-critical · draft
 
 In what order should you work through the bleed points?
 
@@ -800,7 +806,7 @@ When should you close a bleed screw?
 
 <a id="m02-q016"></a>
 
-**m02-q016** · difficulty 3 (hard) · draft
+**m02-q016** · difficulty 3 (hard) · scenario · draft
 
 > **⚠️ Review note:** Audit note 7, accept with qualification: the question now names cam-operated mechanical pumps, and the explanation says electric pumps differ. Please approve.
 
@@ -815,7 +821,7 @@ The hand lever on a cam-operated mechanical lift pump has almost no movement. Wh
 
 <a id="m02-q017"></a>
 
-**m02-q017** · difficulty 3 (hard) · draft
+**m02-q017** · difficulty 3 (hard) · scenario · draft
 
 You bleed the system, the engine runs for a few minutes, then stops again with the same symptoms. What should you suspect?
 
@@ -828,7 +834,7 @@ You bleed the system, the engine runs for a few minutes, then stops again with t
 
 <a id="m02-q023"></a>
 
-**m02-q023** · difficulty 3 (hard) · draft
+**m02-q023** · difficulty 3 (hard) · safety-critical · scenario · unsafe-distractor · draft
 
 > **⚠️ Review note:** New in content 1.1 (S02, S20): a safety-first question on the low-pressure boundary, with warning B in the feedback. Please approve.
 
@@ -1031,7 +1037,7 @@ Caption: The raw water path on a typical indirectly cooled engine.
 
 <a id="m03-q005"></a>
 
-**m03-q005** · difficulty 1 (easy) · draft
+**m03-q005** · difficulty 1 (easy) · safety-critical · unsafe-distractor · draft
 
 What must you do before opening the raw water strainer?
 
@@ -1040,11 +1046,11 @@ What must you do before opening the raw water strainer?
 - C. Open the coolant pressure cap
 - D. Disconnect the battery
 
-*Explanation:* With the seacock open, water can pour in through the strainer, because it is below the waterline on many boats. Stopping the engine also stops the pump running dry.
+*Explanation:* With the seacock open, water can pour in through the strainer, because it is below the waterline on many boats. Stopping the engine also stops the pump running dry. Opening the strainer with the seacock open can flood the boat, and opening a hot coolant pressure cap can spray scalding coolant.
 
 <a id="m03-q006"></a>
 
-**m03-q006** · difficulty 2 (medium) · draft
+**m03-q006** · difficulty 2 (medium) · scenario · draft
 
 The strainer lid seal is leaking air. What can this cause?
 
@@ -1083,7 +1089,7 @@ What is the purpose of an anti-siphon valve in the raw water circuit?
 
 <a id="m03-q021"></a>
 
-**m03-q021** · difficulty 2 (medium) · draft
+**m03-q021** · difficulty 2 (medium) · safety-critical · unsafe-distractor · draft
 
 > **⚠️ Review note:** New in content 1.1 (S06): checks the corrected hose and fitting wording E. Please approve.
 
@@ -1150,7 +1156,7 @@ What damages an impeller most quickly?
 
 <a id="m03-q011"></a>
 
-**m03-q011** · difficulty 2 (medium) · draft
+**m03-q011** · difficulty 2 (medium) · scenario · unsafe-distractor · draft
 
 Your old impeller has two vanes missing. What should you do before running the engine?
 
@@ -1159,7 +1165,7 @@ Your old impeller has two vanes missing. What should you do before running the e
 - C. Run the engine hard for a while to flush the pieces out
 - D. Fit the new impeller and check the flow, because small pieces pass through harmlessly
 
-*Explanation:* Broken vanes travel downstream and often block the heat exchanger inlet, causing overheating even with a new impeller. They do not break down on their own.
+*Explanation:* Broken vanes travel downstream and often block the heat exchanger inlet, causing overheating even with a new impeller. They do not break down on their own, and running the engine hard to flush them out drives them further in and can overheat the engine.
 
 <a id="m03-q012"></a>
 
@@ -1211,7 +1217,7 @@ Caption: The coolant circuit on a typical indirectly cooled engine. The thermost
 
 <a id="m03-q013"></a>
 
-**m03-q013** · difficulty 1 (easy) · draft
+**m03-q013** · difficulty 1 (easy) · safety-critical · unsafe-distractor · draft
 
 When should you check the coolant level in the header tank?
 
@@ -1250,7 +1256,7 @@ Why is the coolant circuit kept under pressure by the cap?
 
 <a id="m03-q016"></a>
 
-**m03-q016** · difficulty 3 (hard) · draft
+**m03-q016** · difficulty 3 (hard) · scenario · draft
 
 The engine runs at a normal temperature at low revs but overheats under load, and the raw water flow looks normal. Which is a likely cause?
 
@@ -1315,7 +1321,7 @@ Why is it worth learning where your temperature gauge normally sits?
 
 <a id="m03-q019"></a>
 
-**m03-q019** · difficulty 2 (medium) · draft
+**m03-q019** · difficulty 2 (medium) · scenario · draft
 
 You hear a belt squealing and the temperature starts to rise. What is the link?
 
@@ -1328,7 +1334,7 @@ You hear a belt squealing and the temperature starts to rise. What is the link?
 
 <a id="m03-q020"></a>
 
-**m03-q020** · difficulty 3 (hard) · draft
+**m03-q020** · difficulty 3 (hard) · safety-critical · scenario · draft
 
 There is steam and very little water from the exhaust. Why is stopping the engine also important for the exhaust system itself?
 
@@ -1343,7 +1349,7 @@ There is steam and very little water from the exhaust. Why is stopping the engin
 
 <a id="m03-q022"></a>
 
-**m03-q022** · difficulty 3 (hard) · draft
+**m03-q022** · difficulty 3 (hard) · safety-critical · scenario · unsafe-distractor · draft
 
 > **⚠️ Review note:** New in content 1.1 (S04, S20): a safety-first ordering question using stop-engine condition D. Please approve.
 
@@ -1354,7 +1360,7 @@ The overheat alarm sounds as you motor out of a busy harbour. Which order of act
 - C. Check the strainer with the engine running, and stop only if it is clear
 - D. Keep motoring to a quiet berth, then stop and investigate once tied up
 
-*Explanation:* Overheating is a stop-engine condition. Get the boat safe, reduce power and stop as soon as it is safe, and let the engine cool before you open anything. A hot pressure cap can spray scalding coolant, and running on can cause serious damage.
+*Explanation:* Overheating is a stop-engine condition. Get the boat safe, reduce power and stop as soon as it is safe, and let the engine cool before you open anything. A hot pressure cap can spray scalding coolant, opening the strainer with the engine running can flood the boat or run the pump dry, and running on can cause serious damage.
 
 *Feedback also shows:* STOP-ENGINE CONDITION (`overheating-stop`)
 
@@ -1493,7 +1499,7 @@ Why do you wipe the dipstick and put it back before reading it?
 
 <a id="m04-q008"></a>
 
-**m04-q008** · difficulty 2 (medium) · draft
+**m04-q008** · difficulty 2 (medium) · scenario · draft
 
 The oil on the dipstick is black. What does this usually mean on a diesel?
 
@@ -1506,7 +1512,7 @@ The oil on the dipstick is black. What does this usually mean on a diesel?
 
 <a id="m04-q009"></a>
 
-**m04-q009** · difficulty 2 (medium) · draft
+**m04-q009** · difficulty 2 (medium) · scenario · draft
 
 The oil on the dipstick looks milky and creamy. What does this suggest?
 
@@ -1519,7 +1525,7 @@ The oil on the dipstick looks milky and creamy. What does this suggest?
 
 <a id="m04-q010"></a>
 
-**m04-q010** · difficulty 3 (hard) · draft
+**m04-q010** · difficulty 3 (hard) · safety-critical · scenario · unsafe-distractor · draft
 
 You have not added any oil, but the level on the dipstick is higher than last week. What should you do?
 
@@ -1581,7 +1587,7 @@ Why is the engine usually warmed up before the old oil is removed?
 
 <a id="m04-q013"></a>
 
-**m04-q013** · difficulty 2 (medium) · draft
+**m04-q013** · difficulty 2 (medium) · unsafe-distractor · draft
 
 When removing the old oil filter, what should you make sure of?
 
@@ -1590,7 +1596,7 @@ When removing the old oil filter, what should you make sure of?
 - C. That the engine is running so the oil keeps flowing
 - D. That the fuel valve is left open so the engine can restart easily
 
-*Explanation:* If the old seal stays on the engine and the new filter is fitted over it, the joint will not seal and oil can be pumped out quickly once the engine starts.
+*Explanation:* If the old seal stays on the engine and the new filter is fitted over it, the joint will not seal and oil can be pumped out quickly once the engine starts. Never change a filter with the engine running: hot oil sprays out under pressure and moving parts can catch you.
 
 <a id="m04-q014"></a>
 
@@ -1607,7 +1613,7 @@ Why does an engine that is used very little still need its oil changed regularly
 
 <a id="m04-q015"></a>
 
-**m04-q015** · difficulty 1 (easy) · draft
+**m04-q015** · difficulty 1 (easy) · unsafe-distractor · draft
 
 What should you do with the used oil and filter?
 
@@ -1645,7 +1651,7 @@ The oil pressure warning is one alarm you should never ignore. Low oil pressure 
 
 <a id="m04-q016"></a>
 
-**m04-q016** · difficulty 1 (easy) · draft
+**m04-q016** · difficulty 1 (easy) · safety-critical · scenario · unsafe-distractor · draft
 
 The oil pressure warning comes on while you are motoring. What should you do?
 
@@ -1673,7 +1679,7 @@ The oil pressure lamp lights when you turn the key, before starting. What does t
 
 <a id="m04-q018"></a>
 
-**m04-q018** · difficulty 2 (medium) · draft
+**m04-q018** · difficulty 2 (medium) · safety-critical · scenario · unsafe-distractor · draft
 
 The oil pressure warning came on and you have stopped the engine safely. What is a sensible first check?
 
@@ -1688,7 +1694,7 @@ The oil pressure warning came on and you have stopped the engine safely. What is
 
 <a id="m04-q019"></a>
 
-**m04-q019** · difficulty 2 (medium) · draft
+**m04-q019** · difficulty 2 (medium) · safety-critical · scenario · unsafe-distractor · draft
 
 You suspect the oil pressure warning is caused by a faulty switch. What is the right approach?
 
@@ -1697,7 +1703,7 @@ You suspect the oil pressure warning is caused by a faulty switch. What is the r
 - C. Assume the switch is faulty because the oil level is fine
 - D. Run the engine at higher revs, where the warning goes out
 
-*Explanation:* A correct oil level does not prove the pressure is good. Only a test gauge shows the real pressure, so the warning should be trusted until then; running on in the hope that it goes out risks the bearings.
+*Explanation:* A correct oil level does not prove the pressure is good. Only a test gauge shows the real pressure, so the warning should be trusted until then. Disconnecting the switch removes your only warning, and running on in the hope that it goes out risks the bearings.
 
 <a id="m04-q020"></a>
 
@@ -1716,7 +1722,7 @@ In a healthy engine, when does oil pressure tend to be at its lowest?
 
 <a id="m04-q021"></a>
 
-**m04-q021** · difficulty 3 (hard) · draft
+**m04-q021** · difficulty 3 (hard) · safety-critical · scenario · unsafe-distractor · draft
 
 > **⚠️ Review note:** New in content 1.1 (S03, S20): a scenario question showing that a normal oil level does not clear the stop condition. Please approve.
 
@@ -1772,7 +1778,7 @@ Why do many boats keep a separate battery just for starting the engine?
 
 <a id="m05-q002"></a>
 
-**m05-q002** · difficulty 2 (medium) · draft
+**m05-q002** · difficulty 2 (medium) · scenario · draft
 
 The battery is fully charged but the starter only clicks. What should you check first?
 
@@ -1798,7 +1804,7 @@ Why is a voltmeter reading of a battery's state of charge best taken after it ha
 
 <a id="m05-q004"></a>
 
-**m05-q004** · difficulty 3 (hard) · draft
+**m05-q004** · difficulty 3 (hard) · safety-critical · draft
 
 > **⚠️ Review note:** Audit note 19, revise: the question is now limited to lead-acid batteries, and the explanation says lithium hazards differ. Please approve.
 
@@ -1844,7 +1850,7 @@ What drives the alternator?
 
 <a id="m05-q006"></a>
 
-**m05-q006** · difficulty 2 (medium) · draft
+**m05-q006** · difficulty 2 (medium) · scenario · draft
 
 > **⚠️ Review note:** S09: the key no longer says the lamp proves the alternator is not charging. Please approve.
 
@@ -1941,7 +1947,7 @@ Why is a solenoid used in the starting circuit?
 
 <a id="m05-q011"></a>
 
-**m05-q011** · difficulty 2 (medium) · draft
+**m05-q011** · difficulty 2 (medium) · scenario · draft
 
 When you press the start button, nothing happens at all, not even a click. Which of these is a likely cause?
 
@@ -1954,7 +1960,7 @@ When you press the start button, nothing happens at all, not even a click. Which
 
 <a id="m05-q012"></a>
 
-**m05-q012** · difficulty 3 (hard) · draft
+**m05-q012** · difficulty 3 (hard) · scenario · draft
 
 The battery is good and its terminals are clean, but the starter turns slowly. Which connection is often overlooked?
 
@@ -2011,7 +2017,7 @@ Why does a diesel engine find it harder to start on a cold day?
 
 <a id="m05-q015"></a>
 
-**m05-q015** · difficulty 2 (medium) · draft
+**m05-q015** · difficulty 2 (medium) · scenario · draft
 
 An engine is hard to start from cold and smokes white for a minute, then runs well and restarts easily when warm. What is a likely cause?
 
@@ -2024,7 +2030,7 @@ An engine is hard to start from cold and smokes white for a minute, then runs we
 
 <a id="m05-q016"></a>
 
-**m05-q016** · difficulty 3 (hard) · draft
+**m05-q016** · difficulty 3 (hard) · safety-critical · draft
 
 Why can aerosol starting sprays be dangerous in an engine with glow plugs?
 
@@ -2075,7 +2081,7 @@ When you switch on before starting, which lights would you normally expect to co
 
 <a id="m05-q018"></a>
 
-**m05-q018** · difficulty 2 (medium) · draft
+**m05-q018** · difficulty 2 (medium) · safety-critical · unsafe-distractor · draft
 
 On a conventional negative-earth system with lead-acid batteries, which lead should you take off first when disconnecting a battery?
 
@@ -2088,7 +2094,7 @@ On a conventional negative-earth system with lead-acid batteries, which lead sho
 
 <a id="m05-q019"></a>
 
-**m05-q019** · difficulty 2 (medium) · draft
+**m05-q019** · difficulty 2 (medium) · scenario · draft
 
 The whole engine panel is dead when you turn the key. What should you check early on?
 
@@ -2101,7 +2107,7 @@ The whole engine panel is dead when you turn the key. What should you check earl
 
 <a id="m05-q020"></a>
 
-**m05-q020** · difficulty 3 (hard) · draft
+**m05-q020** · difficulty 3 (hard) · safety-critical · draft
 
 Why should you remove metal rings and watches before working near the batteries?
 
@@ -2114,7 +2120,7 @@ Why should you remove metal rings and watches before working near the batteries?
 
 <a id="m05-q021"></a>
 
-**m05-q021** · difficulty 2 (medium) · draft
+**m05-q021** · difficulty 2 (medium) · safety-critical · unsafe-distractor · draft
 
 > **⚠️ Review note:** New in content 1.1 (module 5 judgement, S20): safe multimeter use. Please approve.
 
@@ -2169,7 +2175,7 @@ On many engines, what two things stop working if the alternator belt breaks?
 
 <a id="m06-q002"></a>
 
-**m06-q002** · difficulty 1 (easy) · draft
+**m06-q002** · difficulty 1 (easy) · safety-critical · unsafe-distractor · draft
 
 What is the safe way to inspect a drive belt?
 
@@ -2182,7 +2188,7 @@ What is the safe way to inspect a drive belt?
 
 <a id="m06-q003"></a>
 
-**m06-q003** · difficulty 2 (medium) · draft
+**m06-q003** · difficulty 2 (medium) · scenario · draft
 
 You find fine black rubber dust around the pulleys. What does it usually mean?
 
@@ -2278,7 +2284,7 @@ Where should you check the gearbox oil level on most installations?
 
 <a id="m06-q009"></a>
 
-**m06-q009** · difficulty 3 (hard) · draft
+**m06-q009** · difficulty 3 (hard) · scenario · draft
 
 > **⚠️ Review note:** Audit note 24, revise: the question now describes steady drive with a warm engine, and the explanation separates normal slight cold drag from positive drive. Please approve.
 
@@ -2343,7 +2349,7 @@ What is the job of the stern gland?
 
 <a id="m06-q012"></a>
 
-**m06-q012** · difficulty 2 (medium) · draft
+**m06-q012** · difficulty 2 (medium) · scenario · draft
 
 > **⚠️ Review note:** Audit note 26, accept with qualification (S11): a small drip while turning may be normal for some packed glands; the explanation makes drip rates product-specific. Please approve.
 
@@ -2371,7 +2377,7 @@ What can happen if a packed stern gland is tightened too much?
 
 <a id="m06-q014"></a>
 
-**m06-q014** · difficulty 3 (hard) · draft
+**m06-q014** · difficulty 3 (hard) · safety-critical · scenario · unsafe-distractor · draft
 
 > **⚠️ Review note:** S11: the key now treats leakage from a seal designed not to drip as urgent and adds the bilge pumping check. Please approve.
 
@@ -2382,11 +2388,11 @@ A shaft seal that its maker says should not drip shows a steady trickle of water
 - C. As a sign that the seal needs more grease pumping in
 - D. As something to look at when the boat is next lifted out
 
-*Explanation:* A seal designed not to drip should stay dry. A leak can mean wear, damage or a problem with its hose, and it is below the waterline, so new or increasing leakage is a vessel-safety issue: check the bilge, make sure the pumps can keep up and get the seal looked at.
+*Explanation:* A seal designed not to drip should stay dry. A leak can mean wear, damage or a problem with its hose, and it is below the waterline, so new or increasing leakage is a vessel-safety issue: leaving it until the boat is next lifted out risks flooding. Check the bilge, make sure the pumps can keep up and get the seal looked at.
 
 <a id="m06-q015"></a>
 
-**m06-q015** · difficulty 1 (easy) · draft
+**m06-q015** · difficulty 1 (easy) · safety-critical · unsafe-distractor · draft
 
 When is it safe to adjust the stern gland?
 
@@ -2399,7 +2405,7 @@ When is it safe to adjust the stern gland?
 
 <a id="m06-q021"></a>
 
-**m06-q021** · difficulty 3 (hard) · draft
+**m06-q021** · difficulty 3 (hard) · safety-critical · scenario · unsafe-distractor · draft
 
 > **⚠️ Review note:** New in content 1.1 (S11, S20): a safety-first scenario on shaft-seal leakage, matching the Fault finder stop card. Please approve.
 
@@ -2435,7 +2441,7 @@ The propeller shaft carries the engine's power out through the hull to the prope
 
 <a id="m06-q016"></a>
 
-**m06-q016** · difficulty 1 (easy) · draft
+**m06-q016** · difficulty 1 (easy) · safety-critical · scenario · unsafe-distractor · draft
 
 A rope has wrapped round the propeller. What must you do before trying to clear it?
 
@@ -2461,7 +2467,7 @@ What lubricates a typical cutless bearing?
 
 <a id="m06-q018"></a>
 
-**m06-q018** · difficulty 2 (medium) · draft
+**m06-q018** · difficulty 2 (medium) · scenario · draft
 
 With the boat out of the water, the shaft can be moved sideways in the bearing where it leaves the hull. What does this suggest?
 
@@ -2487,7 +2493,7 @@ Why can a fouled propeller make the engine produce black smoke?
 
 <a id="m06-q020"></a>
 
-**m06-q020** · difficulty 3 (hard) · draft
+**m06-q020** · difficulty 3 (hard) · scenario · draft
 
 Over a season, vibration under power slowly gets worse and the stern gland starts to leak more. What should you suspect?
 
@@ -2594,7 +2600,7 @@ Why should you let the engine warm gently before using full power?
 
 <a id="m07-q005"></a>
 
-**m07-q005** · difficulty 3 (hard) · draft
+**m07-q005** · difficulty 3 (hard) · safety-critical · scenario · unsafe-distractor · draft
 
 Before starting, you see a thin film of oil and a little coolant in the bilge that was not there yesterday. What should you do?
 
@@ -2603,11 +2609,11 @@ Before starting, you see a thin film of oil and a little coolant in the bilge th
 - C. Start the engine and run it hard for a while to see whether the leak gets worse
 - D. Top up the oil and coolant, then ignore it unless it gets worse
 
-*Explanation:* New fluid in the bilge means something has changed. Checking levels and tracing the leak first can prevent an engine failure later, and oily water must not be pumped overboard.
+*Explanation:* New fluid in the bilge means something has changed. Checking levels and tracing the leak first can prevent an engine failure later. Running the engine hard to see whether a leak gets worse can turn a small fault into a failure or a fire, and oily water must not be pumped overboard.
 
 <a id="m07-q021"></a>
 
-**m07-q021** · difficulty 2 (medium) · draft
+**m07-q021** · difficulty 2 (medium) · safety-critical · scenario · draft
 
 > **⚠️ Review note:** New in content 1.1 (S15): the propeller-clear pre-start check. Please approve.
 
@@ -2653,7 +2659,7 @@ Where should you find the service schedule for your engine?
 
 <a id="m07-q007"></a>
 
-**m07-q007** · difficulty 2 (medium) · draft
+**m07-q007** · difficulty 2 (medium) · scenario · draft
 
 A service is due 'by running hours or by time, whichever comes first'. Your engine has done few hours this year. What does this mean?
 
@@ -2756,7 +2762,7 @@ What is the main risk of leaving sea water in the raw water circuit in a hard fr
 
 <a id="m07-q013"></a>
 
-**m07-q013** · difficulty 2 (medium) · draft
+**m07-q013** · difficulty 2 (medium) · safety-critical · scenario · unsafe-distractor · draft
 
 You block the exhaust outlet and air intake for the winter. What else should you do?
 
@@ -2911,7 +2917,7 @@ Caption: A simple order of work for any engine fault.
 
 <a id="m08-q001"></a>
 
-**m08-q001** · difficulty 1 (easy) · draft
+**m08-q001** · difficulty 1 (easy) · safety-critical · scenario · unsafe-distractor · draft
 
 Your engine stops while you are motoring near a rocky shore. What should you do first?
 
@@ -2920,7 +2926,7 @@ Your engine stops while you are motoring near a rocky shore. What should you do 
 - C. Keep trying to start the engine until it runs
 - D. Check the fuel filter bowl for water straight away
 
-*Explanation:* The boat's safety comes before the engine. Once you are no longer at risk, you can work on the engine calmly.
+*Explanation:* The boat's safety comes before the engine. Opening up the engine or cranking it while the boat drifts towards rocks puts everyone in danger. Once you are no longer at risk, you can work on the engine calmly.
 
 <a id="m08-q002"></a>
 
@@ -2976,7 +2982,7 @@ In what order should you usually check possible causes?
 
 <a id="m08-q021"></a>
 
-**m08-q021** · difficulty 2 (medium) · draft
+**m08-q021** · difficulty 2 (medium) · safety-critical · scenario · unsafe-distractor · draft
 
 > **⚠️ Review note:** New in content 1.1 (S20): a safety-first ordering question. Please approve.
 
@@ -2987,7 +2993,7 @@ Your engine stops while you are crossing a busy channel. Which order of actions 
 - C. Gather the clues, try restarting several times, then make the boat safe
 - D. Make the boat safe, then change both fuel filters straight away
 
-*Explanation:* The boat comes first. Once it is safe, note how the engine stopped and what changed, then check the easy causes before dismantling anything or changing parts on a guess.
+*Explanation:* The boat comes first: trying to restart while drifting in a busy channel puts the boat at risk of collision. Once it is safe, note how the engine stopped and what changed, then check the easy causes before dismantling anything or changing parts on a guess.
 
 <a id="m08-l02"></a>
 
@@ -3016,7 +3022,7 @@ Starting failures divide roughly in two. Either the engine does not turn over pr
 
 <a id="m08-q006"></a>
 
-**m08-q006** · difficulty 2 (medium) · draft
+**m08-q006** · difficulty 2 (medium) · scenario · draft
 
 > **⚠️ Review note:** S13: the question now asks for a sensible first check and includes the stop control; the explanation covers pre-heating, electronic inhibit, air intake and compression. Please approve.
 
@@ -3031,7 +3037,7 @@ The engine turns over at normal speed but will not fire. Which is a sensible fir
 
 <a id="m08-q007"></a>
 
-**m08-q007** · difficulty 2 (medium) · draft
+**m08-q007** · difficulty 2 (medium) · scenario · draft
 
 Pressing start gives a single click and nothing else. What does this usually point to?
 
@@ -3044,7 +3050,7 @@ Pressing start gives a single click and nothing else. What does this usually poi
 
 <a id="m08-q008"></a>
 
-**m08-q008** · difficulty 2 (medium) · draft
+**m08-q008** · difficulty 2 (medium) · scenario · draft
 
 The engine will not start on a cold morning but starts easily later in the day. Which part is a likely suspect?
 
@@ -3057,7 +3063,7 @@ The engine will not start on a cold morning but starts easily later in the day. 
 
 <a id="m08-q009"></a>
 
-**m08-q009** · difficulty 3 (hard) · draft
+**m08-q009** · difficulty 3 (hard) · safety-critical · draft
 
 Why can long periods of cranking be harmful on an engine with a wet exhaust?
 
@@ -3072,7 +3078,7 @@ Why can long periods of cranking be harmful on an engine with a wet exhaust?
 
 <a id="m08-q010"></a>
 
-**m08-q010** · difficulty 3 (hard) · draft
+**m08-q010** · difficulty 3 (hard) · safety-critical · scenario · unsafe-distractor · draft
 
 While cranking, the engine turns a little and then stops hard. What should you do?
 
@@ -3081,13 +3087,13 @@ While cranking, the engine turns a little and then stops hard. What should you d
 - C. Use a starting spray to help it fire before it stops
 - D. Bleed the fuel system, then try cranking again straight away
 
-*Explanation:* Water does not compress. If a cylinder is full of it, forcing the engine round can bend a connecting rod. Do not crank again; get qualified assistance.
+*Explanation:* Water does not compress. If a cylinder is full of it, forcing the engine round, with more cranking or a starting spray, can bend a connecting rod. Do not crank again; get qualified assistance.
 
 *Feedback also shows:* WARNING — WET EXHAUST / WATERLOCK (`wet-exhaust-waterlock`)
 
 <a id="m08-q022"></a>
 
-**m08-q022** · difficulty 2 (medium) · draft
+**m08-q022** · difficulty 2 (medium) · safety-critical · scenario · unsafe-distractor · draft
 
 > **⚠️ Review note:** New in content 1.1 (S01, S20): tests the corrected wet-exhaust advice, including the old 'close the seacock' advice as a wrong answer. Please approve.
 
@@ -3098,7 +3104,7 @@ After several attempts, an engine with a wet exhaust still will not start. What 
 - C. Keep cranking in longer bursts so the exhaust can clear itself
 - D. Use a starting spray so it fires before the exhaust fills
 
-*Explanation:* Repeated cranking can let water build up in a wet exhaust and enter the engine. Follow the documented procedure for your installation, never run the engine with the raw-water seacock closed, and if water may have got in, do not crank again.
+*Explanation:* Repeated cranking can let water build up in a wet exhaust and enter the engine. Follow the documented procedure for your installation, and never run the engine with the raw-water seacock closed: an engine that fires with it shut quickly destroys its impeller and exhaust. Longer cranking or a starting spray only adds to the risk, and if water may have got in, do not crank again.
 
 *Feedback also shows:* WARNING — WET EXHAUST / WATERLOCK (`wet-exhaust-waterlock`)
 
@@ -3127,7 +3133,7 @@ An engine that stops by itself, or slowly loses power, is usually being starved 
 
 <a id="m08-q011"></a>
 
-**m08-q011** · difficulty 1 (easy) · draft
+**m08-q011** · difficulty 1 (easy) · scenario · draft
 
 The engine slows and fades over several seconds before stopping. What type of cause does this usually point to?
 
@@ -3140,7 +3146,7 @@ The engine slows and fades over several seconds before stopping. What type of ca
 
 <a id="m08-q012"></a>
 
-**m08-q012** · difficulty 2 (medium) · draft
+**m08-q012** · difficulty 2 (medium) · safety-critical · scenario · unsafe-distractor · draft
 
 > **⚠️ Review note:** S12: the question now teaches a safe inspection first instead of naming a single cause. Please approve.
 
@@ -3151,11 +3157,11 @@ The engine runs fine in neutral but stalls as soon as you put it in gear. What i
 - C. Assume the gearbox has failed and call for a tow without checking anything
 - D. Engage astern at higher revs to unwind whatever may be caught
 
-*Explanation:* Something round the propeller is one important possibility, but a low idle speed, a gearbox fault or a binding shaft can do the same. Make the engine safe before inspecting near the propeller, and rule things out one at a time rather than forcing it.
+*Explanation:* Something round the propeller is one important possibility, but a low idle speed, a gearbox fault or a binding shaft can do the same. Make the engine safe before inspecting near the propeller, and rule things out one at a time. Forcing it in gear or at higher revs can wrap a rope tighter and damage the shaft, gearbox or stern gear.
 
 <a id="m08-q013"></a>
 
-**m08-q013** · difficulty 2 (medium) · draft
+**m08-q013** · difficulty 2 (medium) · scenario · draft
 
 Over a season, the boat gets slower at the same engine revs and the exhaust smokes black under load. What is a likely cause?
 
@@ -3168,7 +3174,7 @@ Over a season, the boat gets slower at the same engine revs and the exhaust smok
 
 <a id="m08-q014"></a>
 
-**m08-q014** · difficulty 3 (hard) · draft
+**m08-q014** · difficulty 3 (hard) · scenario · draft
 
 The engine stops, restarts after a rest, runs for a while and stops again, with no water or dirt in the filter bowl. What might be blocked?
 
@@ -3181,7 +3187,7 @@ The engine stops, restarts after a rest, runs for a while and stops again, with 
 
 <a id="m08-q015"></a>
 
-**m08-q015** · difficulty 2 (medium) · draft
+**m08-q015** · difficulty 2 (medium) · scenario · draft
 
 After a rough passage the engine fades over a few seconds and stops. Where should you look first?
 
@@ -3221,7 +3227,7 @@ Warning lights, alarms and smoke are the engine's way of telling you something i
 
 <a id="m08-q016"></a>
 
-**m08-q016** · difficulty 1 (easy) · draft
+**m08-q016** · difficulty 1 (easy) · safety-critical · draft
 
 Which two warnings mean you should stop the engine as soon as it is safe to do so?
 
@@ -3236,7 +3242,7 @@ Which two warnings mean you should stop the engine as soon as it is safe to do s
 
 <a id="m08-q017"></a>
 
-**m08-q017** · difficulty 2 (medium) · draft
+**m08-q017** · difficulty 2 (medium) · safety-critical · scenario · draft
 
 The engine overheated although water was flowing normally from the exhaust. Once it has stopped and cooled, which of these should you check?
 
@@ -3264,7 +3270,7 @@ What does blue exhaust smoke usually mean?
 
 <a id="m08-q019"></a>
 
-**m08-q019** · difficulty 3 (hard) · draft
+**m08-q019** · difficulty 3 (hard) · scenario · draft
 
 The charge warning light comes on while motoring. Why should you check the drive belt straight away?
 
@@ -3277,7 +3283,7 @@ The charge warning light comes on while motoring. Why should you check the drive
 
 <a id="m08-q020"></a>
 
-**m08-q020** · difficulty 3 (hard) · draft
+**m08-q020** · difficulty 3 (hard) · safety-critical · scenario · unsafe-distractor · draft
 
 You suspect a temperature alarm is false because the engine does not feel hot. What is the safe approach?
 

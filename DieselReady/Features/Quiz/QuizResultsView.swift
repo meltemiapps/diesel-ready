@@ -25,12 +25,24 @@ struct QuizResultsView: View {
                 if result.missed.isEmpty {
                     Callout(kind: .success, text: "You answered every question correctly.")
                 } else {
-                    Text("Questions to review")
-                        .font(.sectionTitle)
-                        .foregroundStyle(Theme.Palette.ink)
-                        .accessibilityAddTraits(.isHeader)
-                    ForEach(result.missed) { answer in
-                        MissedQuestionCard(answer: answer)
+                    let safety = result.missedSafetyCritical
+                    let others = result.missed.filter { !$0.question.isSafetyCritical }
+                    // Safety-critical questions are listed first.
+                    if !safety.isEmpty {
+                        sectionHeader("Safety-critical questions to review", systemImage: "exclamationmark.octagon.fill",
+                                      colour: Theme.Palette.error)
+                            .accessibilityIdentifier("missed-safety-heading")
+                        ForEach(safety) { answer in
+                            MissedQuestionCard(answer: answer, isSafetyCritical: true)
+                        }
+                    }
+                    if !others.isEmpty {
+                        sectionHeader(safety.isEmpty ? "Questions to review" : "Other questions to review",
+                                      systemImage: nil, colour: Theme.Palette.ink)
+                            .accessibilityIdentifier("missed-other-heading")
+                        ForEach(others) { answer in
+                            MissedQuestionCard(answer: answer, isSafetyCritical: false)
+                        }
                     }
                 }
 
@@ -52,6 +64,19 @@ struct QuizResultsView: View {
             .frame(maxWidth: 700)
             .frame(maxWidth: .infinity)
         }
+    }
+
+    private func sectionHeader(_ title: String, systemImage: String?, colour: Color) -> some View {
+        HStack(alignment: .firstTextBaseline, spacing: Theme.Spacing.s) {
+            if let systemImage {
+                Image(systemName: systemImage).accessibilityHidden(true)
+            }
+            Text(title)
+        }
+        .font(.sectionTitle)
+        .foregroundStyle(colour)
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isHeader)
     }
 
     private var scoreCard: some View {
@@ -118,9 +143,15 @@ struct QuizResultsView: View {
 
 private struct MissedQuestionCard: View {
     let answer: AnsweredQuestion
+    let isSafetyCritical: Bool
 
     var body: some View {
         VStack(alignment: .leading, spacing: Theme.Spacing.s) {
+            if isSafetyCritical {
+                Text("Safety-critical")
+                    .font(.caption.weight(.heavy))
+                    .foregroundStyle(Theme.Palette.error)
+            }
             Text(answer.question.prompt)
                 .font(.headline)
                 .foregroundStyle(Theme.Palette.ink)
@@ -145,5 +176,6 @@ private struct MissedQuestionCard: View {
         .font(.subheadline)
         .card()
         .accessibilityElement(children: .combine)
+        .accessibilityIdentifier(isSafetyCritical ? "missed-safety-critical" : "missed-other")
     }
 }

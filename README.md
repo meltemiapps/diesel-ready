@@ -5,9 +5,9 @@ leisure boaters learning basic marine diesel engine care and fault-finding. It i
 made by [Meltemi Apps](https://meltemiapps.co.uk), an independent app studio.
 
 - Website: https://meltemiapps.co.uk/diesel-ready/
-- App Store: link to follow at release
+- App Store: https://apps.apple.com/app/diesel-ready-marine-diesel/id6837058624
 
-> **Status:** in TestFlight. Content version 1.2 was reviewed and approved by a
+> **Status:** version 1.0 live on the App Store since 21 November 2026. Content version 1.2 was reviewed and approved by a
 > qualified marine engineer on 20 November 2026, and every item is marked
 > `"reviewStatus": "reviewed"`. Release builds fail if any item is still
 > `"draft"` (`scripts/check-review-status.sh`).
